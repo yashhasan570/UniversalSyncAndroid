@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import com.google.common.io.Files;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.http.PollWebGuiAvailableTask;
 import com.universalsync.android.model.Device;
 import com.universalsync.android.model.Folder;
@@ -47,11 +47,11 @@ import net.lingala.zip4j.model.enums.EncryptionMethod;
 import net.lingala.zip4j.model.enums.AesKeyStrength;
 
 /**
- * Holds the native syncthing instance and provides an API to access it.
+ * Holds the native universalsync instance and provides an API to access it.
  */
-public class Universal SyncService extends Service {
+public class UniversalSyncService extends Service {
 
-    private static final String TAG = "Universal SyncService";
+    private static final String TAG = "UniversalSyncService";
 
     private Boolean ENABLE_VERBOSE_LOG = false;
 
@@ -59,95 +59,95 @@ public class Universal SyncService extends Service {
      * Intent action to perform a Universal Sync restart.
      */
     public static final String ACTION_RESTART =
-            ".Universal SyncService.RESTART";
+            ".UniversalSyncService.RESTART";
 
     /**
      * Intent action to perform a Universal Sync stop.
      */
     public static final String ACTION_STOP =
-            ".Universal SyncService.STOP";
+            ".UniversalSyncService.STOP";
 
     /**
      * Intent action to reset Universal Sync's database.
      */
     public static final String ACTION_RESET_DATABASE =
-            ".Universal SyncService.RESET_DATABASE";
+            ".UniversalSyncService.RESET_DATABASE";
 
     /**
      * Intent action to reset Universal Sync's delta indexes.
      */
     public static final String ACTION_RESET_DELTAS =
-            ".Universal SyncService.RESET_DELTAS";
+            ".UniversalSyncService.RESET_DELTAS";
 
     public static final String ACTION_REFRESH_NETWORK_INFO =
-            ".Universal SyncService.REFRESH_NETWORK_INFO";
+            ".UniversalSyncService.REFRESH_NETWORK_INFO";
 
     /**
      * Intent action to permanently ignore a device connection request.
      */
     public static final String ACTION_IGNORE_DEVICE =
-            ".Universal SyncService.IGNORE_DEVICE";
+            ".UniversalSyncService.IGNORE_DEVICE";
 
     /**
      * Intent action to permanently ignore a folder share request.
      */
     public static final String ACTION_IGNORE_FOLDER =
-            ".Universal SyncService.IGNORE_FOLDER";
+            ".UniversalSyncService.IGNORE_FOLDER";
 
     /**
      * Intent action to override folder changes.
      */
     public static final String ACTION_OVERRIDE_CHANGES =
-            ".Universal SyncService.OVERRIDE_CHANGES";
+            ".UniversalSyncService.OVERRIDE_CHANGES";
 
     /**
      * Intent action to revert local folder changes.
      */
     public static final String ACTION_REVERT_LOCAL_CHANGES =
-            ".Universal SyncService.REVERT_LOCAL_CHANGES";
+            ".UniversalSyncService.REVERT_LOCAL_CHANGES";
 
 
     /**
      * Extra used together with ACTION_IGNORE_DEVICE, ACTION_IGNORE_FOLDER.
      */
     public static final String EXTRA_NOTIFICATION_ID =
-            ".Universal SyncService.EXTRA_NOTIFICATION_ID";
+            ".UniversalSyncService.EXTRA_NOTIFICATION_ID";
 
     /**
      * Extra used together with ACTION_IGNORE_DEVICE
      */
     public static final String EXTRA_DEVICE_ID =
-            ".Universal SyncService.EXTRA_DEVICE_ID";
+            ".UniversalSyncService.EXTRA_DEVICE_ID";
 
     /**
      * Extra used together with ACTION_IGNORE_DEVICE
      */
     public static final String EXTRA_DEVICE_ADDRESS =
-            ".Universal SyncService.EXTRA_DEVICE_ADDRESS";
+            ".UniversalSyncService.EXTRA_DEVICE_ADDRESS";
 
     /**
      * Extra used together with ACTION_IGNORE_DEVICE
      */
     public static final String EXTRA_DEVICE_NAME =
-            ".Universal SyncService.EXTRA_DEVICE_NAME";
+            ".UniversalSyncService.EXTRA_DEVICE_NAME";
 
     /**
      * Extra used together with ACTION_IGNORE_FOLDER
      */
     public static final String EXTRA_FOLDER_ID =
-            ".Universal SyncService.EXTRA_FOLDER_ID";
+            ".UniversalSyncService.EXTRA_FOLDER_ID";
 
     /**
      * Extra used together with ACTION_IGNORE_FOLDER
      */
     public static final String EXTRA_FOLDER_LABEL =
-            ".Universal SyncService.EXTRA_FOLDER_LABEL";
+            ".UniversalSyncService.EXTRA_FOLDER_LABEL";
 
     /**
      * Extra used together with ACTION_STOP.
      */
     public static final String EXTRA_STOP_AFTER_CRASHED_NATIVE =
-            ".Universal SyncService.EXTRA_STOP_AFTER_CRASHED_NATIVE";
+            ".UniversalSyncService.EXTRA_STOP_AFTER_CRASHED_NATIVE";
 
     public interface OnServiceStateChangeListener {
         void onServiceStateChange(State currentState);
@@ -178,7 +178,7 @@ public class Universal SyncService extends Service {
     }
 
     /**
-     * Indicates the current state of Universal SyncService and of Universal Sync itself.
+     * Indicates the current state of UniversalSyncService and of Universal Sync itself.
      */
     public enum State {
         /**
@@ -213,11 +213,11 @@ public class Universal SyncService extends Service {
     private State mCurrentState = State.DISABLED;
     private ConfigRouter mConfigRouter;
     private ConfigXml mConfig;
-    private Thread mUniversal SyncRunnableThread = null;
+    private Thread mUniversalSyncRunnableThread = null;
     private Handler mHandler;
 
     private final HashSet<OnServiceStateChangeListener> mOnServiceStateChangeListeners = new HashSet<>();
-    private final Universal SyncServiceBinder mBinder = new Universal SyncServiceBinder(this);
+    private final UniversalSyncServiceBinder mBinder = new UniversalSyncServiceBinder(this);
 
     private @Nullable
     PollWebGuiAvailableTask mPollWebGuiAvailableTask = null;
@@ -232,7 +232,7 @@ public class Universal SyncService extends Service {
     RunConditionMonitor mRunConditionMonitor = null;
 
     private @Nullable
-    Universal SyncRunnable mUniversal SyncRunnable = null;
+    UniversalSyncRunnable mUniversalSyncRunnable = null;
 
     @Inject
     NotificationHandler mNotificationHandler;
@@ -261,10 +261,10 @@ public class Universal SyncService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         LogV("onCreate");
-        mConfigRouter = new ConfigRouter(Universal SyncService.this);
+        mConfigRouter = new ConfigRouter(UniversalSyncService.this);
         mHandler = new Handler();
 
         /**
@@ -298,10 +298,10 @@ public class Universal SyncService extends Service {
             /**
              * Instantiate the run condition monitor on first onStartCommand and
              * enable callback on run condition change affecting the final decision to
-             * run/terminate syncthing. After initial run conditions are collected
+             * run/terminate universalsync. After initial run conditions are collected
              * the first decision is sent to {@link onShouldRunDecisionChanged}.
              */
-            mRunConditionMonitor = new RunConditionMonitor(Universal SyncService.this,
+            mRunConditionMonitor = new RunConditionMonitor(UniversalSyncService.this,
                 this::onShouldRunDecisionChanged,
                 this::applyCustomRunConditions
             );
@@ -314,12 +314,12 @@ public class Universal SyncService extends Service {
 
         if (ACTION_RESTART.equals(intent.getAction()) && mCurrentState == State.ACTIVE) {
             shutdown(State.INIT);
-            launchStartupTask(Universal SyncRunnable.Command.main);
+            launchStartupTask(UniversalSyncRunnable.Command.main);
         } else if (ACTION_STOP.equals(intent.getAction())) {
             if (intent.getBooleanExtra(EXTRA_STOP_AFTER_CRASHED_NATIVE, false)) {
                 /**
-                 * We were requested to stop the service because the syncthing native binary crashed.
-                 * Changing mCurrentState prevents the "defer until syncthing is started" routine we normally
+                 * We were requested to stop the service because the universalsync native binary crashed.
+                 * Changing mCurrentState prevents the "defer until universalsync is started" routine we normally
                  * use for clean shutdown to take place. Instead, we will immediately shutdown the crashed
                  * instance forcefully.
                  */
@@ -334,27 +334,27 @@ public class Universal SyncService extends Service {
             }
         } else if (ACTION_RESET_DATABASE.equals(intent.getAction())) {
             /**
-             * 1. Stop syncthing native if it's running.
-             * 2. Reset the database, syncthing native will exit after performing the reset.
-             * 3. Relaunch syncthing native if it was previously running.
+             * 1. Stop universalsync native if it's running.
+             * 2. Reset the database, universalsync native will exit after performing the reset.
+             * 3. Relaunch universalsync native if it was previously running.
              */
             Log.i(TAG, "Invoking reset of database");
             if (mCurrentState != State.DISABLED) {
                 // Shutdown synchronously.
                 shutdown(State.DISABLED);
             }
-            new Universal SyncRunnable(this, Universal SyncRunnable.Command.resetdatabase).run();
+            new UniversalSyncRunnable(this, UniversalSyncRunnable.Command.resetdatabase).run();
             if (mLastDeterminedShouldRun) {
-                launchStartupTask(Universal SyncRunnable.Command.main);
+                launchStartupTask(UniversalSyncRunnable.Command.main);
             }
         } else if (ACTION_RESET_DELTAS.equals(intent.getAction())) {
             /**
-             * 1. Stop syncthing native if it's running.
-             * 2. Reset delta index, syncthing native will NOT exit after performing the reset.
-             * 3. If syncthing was previously NOT running:
+             * 1. Stop universalsync native if it's running.
+             * 2. Reset delta index, universalsync native will NOT exit after performing the reset.
+             * 3. If universalsync was previously NOT running:
              * 3.1  Schedule a shutdown of the native binary after it left State.STARTING (to State.ACTIVE).
              *      This is the moment, when the reset delta index work was completed and Web UI came up.
-             * 3.2  The shutdown gets deferred until State.ACTIVE was reached and then syncthing native will
+             * 3.2  The shutdown gets deferred until State.ACTIVE was reached and then universalsync native will
              *      be shutdown synchronously.
              */
             Log.i(TAG, "Invoking reset of delta indexes");
@@ -362,9 +362,9 @@ public class Universal SyncService extends Service {
                 // Shutdown synchronously.
                 shutdown(State.DISABLED);
             }
-            launchStartupTask(Universal SyncRunnable.Command.resetdeltas);
+            launchStartupTask(UniversalSyncRunnable.Command.resetdeltas);
             if (!mLastDeterminedShouldRun) {
-                // Shutdown if syncthing was not running before the UI action was raised.
+                // Shutdown if universalsync was not running before the UI action was raised.
                 shutdown(State.DISABLED);
             }
         } else if (ACTION_REFRESH_NETWORK_INFO.equals(intent.getAction())) {
@@ -399,10 +399,10 @@ public class Universal SyncService extends Service {
 
     /**
      * Event handler ot catch a fresh service startup right after the run condition evaluation took place
-     * and Universal SyncNative may be starting in the background meanwhilst or non-present.
+     * and UniversalSyncNative may be starting in the background meanwhilst or non-present.
      */
     private void afterFreshServiceInstanceStart() {
-        LogV("afterFreshServiceInstanceStart: Service started from scratch, Universal SyncNative is going to STATE_" + mCurrentState + " meanwhilst ...");
+        LogV("afterFreshServiceInstanceStart: Service started from scratch, UniversalSyncNative is going to STATE_" + mCurrentState + " meanwhilst ...");
         if (mCurrentState == State.DISABLED) {
             // Read and parse the config from disk.
             ConfigXml configXml = new ConfigXml(this);
@@ -421,8 +421,8 @@ public class Universal SyncService extends Service {
 
     /**
      * After run conditions monitored by {@link RunConditionMonitor} changed and
-     * it had an influence on the decision to run/terminate syncthing, this
-     * function is called to notify this class to run/terminate the syncthing binary.
+     * it had an influence on the decision to run/terminate universalsync, this
+     * function is called to notify this class to run/terminate the universalsync binary.
      * {@link #onServiceStateChange} is called while applying the decision change.
      */
     private void onShouldRunDecisionChanged(boolean newShouldRunDecision) {
@@ -432,11 +432,11 @@ public class Universal SyncService extends Service {
 
             // React to the shouldRun condition change.
             if (newShouldRunDecision) {
-                // Start syncthing.
+                // Start universalsync.
                 switch (mCurrentState) {
                     case DISABLED:
                     case INIT:
-                        launchStartupTask(Universal SyncRunnable.Command.main);
+                        launchStartupTask(UniversalSyncRunnable.Command.main);
                         break;
                     case STARTING:
                     case ACTIVE:
@@ -446,7 +446,7 @@ public class Universal SyncService extends Service {
                         break;
                 }
             } else {
-                // Stop syncthing.
+                // Stop universalsync.
                 if (mCurrentState == State.DISABLED) {
                     return;
                 }
@@ -462,7 +462,7 @@ public class Universal SyncService extends Service {
     private void applyCustomRunConditions(RunConditionMonitor runConditionMonitor) {
         synchronized (mStateLock) {
             if (mRestApi != null && mCurrentState == State.ACTIVE) {
-                // Forward event because syncthing is running.
+                // Forward event because universalsync is running.
                 mRestApi.applyCustomRunConditions(runConditionMonitor);
                 return;
             }
@@ -543,9 +543,9 @@ public class Universal SyncService extends Service {
     }
 
     /**
-     * Prepares to launch the syncthing binary.
+     * Prepares to launch the universalsync binary.
      */
-    private void launchStartupTask(Universal SyncRunnable.Command srCommand) {
+    private void launchStartupTask(UniversalSyncRunnable.Command srCommand) {
         synchronized (mStateLock) {
             if (mCurrentState != State.DISABLED && mCurrentState != State.INIT) {
                 Log.e(TAG, "launchStartupTask: Wrong state " + mCurrentState + " detected. Cancelling.");
@@ -565,11 +565,11 @@ public class Universal SyncService extends Service {
             return;
         }
 
-        // Check if the Universal SyncNative's configured webgui port is allocated by another app or process.
+        // Check if the UniversalSyncNative's configured webgui port is allocated by another app or process.
         Integer webGuiTcpPort = mConfig.getWebGuiBindPort();
         Boolean isWebUIPortListening = Util.isTcpPortListening(webGuiTcpPort);
         if (isWebUIPortListening) {
-            // We shouldn't start Universal SyncNative as we would wait forever for life signs on the configured port. (ANR)
+            // We shouldn't start UniversalSyncNative as we would wait forever for life signs on the configured port. (ANR)
             Log.e(TAG, "launchStartupTask: WebUI tcp port " + Integer.toString(webGuiTcpPort) + " unavailable. Second instance?");
             mNotificationHandler.showCrashedNotification(R.string.webui_tcp_port_unavailable, Integer.toString(webGuiTcpPort));
             return;
@@ -583,36 +583,36 @@ public class Universal SyncService extends Service {
             Log.i(TAG, "Web GUI will be available at " + mConfig.getWebGuiUrl());
         }
 
-        // Check mUniversal SyncRunnable lifecycle and create singleton.
-        if (mUniversal SyncRunnable != null || mUniversal SyncRunnableThread != null) {
+        // Check mUniversalSyncRunnable lifecycle and create singleton.
+        if (mUniversalSyncRunnable != null || mUniversalSyncRunnableThread != null) {
             Log.e(TAG, "onStartupTaskCompleteListener: Universal Sync binary lifecycle violated");
             return;
         }
-        mUniversal SyncRunnable = new Universal SyncRunnable(this, srCommand);
+        mUniversalSyncRunnable = new UniversalSyncRunnable(this, srCommand);
 
         /**
-         * Check if an old syncthing instance is still running.
+         * Check if an old universalsync instance is still running.
          * This happens after an in-place app upgrade. If so, end it.
          */
-        Util.killProcess(Constants.FILENAME_SYNCTHING_BINARY);
+        Util.killProcess(Constants.FILENAME_UNIVERSALSYNC_BINARY);
 
-        // Start the syncthing binary in a separate thread.
-        Thread.UncaughtExceptionHandler syncthingRunnableThreadExceptionHandler = new Thread.UncaughtExceptionHandler() {
-                public void uncaughtException(Thread syncthingRunnableThread, Throwable ex) {
-                    Log.e(TAG, "mUniversal SyncRunnableThread: Uncaught exception [ExecutableNotFoundException]");
-                    mNotificationHandler.showCrashedNotification(R.string.executable_not_found, Constants.FILENAME_SYNCTHING_BINARY);
+        // Start the universalsync binary in a separate thread.
+        Thread.UncaughtExceptionHandler universalsyncRunnableThreadExceptionHandler = new Thread.UncaughtExceptionHandler() {
+                public void uncaughtException(Thread universalsyncRunnableThread, Throwable ex) {
+                    Log.e(TAG, "mUniversalSyncRunnableThread: Uncaught exception [ExecutableNotFoundException]");
+                    mNotificationHandler.showCrashedNotification(R.string.executable_not_found, Constants.FILENAME_UNIVERSALSYNC_BINARY);
                 }
         };
-        mUniversal SyncRunnableThread = new Thread(mUniversal SyncRunnable);
-        mUniversal SyncRunnableThread.setUncaughtExceptionHandler(syncthingRunnableThreadExceptionHandler);
-        mUniversal SyncRunnableThread.start();
+        mUniversalSyncRunnableThread = new Thread(mUniversalSyncRunnable);
+        mUniversalSyncRunnableThread.setUncaughtExceptionHandler(universalsyncRunnableThreadExceptionHandler);
+        mUniversalSyncRunnableThread.start();
 
         /**
-         * Wait for the web-gui of the native syncthing binary to come online.
+         * Wait for the web-gui of the native universalsync binary to come online.
          *
          * In case the binary is to be stopped, also be aware that another thread could request
          * to stop the binary in the time while waiting for the GUI to become active. See the comment
-         * for {@link Universal SyncService#onDestroy} for details.
+         * for {@link UniversalSyncService#onDestroy} for details.
          */
         if (mPollWebGuiAvailableTask == null) {
             mPollWebGuiAvailableTask = new PollWebGuiAvailableTask(
@@ -646,13 +646,13 @@ public class Universal SyncService extends Service {
         }
 
         if (mEventProcessor == null) {
-            mEventProcessor = new EventProcessor(Universal SyncService.this, mRestApi);
+            mEventProcessor = new EventProcessor(UniversalSyncService.this, mRestApi);
             mEventProcessor.start();
         }
     }
 
     @Override
-    public Universal SyncServiceBinder onBind(Intent intent) {
+    public UniversalSyncServiceBinder onBind(Intent intent) {
         return mBinder;
     }
 
@@ -676,14 +676,14 @@ public class Universal SyncService extends Service {
         if (!mStoragePermissionGranted) {
             // If the storage permission got revoked, we did not start the binary and
             // are in State.INIT requiring an immediate shutdown of this service class.
-            Log.i(TAG, "Shutting down syncthing binary due to missing storage permission.");
+            Log.i(TAG, "Shutting down universalsync binary due to missing storage permission.");
         }
         shutdown(State.DISABLED);
         super.onDestroy();
     }
 
     /**
-     * Stop Universal SyncNative and all helpers like event processor and api handler.
+     * Stop UniversalSyncNative and all helpers like event processor and api handler.
      * Sets {@link #mCurrentState} to newState.
      * Performs a synchronous shutdown of the native binary.
      */
@@ -715,25 +715,25 @@ public class Universal SyncService extends Service {
         }
 
         if (mRestApi != null) {
-            if (mUniversal SyncRunnable != null) {
+            if (mUniversalSyncRunnable != null) {
                 mRestApi.shutdown();
             }
             mRestApi = null;
         }
 
-        if (mUniversal SyncRunnable != null) {
-            Util.killProcess(Constants.FILENAME_SYNCTHING_BINARY);
-            if (mUniversal SyncRunnableThread != null) {
-                LogV("Waiting for mUniversal SyncRunnableThread to finish after killProcess(Universal Sync) ...");
+        if (mUniversalSyncRunnable != null) {
+            Util.killProcess(Constants.FILENAME_UNIVERSALSYNC_BINARY);
+            if (mUniversalSyncRunnableThread != null) {
+                LogV("Waiting for mUniversalSyncRunnableThread to finish after killProcess(Universal Sync) ...");
                 try {
-                    mUniversal SyncRunnableThread.join();
+                    mUniversalSyncRunnableThread.join();
                 } catch (InterruptedException e) {
-                    Log.w(TAG, "mUniversal SyncRunnableThread InterruptedException");
+                    Log.w(TAG, "mUniversalSyncRunnableThread InterruptedException");
                 }
-                Log.d(TAG, "Finished mUniversal SyncRunnableThread.");
-                mUniversal SyncRunnableThread = null;
+                Log.d(TAG, "Finished mUniversalSyncRunnableThread.");
+                mUniversalSyncRunnableThread = null;
             }
-            mUniversal SyncRunnable = null;
+            mUniversalSyncRunnable = null;
         }
     }
 
@@ -755,7 +755,7 @@ public class Universal SyncService extends Service {
     }
 
     /**
-     * Register a listener for the syncthing API state changing.
+     * Register a listener for the universalsync API state changing.
      * The listener is called immediately with the current state, and again whenever the state
      * changes. The call is always from the GUI thread.
      *
@@ -822,10 +822,10 @@ public class Universal SyncService extends Service {
 
     /**
      * Get backup zip file.
-     * Default: /storage/emulated0/backups/syncthing/config.zip
+     * Default: /storage/emulated0/backups/universalsync/config.zip
      */
     private final File getBackupZipFile() {
-        String defaultPath = "backups/syncthing/config.zip";
+        String defaultPath = "backups/universalsync/config.zip";
         String relPathToZip = mPreferences.getString(Constants.PREF_BACKUP_REL_PATH_TO_ZIP, defaultPath);
         // NOTE: somehow we get empty string from the prefs, which crashes the app, use default when that happens
         // TODO: figure out where the empty string is coming from and fix that
@@ -839,7 +839,7 @@ public class Universal SyncService extends Service {
      * Exports the local config and keys to {@link Constants#EXPORT_PATH}.
      *
      * Test with Android Virtual Device using emulator.
-     * cls & adb shell su 0 "ls -a -l -R /data/data/${applicationId}/files; echo === SDCARD ===; ls -a -l -R /storage/emulated/0/backups/syncthing"
+     * cls & adb shell su 0 "ls -a -l -R /data/data/${applicationId}/files; echo === SDCARD ===; ls -a -l -R /storage/emulated/0/backups/universalsync"
      *
      */
     public boolean exportConfig() {
@@ -945,13 +945,13 @@ public class Universal SyncService extends Service {
         }
         Log.d(TAG, "exportConfig END");
 
-        // Start syncthing after export if run conditions apply.
+        // Start universalsync after export if run conditions apply.
         if (mLastDeterminedShouldRun) {
             Handler mainLooper = new Handler(Looper.getMainLooper());
             Runnable launchStartupTaskRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    launchStartupTask(Universal SyncRunnable.Command.main);
+                    launchStartupTask(UniversalSyncRunnable.Command.main);
                 }
             };
             mainLooper.post(launchStartupTaskRunnable);
@@ -963,7 +963,7 @@ public class Universal SyncService extends Service {
      * Imports config and keys from {@link Constants#EXPORT_PATH}.
      *
      * Test with Android Virtual Device using emulator.
-     * cls & adb shell su 0 "ls -a -l -R /data/data/${applicationId}/files; echo === SDCARD ===; ls -a -l -R /storage/emulated/0/backups/syncthing"
+     * cls & adb shell su 0 "ls -a -l -R /data/data/${applicationId}/files; echo === SDCARD ===; ls -a -l -R /storage/emulated/0/backups/universalsync"
      *
      * @return True if the import was successful, false otherwise (eg if files aren't found).
      */
@@ -1015,7 +1015,7 @@ public class Universal SyncService extends Service {
             return false;
         }
 
-        // Shutdown Universal SyncNative.
+        // Shutdown UniversalSyncNative.
         Boolean failSuccess = true;
         Log.d(TAG, "importConfig BEGIN");
         if (mCurrentState != State.DISABLED) {
@@ -1075,13 +1075,13 @@ public class Universal SyncService extends Service {
             Log.e(TAG, "importConfig: Failed to cleanup invalid folder databases", e);
         }
 
-        // Start syncthing after import if run conditions apply.
+        // Start universalsync after import if run conditions apply.
         if (mLastDeterminedShouldRun) {
             Handler mainLooper = new Handler(Looper.getMainLooper());
             Runnable launchStartupTaskRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    launchStartupTask(Universal SyncRunnable.Command.main);
+                    launchStartupTask(UniversalSyncRunnable.Command.main);
                 }
             };
             mainLooper.post(launchStartupTaskRunnable);
@@ -1145,13 +1145,13 @@ public class Universal SyncService extends Service {
             restoreFile(certBak, certFile);
             restoreFile(keyBak, keyFile);
             if (mLastDeterminedShouldRun) {
-                launchStartupTask(Universal SyncRunnable.Command.main);
+                launchStartupTask(UniversalSyncRunnable.Command.main);
             }
             listener.onResult(HttpsCertReplaceResult.FAILED, e.getMessage());
             return;
         }
 
-        // Captured before the restart so we can tell afterwards whether syncthing is actually serving
+        // Captured before the restart so we can tell afterwards whether universalsync is actually serving
         // what we wrote, or replaced it with a self-signed certificate of its own.
         final String expectedFingerprint = CertificateValidator.leafFingerprint(certPem);
         applyCertChangeWithVerify(certFile, keyFile, certBak, keyBak, expectedFingerprint, listener);
@@ -1172,11 +1172,11 @@ public class Universal SyncService extends Service {
 
         final File certBak = backupFile(certFile);
         final File keyBak = backupFile(keyFile);
-        // Removing the files makes syncthing generate a fresh self-signed certificate at startup.
+        // Removing the files makes universalsync generate a fresh self-signed certificate at startup.
         deleteQuietly(certFile);
         deleteQuietly(keyFile);
 
-        // No expected fingerprint: regenerating is the whole point here, so any certificate syncthing
+        // No expected fingerprint: regenerating is the whole point here, so any certificate universalsync
         // comes up with is the right one.
         applyCertChangeWithVerify(certFile, keyFile, certBak, keyBak, null, listener);
     }
@@ -1199,7 +1199,7 @@ public class Universal SyncService extends Service {
      * Restarts the binary and watches the service state: failure on ERROR / an abnormal
      * STARTING&rarr;DISABLED transition (crashed binary) / a watchdog timeout.
      *
-     * Reaching ACTIVE is necessary but <b>not sufficient</b>. When syncthing cannot load the cert/key
+     * Reaching ACTIVE is necessary but <b>not sufficient</b>. When universalsync cannot load the cert/key
      * pair it does not fail — it generates a fresh self-signed certificate, overwrites the files, and
      * starts normally (see {@code lib/api/api.go} {@code getListener}). So success additionally
      * requires the certificate on disk to still be the one we wrote, identified by
@@ -1218,7 +1218,7 @@ public class Universal SyncService extends Service {
         final HttpsCertReplaceResult[] failureReason = {HttpsCertReplaceResult.FAILED_NOT_ONLINE};
 
         final Runnable finishFailure = () -> {
-            // Stop first, then restore. In the FAILED_CERT_REJECTED case syncthing is running and
+            // Stop first, then restore. In the FAILED_CERT_REJECTED case universalsync is running and
             // serving a certificate that differs from the file on disk; restoring the file underneath
             // a live instance would leave ApiRequest pinning against a certificate that is not the one
             // being served, so any request in that window fails.
@@ -1228,7 +1228,7 @@ public class Universal SyncService extends Service {
             restoreFile(certBak, certFile);
             restoreFile(keyBak, keyFile);
             // Bring the previous, known-good certificate back online.
-            launchStartupTask(Universal SyncRunnable.Command.main);
+            launchStartupTask(UniversalSyncRunnable.Command.main);
             listener.onResult(failureReason[0], null);
         };
         final Runnable finishSuccess = () -> {
@@ -1287,7 +1287,7 @@ public class Universal SyncService extends Service {
         // that is ignored because sawStarting is still false.
         registerOnServiceStateChangeListener(verifyListener[0]);
         mHandler.postDelayed(watchdog[0], HTTPS_CERT_VERIFY_TIMEOUT_MS);
-        launchStartupTask(Universal SyncRunnable.Command.main);
+        launchStartupTask(UniversalSyncRunnable.Command.main);
     }
 
     /**
@@ -1347,7 +1347,7 @@ public class Universal SyncService extends Service {
     }
 
     private void restrictToOwner(File file) {
-        // Mirror syncthing core, which writes the HTTPS key with 0600 permissions.
+        // Mirror universalsync core, which writes the HTTPS key with 0600 permissions.
         file.setReadable(false, false);
         file.setReadable(true, true);
         file.setWritable(false, false);
@@ -1388,7 +1388,7 @@ public class Universal SyncService extends Service {
 
             if (folderPathMissing || markerMissing) {
                 Log.i(TAG, "importConfig: Folder path or marker missing for folder id \"" + folder.id + "\". Resetting Universal Sync database.");
-                new Universal SyncRunnable(this, Universal SyncRunnable.Command.resetdatabase).run();
+                new UniversalSyncRunnable(this, UniversalSyncRunnable.Command.resetdatabase).run();
                 break;
             }
         }

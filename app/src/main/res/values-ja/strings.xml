@@ -48,7 +48,7 @@
     <string name="grant_storage_permission">ストレージアクセスを許可して下さい。</string>
     <string name="grant_camera_permission">カメラアクセスを許可して下さい。</string>
     <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_syncthing_camera_folder_label">Universal Sync カメラ</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync カメラ</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">すべてを再スキャンする</string>
@@ -64,7 +64,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">デバイス ID を送信…</string>
     <string name="usage_reporting_dialog_title">匿名での使用状況レポートを許可しますか?</string>
-    <string name="usage_reporting_dialog_description">使用状況レポートは暗号化されて毎日送信されます。この情報はプラットフォーム、フォルダーのサイズ、アプリケーションのバージョンを調査するために使われます。送信するデータセットが変更された場合、このダイアログで再度確認が求められます。 \n \n集計結果は https://data.syncthing.net で公開されています。</string>
+    <string name="usage_reporting_dialog_description">使用状況レポートは暗号化されて毎日送信されます。この情報はプラットフォーム、フォルダーのサイズ、アプリケーションのバージョンを調査するために使われます。送信するデータセットが変更された場合、このダイアログで再度確認が求められます。 \n \n集計結果は https://data.Universal Sync.net で公開されています。</string>
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
     <string name="open_website">Web サイトを開く</string>
@@ -125,10 +125,10 @@
     <string name="button_follow_run_conditions">実行条件に従う</string>
     <string name="button_force_start">強制開始 \n実行条件を無視</string>
     <string name="button_force_stop">強制停止 \n実行条件を無視</string>
-    <string name="syncthing_starting">Universal Sync が開始しています</string>
-    <string name="syncthing_running">Universal Sync は実行中です</string>
-    <string name="syncthing_not_running">Universal Sync は実行していません</string>
-    <string name="syncthing_has_crashed">Universal Sync がクラッシュしました</string>
+    <string name="universalsync_starting">Universal Sync が開始しています</string>
+    <string name="universalsync_running">Universal Sync は実行中です</string>
+    <string name="universalsync_not_running">Universal Sync は実行していません</string>
+    <string name="universalsync_has_crashed">Universal Sync がクラッシュしました</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"ダウンロード: "</string>
@@ -244,8 +244,8 @@
     <string name="preference_app_theme_follow_light">ライト</string>
     <string name="preference_app_theme_follow_dark">ダーク</string>
     <string name="category_behaviour">動作</string>
-    <string name="category_syncthing_options">同期オプション</string>
-    <string name="category_syncthing_options_summary">このメニューは、Universal Sync が起動している場合にのみ表示されます。</string>
+    <string name="category_universalsync_options">同期オプション</string>
+    <string name="category_universalsync_options_summary">このメニューは、Universal Sync が起動している場合にのみ表示されます。</string>
     <string name="category_backup">インポートとエクスポート</string>
     <string name="category_debug">トラブルシューティング</string>
     <string name="category_experimental">実験的</string>
@@ -348,15 +348,15 @@
     <string name="report_issue_title">問題を報告</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync バージョン</string>
+    <string name="universalsync_version_title">Universal Sync バージョン</string>
     <!-- Title of the preference showing this app's version name -->
     <string name="app_version_title">Universal Sync-Fork ラッパー バージョン</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="syncthing_api_key">Universal Sync API キー (クリックでコピー)</string>
+    <string name="universalsync_api_key">Universal Sync API キー (クリックでコピー)</string>
     <!-- Shown when the API key is copied to the clipboard -->
     <string name="api_key_copied_to_clipboard">Universal Sync APIキーがクリップボードにコピーされました</string>
     <!-- Title of the preference showing database size -->
-    <string name="syncthing_database_size">Universal Sync データベースサイズ</string>
+    <string name="universalsync_database_size">Universal Sync データベースサイズ</string>
     <!-- Title of the preference showing the OS open file limit -->
     <string name="os_open_file_limit">Androidファイルオープン制限</string>
     <!-- FolderPickerAcitivity -->
@@ -372,12 +372,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">上にあがる</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Universal Syncログ</string>
+    <string name="universalsync_log_title">Universal Syncログ</string>
     <string name="android_log_title">Androidログ</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Android ログを表示</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Universal Sync ログを表示</string>
+    <string name="view_universalsync_log">Universal Sync ログを表示</string>
     <string name="retrieving_logs">ログの取得中…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">共有</string>
@@ -413,21 +413,21 @@
     <string name="reason_not_charging">携帯電話が充電されていません。</string>
     <string name="reason_not_on_battery_power">携帯電話はバッテリー駆動していません。</string>
     <string name="reason_on_mobile_data">Universal Syncはモバイルデータでの動作が許可されています。</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">終了</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync は実行中です</string>
-    <string name="syncthing_active_details">Universal Sync 実行中： %1$s</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync は実行中です</string>
+    <string name="universalsync_active_details">Universal Sync 実行中： %1$s</string>
     <string name="no_remote_devices_connected">リモートデバイスが接続されていません</string>
     <plurals name="device_online_up_to_date">
         <item quantity="other">%1$d：デバイスオンライン＆最新状態</item>
     </plurals>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="other">Syncing: %1$d%% 完了、%2$d デバイスオンライン</item>
     </plurals>
-    <string name="syncthing_disabled">Universal Sync スリープ中</string>
-    <string name="syncthing_terminated">Universal Sync は終了しました。</string>
+    <string name="universalsync_disabled">Universal Sync スリープ中</string>
+    <string name="universalsync_terminated">Universal Sync は終了しました。</string>
     <string name="config_create_failed">設定ファイルの作成に失敗しました</string>
     <!-- Label of the default folder created of first start (camera folder). -->
     <string name="default_android_camera_folder_label">Android カメラ</string>
@@ -543,11 +543,11 @@
     <string name="photo_shoot_intro_permission_desc">Universal Syncカメラは、写真を撮影してデバイスに保存するためにお客様の同意が必要です。この機能はオプションです。使用するには、許可を与えて「続行」をタップしてください。Universal Syncカメラフォルダの設定を行います。</string>
     <string name="dialog_exit_while_running_as_service_message">ご参考までに：あなたはアプリを「起動時に自動的に開始」するよう設定しています。そのため、アプリは条件が合えばバックグラウンドでいつでも同期や監視を行います。深刻な問題が発生した場合のみ手動で終了してください。それ以外の場合は、設定で「起動時に自動的に開始」を無効にしてください。今すぐデバイスを再起動するまでアプリを終了しますか？</string>
     <string name="folder_path_readwrite">Android バージョンにより、選択したフォルダーへの読み取りおよび書き込みアクセス権が Universal Sync に付与されます。</string>
-    <string name="folder_ignore_delete_description">受信インデックス更新の処理に影響するエキスパートオプションです。設定すると、削除フラグが設定された受信更新は無視されます。詳細は、https://docs.syncthing.net/advanced/folder-ignoredelete.html をご覧ください</string>
+    <string name="folder_ignore_delete_description">受信インデックス更新の処理に影響するエキスパートオプションです。設定すると、削除フラグが設定された受信更新は無視されます。詳細は、https://docs.Universal Sync.net/advanced/folder-ignoredelete.html をご覧ください</string>
     <string name="discovered_device_list_empty">ローカルネットワーク上でデバイスが見つかりませんでした。このアプリを2台目のスマートフォンで実行してください。パソコン用のインストールファイルは%1$sから入手できます</string>
     <string name="untrusted_device_explanation">このデバイスと共有されるすべてのフォルダーはパスワードで保護される必要があり、送信されたすべてのデータは指定されたパスワードがなければ読み取れなくなります。</string>
     <string name="local_discovery_disabled">「設定」&gt;「Universal Syncオプション」&gt;「ローカル検出」でローカル検出が無効になっています。ローカルネットワーク上のデバイスを検索するには、ローカル検出を有効にしてください。</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">注意：Universal SyncNative が中断され、何か異常な動作をした場合、それはあなたの責任です。デバイスが許可の付与をサポートしていない場合にのみスキップしてください。本当にスキップしますか？</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">注意：UniversalSyncNative が中断され、何か異常な動作をした場合、それはあなたの責任です。デバイスが許可の付与をサポートしていない場合にのみスキップしてください。本当にスキップしますか？</string>
     <string name="photo_shoot_take_picture_success">写真を Universal Sync カメラ フォルダーに正常に保存しました。</string>
     <string name="folder_rejected">デバイス「%1$s」がフォルダ「%2$s」を共有しようとしています</string>
     <string name="advanced_directory_selection">高度なディレクトリ選択</string>

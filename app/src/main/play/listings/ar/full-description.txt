@@ -24,14 +24,14 @@ Universal Sync-Fork لنظام Android هو غلاف لـ Universal Sync يوف�
 * تختلف الاستراتيجية وتواتر الإصدارات.
 * يتناول هذا التفرع الغلاف الذي يحتوي على واجهة مستخدم Android فقط.
 
-الموقع الإلكتروني: https://github.com/universalsync/syncthing-android
+الموقع الإلكتروني: https://github.com/universalsync/Universal Sync Android
 
-شفرة المصدر: https://github.com/universalsync/syncthing-android
+شفرة المصدر: https://github.com/universalsync/Universal Sync Android
 
-كيف يكتب Universal Sync على بطاقة SD الخارجية: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+كيف يكتب Universal Sync على بطاقة SD الخارجية: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-الويكي، الأسئلة الشائعة، والمقالات المفيدة: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+الويكي، الأسئلة الشائعة، والمقالات المفيدة: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-المشكلات: https://github.com/universalsync/syncthing-android/issues
+المشكلات: https://github.com/universalsync/Universal Sync Android/issues
 
-يرجى المساعدة في الترجمة: https://hosted.weblate.org/projects/syncthing-fork/app/
+يرجى المساعدة في الترجمة: https://hosted.weblate.org/projects/Universal Sync/app/

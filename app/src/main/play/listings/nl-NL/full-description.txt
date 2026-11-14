@@ -13,15 +13,15 @@ Universal Sync-Fork voor Android is een wrapper voor Universal Sync die een Andr
 
 Zoek eerst hulp op het forum en/of sociale media-apps voordat u issues aanmaakt op de tracker. Houd er rekening mee dat Universal Sync-Fork is ontstaan uit persoonlijke interesse om familie en vrienden te helpen Universal Sync op Android te gebruiken. Het was niet bedoeld voor de momenteel meer dan 100.000 gebruikers, ook al worden de resultaten met u en de community gedeeld. Hartelijk dank.
 
-Website: https://github.com/universalsync/syncthing-android
+Website: https://github.com/universalsync/Universal Sync Android
 
-Broncode: https://github.com/universalsync/syncthing-android
+Broncode: https://github.com/universalsync/Universal Sync Android
 
-Hoe Universal Sync naar een externe SD-kaart schrijft: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Hoe Universal Sync naar een externe SD-kaart schrijft: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, veelgestelde vragen en nuttige artikelen: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, veelgestelde vragen en nuttige artikelen: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Problemen: https://github.com/universalsync/syncthing-android/issues
+Problemen: https://github.com/universalsync/Universal Sync Android/issues
 
 Help mee met de
-Vertaling: https://hosted.weblate.org/projects/syncthing-fork/app/
+Vertaling: https://hosted.weblate.org/projects/Universal Sync/app/

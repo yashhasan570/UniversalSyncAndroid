@@ -33,7 +33,7 @@
     <string name="reason">السبب:</string>
     <string name="photo_shoot_take_picture_success">تم حفظ الصورة بنجاح في مجلد آلة تصوير Universal Sync.</string>
     <string name="welcome_text">Universal Sync هو تطبيق مزامنة ملفات مفتوح المصدر. لمشاركة البيانات مع أجهزة أخرى، تحتاج إلى إضافة معرّفات الأجهزة الفريدة الخاصة بها إلى قائمة الأجهزة. بعد ذلك، يمكنك تحديد المجلدات التي ترغب في مشاركتها ومع أي أجهزة. \n \nيرجى الإبلاغ عن أي مشاكل تواجهك عبر GitHub.</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">تنبيه: إذا تمت مقاطعة Universal SyncNative وقام بشيء غريب، فأنت المسؤول. تخطَّ فقط في حالة عدم دعم جهازك لمنح الإذن. هل تريد التخطي حقًا؟</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">تنبيه: إذا تمت مقاطعة UniversalSyncNative وقام بشيء غريب، فأنت المسؤول. تخطَّ فقط في حالة عدم دعم جهازك لمنح الإذن. هل تريد التخطي حقًا؟</string>
     <string name="accept">قبول</string>
     <string name="ignore">تجاهل</string>
     <string name="page_x_of_y">صفحة ‎%1$s‏ من ‎%2$s</string>
@@ -47,7 +47,7 @@
     <string name="grant_storage_permission">منح إذن التخزين</string>
     <string name="grant_camera_permission">منح إذن آلة التصوير</string>
     <string name="photo_shoot_take_picture_failure">فشل التقاط الصورة أو أنك ألغيت العملية.</string>
-    <string name="default_syncthing_camera_folder_label">آلة تصوير Universal Sync</string>
+    <string name="default_universalsync_camera_folder_label">آلة تصوير Universal Sync</string>
     <string name="activity_main_bottom_navigation_rescan_all">إعادة فحص الكل</string>
     <string name="open_main_menu">فتح القائمة الرئيسة</string>
     <string name="close_main_menu">إغلاق القائمة الرئيسة</string>
@@ -67,7 +67,7 @@
     <string name="key_generation_success">نجح إنشاء مفاتيح آمنة لتبادل البيانات الخاصة.</string>
     <string name="photo_shoot_intro_permission_desc">تتطلب آلة تصوير Universal Sync موافقتك لالتقاط الصور وتخزينها على جهازك. هذه الميزة اختيارية. لاستخدامها، امنح الأذونات وانقر على متابعة. سنقوم بإعداد مجلد آلة تصوير Universal Sync لك والذي يمكنك مشاركته مع أجهزة Universal Sync أخرى لاحقًا.</string>
     <string name="start_into_web_gui_title">بدء مباشرة في واجهة المستخدم الرسومية للـ Web</string>
-    <string name="webui_remote_access_summary">حدد للسماح بالوصول إلى واجهة المستخدم الرسومية للويب من جهاز آخر. إذا تم تمكينه، يمكنك تسجيل الدخول باستخدام المستخدم syncthing ومفتاح API ككلمة مرور. الافتراضي: معطل (الأكثر أمانًا)</string>
+    <string name="webui_remote_access_summary">حدد للسماح بالوصول إلى واجهة المستخدم الرسومية للويب من جهاز آخر. إذا تم تمكينه، يمكنك تسجيل الدخول باستخدام المستخدم Universal Sync ومفتاح API ككلمة مرور. الافتراضي: معطل (الأكثر أمانًا)</string>
     <string name="undo_ignored_devices_folders_question">سيؤدي هذا إلى التراجع عن القرارات السابقة بتجاهل الأجهزة والمجلدات. هل تريد المتابعة؟</string>
     <string name="undo_ignored_devices_folders_done">نجح التراجع عن القرارات.</string>
     <string name="invalid_integer_value" tools:ignore="PluralsCandidate">القيمة المدخلة غير صالحة. يرجى إدخال قيمة بين ‎%1$d‏ و ‎%2$d‏.</string>
@@ -123,8 +123,8 @@
     <string name="install_barcode_scanner_app_message">يتطلب هذا تطبيق ماسح ضوئي للرموز الشريطية. هل ترغب في تثبيت تطبيق Binary Eye من F-Droid؟</string>
     <string name="folders_list_empty">لا توجد مجلدات مُعَدّة. انقر لإضافة مجلد جديد.</string>
     <string name="category_behaviour">سُلوك</string>
-    <string name="category_syncthing_options">خيارات Universal Sync</string>
-    <string name="category_syncthing_options_summary">هذه القائمة متاحة فقط عندما يكون Universal Sync قيد التشغيل.</string>
+    <string name="category_universalsync_options">خيارات Universal Sync</string>
+    <string name="category_universalsync_options_summary">هذه القائمة متاحة فقط عندما يكون Universal Sync قيد التشغيل.</string>
     <string name="run_on_roaming_summary">السماح لـ Universal Sync باستخدام بيانات الجوال أثناء التجوال.</string>
     <string name="run_on_metered_wifi_title">تشغيل باستخدام Wi-Fi محدود السعة</string>
     <string name="run_on_metered_wifi_summary">التشغيل عندما يكون الجهاز متصلاً بشبكة Wi-Fi محدودة الاستخدام، على سبيل المثال نقطة اتصال أو شبكة مربوطة. انتباه: يمكن أن يستهلك هذا جزءًا كبيرًا من باقة بياناتك إذا قمت بمزامنة الكثير من البيانات.</string>
@@ -150,7 +150,7 @@
     <string name="sttrace_title">خيارات STTRACE</string>
     <string name="environment_variables">متغيرات البيئة</string>
     <string name="save_title">حفظ</string>
-    <string name="syncthing_disabled">في وضع السكون</string>
+    <string name="universalsync_disabled">في وضع السكون</string>
     <string name="state_scan_waiting">في انتظار الفحص</string>
     <string name="folder_type_sendonly_description">الملفات محمية من التغييرات التي تتم على الأجهزة الأخرى، ولكن التغييرات التي تتم على هذا الجهاز سيتم إرسالها إلى بقية المجموعة.</string>
     <string name="none">لا شيء</string>
@@ -160,7 +160,7 @@
     <string name="reason_not_on_wifi">يُسمح لـ Universal Sync بالتشغيل على Wi-Fi ولكن Wi-Fi ليس متصلاً أو الهاتف في وضع الطيران.</string>
     <string name="reason_on_metered_nonmetered_wifi">يُسمح لـ Universal Sync بالعمل على اتصالات Wi-Fi المحدودة وغير المحدودة الاستخدام.</string>
     <string name="reason_on_whitelisted_wifi">يُسمح لـ Universal Sync بالعمل على شبكة Wi-Fi الحالية.</string>
-    <string name="syncthing_active">قيد التشغيل</string>
+    <string name="universalsync_active">قيد التشغيل</string>
     <string name="notification_crash_title">تعطل (رمز الخروج ‎‏%1$s)</string>
     <string name="state_cleaning">تنظيف الإصدارات</string>
     <string name="state_clean_waiting">في انتظار التنظيف</string>
@@ -170,7 +170,7 @@
     <string name="custom_sync_conditions_title">شروط مزامنة مخصصة</string>
     <string name="custom_sync_conditions_description">يَسمح لك بتحديد استثناءات لشروط التشغيل العامة.</string>
     <string name="custom_sync_conditions_dialog">تحديد شروط المزامنة</string>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="zero">مزامنة: %%‎%1$d‏ مكتمل، لا أجهزة متصلة بالإنترنت</item>
         <item quantity="one">مزامنة: %%‎%1$d‏ مكتمل، جهاز واحد متصل بالإنترنت</item>
         <item quantity="two">مزامنة: %%‎%1$d‏ مكتمل، جهازان متصلان بالإنترنت</item>
@@ -199,7 +199,7 @@
     <string name="copy_progress">مشاركة الملفات…</string>
     <string name="reason_on_nonroaming_mobile_data">يُسمح لـ Universal Sync بالتشغيل على اتصالات بيانات الجوال بدون تجوال. الاتصال النشط بدون تجوال.</string>
     <string name="reason_on_flight_mode">Universal Sync قيد التشغيل لأنك سمحت له بالعمل عندما يكون وضع الطيران نشطًا.</string>
-    <string name="syncthing_active_details">قيد التشغيل: ‎%1$s</string>
+    <string name="universalsync_active_details">قيد التشغيل: ‎%1$s</string>
     <string name="browse">تصفّح</string>
     <plurals name="device_online_up_to_date">
         <item quantity="zero">%1$d جهاز متصل ومحدّث</item>
@@ -209,7 +209,7 @@
         <item quantity="many">%1$d جهازًا متصلًا ومحدثًا</item>
         <item quantity="other">%1$d جهاز متصل ومحدث</item>
     </plurals>
-    <string name="syncthing_terminated">تم إنهاؤها</string>
+    <string name="universalsync_terminated">تم إنهاؤها</string>
     <string name="folder_run_script_caption">تشغيل برنامج نَصّي</string>
     <string name="discovered_devices_title">الأجهزة المُكتَشَفة - أنقر للإختيار</string>
     <string name="local_discovery_disabled">لقد قمت بتعطيل الاكتشاف المحلي في الإعدادات &gt; خيارات Universal Sync &gt; الاكتشاف المحلي. قم بتمكينه للبحث عن الأجهزة على الشبكة المحلية.</string>
@@ -234,7 +234,7 @@
     <string name="open_source_licenses_title">تراخيص المصادر المفتوحة</string>
     <string name="advanced_storage_path_overview">نظرة عامة على مسار التخزين المتقدم</string>
     <string name="directory_empty">الدليل فارغ</string>
-    <string name="view_syncthing_log">عرض سجل Universal Sync</string>
+    <string name="view_universalsync_log">عرض سجل Universal Sync</string>
     <string name="folder_title">مجلد</string>
     <string name="custom_wifi_ssid_whitelist_empty">لا توجد معرّفات SSID لشبكات Wi-Fi في القائمة البيضاء. يرجى تحديد بعضها في الإعدادات.</string>
     <string name="no_remote_devices_connected">لا توجد أجهزة بعيدة متصلة</string>
@@ -260,13 +260,13 @@
     <string name="dialog_exit_while_running_as_service_title">تأكيد الخروج من التطبيق</string>
     <string name="device_rejected">الجهاز \"‎%1$s‏\" يُريد الاتصال</string>
     <string name="open_file_no_compatible_app">لم يتم العثور على تطبيق متوافق لفتح الملف.</string>
-    <string name="syncthing_running">Universal Sync قيد التشغيل.</string>
-    <string name="syncthing_not_running">Universal Sync ليس قيد التشغيل.</string>
-    <string name="syncthing_has_crashed">لقد تعطل Universal Sync.</string>
+    <string name="universalsync_running">Universal Sync قيد التشغيل.</string>
+    <string name="universalsync_not_running">Universal Sync ليس قيد التشغيل.</string>
+    <string name="universalsync_has_crashed">لقد تعطل Universal Sync.</string>
     <string name="uptime">مُدة التشغيل</string>
     <string name="folder_id">معرّف المجلد</string>
     <string name="folder_ignore_delete_caption">تجاهل الحذف</string>
-    <string name="folder_ignore_delete_description">خيار متقدم يؤثر على معالجة تحديثات الفهرس الواردة. عند التعيين، يتم تجاهل التحديثات الواردة التي تحمل علامة الحذف. راجع https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">خيار متقدم يؤثر على معالجة تحديثات الفهرس الواردة. عند التعيين، يتم تجاهل التحديثات الواردة التي تحمل علامة الحذف. راجع https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <string name="folder_pause">إيقاف المجلد مؤقتًا</string>
     <string name="devices">أجهزة</string>
     <string name="keep_versions">احتفظ بالإصدارات</string>
@@ -284,7 +284,7 @@
     <string name="pull_order_random">عشوائي</string>
     <string name="download_support_bundle_title">تنزيل حُزمة الدعم</string>
     <string name="dialog_settings_restart_app_question">يتطلب تغيير هذا الخيار إعادة تشغيل فورية للتطبيق. سيتم تجاهل جميع التغييرات الأخرى. متابعة؟</string>
-    <string name="syncthing_version_title">إصدار Universal Sync</string>
+    <string name="universalsync_version_title">إصدار Universal Sync</string>
     <string name="file_size_unit_MiB">ميجابايت</string>
     <string name="transfer_rate_unit_KiB_s">كيلوبايت/الثّانية</string>
     <string name="transfer_rate_unit_MiB_s">ميجابايت/الثّانية</string>
@@ -308,7 +308,7 @@
     <string name="device_name">اسم الجهاز</string>
     <string name="local_announce_enabled">اكتشاف مَحلّي</string>
     <string name="open_log_summary">فتح نافذة سجل Universal Sync وأندرويد</string>
-    <string name="syncthing_forum_title">منتدى Universal Sync</string>
+    <string name="universalsync_forum_title">منتدى Universal Sync</string>
     <string name="reason_on_mobile_data">يُسمح لـ Universal Sync بالتشغيل على بيانات الجوال.</string>
     <string name="reason_run_condition_monitor_not_instantiated">RunConditionMonitor غير مُهيأ. يرجى إعادة تشغيل التطبيق وتقديم تقرير خطأ إذا لم يختفِ هذا الخطأ بعد إعادة التشغيل.</string>
     <string name="state_local_additions">إضافات مَحلية</string>
@@ -345,7 +345,7 @@
     <string name="global_announce_server">خوادم الاكتشاف العالمية</string>
     <string name="create_folder_failed">فشل إنشاء المجلد</string>
     <string name="folder_go_up">انتقال للأعلى</string>
-    <string name="syncthing_log_title">سِجِل Universal Sync</string>
+    <string name="universalsync_log_title">سِجِل Universal Sync</string>
     <string name="create_fs_folder">إنشاء مجلد جديد</string>
     <string name="select_folder">تحديد المجلد</string>
     <string name="reason_wifi_disallowed">لم يُسمح لـ Universal Sync بالعمل على Wi-Fi أو Ethernet.</string>
@@ -412,7 +412,7 @@
     </plurals>
     <string name="dialog_exit_while_running_as_service_message">تنبيه: لقد قمت بتهيئة التطبيق ليعمل تلقائيًا عند الإقلاع. لذلك، فإنه يراقب شروط التشغيل ويزامن في أي وقت في الخلفية عند تطابق الشروط. يجب عليك الخروج يدويًا فقط إذا واجهت مشاكل خطيرة. وإلا، قم بتعطيل البدء تلقائيًا عند الإقلاع في الإعدادات. هل ترغب في الخروج الآن حتى إعادة تشغيل الجهاز؟</string>
     <string name="usage_reporting_dialog_title">سماح بالإبلاغ المجهول عن الاستخدام؟</string>
-    <string name="usage_reporting_dialog_description">يتم إرسال تقرير الاستخدام المشفر يوميًا. يُستخدم لتتبع المنصات الشائعة، وأحجام المجلدات، وإصدارات التطبيق. إذا تم تغيير مجموعة البيانات المبلغ عنها، فسيُطلب منك هذا الحوار مرة أخرى. \n \nالإحصاءات المجمعة متاحة للعامة على https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">يتم إرسال تقرير الاستخدام المشفر يوميًا. يُستخدم لتتبع المنصات الشائعة، وأحجام المجلدات، وإصدارات التطبيق. إذا تم تغيير مجموعة البيانات المبلغ عنها، فسيُطلب منك هذا الحوار مرة أخرى. \n \nالإحصاءات المجمعة متاحة للعامة على https://data.Universal Sync.net.</string>
     <string name="toast_write_storage_permission_required">إذن الكتابة على التخزين ضروري لهذا التطبيق</string>
     <string name="web_gui_creating_key">إنشاء مفاتيح آمنة جارٍ. قد يستغرق هذا بضع دقائق…</string>
     <string name="folders_fragment_title">مجلدات</string>
@@ -439,7 +439,7 @@
     <string name="device_state_unused">غير مستخدَم</string>
     <string name="device_last_seen">آخر ظهور: ‎%1$s</string>
     <string name="button_force_stop">إيقاف إجباري \nتجاهل شروط التشغيل</string>
-    <string name="syncthing_starting">Universal Sync ينطلق.</string>
+    <string name="universalsync_starting">Universal Sync ينطلق.</string>
     <string name="announce_server">خادم الإعلان المُعَد</string>
     <string name="download_title_colon">"تنزيل: "</string>
     <string name="upload_title_colon">"رفع: "</string>
@@ -498,20 +498,20 @@
     <string name="st_reset_database_done">نجحت إعادة ضبط قاعدة بيانات Universal Sync</string>
     <string name="st_reset_deltas_title">إعادة ضبط فهارس الإختلافات</string>
     <string name="log_to_file_title">تسجيل في ملف</string>
-    <string name="log_to_file_summary">سيتم كتابة مخرجات بيانات Universal SyncNative في ملف.</string>
+    <string name="log_to_file_summary">سيتم كتابة مخرجات بيانات UniversalSyncNative في ملف.</string>
     <string name="dialog_confirm_export">هل تريد حقاً تصدير التكوين الخاص بك؟ سيتم استبدال الأرشيف الموجود.</string>
     <string name="dialog_confirm_import">هل تريد حقاً استيراد التكوين؟ سيتم استبدال الإعدادات الحالية بما في ذلك المجلدات المشتركة وقائمة الأجهزة.</string>
     <string name="dialog_settings_restart_app_title">إعادة التشغيل مطلوبة</string>
     <string name="st_reset_database_title">إعادة ضبط قاعدة البيانات</string>
     <string name="st_reset_database_question">يجب تنفيذ هذا الإجراء فقط بناءً على توصية من فريق الدعم لدينا. \nهل أنت متأكد أنك تريد مسح قاعدة بيانات Universal Sync؟</string>
-    <string name="syncthing_forum_summary">اذهب إلى منتدى Universal Sync واحصل على الدعم</string>
+    <string name="universalsync_forum_summary">اذهب إلى منتدى Universal Sync واحصل على الدعم</string>
     <string name="pizza_url_title">» تُحبّ القطط البيتزا « 😺🍕</string>
     <string name="privacy_title">سياسة الخصوصية</string>
     <string name="reason_on_nonmetered_wifi">يُسمح لـ Universal Sync بالتشغيل على اتصالات Wi-Fi غير المحدودة الاستخدام. اتصال Wi-Fi النشط غير محدود الاستخدام.</string>
     <string name="reason_not_nonmetered_wifi">Universal Sync ليس قيد التشغيل لأنك لم تسمح له بالعمل على اتصالات Wi-Fi المحدودة الاستخدام.</string>
-    <string name="privacy_summary">فتح سياسة خصوصية syncthing-android، التي تغطي استخدام (إن وجد) البيانات الشخصية، على سبيل المثال، الموقع.</string>
-    <string name="syncthing_api_key">مفتاح API الخاص بـ Universal Sync (انقر للنسخ)</string>
-    <string name="syncthing_database_size">حجم قاعدة بيانات Universal Sync</string>
+    <string name="privacy_summary">فتح سياسة خصوصية Universal Sync Android، التي تغطي استخدام (إن وجد) البيانات الشخصية، على سبيل المثال، الموقع.</string>
+    <string name="universalsync_api_key">مفتاح API الخاص بـ Universal Sync (انقر للنسخ)</string>
+    <string name="universalsync_database_size">حجم قاعدة بيانات Universal Sync</string>
     <string name="os_open_file_limit">حد الملفات المفتوحة في أندرويد</string>
     <string name="open_source_licenses_summary">عرض تراخيص المصادر المفتوحة المُستخدَمة</string>
     <string name="folder_picker_title">منتقي المجلدات</string>

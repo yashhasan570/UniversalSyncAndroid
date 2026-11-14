@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Shows the log information from Universal Sync.
  */
-public class LogActivity extends Universal SyncActivity {
+public class LogActivity extends UniversalSyncActivity {
 
     private final static String TAG = "LogActivity";
 
@@ -43,7 +43,7 @@ public class LogActivity extends Universal SyncActivity {
     /**
      * Show Android Log by default.
      */
-    private boolean mShowUniversal SyncLog = false;
+    private boolean mShowUniversalSyncLog = false;
 
     private TextView mLog;
     private AsyncTask mFetchLogTask = null;
@@ -51,7 +51,7 @@ public class LogActivity extends Universal SyncActivity {
     private Intent mShareIntent;
    
     private String androidLogContent = "";   
-    private String syncthingLogContent = "";
+    private String universalsyncLogContent = "";
 
     /**
      * Initialize Log.
@@ -64,7 +64,7 @@ public class LogActivity extends Universal SyncActivity {
         setTitle(R.string.android_log_title);
 
         if (savedInstanceState != null) {
-            mShowUniversal SyncLog = savedInstanceState.getBoolean("showUniversal SyncLog");
+            mShowUniversalSyncLog = savedInstanceState.getBoolean("showUniversalSyncLog");
             invalidateOptionsMenu();
         }
 
@@ -77,7 +77,7 @@ public class LogActivity extends Universal SyncActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putBoolean("showUniversal SyncLog", mShowUniversal SyncLog);
+        outState.putBoolean("showUniversalSyncLog", mShowUniversalSyncLog);
     }
 
     @Override
@@ -86,7 +86,7 @@ public class LogActivity extends Universal SyncActivity {
         inflater.inflate(R.menu.log_list, menu);
 
         MenuItem switchLog = menu.findItem(R.id.switch_logs);
-        switchLog.setTitle(mShowUniversal SyncLog ? R.string.view_android_log : R.string.view_syncthing_log);
+        switchLog.setTitle(mShowUniversalSyncLog ? R.string.view_android_log : R.string.view_universalsync_log);
 
         return true;
     }
@@ -95,20 +95,20 @@ public class LogActivity extends Universal SyncActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.switch_logs) {
-            mShowUniversal SyncLog = !mShowUniversal SyncLog;
-            if (mShowUniversal SyncLog) {
+            mShowUniversalSyncLog = !mShowUniversalSyncLog;
+            if (mShowUniversalSyncLog) {
                 item.setTitle(R.string.view_android_log);
-                setTitle(R.string.syncthing_log_title);
+                setTitle(R.string.universalsync_log_title);
             } else {
-                item.setTitle(R.string.view_syncthing_log);
+                item.setTitle(R.string.view_universalsync_log);
                 setTitle(R.string.android_log_title);
             }
             fetchAndViewLog();
             return true;
         } else if (itemId == R.id.menu_share_log_file) {
-            if (mShowUniversal SyncLog) {
-                File syncthingLog = Constants.getUniversal SyncLogFile(this);
-                shareLogFile(syncthingLog);
+            if (mShowUniversalSyncLog) {
+                File universalsyncLog = Constants.getUniversalSyncLogFile(this);
+                shareLogFile(universalsyncLog);
             } else {
                 File androidLog = Constants.getAndroidLogFile(this);
                 shareLogFile(androidLog);
@@ -166,8 +166,8 @@ public class LogActivity extends Universal SyncActivity {
             logActivity.androidLogContent = getAndroidLog();
             writeLogFile(Constants.getAndroidLogFile(logActivity), logActivity.androidLogContent);
 
-            // Get Universal SyncNative log.
-            logActivity.syncthingLogContent = readLogFile(Constants.getUniversal SyncLogFile(logActivity));
+            // Get UniversalSyncNative log.
+            logActivity.universalsyncLogContent = readLogFile(Constants.getUniversalSyncLogFile(logActivity));
             return null;
         }
 
@@ -179,7 +179,7 @@ public class LogActivity extends Universal SyncActivity {
             }
 
             // Show one of the two logs available.
-            logActivity.mLog.setText(logActivity.mShowUniversal SyncLog ? logActivity.syncthingLogContent : logActivity.androidLogContent);
+            logActivity.mLog.setText(logActivity.mShowUniversalSyncLog ? logActivity.universalsyncLogContent : logActivity.androidLogContent);
 
             // Scroll to bottom
             logActivity.mScrollView.post(() -> logActivity.mScrollView.scrollTo(0, logActivity.mLog.getBottom()));
@@ -188,13 +188,13 @@ public class LogActivity extends Universal SyncActivity {
         /**
          * Queries logcat to obtain a log.
          *
-         * @param syncthingLog Filter on Universal Sync's native messages.
+         * @param universalsyncLog Filter on Universal Sync's native messages.
          */
         private String getAndroidLog() {
             String output = Util.runShellCommandGetOutput("/system/bin/logcat -t " + Integer.toString(ANDROID_LOG_FILE_MAX_LINES) + " -v time *:i ps:s art:s");
 
             // Filter Android log.
-            output = output.replaceAll("I/Universal SyncNativeCode", "");
+            output = output.replaceAll("I/UniversalSyncNativeCode", "");
             // Remove PID.
             output = output.replaceAll("\\(\\s?[0-9]+\\):", "");
             String[] lines = output.split("\n");

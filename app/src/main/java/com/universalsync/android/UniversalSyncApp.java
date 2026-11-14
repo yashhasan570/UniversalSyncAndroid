@@ -5,7 +5,7 @@ import android.os.StrictMode;
 
 import javax.inject.Inject;
 
-public class Universal SyncApp extends Application {
+public class UniversalSyncApp extends Application {
 
     @Inject DaggerComponent mComponent;
 
@@ -14,7 +14,7 @@ public class Universal SyncApp extends Application {
         super.onCreate();
 
         DaggerDaggerComponent.builder()
-                .syncthingModule(new Universal SyncModule(this))
+                .universalsyncModule(new UniversalSyncModule(this))
                 .build()
                 .inject(this);
 

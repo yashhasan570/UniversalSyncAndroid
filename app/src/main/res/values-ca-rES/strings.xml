@@ -52,7 +52,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Envia ID del dispositiu a</string>
     <string name="usage_reporting_dialog_title">Permeteu els informes d\'ús anònims?</string>
-    <string name="usage_reporting_dialog_description">L\'informe d\'ús s\'envia de manera xifrada cada dia. L\'utilitzem per fer un seguiment de les plataformes més comuns, la mida de les carpetes i les versions de l\'aplicació. Si mai canviem el contingut dels informes us tornarem a mostrar aquest missatge. \n \nLes estadístiques globals estan disponibles públicament a https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">L\'informe d\'ús s\'envia de manera xifrada cada dia. L\'utilitzem per fer un seguiment de les plataformes més comuns, la mida de les carpetes i les versions de l\'aplicació. Si mai canviem el contingut dels informes us tornarem a mostrar aquest missatge. \n \nLes estadístiques globals estan disponibles públicament a https://data.Universal Sync.net.</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="open_website">Obre la pàgina web</string>
@@ -98,10 +98,10 @@
     <string name="upload_title">Pujada</string>
     <!-- StatusFragment -->
     <string name="status_fragment_title">Estat</string>
-    <string name="syncthing_starting">El Universal Sync s\'està iniciant.</string>
-    <string name="syncthing_running">El Universal Sync està en funcionament.</string>
-    <string name="syncthing_not_running">El Universal Sync no està en funcionament.</string>
-    <string name="syncthing_has_crashed">El Syncthinc s\'ha tancat inesperadament.</string>
+    <string name="universalsync_starting">El Universal Sync s\'està iniciant.</string>
+    <string name="universalsync_running">El Universal Sync està en funcionament.</string>
+    <string name="universalsync_not_running">El Universal Sync no està en funcionament.</string>
+    <string name="universalsync_has_crashed">El Syncthinc s\'ha tancat inesperadament.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Descàrrega: "</string>
@@ -154,7 +154,7 @@
     <string name="folder_path_readonly">La vostra versió d\'Android només permet accés de lectura al Universal Sync per la carpeta seleccionada</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
     <string name="folder_path_readwrite">La vostra versió d\'Android permet accés de lectura i escriptura al Universal Sync per la carpeta seleccionada</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">Ho sentim. La capeta seleccionada no es pot utilitzar. Trieu una carpeta de l\'emmagatzematge intern o extern.</string>
     <string name="ignore_patterns">Patrons a ignorar</string>
     <!-- DeviceActivity -->
@@ -216,8 +216,8 @@
     <string name="settings_title">Configuració</string>
     <string name="category_run_conditions">Condicions d\'execució</string>
     <string name="category_behaviour">Comportament</string>
-    <string name="category_syncthing_options">Opcions del Universal Sync</string>
-    <string name="category_syncthing_options_summary">Aquest menú només està disponible si el Universal Sync s\'està executant.</string>
+    <string name="category_universalsync_options">Opcions del Universal Sync</string>
+    <string name="category_universalsync_options_summary">Aquest menú només està disponible si el Universal Sync s\'està executant.</string>
     <string name="category_backup">Importa i Exporta</string>
     <string name="category_debug">Resolució de problemes</string>
     <string name="category_experimental">Experimental</string>
@@ -344,15 +344,15 @@
     <string name="report_issue_title">Informeu d\'un problema</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Versió del Universal Sync</string>
+    <string name="universalsync_version_title">Versió del Universal Sync</string>
     <!-- Title of the preference showing this app's version name -->
     <string name="app_version_title">Versió de l\'embolcall del Universal Sync-Fork</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="syncthing_api_key">Clau d\'API del Universal Sync (feu clic per copiar)</string>
+    <string name="universalsync_api_key">Clau d\'API del Universal Sync (feu clic per copiar)</string>
     <!-- Shown when the API key is copied to the clipboard -->
     <string name="api_key_copied_to_clipboard">Clau d\'API del Universal Sync copiada al porta-retalls</string>
     <!-- Title of the preference showing database size -->
-    <string name="syncthing_database_size">Mida de la Base de dades del Universal Sync</string>
+    <string name="universalsync_database_size">Mida de la Base de dades del Universal Sync</string>
     <!-- Title of the preference showing the OS open file limit -->
     <string name="os_open_file_limit">Límit de Fitxers Oberts de l\'Android</string>
     <!-- FolderPickerAcitivity -->
@@ -368,12 +368,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">Puja</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Registre del Universal Sync</string>
+    <string name="universalsync_log_title">Registre del Universal Sync</string>
     <string name="android_log_title">Registre de l\'Android</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Mostra el registre de l\'Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Mostra el registre del Universal Sync</string>
+    <string name="view_universalsync_log">Mostra el registre del Universal Sync</string>
     <string name="retrieving_logs">Obtenint registres…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Comparteix</string>
@@ -418,14 +418,14 @@
     <string name="reason_not_while_auto_sync_data_disabled">El Universal Sync no està funcionant perquè l\'Android té la funció \'Sincronització automàtica de dades\' desactivada.</string>
     <string name="reason_on_mobile_data">El Universal Sync està funcionant perquè les dades mòbils estan actives.</string>
     <string name="reason_not_on_mobile_data">El Universal Sync pot funcionar amb connexions de dades mòbils però les dades mòbils no estan connectades.</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Surt</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">El Universal Sync s\'està executant</string>
-    <string name="syncthing_disabled">El Universal Sync està adormit</string>
-    <string name="syncthing_terminated">El Universal Sync s\'ha aturat</string>
-    <!-- Toast shown if syncthing failed to create or read the config -->
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">El Universal Sync s\'està executant</string>
+    <string name="universalsync_disabled">El Universal Sync està adormit</string>
+    <string name="universalsync_terminated">El Universal Sync s\'ha aturat</string>
+    <!-- Toast shown if Universal Sync failed to create or read the config -->
     <string name="executable_not_found">Falta l\'executable essencial \"%s\". Comproveu el fitxer de registre.</string>
     <string name="config_create_failed">No s\'ha pogut crear el fitxer de configuració</string>
     <!-- Toast shown if a config file crucial to operation is missing -->
@@ -544,11 +544,11 @@
     <string name="preference_app_theme_follow_dark">Fosc</string>
     <string name="sync_duration_minutes_summary">%1$s minuts</string>
     <string name="expert_mode_summary">Si activeu aquesta opció, es mostraran opcions de configuració avançades. Primer hauríeu de consultar la documentació de Universal Sync per assegurar-vos que sabeu com utilitzar-la correctament. Una configuració incorrecta pot provocar que la bateria s\'esgoti, que els recursos del sistema s\'esgotin o que la sincronització sigui incompleta.</string>
-    <string name="webui_remote_access_summary">Especifiqueu per permetre l\'accés a la interfície web des d\'un altre dispositiu. Si està habilitat, podreu iniciar sessió amb l\'usuari \'syncthing\' i la clau API com a contrasenya. Per defecte: desactivat (el més segur)</string>
+    <string name="webui_remote_access_summary">Especifiqueu per permetre l\'accés a la interfície web des d\'un altre dispositiu. Si està habilitat, podreu iniciar sessió amb l\'usuari \'Universal Sync\' i la clau API com a contrasenya. Per defecte: desactivat (el més segur)</string>
     <string name="clear_stversions_question">Això suprimirà totes les versions anteriors dels fitxers gestionats per Universal Sync. Voleu continuar?</string>
     <string name="config_import_failed_no_path">La importació de la configuració ha fallat. Ves a Configuració-Resolució de problemes-Obre el registre per veure\'n els detalls.</string>
     <string name="backup_password_summary">ℹ️ Recomanat:\nIntroduïu una contrasenya segura que s\'utilitzi per xifrar la configuració durant l\'exportació i desxifrar-la durant la importació. Guardeu aquesta contrasenya en un lloc segur per al procés de recuperació. La necessitareu per utilitzar la funció d\'importació.\n\n⚠️ No recomanat:\nSi no feu servir cap contrasenya, altres aplicacions poden llegir i manipular la configuració de Universal Sync. Exposar la configuració comporta el risc que un malfactor pugui obtenir accés no autoritzat als vostres fitxers mitjançant exportacions de configuració perdudes.</string>
-    <string name="default_syncthing_camera_folder_label">Càmera Universal Sync</string>
+    <string name="default_universalsync_camera_folder_label">Càmera Universal Sync</string>
     <string name="activity_main_bottom_navigation_rescan_all">Torna a escanejar-ho tot</string>
     <string name="device_state_unused">Sense utilitzar</string>
     <string name="advanced_directory_selection">Selecció avançada de directoris</string>
@@ -568,8 +568,8 @@
     <string name="pull_order_type_newestFirst_description">Fitxers d\'extracció ordenats per hora de modificació. Els més nous primer, respectivament.</string>
     <string name="devices_list_empty">No hi ha cap dispositiu configurat. Toca per afegir un dispositiu nou.</string>
     <string name="clear_stversions_done">S\'han esborrat correctament les carpetes .stversions.</string>
-    <string name="syncthing_active_details">En execució: %1$s</string>
-    <plurals name="syncthing_active_syncing_device_online">
+    <string name="universalsync_active_details">En execució: %1$s</string>
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Sincronització: %1$d%% completa, %2$d dispositiu en línia</item>
         <item quantity="many">Sincronització: %1$d%% completat, %2$d dispositius en línia</item>
         <item quantity="other">Sincronització: %1$d%% completat, %2$d dispositius en línia</item>
@@ -585,13 +585,13 @@
     <string name="run_on_roaming_summary">Permet que Universal Sync utilitzi dades mòbils en roaming. (!) Si us plau, envia comentaris a GitHub si això funciona correctament.</string>
     <string name="sync_only_wifi_ssids_wifi_turn_on_location">Si us plau, activa la ubicació per seleccionar xarxes.</string>
     <string name="invalid_port_number" tools:ignore="PluralsCandidate">Número de port no vàlid. Introduïu un port entre %1$d i %2$d.</string>
-    <string name="privacy_summary">Obre la política de privadesa de syncthing-android, que cobreix l\'ús (si n\'hi ha) de dades personals, p. ex. la ubicació.</string>
+    <string name="privacy_summary">Obre la política de privadesa de Universal Sync Android, que cobreix l\'ús (si n\'hi ha) de dades personals, p. ex. la ubicació.</string>
     <string name="open_source_licenses_summary">Mostra les llicències de codi obert utilitzades</string>
     <string name="advanced_storage_path_overview">Visió general de la ruta d\'emmagatzematge avançada</string>
     <string name="custom_wifi_ssid_whitelist_empty">No hi ha cap SSID de Wi-Fi a la llista blanca. Especifiqueu-ne alguns a la configuració.</string>
     <string name="pull_order_type_smallestFirst_description">Extreu els fitxers ordenats per mida. Del més petit al més petit, respectivament.</string>
     <string name="run_on_whitelisted_wifi_summary">Activa la llista blanca per restringir la sincronització que només es produeixi en xarxes Wi-Fi especificades.</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Atenció: si Universal SyncNative s\'interromp i fa alguna cosa estranya, la culpa és teva. Només cal ometre-ho en cas que el dispositiu no admeti l\'atorgament del permís. De debò que ho vols ometre?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Atenció: si UniversalSyncNative s\'interromp i fa alguna cosa estranya, la culpa és teva. Només cal ometre-ho en cas que el dispositiu no admeti l\'atorgament del permís. De debò que ho vols ometre?</string>
     <string name="photo_shoot_launcher_title">Sincronitza. Càmera</string>
     <string name="photo_shoot_activity_title">Càmera de Universal Sync-Fork</string>
     <string name="photo_shoot_intro_permission_title">Permisos necessaris</string>
@@ -605,7 +605,7 @@
     <string name="no_devices_configured">No hi ha cap dispositiu configurat.\nComenceu afegint un dispositiu ara.</string>
     <string name="suggest_file_manager_app_dialog_text">Us recomanem que instal·leu l\'aplicació de gestió de fitxers de codi obert \"Material Files\". Voleu obrir la pàgina de la seva botiga d\'aplicacions?</string>
     <string name="device_disconnected_not_synced">Desconnectat (%1$s pendent)</string>
-    <string name="folder_ignore_delete_description">Opció d\'expert que afecta la gestió de les actualitzacions d\'índex entrants. Quan està definida, les actualitzacions entrants amb el senyalador d\'eliminació definit s\'ignoren. Vegeu https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Opció d\'expert que afecta la gestió de les actualitzacions d\'índex entrants. Quan està definida, les actualitzacions entrants amb el senyalador d\'eliminació definit s\'ignoren. Vegeu https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <string name="untrusted_device">Dispositiu no fiable</string>
     <string name="install_barcode_scanner_app_message">Això requereix una aplicació d\'escàner de codis de barres. Voleu instal·lar l\'aplicació \"Binary Eye\" d\'F-Droid?</string>
     <string name="revert_local_changes_question">Això desfarà tots els canvis fets en aquest dispositiu dins d\'aquesta carpeta. Voleu continuar?</string>
@@ -629,8 +629,8 @@
     <string name="webui_password_title">Contrasenya de la interfície d\'usuari web</string>
     <string name="clear_stversions_title">Buida totes les carpetes de versions</string>
     <string name="clear_stversions_summary">Els fitxers es mouen al directori .stversions quan Universal Sync els reemplaça o els elimina. Probablement hi podeu trobar i recuperar fitxers eliminats accidentalment, però les versions obsoletes dels fitxers ocupen espai d\'emmagatzematge al dispositiu.</string>
-    <string name="log_to_file_summary">La sortida de Universal SyncNative s\'escriurà a un fitxer.</string>
-    <string name="syncthing_forum_summary">Ves al fòrum de Universal Sync i demana ajuda.</string>
+    <string name="log_to_file_summary">La sortida de UniversalSyncNative s\'escriurà a un fitxer.</string>
+    <string name="universalsync_forum_summary">Ves al fòrum de Universal Sync i demana ajuda.</string>
     <string name="pizza_url_title">» Als gats els encanta la pizza « 😺🍕</string>
     <string name="qs_schedule_label">Executa durant 5 minuts</string>
     <string name="photo_shoot_intro_missing_permissions">Necessitem permís d\'emmagatzematge i de càmera per continuar.</string>
@@ -685,7 +685,7 @@
     <string name="preference_category_explanation">Explicació</string>
     <string name="preference_category_prepare">Prepara</string>
     <string name="config_export_successful_no_path">La configuració s\'ha exportat. Assegureu-vos de recordar la contrasenya per a una importació posterior.</string>
-    <string name="syncthing_forum_title">Fòrum de Universal Sync</string>
+    <string name="universalsync_forum_title">Fòrum de Universal Sync</string>
     <string name="privacy_title">Política de privacitat</string>
     <string name="complete_welcome_wizard_first">Primer, obre l\'aplicació des del calaix d\'aplicacions i completa l\'assistent de benvinguda abans de compartir fitxers.</string>
     <string name="reason_force_stop">Universal Sync no s\'està executant perquè l\'has forçat a aturar-se independentment de les condicions d\'execució.</string>

@@ -66,8 +66,8 @@ import com.universalsync.android.activities.MainActivity
 import com.universalsync.android.recentchanges.RecentChangesActivity
 import com.universalsync.android.webgui.WebGuiActivity
 import com.universalsync.android.service.Constants
-import com.universalsync.android.service.Universal SyncService
-import com.universalsync.android.service.Universal SyncService.OnServiceStateChangeListener
+import com.universalsync.android.service.UniversalSyncService
+import com.universalsync.android.service.UniversalSyncService.OnServiceStateChangeListener
 import com.universalsync.android.settings.SettingsActivity
 import com.universalsync.android.theme.ApplicationTheme
 import com.universalsync.android.util.isTelevision
@@ -116,8 +116,8 @@ class DrawerFragment : Fragment(), OnServiceStateChangeListener {
         }
     }
 
-    override fun onServiceStateChange(currentState: Universal SyncService.State?) {
-        stServiceRunning.value = currentState == Universal SyncService.State.ACTIVE
+    override fun onServiceStateChange(currentState: UniversalSyncService.State?) {
+        stServiceRunning.value = currentState == UniversalSyncService.State.ACTIVE
     }
 
     fun drawerOpened() {
@@ -256,8 +256,8 @@ private fun RestartDrawerItem(stServiceRunning: Boolean) {
             confirmButton = {
                 TextButton(
                     onClick = {
-                        val intent = Intent(activity, Universal SyncService::class.java).apply {
-                            action = Universal SyncService.ACTION_RESTART
+                        val intent = Intent(activity, UniversalSyncService::class.java).apply {
+                            action = UniversalSyncService.ACTION_RESTART
                         }
                         activity.startService(intent)
                         showAlert = false

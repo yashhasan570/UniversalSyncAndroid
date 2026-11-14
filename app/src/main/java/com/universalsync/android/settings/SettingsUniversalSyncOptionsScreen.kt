@@ -31,7 +31,7 @@ import com.universalsync.android.R
 import com.universalsync.android.model.Folder
 import com.universalsync.android.service.Constants
 import com.universalsync.android.service.RestApi
-import com.universalsync.android.service.Universal SyncService
+import com.universalsync.android.service.UniversalSyncService
 import com.universalsync.android.util.FileUtils
 import com.universalsync.android.util.LocalActivityScope
 import kotlinx.coroutines.Dispatchers
@@ -53,11 +53,11 @@ import org.mindrot.jbcrypt.BCrypt
 import java.io.File
 import kotlin.time.Duration.Companion.seconds
 
-private const val TAG = "SettingsUniversal SyncOptionsScreen"
+private const val TAG = "SettingsUniversalSyncOptionsScreen"
 
-fun EntryProviderScope<SettingsRoute>.settingsUniversal SyncOptionsEntry() {
-    entry<SettingsRoute.Universal SyncOptions> {
-        SettingsUniversal SyncOptionsScreen()
+fun EntryProviderScope<SettingsRoute>.settingsUniversalSyncOptionsEntry() {
+    entry<SettingsRoute.UniversalSyncOptions> {
+        SettingsUniversalSyncOptionsScreen()
     }
 }
 
@@ -89,10 +89,10 @@ private const val BIND_LOCALHOST = "127.0.0.1"
 
 @OptIn(FlowPreview::class)
 @Composable
-fun SettingsUniversal SyncOptionsScreen() {
+fun SettingsUniversalSyncOptionsScreen() {
     val context = LocalContext.current
     val clipboard = LocalClipboard.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
     val stServiceTick = LocalServiceUpdateTick.current
     val scope = LocalActivityScope.current
     val navigator = LocalSettingsNavigator.current
@@ -100,7 +100,7 @@ fun SettingsUniversal SyncOptionsScreen() {
     val sharedPrefWebGuiPassword = rememberPreferenceState(Constants.PREF_WEBUI_PASSWORD, "")
 
     val isStServiceActive by remember(stService, stServiceTick) { derivedStateOf {
-        stService?.currentState == Universal SyncService.State.ACTIVE && stService.api?.isConfigLoaded == true
+        stService?.currentState == UniversalSyncService.State.ACTIVE && stService.api?.isConfigLoaded == true
     } }
     val apiPrefFlow: MutableStateFlow<Preferences> = remember {
         MutableStateFlow(stService?.api?.preferences ?: MapPreferences())
@@ -119,13 +119,13 @@ fun SettingsUniversal SyncOptionsScreen() {
                     val localDiscoveryAfter = prefs.asMap()[Keys.LOCAL_DISCOVERY] as Boolean?
                     if (localDiscoveryBefore != null && localDiscoveryAfter != null &&
                             localDiscoveryBefore != localDiscoveryAfter) {
-                        // Universal SyncRunnable reads local discovery from config.xml when it starts
+                        // UniversalSyncRunnable reads local discovery from config.xml when it starts
                         // the binary, to decide on the MulticastLock. Restart once it is saved.
                         val appContext = context.applicationContext
                         currentApi.sendConfig {
                             appContext.startService(
-                                Intent(appContext, Universal SyncService::class.java)
-                                    .setAction(Universal SyncService.ACTION_RESTART)
+                                Intent(appContext, UniversalSyncService::class.java)
+                                    .setAction(UniversalSyncService.ACTION_RESTART)
                             )
                         }
                     }
@@ -150,15 +150,15 @@ fun SettingsUniversal SyncOptionsScreen() {
 
         val webGuiPort = rememberPreferenceState(Keys.WEB_GUI_PORT, Constants.DEFAULT_WEBGUI_TCP_PORT)
         val webGuiRemoteAccess = rememberPreferenceState(Keys.WEB_GUI_REMOTE_ACCESS, false)
-        val webGuiUsername = rememberPreferenceState(Keys.WEB_GUI_USERNAME, "syncthing")
+        val webGuiUsername = rememberPreferenceState(Keys.WEB_GUI_USERNAME, "universalsync")
         val webGuiPassword = rememberPreferenceState(Keys.WEB_GUI_PASSWORD, sharedPrefWebGuiPassword.value)
 
         val crashReporting = rememberPreferenceState(Keys.CRASH_REPORTING, true)
 
 
         SettingsScaffold(
-            title = stringResource(R.string.category_syncthing_options),
-            description = stringResource(R.string.category_syncthing_options_summary),
+            title = stringResource(R.string.category_universalsync_options),
+            description = stringResource(R.string.category_universalsync_options_summary),
         ) {
             item {
                 PreferenceCategory(
@@ -175,7 +175,7 @@ fun SettingsUniversal SyncOptionsScreen() {
                 )
             }
             item {
-                val apiKeyTitle = stringResource(R.string.syncthing_api_key)
+                val apiKeyTitle = stringResource(R.string.universalsync_api_key)
                 Preference(
                     title = { Text(apiKeyTitle) },
                     summary = { Text(apiKey) },
@@ -395,7 +395,7 @@ fun SettingsUniversal SyncOptionsScreen() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ClearStVersionPreference(
-    stService: Universal SyncService?,
+    stService: UniversalSyncService?,
     enabled: Boolean,
 ) {
     val context = LocalContext.current
@@ -450,7 +450,7 @@ private fun ClearStVersionPreference(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun UndoIgnoredDevicesFoldersPreference(
-    stService: Universal SyncService?,
+    stService: UniversalSyncService?,
     enabled: Boolean,
 ) {
     val context = LocalContext.current
@@ -503,7 +503,7 @@ private fun UndoIgnoredDevicesFoldersPreference(
 
 @Composable
 private fun SupportBundlePreference(
-    stService: Universal SyncService?,
+    stService: UniversalSyncService?,
     enabled: Boolean,
 ) {
     val scope = LocalActivityScope.current
@@ -532,7 +532,7 @@ private fun SupportBundlePreference(
                 scope.launch(Dispatchers.IO) {
                     val deviceName = api.localDevice.displayName
                     val downloadDir = FileUtils.getExternalStorageDownloadsDirectory()
-                    val targetFileName = "$downloadDir/syncthing-support-bundle_$deviceName.zip"
+                    val targetFileName = "$downloadDir/universalsync-support-bundle_$deviceName.zip"
                     supportBundleFileName = targetFileName
                     val targetFile = File(targetFileName)
                     api.downloadSupportBundle(targetFile) { success ->

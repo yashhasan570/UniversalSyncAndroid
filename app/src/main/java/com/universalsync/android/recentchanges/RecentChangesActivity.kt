@@ -19,13 +19,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.PreferenceManager
 import com.universalsync.android.R
-import com.universalsync.android.activities.Universal SyncActivity
+import com.universalsync.android.activities.UniversalSyncActivity
 import com.universalsync.android.model.Device
 import com.universalsync.android.model.DiskEvent
 import com.universalsync.android.service.Constants.PREF_SHOW_EXACT_TIMES
 import com.universalsync.android.service.RestApi
-import com.universalsync.android.service.Universal SyncService
-import com.universalsync.android.service.Universal SyncServiceBinder
+import com.universalsync.android.service.UniversalSyncService
+import com.universalsync.android.service.UniversalSyncServiceBinder
 import com.universalsync.android.theme.ApplicationTheme
 import com.universalsync.android.util.FileUtils
 import java.io.File
@@ -42,7 +42,7 @@ import kotlinx.coroutines.withTimeoutOrNull
 /**
  * Shows the list of recent changes to files and folders reported by the local Universal Sync instance.
  */
-class RecentChangesActivity : Universal SyncActivity(), Universal SyncService.OnServiceStateChangeListener {
+class RecentChangesActivity : UniversalSyncActivity(), UniversalSyncService.OnServiceStateChangeListener {
 
     private var changes by mutableStateOf<List<RecentChange>>(emptyList())
 
@@ -107,12 +107,12 @@ class RecentChangesActivity : Universal SyncActivity(), Universal SyncService.On
 
     override fun onServiceConnected(componentName: ComponentName, binder: IBinder) {
         super.onServiceConnected(componentName, binder)
-        (binder as Universal SyncServiceBinder).service.registerOnServiceStateChangeListener(this)
+        (binder as UniversalSyncServiceBinder).service.registerOnServiceStateChangeListener(this)
     }
 
-    override fun onServiceStateChange(newState: Universal SyncService.State) {
+    override fun onServiceStateChange(newState: UniversalSyncService.State) {
         Log.v(TAG, "onServiceStateChange($newState)")
-        if (newState == Universal SyncService.State.ACTIVE) {
+        if (newState == UniversalSyncService.State.ACTIVE) {
             refresh()
         }
     }
@@ -173,7 +173,7 @@ class RecentChangesActivity : Universal SyncActivity(), Universal SyncService.On
 
     /** The [RestApi], but only once the service is actually running. */
     private val activeApi: RestApi?
-        get() = api?.takeIf { service?.currentState == Universal SyncService.State.ACTIVE }
+        get() = api?.takeIf { service?.currentState == UniversalSyncService.State.ACTIVE }
 
     companion object {
         private const val TAG = "RecentChangesActivity"
@@ -381,7 +381,7 @@ private fun String.ancestorPaths(): Sequence<String> = sequence {
 
 /** Last path segment, e.g. "a/b/c.txt" -> "c.txt". */
 private fun fileNameOf(path: String): String {
-    // Encode "#" so Uri.parse handles it. See syncthing-android/651.
+    // Encode "#" so Uri.parse handles it. See UniversalSyncAndroid/651.
     val uriParseInput = path.replace("#", Uri.encode("#"))
     return uriParseInput.toUri().lastPathSegment.orEmpty()
 }

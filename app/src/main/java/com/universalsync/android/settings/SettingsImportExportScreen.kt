@@ -62,7 +62,7 @@ fun EntryProviderScope<SettingsRoute>.settingsImportExportEntry() {
 
 @Composable
 fun SettingsImportExportScreen() {
-    val defaultBackupPath = "backups/syncthing/config.zip"
+    val defaultBackupPath = "backups/universalsync/config.zip"
     val backupPath = rememberPreferenceState(Constants.PREF_BACKUP_REL_PATH_TO_ZIP,defaultBackupPath)
 
     SettingsScaffold(
@@ -206,7 +206,7 @@ private fun ExportConfigPreference() {
     val context = LocalContext.current
     val scope = LocalActivityScope.current
     val navigator = LocalSettingsNavigator.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
 
     var showAlert by rememberSaveable { mutableStateOf(false) }
 
@@ -269,7 +269,7 @@ private fun ImportConfigPreference() {
     val context = LocalContext.current
     val scope = LocalActivityScope.current
     val navigator = LocalSettingsNavigator.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
     val prefs = LocalPreferenceFlow.current
 
     var showAlert by rememberSaveable { mutableStateOf(false) }

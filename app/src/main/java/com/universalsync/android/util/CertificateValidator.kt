@@ -19,7 +19,7 @@ import javax.net.ssl.X509TrustManager
  * Validates a user-supplied HTTPS certificate (+ private key) that is about to replace the local
  * Universal Sync Web GUI certificate.
  *
- * The decisive check is [Check.TRUST]: it mirrors [com.universalsync.android.http.Universal SyncTrustManager]
+ * The decisive check is [Check.TRUST]: it mirrors [com.universalsync.android.http.UniversalSyncTrustManager]
  * exactly (self-signed pin OR a chain that validates against the Android OS trust store via
  * [Util.getOsTrustManager]). If that passes, the app will be able to talk to Universal Sync once the cert
  * is installed. The private-key match is best-effort: Universal Sync's own `tls.LoadX509KeyPair` at the
@@ -53,7 +53,7 @@ object CertificateValidator {
         val info: CertInfo?,
     )
 
-    private val NONCE = "syncthing-android-cert-key-match-probe".toByteArray()
+    private val NONCE = "UniversalSyncAndroid-cert-key-match-probe".toByteArray()
 
     /**
      * Validates the two picked files. The arguments are passed in the order the user assigned them
@@ -167,7 +167,7 @@ object CertificateValidator {
         leaf: X509Certificate,
         osTrustManager: X509TrustManager?,
     ): CheckResult {
-        // Self-signed pin path — mirrors Universal SyncTrustManager.verifyAgainstPinnedCert.
+        // Self-signed pin path — mirrors UniversalSyncTrustManager.verifyAgainstPinnedCert.
         if (isSelfSigned(leaf)) {
             return CheckResult(Check.TRUST, Status.PASS, "Self-signed — the app will pin this certificate.")
         }
@@ -213,7 +213,7 @@ object CertificateValidator {
      * [Status.WARN] is reserved for "Universal Sync can read this, but we cannot check it here" — a legacy
      * PKCS#1/SEC1 block, or a key of an algorithm this device's providers do not implement. Those stay
      * applyable, and the post-restart fingerprint check in
-     * [com.universalsync.android.service.Universal SyncService] is the backstop.
+     * [com.universalsync.android.service.UniversalSyncService] is the backstop.
      */
     private fun keyCheck(keyBytes: ByteArray, leaf: X509Certificate): CheckResult {
         val text = String(keyBytes, Charsets.US_ASCII)

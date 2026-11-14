@@ -24,15 +24,15 @@ Upstream und Fork im Vergleich zum Zeitpunkt des Schreibens:
 * Strategie und Releasehäufigkeit unterscheidet sich
 * Der Fork kümmert sich nur um den Wrapper, welcher die Android-Bedienoberfläche enthält.
 
-Webseite: https://github.com/universalsync/syncthing-android
+Webseite: https://github.com/universalsync/Universal Sync Android
 
-Quellcode: https://github.com/universalsync/syncthing-android
+Quellcode: https://github.com/universalsync/Universal Sync Android
 
-Wie Universal Sync auf externe SD-Karten schreibt: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Wie Universal Sync auf externe SD-Karten schreibt: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ und hilfreiche Artikel: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ und hilfreiche Artikel: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Probleme: https://github.com/universalsync/syncthing-android/issues
+Probleme: https://github.com/universalsync/Universal Sync Android/issues
 
 Bitte bei der Übersetzung mithelfen:
-https://hosted.weblate.org/projects/syncthing-fork/app/
+https://hosted.weblate.org/projects/Universal Sync/app/

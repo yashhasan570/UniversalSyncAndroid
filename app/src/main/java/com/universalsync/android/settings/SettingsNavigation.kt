@@ -36,7 +36,7 @@ sealed interface SettingsRoute : NavKey {
     @Serializable
     data object Behavior : SettingsRoute
     @Serializable
-    data object Universal SyncOptions : SettingsRoute
+    data object UniversalSyncOptions : SettingsRoute
     @Serializable
     data object CustomCertificate : SettingsRoute
     @Serializable
@@ -59,7 +59,7 @@ sealed interface SettingsRoute : NavKey {
             "RunConditions" -> RunConditions
             "UserInterface" -> UserInterface
             "Behavior" -> Behavior
-            "Universal SyncOptions" -> Universal SyncOptions
+            "UniversalSyncOptions" -> UniversalSyncOptions
             "CustomCertificate" -> CustomCertificate
             "ImportExport" -> ImportExport
             "Troubleshooting" -> Troubleshooting
@@ -114,7 +114,7 @@ fun SettingsNavDisplay(
             settingsRunConditionsEntry()
             settingsUserInterfaceEntry()
             settingsBehaviorEntry()
-            settingsUniversal SyncOptionsEntry()
+            settingsUniversalSyncOptionsEntry()
             settingsCustomCertificateEntry()
             settingsImportExportEntry()
             settingsTroubleshootingEntry()

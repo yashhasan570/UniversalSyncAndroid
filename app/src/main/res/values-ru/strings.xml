@@ -52,7 +52,7 @@
     <string name="grant_camera_permission">Выдать разрешение доступа к камере</string>
     <string name="photo_shoot_intro_permission_desc">Universal Sync Камера требует вашего разрешения для создания фотографий и хранения их на вашем устройстве. Эта опция необязательна. Чтобы использовать её, предоставьте доступ и нажмите \"Продолжить\". Будет настроена папка Universal Sync Камеры, которую вы позже сможете синхронизировать с другими устройствами Universal Sync.</string>
     <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_syncthing_camera_folder_label">Universal Sync Камера</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync Камера</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">Пересканировать всё</string>
@@ -70,7 +70,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Отправить ID устройства</string>
     <string name="usage_reporting_dialog_title">Разрешить отправлять анонимную статистику?</string>
-    <string name="usage_reporting_dialog_description">Зашифрованный отчет об использовании отправляется ежедневно. Используется для отслеживания используемых платформ, размеров папок и версий программы. Если набор собираемых данных изменится, этот диалог появится вновь. \n \nОбобщенная статистика доступна всем на https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Зашифрованный отчет об использовании отправляется ежедневно. Используется для отслеживания используемых платформ, размеров папок и версий программы. Если набор собираемых данных изменится, этот диалог появится вновь. \n \nОбобщенная статистика доступна всем на https://data.Universal Sync.net.</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="open_website">Открыть сайт</string>
@@ -125,10 +125,10 @@
     <string name="upload_title">Отдача</string>
     <!-- StatusFragment -->
     <string name="status_fragment_title">Статус</string>
-    <string name="syncthing_starting">Universal Sync запускается.</string>
-    <string name="syncthing_running">Universal Sync запущен.</string>
-    <string name="syncthing_not_running">Universal Sync не запущен.</string>
-    <string name="syncthing_has_crashed">Universal Sync завершился из-за сбоя.</string>
+    <string name="universalsync_starting">Universal Sync запускается.</string>
+    <string name="universalsync_running">Universal Sync запущен.</string>
+    <string name="universalsync_not_running">Universal Sync не запущен.</string>
+    <string name="universalsync_has_crashed">Universal Sync завершился из-за сбоя.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Загрузка: "</string>
@@ -177,7 +177,7 @@
     <string name="dialog_discard_changes">Отменить внесённые изменения?</string>
     <!-- Summary shown if we only have readonly access to the folder path -->
     <string name="folder_path_readonly">Ваша версия Android даёт Universal Sync только доступ на чтение этой папки.</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">Извините. Выбранная папка не может быть использована. Пожалуйста, выберите папку, расположенную на внутреннем или внешнем хранилище.</string>
     <string name="ignore_patterns">Шаблоны игнорирования</string>
     <!-- DeviceActivity -->
@@ -236,8 +236,8 @@
     <string name="category_user_interface">Интерфейс</string>
     <string name="preference_app_theme_title">Тема</string>
     <string name="category_behaviour">Поведение</string>
-    <string name="category_syncthing_options">Настройки устройства</string>
-    <string name="category_syncthing_options_summary">Это меню доступно только во время работы Universal Sync.</string>
+    <string name="category_universalsync_options">Настройки устройства</string>
+    <string name="category_universalsync_options_summary">Это меню доступно только во время работы Universal Sync.</string>
     <string name="category_backup">Импорт и экспорт</string>
     <string name="category_debug">Отладка</string>
     <string name="category_experimental">Экспериментальные</string>
@@ -325,7 +325,7 @@
     <string name="report_issue_title">Сообщить о проблеме</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Версия ядра</string>
+    <string name="universalsync_version_title">Версия ядра</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Выбор папки</string>
@@ -337,12 +337,12 @@
     <string name="select_folder">Выбрать папку</string>
     <string name="create_folder_failed">Не удалось создать папку</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Журнал Universal Sync</string>
+    <string name="universalsync_log_title">Журнал Universal Sync</string>
     <string name="android_log_title">Журнал Android</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Логи Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Логи Universal Sync</string>
+    <string name="view_universalsync_log">Логи Universal Sync</string>
     <string name="retrieving_logs">Получение логов…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Поделиться</string>
@@ -385,11 +385,11 @@
     <!-- Sub Folder title -->
     <string name="sub_folder">Подпапка</string>
     <string name="reason_not_charging">Устройство сейчас не заряжается.</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Выход</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Работает</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Работает</string>
     <string name="config_create_failed">Ошибка при создании файла конфигурации. Ознакомьтесь с журналом.</string>
     <!-- Label of the default folder created of first start (camera folder). -->
     <string name="default_android_camera_folder_label">Android Камера</string>
@@ -510,11 +510,11 @@
     <string name="autoAcceptFolders">Автоматический приём</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">Переключение существующих папок в \'Получать зашифрованное\' не поддерживается.</string>
     <string name="folder_path_readwrite">Ваша версия Android даёт разрешение Universal Sync на чтение и запись в указанной папке.</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Осторожно: Если Universal SyncNative будет прерван и сделает что-то странное, вы сами виноваты. Пропускайте только если ваше устройство не поддерживает выдачу разрешения. Пропустить?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Осторожно: Если UniversalSyncNative будет прерван и сделает что-то странное, вы сами виноваты. Пропускайте только если ваше устройство не поддерживает выдачу разрешения. Пропустить?</string>
     <string name="dialog_exit_while_running_as_service_message">На заметку: Вы настроили приложение на автоматический запуск при загрузке. Поэтому оно отслеживает условия работы и синхронизируется в любое время в фоновом режиме, если условия совпадают. Вы должны завершать работу вручную только в случае возникновения серьезных проблем. В противном случае отключите \"Запускать автоматически при загрузке\" в настройках. Хотите завершить работу до перезагрузки устройства?</string>
     <string name="button_force_start">ПРИНУДИТЕЛЬНЫЙ ЗАПУСК \nИГНОРИРОВАТЬ УСЛОВИЯ ЗАПУСКА</string>
     <string name="button_force_stop">ПРИНУДИТЕЛЬНАЯ ОСТАНОВКА \nИГНОРИРОВАТЬ УСЛОВИЯ ЗАПУСКА</string>
-    <string name="folder_ignore_delete_description">Экспертная опция, влияющая на обработку входящих обновлений индекса. Если опция установлена, входящие обновления с установленным флагом delete игнорируются. См. https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Экспертная опция, влияющая на обработку входящих обновлений индекса. Если опция установлена, входящие обновления с установленным флагом delete игнорируются. См. https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <string name="advanced_directory_selection">Расширенный выбор папки</string>
     <string name="local_discovery_disabled">Вы отключили локальное обнаружение в \'Настройки\' &gt; \'Настройки Universal Sync\' &gt; \'Локальное обнаружение\'. Включите эту опцию для поиска устройств в локальной сети.</string>
     <string name="device_addresses_invalid">Адреса устройств не соответствуют формату. Попробуйте ещё раз. Смотрите документацию Universal Sync для большей информации.</string>
@@ -541,7 +541,7 @@
     <string name="invalid_integer_value" tools:ignore="PluralsCandidate">Недопустимое значение. Введите значение от %1$d до %2$d.</string>
     <string name="config_export_failed">Не удалось выполнить экспорт конфигурации. Перейдите в Настройки-Устранение неполадок-Открыть журнал, чтобы просмотреть подробную информацию.</string>
     <string name="dialog_settings_restart_app_title">Требуется перезапуск</string>
-    <string name="syncthing_api_key">Ключ API Universal Sync (нажмите, чтобы скопировать)</string>
+    <string name="universalsync_api_key">Ключ API Universal Sync (нажмите, чтобы скопировать)</string>
     <string name="reason_not_on_battery_power">Устройство работает не от аккумулятора.</string>
     <string name="reason_wifi_disallowed">Universal Sync не разрешено работать по Wi-Fi или Ethernet.</string>
     <string name="reason_on_wifi">Universal Sync разрешено работать от Wi-Fi, и Wi-Fi сейчас подключён.</string>
@@ -568,7 +568,7 @@
     <string name="webui_tcp_port_title">TCP-порт веб-интерфейса</string>
     <string name="crash_reporting">Анонимные отчеты о сбоях</string>
     <string name="webui_remote_access_title">Удалённый доступ к веб-интерфейсу</string>
-    <string name="syncthing_database_size">Размер базы данных Synthing</string>
+    <string name="universalsync_database_size">Размер базы данных Synthing</string>
     <string name="os_open_file_limit">Предельное количество открытых файлов для Android</string>
     <string name="reason_on_mobile_data">Universal Sync разрешено работать от мобильной сети.</string>
     <string name="reason_not_on_mobile_data">Universal Sync разрешено работать от мобильной сети, но мобильная сеть не подключена.</string>
@@ -619,8 +619,8 @@
     <string name="qs_forced_to_run">Принудительно запущен</string>
     <string name="qs_forced_to_stop">Принудительно остановлен</string>
     <string name="reason_force_start">Universal Sync запущен принудительно в обход условий запуска.</string>
-    <string name="syncthing_disabled">Приостановлен</string>
-    <string name="syncthing_terminated">Неактивен</string>
+    <string name="universalsync_disabled">Приостановлен</string>
+    <string name="universalsync_terminated">Неактивен</string>
     <string name="verbose_log_title">Подробный журнал</string>
     <string name="state_local_additions">Локальные добавления</string>
     <string name="state_cleaning">Версии удаляюся</string>
@@ -629,15 +629,15 @@
     <string name="qs_force_label">Запустить принудительно</string>
     <string name="custom_sync_conditions_title">Свои условия синхронизации</string>
     <string name="qs_following_run_conditions">По условиям запуска</string>
-    <string name="webui_remote_access_summary">Укажите, чтобы разрешить доступ к веб интерфейсу с другого устройства. Когда включено, вы сможете входить как пользователь «syncthing» с паролем в качестве ключа API. По умолчанию: выключено (наибольшая безопасность)</string>
+    <string name="webui_remote_access_summary">Укажите, чтобы разрешить доступ к веб интерфейсу с другого устройства. Когда включено, вы сможете входить как пользователь «Universal Sync» с паролем в качестве ключа API. По умолчанию: выключено (наибольшая безопасность)</string>
     <string name="verbose_log_summary">Очень подробное журналирование для отладки.</string>
-    <string name="log_to_file_summary">Журнал Universal SyncNative будет вестись в файл.</string>
+    <string name="log_to_file_summary">Журнал UniversalSyncNative будет вестись в файл.</string>
     <string name="reason_not_while_auto_sync_data_disabled">Universal Sync не работает, т.к. Автосинхронизация данных выключена в Android.</string>
     <string name="reason_on_flight_mode">Universal Sync работает, т.к. разрешена работа в режиме полёта.</string>
     <string name="reason_not_within_time_frame">Включена работа по расписанию; последняя синхронизация была менее часа назад.</string>
     <string name="reason_not_on_whitelisted_wifi">Universal Sync не работает, т.к. текущая сеть Wi-Fi не добавлена в список разрешённых.</string>
     <string name="custom_wifi_ssid_whitelist_empty">Список разрешённых сетей Wi-Fi пуст. Укажите хотя бы одну в настройках.</string>
-    <string name="syncthing_active_details">Работает: %1$s</string>
+    <string name="universalsync_active_details">Работает: %1$s</string>
     <string name="no_remote_devices_connected">Нет подключенных удалённых устройств</string>
     <string name="config_file_missing">Отсутствует конфигурационный файл, необходимый для работы</string>
     <string name="webui_tcp_port_unavailable">TCP-порт WebUI %s занят. Другой сервер уже запущен?</string>
@@ -652,7 +652,7 @@
     <string name="broadcast_service_control_summary">По умолчанию: выключено. Включите, чтобы разрешить adb или сторонним приложениям, например приложениям автоматизации, давать Universal Sync указания на выполнение условий запуска, принудительный запуск или принудительную остановку.</string>
     <string name="reason_not_within_time_frame_2">Включена работа по расписанию; последняя синхронизация была %s назад.</string>
     <string name="reason_not_within_time_frame_0_min">менее минуты</string>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Синхронизация: %1$d завершено, %2$d устройство в сети</item>
         <item quantity="few">Синхронизация: %1$d завершено, %2$d устройства в сети</item>
         <item quantity="many">Синхронизация: %1$d завершено, %2$d устройств в сети</item>
@@ -674,13 +674,13 @@
     <string name="privacy_title">Политика конфиденциальности</string>
     <string name="pizza_url_title">» Кошки любят пиццу « 😺🍕</string>
     <string name="pizza_url_summary">Всего одним касанием вы можете оставить теплый кусочек доброты, дополненный хорошим настроением, чтобы кошки счастливо мурлыкали.</string>
-    <string name="privacy_summary">Открыть политику конфиденциальности syncthing-android, которая распространяется на использование (если таковое имеется) персональных данных, например, местоположения.</string>
+    <string name="privacy_summary">Открыть политику конфиденциальности Universal Sync Android, которая распространяется на использование (если таковое имеется) персональных данных, например, местоположения.</string>
     <string name="folder_run_script_caption">Запустить скрипт</string>
     <string name="folder_run_script_description">Специальная функция для запуска скриптов после изменения состояния синхронизации папки. Будут выполняться скрипты в папке \'.stfolder/*.sh\', другие расположения не поддерживаются из соображений безопасности.\nПример вызова скрипта: \'.stfolder/rename-files.sh sync_complete\'</string>
     <string name="clear_stversions_title">Очистить все папки управления версиями</string>
     <string name="clear_stversions_summary">Файлы перемещаются в каталог .stversions при замене или удалении с помощью Universal Sync. Вероятно, вы можете найти и восстановить случайно удаленные файлы, но устаревшие версии файлов занимают место на вашем устройстве.</string>
     <string name="clear_stversions_done">Папки .stversions успешно очищены.</string>
-    <string name="syncthing_forum_title">Форум Universal Sync</string>
+    <string name="universalsync_forum_title">Форум Universal Sync</string>
     <string name="share_log_file_missing">Отсутствует файл журнала для отправки.</string>
     <string name="backup_rel_path_to_zip">Относительный путь к архиву конфигурации</string>
     <string name="backup_password_set">✅ Пароль задан: %1$s</string>
@@ -696,7 +696,7 @@
         <item quantity="other">%1$d конфликтов</item>
     </plurals>
     <string name="backup_password_title">Пароль защиты конфигурации</string>
-    <string name="syncthing_forum_summary">Зайдите на форум Universal Sync и получите поддержку</string>
+    <string name="universalsync_forum_summary">Зайдите на форум Universal Sync и получите поддержку</string>
     <string name="clear_stversions_question">Это приведет к удалению всех предыдущих версий файлов, обработанных Universal Sync. Продолжить?</string>
     <string name="backup_password_summary">ℹ️ Рекомендуется:\nВведите надежный пароль, который используется для шифрования вашей конфигурации при экспорте и расшифровки при импорте. Сохраните этот пароль в надежном месте для процесса восстановления. Он понадобится вам для использования функции импорта.\n\n⚠️ Не рекомендуется:\nБез использования пароля другие приложения потенциально могут считывать вашу конфигурацию Universal Sync и манипулировать ею. Раскрытие конфигурации сопряжено с риском того, что злоумышленник может получить несанкционированный доступ к вашим файлам, используя украденную конфигурацию.</string>
     <string name="share_log_file">Отправить файл журнала</string>

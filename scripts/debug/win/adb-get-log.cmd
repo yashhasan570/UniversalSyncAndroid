@@ -9,8 +9,8 @@ where adb >NUL: 2>&1 || (echo [ERROR] adb is missing. Please install it first. S
 ::
 echo [INFO] Looking for app [%PACKAGE_NAME%]
 FOR /F "delims=" %%I IN ('adb shell pidof %PACKAGE_NAME%') DO SET PID=%%I
-IF NOT DEFINED PID echo [ERROR] Syncthing-Fork DEBUG is NOT installed or NOT running. & FOR /F "delims=" %%I IN ('adb shell pidof %PACKAGE_NAME:.debug=%') DO SET PID=%%I
-IF NOT DEFINED PID echo [ERROR] Syncthing-Fork RELEASE is NOT installed or NOT running.
+IF NOT DEFINED PID echo [ERROR] UniversalSync-Fork DEBUG is NOT installed or NOT running. & FOR /F "delims=" %%I IN ('adb shell pidof %PACKAGE_NAME:.debug=%') DO SET PID=%%I
+IF NOT DEFINED PID echo [ERROR] UniversalSync-Fork RELEASE is NOT installed or NOT running.
 ::
 IF DEFINED PID echo [INFO] Found PID: %PID%
 timeout /nobreak 3 >NUL:

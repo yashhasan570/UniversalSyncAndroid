@@ -19,7 +19,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Poslat ID přístroje přes</string>
     <string name="usage_reporting_dialog_title">Povolit anonymní hlášení o používání?</string>
-    <string name="usage_reporting_dialog_description">Zašifrované hlášení o používání je odesíláno denně. Je použito k zjišťování obvyklých platforem, velikosti adresářů a verzi aplikace. Pokud se změní množství odesílaných detailů, budete znovu upozorněni tímto dialogem. \n \nSouhrnné statistiky jsou veřejně dostupné na https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Zašifrované hlášení o používání je odesíláno denně. Je použito k zjišťování obvyklých platforem, velikosti adresářů a verzi aplikace. Pokud se změní množství odesílaných detailů, budete znovu upozorněni tímto dialogem. \n \nSouhrnné statistiky jsou veřejně dostupné na https://data.Universal Sync.net.</string>
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
     <string name="open_website">Otevřít webovou stránku</string>
@@ -131,7 +131,7 @@
     <string name="settings_title">Nastavení</string>
     <string name="category_run_conditions">Podmínky spuštění</string>
     <string name="category_behaviour">Chování</string>
-    <string name="category_syncthing_options">Nastavení Universal Sync</string>
+    <string name="category_universalsync_options">Nastavení Universal Sync</string>
     <string name="category_experimental">Experimentální</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Podmínky spuštění</string>
@@ -183,7 +183,7 @@
     <string name="report_issue_title">Nahlásit chybu</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Verze Universal Sync</string>
+    <string name="universalsync_version_title">Verze Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Výběr složky</string>
@@ -195,12 +195,12 @@
     <string name="select_folder">Vybrat složku</string>
     <string name="create_folder_failed">Vytvoření složky selhalo</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Log Universal Sync</string>
+    <string name="universalsync_log_title">Log Universal Sync</string>
     <string name="android_log_title">Log Androidu</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Zobrazit log Androidu</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Zobrazit log Universal Syncu</string>
+    <string name="view_universalsync_log">Zobrazit log UniversalSyncu</string>
     <string name="retrieving_logs">Získávám logy…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Sdílet</string>
@@ -242,11 +242,11 @@
     </plurals>
     <!-- Sub Folder title -->
     <string name="sub_folder">Podsložka</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Ukončit</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Spuštěno</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Spuštěno</string>
     <string name="config_create_failed">Vytváření konfiguračního souboru selhalo. Zkontrolujte výstup logcat.</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-foto</string>
@@ -318,7 +318,7 @@
     <string name="pull_order_type_random_description">Stahovat soubory v náhodném pořadí.</string>
     <string name="respect_master_sync_summary">Vypnout Universal Sync, pokud je vypnutá dlaždice rychlého nastavení ‚Automaticky synchronizovat data‘.</string>
     <string name="open_file_manager">Otevřít správce souborů</string>
-    <string name="syncthing_starting">Universal Sync se spouští.</string>
+    <string name="universalsync_starting">Universal Sync se spouští.</string>
     <string name="folder_fileWatcher">Sledovat změny</string>
     <string name="folder_pause">Pozastavit složku</string>
     <string name="folder_path_readonly">Vaše verze Androidu umožňuje aplikaci Universal Sync pouze čtení vybrané složky.</string>
@@ -329,15 +329,15 @@
     <string name="respect_master_sync_title">Dodržovat nastavení automatické synchronizace dat z Androidu</string>
     <string name="st_reset_database_question">Tato akce by měla být provedena pouze na základě doporučení naší podpory. \nSkutečně chcete vymazat databázi Universal Sync?</string>
     <string name="st_reset_deltas_title">Resetovat rejstříky přírůstků</string>
-    <string name="syncthing_terminated">Ukončeno</string>
+    <string name="universalsync_terminated">Ukončeno</string>
     <string name="config_file_missing">Soubor s nastaveními nezbytný pro fungování nebyl nalezen</string>
     <string name="notifications_persistent_channel">Universal Sync je aktivní</string>
     <string name="storage_permission_title">Oprávnění pro přístup k úložišti</string>
     <string name="dialog_exit_while_running_as_service_message">Ke zvážení: nastavili jste aplikaci tak, aby se spouštěla automaticky po zapnutí zařízení. K synchronizaci tedy dochází i na pozadí. Ručně byste měli aplikaci vypnout pouze v případě, že narazíte na problémy, jinak můžete v nastavení zakázat možnost \'Spouštět službu automaticky při startu systému\'. Přejete si nyní aplikaci vypnout až do restartu zařízení?</string>
     <string name="device_paused">Pozastaveno</string>
-    <string name="syncthing_running">Universal Sync je spuštěn.</string>
-    <string name="syncthing_not_running">Universal Sync není spuštěn.</string>
-    <string name="syncthing_has_crashed">Universal Sync havaroval.</string>
+    <string name="universalsync_running">Universal Sync je spuštěn.</string>
+    <string name="universalsync_not_running">Universal Sync není spuštěn.</string>
+    <string name="universalsync_has_crashed">Universal Sync havaroval.</string>
     <string name="folder_path_readwrite">Vaše verze Androidu umožňuje aplikaci Universal Sync ve vybrané složce čtení i zápis.</string>
     <string name="folder_fileWatcherDescription">Operační systém bude oznamovat změny souborů. Jinak budou změny sledovány periodickým prohledáváním.</string>
     <string name="toast_invalid_folder_selected">Promiňte, ale zvolenou složku není možné použít. Vyberte složku, která se nachází na vestavěném nebo externím úložišti.</string>
@@ -394,7 +394,7 @@
     <string name="grant_storage_permission">Udělit oprávnění k uložišti</string>
     <string name="photo_shoot_take_picture_success">Snímek byl úspěšně uložen do složky Universal Sync Camera.</string>
     <string name="photo_shoot_take_picture_failure">Nepodařilo se vám pořídit snímek nebo jste ho zrušili.</string>
-    <string name="default_syncthing_camera_folder_label">Universal Sync Camera</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync Camera</string>
     <string name="activity_main_bottom_navigation_rescan_all">Znovu prohledat vše</string>
     <string name="open_main_menu">Otevřít hlavní nabídku</string>
     <string name="dialog_exit_while_running_as_service_title">Potvrdit ukončení aplikace</string>
@@ -416,15 +416,15 @@
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">Přepnutí existujících složek na „Přijímat šifrovaně“ není podporováno.</string>
     <string name="no_recent_changes">Žádné nedávné změny.</string>
     <string name="dialog_settings_restart_app_title">Vyžadován restart</string>
-    <string name="syncthing_active_details">Spuštěno: %1$s</string>
-    <plurals name="syncthing_active_syncing_device_online">
+    <string name="universalsync_active_details">Spuštěno: %1$s</string>
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Synchronizace: %1$d%% hotovo, %2$d zařízení je připojeno</item>
         <item quantity="few">Synchronizace: %1$d%% hotovo, %2$d zařízení je připojena</item>
         <item quantity="many">Synchronizace: %1$d%% hotovo, %2$d zařízení je připojeno</item>
         <item quantity="other">Synchronizace: %1$d%% hotovo, %2$d zařízení je připojeno</item>
     </plurals>
     <string name="devices_list_empty">Nejsou nakonfigurována žádná zařízení. Klepnutím přidáte nové zařízení.</string>
-    <string name="folder_ignore_delete_description">Expertní volba, která ovlivňuje zpracování příchozích aktualizací indexu.Je-li nastavena, jsou příchozí aktualizace s nastaveným příznakem odstranění ignorovány. Viz https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Expertní volba, která ovlivňuje zpracování příchozích aktualizací indexu.Je-li nastavena, jsou příchozí aktualizace s nastaveným příznakem odstranění ignorovány. Viz https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <string name="welcome_text">Universal Sync je synchronizační aplikace s otevřeným zdrojovým kódem. Pro sdílení dat s dalšími přístroji je třeba přidat jejich unikátní ID do seznamu. Poté lze určovat, které adresáře jsou sdíleny s kterými přístroji.\n\nVšechny zaznamenané chyby prosím hlašte přes GitHub.</string>
     <string name="ignore_doze_permission_desc">Systém Android může po určité době synchronizaci zastavit. Chcete-li tomu zabránit, vypněte optimalizaci baterie. Některá zařízení mají předinstalované další aplikace, které ukončují úlohy. Do jejich bílého seznamu byste měli přidat také Universal Sync.</string>
     <string name="recent_changes_title">Nedávné změny</string>
@@ -455,7 +455,7 @@
     <string name="location_permission_desc">Synchronizaci lze nakonfigurovat tak, aby fungovala ve vybraných sítích Wi-Fi. Systém Android vyžaduje, aby aplikace měla oprávnění k poloze, aby mohla číst název aktivní sítě Wi-Fi. Pokud chcete tuto funkci používat, stiskněte výše uvedené tlačítko. Tento krok můžete přeskočit. Další podrobnosti naleznete v našich zásadách ochrany osobních údajů.</string>
     <string name="toast_ignore_doze_permission_required">Tato aplikace funguje spolehlivě, pouze pokud je vyjmuta z úsporného režimu „Doze“.</string>
     <string name="location_permission_title">Oprávnění k poloze</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Pozor: Pokud se Universal SyncNative přeruší a udělá něco divného, je to vaše vina. Přeskočte pouze v případě, že vaše zařízení nepodporuje udělení oprávnění. Opravdu přeskočit?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Pozor: Pokud se UniversalSyncNative přeruší a udělá něco divného, je to vaše vina. Přeskočte pouze v případě, že vaše zařízení nepodporuje udělení oprávnění. Opravdu přeskočit?</string>
     <string name="photo_shoot_activity_title">Universal Sync-Fork Fotoaparát</string>
     <string name="folder_ignore_delete_caption">Ignorovat Odstranění</string>
     <string name="discovered_devices_title">Objevená zařízení - Klepnutím vyberte</string>
@@ -482,26 +482,26 @@
     <string name="webui_remote_access_title">Vzdálený přístup k webovému rozhraní</string>
     <string name="webui_username_title">Uživatelské jméno webového rozhraní</string>
     <string name="webui_password_title">Heslo webového rozhraní</string>
-    <string name="webui_remote_access_summary">Zadejte, chcete-li povolit přístup k webovému rozhraní z jiného zařízení. Pokud je povoleno, můžete se přihlásit pomocí uživatele „syncthing“ a klíče API jako hesla. Výchozí: zakázáno (nejbezpečnější)</string>
+    <string name="webui_remote_access_summary">Zadejte, chcete-li povolit přístup k webovému rozhraní z jiného zařízení. Pokud je povoleno, můžete se přihlásit pomocí uživatele „Universal Sync“ a klíče API jako hesla. Výchozí: zakázáno (nejbezpečnější)</string>
     <string name="download_support_bundle_title">Stáhnout balíček podpory</string>
     <string name="undo_ignored_devices_folders_title">Vrátit zpět ignorovaná zařízení a složky</string>
     <string name="socks_proxy_address_title">SOCKS5 proxy</string>
     <string name="http_proxy_address_title">HTTP(S) proxy</string>
     <string name="broadcast_service_control_title">Řízení služeb vysíláním</string>
-    <string name="broadcast_service_control_summary">Výchozí: Vypnuto. Povolte tuto možnost, pokud chcete umožnit nástrojům jako ADB nebo aplikacím třetích stran (např. automatizačním aplikacím) ovlivňovat chování Universal Syncu – např. řídit podmínky spuštění, vynuceně spustit nebo zastavit proces.</string>
+    <string name="broadcast_service_control_summary">Výchozí: Vypnuto. Povolte tuto možnost, pokud chcete umožnit nástrojům jako ADB nebo aplikacím třetích stran (např. automatizačním aplikacím) ovlivňovat chování UniversalSyncu – např. řídit podmínky spuštění, vynuceně spustit nebo zastavit proces.</string>
     <string name="dialog_settings_restart_app_question">Změna této možnosti vyžaduje okamžitý restart aplikace. Všechny ostatní změny budou zahozeny. Pokračovat?</string>
     <string name="verbose_log_summary">Povolení této možnosti pomůže generovat logy ladění na velmi podrobné úrovni.</string>
     <string name="log_to_file_title">Log do souboru</string>
     <string name="app_version_title">Verze Universal Sync-Fork Wrapper</string>
-    <string name="syncthing_api_key">Universal Sync API Key (kliknutím zkopírujete)</string>
-    <string name="syncthing_database_size">Velikost databáze Universal Sync</string>
+    <string name="universalsync_api_key">Universal Sync API Key (kliknutím zkopírujete)</string>
+    <string name="universalsync_database_size">Velikost databáze Universal Sync</string>
     <string name="os_open_file_limit">Omezení otevřených souborů systému Android</string>
     <string name="api_key_copied_to_clipboard">Klíč Universal Sync API zkopírován do schránky</string>
     <string name="reason_not_on_mobile_data">Universal Sync může běžet na mobilním datovém připojení, ale mobilní data nejsou zapnuta.</string>
     <string name="reason_not_nonroaming_mobile_data">Universal Sync neběží, protože jste zakázali spuštění na roamingových mobilních datových připojeních.</string>
     <string name="reason_run_condition_monitor_not_instantiated">RunConditionMonitor bnemá vytvořenu instance. Pokud tato chyba po restartu aplikace nezmizí, odešlete prosím hlášení o chybě.</string>
     <string name="custom_wifi_ssid_whitelist_empty">Žádné WiFi sítě na seznamu povolených. Přidejte nějaké v nastavení.</string>
-    <string name="syncthing_disabled">Pozastaveno</string>
+    <string name="universalsync_disabled">Pozastaveno</string>
     <string name="config_read_failed">Načtení konfigurace se nezdařilo. Zvažte zálohování dat ze složek pro synchronizaci, poté vymažte data této aplikace a znovu ji spusťte.</string>
     <string name="default_android_camera_folder_label">Fotoaparát Android</string>
     <string name="notification_out_of_disk_space">SD karta je plná. Soubor %1$s</string>
@@ -542,7 +542,7 @@
     <string name="modified_by_device">Zařízení: %1$s</string>
     <string name="modification_time">Čas: %1$s</string>
     <string name="this_device">Toto zařízení</string>
-    <string name="category_syncthing_options_summary">Tato nabídka je k dispozici pouze v případě, že je aplikace Universal Sync spuštěna.</string>
+    <string name="category_universalsync_options_summary">Tato nabídka je k dispozici pouze v případě, že je aplikace Universal Sync spuštěna.</string>
     <string name="category_debug">Odstraňování problémů</string>
     <string name="discovered_device_list_empty">Místní zjišťování nenašlo v místní síti žádné zařízení.Spusťte tuto aplikaci na druhém telefonu. Instalační soubory pro počítače jsou k dispozici na adrese: %1$s</string>
     <string name="preference_app_theme_follow_dark">Tmavé</string>
@@ -588,7 +588,7 @@
     <string name="use_proxy">Připojit prostřednictvím proxy</string>
     <string name="config_export_failed">Export konfigurace selhal. Jděte do Nastavení-Odstraňování problémů-Otevřít log pro důvod selhání.</string>
     <string name="verbose_log_title">Podrobný log</string>
-    <string name="log_to_file_summary">Výstup Universal SyncNative bude zapsán do souboru.</string>
+    <string name="log_to_file_summary">Výstup UniversalSyncNative bude zapsán do souboru.</string>
     <string name="open_issue_tracker_summary">Otevřete nástroj pro sledování problémů Universal Sync-Fork na adrese %1$s</string>
     <string name="complete_welcome_wizard_first">Nejprve spusťte aplikaci a před sdílením souborů dokončete uvítacího průvodce.</string>
     <string name="reason_force_start">Universal Sync běží, protože bylo vynuceno spuštění bez ohledu na podmínky spuštění.</string>
@@ -645,15 +645,15 @@
     <string name="folder_run_script_description">Expertní volba pro spuštění skriptů po změně stavu synchronizace složky.Skripty umístěné ve složce \'.stfolder/*.sh\' budou spuštěny. Jiné umístění skriptů není podporováno z bezpečnostních důvodů.\nPříklad spuštění skriptu: \'.stfolder/rename-files.sh sync_complete\'</string>
     <string name="backup_rel_path_to_zip">Relativní cesta k archivu s konfigurací</string>
     <string name="backup_password_title">Heslo k zabezpečení nastavení</string>
-    <string name="backup_password_summary">ℹ️ Doporučeno:\nZadejte silné heslo, které bude použito k zašifrování vaší konfigurace při exportu a k jejímu dešifrování při importu. Toto heslo si bezpečně uložte – budete ho potřebovat při obnově konfigurace a při použití funkce importu.\n\n⚠️ Nedoporučeno:\nNepoužít žádné heslo. V takovém případě mohou jiné aplikace potenciálně číst nebo upravovat vaši konfiguraci Universal Syncu. Zpřístupnění konfigurace nese riziko, že útočník může získat neoprávněný přístup k vašim souborům pomocí odcizeného exportu nastavení.</string>
+    <string name="backup_password_summary">ℹ️ Doporučeno:\nZadejte silné heslo, které bude použito k zašifrování vaší konfigurace při exportu a k jejímu dešifrování při importu. Toto heslo si bezpečně uložte – budete ho potřebovat při obnově konfigurace a při použití funkce importu.\n\n⚠️ Nedoporučeno:\nNepoužít žádné heslo. V takovém případě mohou jiné aplikace potenciálně číst nebo upravovat vaši konfiguraci UniversalSyncu. Zpřístupnění konfigurace nese riziko, že útočník může získat neoprávněný přístup k vašim souborům pomocí odcizeného exportu nastavení.</string>
     <string name="backup_password_set">✅ Heslo nastaveno: %1$s</string>
     <string name="backup_password_not_set">⚠ Heslo nenastaveno.</string>
     <string name="preference_category_actions">Akce</string>
     <string name="preference_category_explanation">Informace</string>
     <string name="preference_category_prepare">Připravit</string>
     <string name="config_export_successful_no_path">Konfigurace byla exportována. Prosím, nezapomeňte heslo pro pozdější import.</string>
-    <string name="syncthing_forum_title">Fórum Universal Sync</string>
-    <string name="syncthing_forum_summary">Získat pomoc na fóru Universal Sync</string>
+    <string name="universalsync_forum_title">Fórum Universal Sync</string>
+    <string name="universalsync_forum_summary">Získat pomoc na fóru Universal Sync</string>
     <string name="privacy_title">Zásady ochrany soukromí</string>
     <string name="privacy_summary">Otevřete zásady ochrany soukromí Universal Sync-Android, které popisují používání (pokud existuje) osobních údajů, například polohy.</string>
     <string name="share_log_file_missing">Chybí soubor logu pro sdílení.</string>

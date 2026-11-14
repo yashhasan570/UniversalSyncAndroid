@@ -41,7 +41,7 @@ import com.annimon.stream.function.Consumer;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.fragments.DeviceIdDialogFragment;
 import com.universalsync.android.fragments.DeviceListFragment;
 import com.universalsync.android.fragments.DrawerFragment;
@@ -52,8 +52,8 @@ import com.universalsync.android.onboarding.OnboardingActivity;
 import com.universalsync.android.service.AppPrefs;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
-import com.universalsync.android.service.Universal SyncServiceBinder;
+import com.universalsync.android.service.UniversalSyncService;
+import com.universalsync.android.service.UniversalSyncServiceBinder;
 import com.universalsync.android.util.ConfigRouter;
 import com.universalsync.android.util.PermissionUtil;
 import com.universalsync.android.util.Util;
@@ -69,8 +69,8 @@ import javax.inject.Inject;
  * {@link DeviceListFragment} in different tabs, and
  * {@link DrawerFragment} in the navigation drawer.
  */
-public class MainActivity extends Universal SyncActivity
-        implements Universal SyncService.OnServiceStateChangeListener {
+public class MainActivity extends UniversalSyncActivity
+        implements UniversalSyncService.OnServiceStateChangeListener {
 
     private static final String TAG = "MainActivity";
 
@@ -96,7 +96,7 @@ public class MainActivity extends Universal SyncActivity
     private AlertDialog mUsageReportingDialog;
     private Dialog mRestartDialog;
 
-    private Universal SyncService.State mUniversal SyncServiceState = Universal SyncService.State.INIT;
+    private UniversalSyncService.State mUniversalSyncServiceState = UniversalSyncService.State.INIT;
 
     private ViewPager mViewPager;
 
@@ -145,21 +145,21 @@ public class MainActivity extends Universal SyncActivity
      * Handles various dialogs based on current state.
      */
     @Override
-    public void onServiceStateChange(Universal SyncService.State currentState) {
-        mUniversal SyncServiceState = currentState;
+    public void onServiceStateChange(UniversalSyncService.State currentState) {
+        mUniversalSyncServiceState = currentState;
         if (oneTimeShot) {
             updateViewPager();
             oneTimeShot = false;
         }
 
-        // Update status light indicating if syncthing is running.
+        // Update status light indicating if universalsync is running.
         Button btnDisabled = (Button) findViewById(R.id.btnDisabled);
         Button btnStarting = (Button) findViewById(R.id.btnStarting);
         Button btnActive = (Button) findViewById(R.id.btnActive);
         if (btnDisabled != null && btnStarting != null && btnActive != null) {
-            btnActive.setVisibility(currentState == Universal SyncService.State.ACTIVE ? View.VISIBLE : View.GONE);
-            btnStarting.setVisibility(currentState == Universal SyncService.State.STARTING ? View.VISIBLE : View.GONE);
-            btnDisabled.setVisibility(currentState != Universal SyncService.State.ACTIVE && currentState != Universal SyncService.State.STARTING ? View.VISIBLE : View.GONE);
+            btnActive.setVisibility(currentState == UniversalSyncService.State.ACTIVE ? View.VISIBLE : View.GONE);
+            btnStarting.setVisibility(currentState == UniversalSyncService.State.STARTING ? View.VISIBLE : View.GONE);
+            btnDisabled.setVisibility(currentState != UniversalSyncService.State.ACTIVE && currentState != UniversalSyncService.State.STARTING ? View.VISIBLE : View.GONE);
         }
 
         switch (currentState) {
@@ -204,7 +204,7 @@ public class MainActivity extends Universal SyncActivity
      */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
         mConfig = new ConfigRouter(MainActivity.this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         if (ENABLE_VERBOSE_LOG) {
@@ -252,10 +252,10 @@ public class MainActivity extends Universal SyncActivity
         mDrawerLayout.addDrawerListener(mDrawerToggle);
 
         /**
-         * Universal SyncService needs to be started from this activity as the user
+         * UniversalSyncService needs to be started from this activity as the user
          * can directly launch this activity from the recent activity switcher.
          */
-        Intent serviceIntent = new Intent(this, Universal SyncService.class);
+        Intent serviceIntent = new Intent(this, UniversalSyncService.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(serviceIntent);
         } else {
@@ -358,9 +358,9 @@ public class MainActivity extends Universal SyncActivity
         }
 
         // Evaluate run conditions to detect changes made to the metered wifi flags.
-        Universal SyncService mUniversal SyncService = getService();
-        if (mUniversal SyncService != null) {
-            mUniversal SyncService.evaluateRunConditions();
+        UniversalSyncService mUniversalSyncService = getService();
+        if (mUniversalSyncService != null) {
+            mUniversalSyncService.evaluateRunConditions();
         }
 
         startUIRefreshHandler();
@@ -372,7 +372,7 @@ public class MainActivity extends Universal SyncActivity
         if (action != null) {
             if (ACTION_EXIT.equals(action)) {
                 Log.i(TAG, "Exit app requested by notification action");
-                stopService(new Intent(this, Universal SyncService.class));
+                stopService(new Intent(this, UniversalSyncService.class));
                 finishAndRemoveTask();
             }
         }
@@ -383,26 +383,26 @@ public class MainActivity extends Universal SyncActivity
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Universal SyncService mUniversal SyncService = getService();
-        if (mUniversal SyncService != null) {
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(this);
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(mDrawerFragment);
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(mFolderListFragment);
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(mDeviceListFragment);
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(mStatusFragment);
+        UniversalSyncService mUniversalSyncService = getService();
+        if (mUniversalSyncService != null) {
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(this);
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(mDrawerFragment);
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(mFolderListFragment);
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(mDeviceListFragment);
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(mStatusFragment);
         }
     }
 
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         super.onServiceConnected(componentName, iBinder);
-        Universal SyncServiceBinder syncthingServiceBinder = (Universal SyncServiceBinder) iBinder;
-        Universal SyncService syncthingService = syncthingServiceBinder.getService();
-        syncthingService.registerOnServiceStateChangeListener(this);
-        syncthingService.registerOnServiceStateChangeListener(mDrawerFragment);
-        syncthingService.registerOnServiceStateChangeListener(mFolderListFragment);
-        syncthingService.registerOnServiceStateChangeListener(mDeviceListFragment);
-        syncthingService.registerOnServiceStateChangeListener(mStatusFragment);
+        UniversalSyncServiceBinder universalsyncServiceBinder = (UniversalSyncServiceBinder) iBinder;
+        UniversalSyncService universalsyncService = universalsyncServiceBinder.getService();
+        universalsyncService.registerOnServiceStateChangeListener(this);
+        universalsyncService.registerOnServiceStateChangeListener(mDrawerFragment);
+        universalsyncService.registerOnServiceStateChangeListener(mFolderListFragment);
+        universalsyncService.registerOnServiceStateChangeListener(mDeviceListFragment);
+        universalsyncService.registerOnServiceStateChangeListener(mStatusFragment);
     }
 
     /**
@@ -470,8 +470,8 @@ public class MainActivity extends Universal SyncActivity
     public void showRestartDialog(){
         mRestartDialog = new AlertDialog.Builder(this)
                 .setMessage(R.string.dialog_confirm_restart)
-                .setPositiveButton(android.R.string.yes, (dialogInterface, i1) -> this.startService(new Intent(this, Universal SyncService.class)
-                        .setAction(Universal SyncService.ACTION_RESTART)))
+                .setPositiveButton(android.R.string.yes, (dialogInterface, i1) -> this.startService(new Intent(this, UniversalSyncService.class)
+                        .setAction(UniversalSyncService.ACTION_RESTART)))
                 .setNegativeButton(android.R.string.no, null)
                 .create();
         mRestartDialog.show();
@@ -576,7 +576,7 @@ public class MainActivity extends Universal SyncActivity
                         break;
                     case DialogInterface.BUTTON_NEUTRAL:
                         final Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                        intent.putExtra(WebViewActivity.EXTRA_WEB_URL, getString(R.string.syncthing_usage_stats_url));
+                        intent.putExtra(WebViewActivity.EXTRA_WEB_URL, getString(R.string.universalsync_usage_stats_url));
                         startActivity(intent);
                         break;
                 }
@@ -626,7 +626,7 @@ public class MainActivity extends Universal SyncActivity
 
         int totalSyncCompletePercent = restApi.getTotalSyncCompletion();
         Boolean showTotalSyncProgress = (
-                (mUniversal SyncServiceState == Universal SyncService.State.ACTIVE) &&
+                (mUniversalSyncServiceState == UniversalSyncService.State.ACTIVE) &&
                 (totalSyncCompletePercent != -1)
         );
         if (!showTotalSyncProgress) {
@@ -659,7 +659,7 @@ public class MainActivity extends Universal SyncActivity
             return;
         }
         Log.i(TAG, "Exiting app on user request");
-        stopService(new Intent(this, Universal SyncService.class));
+        stopService(new Intent(this, UniversalSyncService.class));
         finishAndRemoveTask();
     }
 

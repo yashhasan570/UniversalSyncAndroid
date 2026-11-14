@@ -22,7 +22,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.activities.ShareActivity;
 import com.universalsync.android.http.ApiRequest;
 import com.universalsync.android.http.GetRequest;
@@ -82,7 +82,7 @@ import static com.universalsync.android.service.Constants.ENABLE_TEST_DATA;
 import static com.universalsync.android.util.Util.getLocalZonedDateTime;
 
 /**
- * Provides functions to interact with the syncthing REST API.
+ * Provides functions to interact with the universalsync REST API.
  */
 public class RestApi {
 
@@ -145,7 +145,7 @@ public class RestApi {
 
     /**
      * In the last-finishing {@link #readConfigFromRestApi} callback, we have to call
-     * {@link Universal SyncService#onApiAvailable} to indicate that the RestApi class is fully initialized.
+     * {@link UniversalSyncService#onApiAvailable} to indicate that the RestApi class is fully initialized.
      * We do this to avoid getting stuck with our main thread due to synchronous REST queries.
      * The correct indication of full initialisation is crucial to stability as other listeners of
      * {@link ../activities/SettingsActivity#SettingsFragment#onServiceStateChange} needs cached config and system information available.
@@ -184,7 +184,7 @@ public class RestApi {
 
     public RestApi(Context context, URL url, String apiKey, OnApiAvailableListener apiListener,
                    OnConfigChangedListener configListener) {
-        ((Universal SyncApp) context.getApplicationContext()).component().inject(this);
+        ((UniversalSyncApp) context.getApplicationContext()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(context);
         mContext = context;
         mUrl = url;
@@ -205,7 +205,7 @@ public class RestApi {
     private final OnConfigChangedListener mOnConfigChangedListener;
 
     /**
-     * Gets local device ID, syncthing version and config, then calls all OnApiAvailableListeners.
+     * Gets local device ID, universalsync version and config, then calls all OnApiAvailableListeners.
      */
     public void readConfigFromRestApi() {
         LogV("Querying config from REST ...");
@@ -245,7 +245,7 @@ public class RestApi {
                 asyncQueryConfigComplete &&
                 asyncQuerySystemStatusComplete) {
             LogV("Reading config from REST completed. Universal Sync version is " + mVersion);
-            // Tell Universal SyncService it can transition to State.ACTIVE.
+            // Tell UniversalSyncService it can transition to State.ACTIVE.
             mOnApiAvailableListener.onApiAvailable();
 
             triggerVersioningCleanupIfNecessary();
@@ -427,8 +427,8 @@ public class RestApi {
     }
 
     /**
-     * Queries debug facilities available from the currently running syncthing binary
-     * if the syncthing binary version changed. First launch of the binary is also
+     * Queries debug facilities available from the currently running universalsync binary
+     * if the universalsync binary version changed. First launch of the binary is also
      * considered as a version change.
      * Precondition: {@link #mVersion} read from REST
      */
@@ -618,7 +618,7 @@ public class RestApi {
 
     /**
      * Posts shutdown request.
-     * This will cause Universal SyncNative to exit and not restart.
+     * This will cause UniversalSyncNative to exit and not restart.
      */
     public void shutdown() {
         hasShutdown = true;
@@ -642,7 +642,7 @@ public class RestApi {
         }
         for (Folder folder : folders) {
             if (folder.path.startsWith("~/")) {
-                folder.path = folder.path.replaceFirst("^~", FileUtils.getUniversal SyncTildeAbsolutePath());
+                folder.path = folder.path.replaceFirst("^~", FileUtils.getUniversalSyncTildeAbsolutePath());
             }
         }
         Collections.sort(folders, FOLDERS_COMPARATOR);
@@ -675,7 +675,7 @@ public class RestApi {
         synchronized (mConfigLock) {
             // Add the new folder to the model.
             mConfig.folders.add(folder);
-            // Send model changes to syncthing, does not require a restart.
+            // Send model changes to universalsync, does not require a restart.
             sendConfig();
         }
     }
@@ -1139,13 +1139,13 @@ public class RestApi {
 
     private void sendBroadcastToApps(Intent intent) {
         String[] packageIdList = {
-            // "com.example.syncthingreceiver",
+            // "com.example.universalsyncreceiver",
             "org.decsync.cc"
         };
         // intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         for (String packageId : packageIdList) {
             intent.setPackage(packageId);
-            ((Universal SyncApp) mContext.getApplicationContext()).sendBroadcast(intent, PERMISSION_RECEIVE_SYNC_STATUS);
+            ((UniversalSyncApp) mContext.getApplicationContext()).sendBroadcast(intent, PERMISSION_RECEIVE_SYNC_STATUS);
         }
     }
 
@@ -1432,7 +1432,7 @@ public class RestApi {
     }
 
     /**
-     * Event triggered by {@link RunConditionMonitor} routed here through {@link Universal SyncService}.
+     * Event triggered by {@link RunConditionMonitor} routed here through {@link UniversalSyncService}.
      */
     public void applyCustomRunConditions(RunConditionMonitor runConditionMonitor) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
@@ -1526,7 +1526,7 @@ public class RestApi {
             return;
         }
         mNotificationHandler.updatePersistentNotification(
-                (Universal SyncService) mContext,
+                (UniversalSyncService) mContext,
                 false,                                              // Do not persist previous notification text.
                 onlineDeviceCount,
                 totalSyncCompletion

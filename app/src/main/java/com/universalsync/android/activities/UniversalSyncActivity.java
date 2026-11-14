@@ -13,17 +13,17 @@ import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.universalsync.android.R;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
-import com.universalsync.android.service.Universal SyncServiceBinder;
+import com.universalsync.android.service.UniversalSyncService;
+import com.universalsync.android.service.UniversalSyncServiceBinder;
 
 /**
- * Connects to {@link Universal SyncService} and provides access to it.
+ * Connects to {@link UniversalSyncService} and provides access to it.
  */
-public abstract class Universal SyncActivity extends ThemedAppCompatActivity implements ServiceConnection {
+public abstract class UniversalSyncActivity extends ThemedAppCompatActivity implements ServiceConnection {
 
-    private static final String TAG = "Universal SyncActivity";
+    private static final String TAG = "UniversalSyncActivity";
 
-    private Universal SyncService mUniversal SyncService;
+    private UniversalSyncService mUniversalSyncService;
 
     /**
      * Look for a Toolbar in the layout and bind it as the activity's actionbar with reasonable
@@ -63,29 +63,29 @@ public abstract class Universal SyncActivity extends ThemedAppCompatActivity imp
     @Override
     protected void onResume() {
         super.onResume();
-        bindService(new Intent(this, Universal SyncService.class), this, Context.BIND_AUTO_CREATE);
+        bindService(new Intent(this, UniversalSyncService.class), this, Context.BIND_AUTO_CREATE);
     }
 
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-        Universal SyncServiceBinder syncthingServiceBinder = (Universal SyncServiceBinder) iBinder;
-        mUniversal SyncService = syncthingServiceBinder.getService();
+        UniversalSyncServiceBinder universalsyncServiceBinder = (UniversalSyncServiceBinder) iBinder;
+        mUniversalSyncService = universalsyncServiceBinder.getService();
     }
 
     @Override
     public void onServiceDisconnected(ComponentName componentName) {
-        mUniversal SyncService = null;
+        mUniversalSyncService = null;
     }
 
     /**
      * Returns service object (or null if not bound).
      */
-    public Universal SyncService getService() {
-        return mUniversal SyncService;
+    public UniversalSyncService getService() {
+        return mUniversalSyncService;
     }
 
     /**
-     * Returns RestApi instance, or null if Universal SyncService is not yet connected.
+     * Returns RestApi instance, or null if UniversalSyncService is not yet connected.
      */
     public RestApi getApi() {
         return (getService() != null)

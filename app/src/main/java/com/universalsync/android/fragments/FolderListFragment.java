@@ -14,15 +14,15 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.activities.FolderActivity;
 import com.universalsync.android.activities.MainActivity;
-import com.universalsync.android.activities.Universal SyncActivity;
+import com.universalsync.android.activities.UniversalSyncActivity;
 import com.universalsync.android.model.Folder;
 import com.universalsync.android.service.AppPrefs;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
+import com.universalsync.android.service.UniversalSyncService;
 import com.universalsync.android.util.ConfigRouter;
 import com.universalsync.android.util.ConfigXml.OpenConfigException;
 import com.universalsync.android.views.FoldersAdapter;
@@ -34,7 +34,7 @@ import javax.inject.Inject;
 /**
  * Displays a list of all existing folders.
  */
-public class FolderListFragment extends ListFragment implements Universal SyncService.OnServiceStateChangeListener,
+public class FolderListFragment extends ListFragment implements UniversalSyncService.OnServiceStateChangeListener,
         AdapterView.OnItemClickListener {
 
     private static final String TAG = "FolderListFragment";
@@ -57,12 +57,12 @@ public class FolderListFragment extends ListFragment implements Universal SyncSe
     private final Handler mUpdateListHandler = new Handler();
     private Boolean mLastVisibleToUser = false;
     private FoldersAdapter mAdapter;
-    private Universal SyncService.State mServiceState = Universal SyncService.State.INIT;
+    private UniversalSyncService.State mServiceState = UniversalSyncService.State.INIT;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getActivity().getApplication()).component().inject(this);
+        ((UniversalSyncApp) getActivity().getApplication()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
     }
 
@@ -106,7 +106,7 @@ public class FolderListFragment extends ListFragment implements Universal SyncSe
     }
 
     @Override
-    public void onServiceStateChange(Universal SyncService.State currentState) {
+    public void onServiceStateChange(UniversalSyncService.State currentState) {
         mServiceState = currentState;
     }
 
@@ -143,7 +143,7 @@ public class FolderListFragment extends ListFragment implements Universal SyncSe
      * Also creates adapter if it doesn't exist yet.
      */
     private void updateList() {
-        Universal SyncActivity activity = (Universal SyncActivity) getActivity();
+        UniversalSyncActivity activity = (UniversalSyncActivity) getActivity();
         if (activity == null || getView() == null || activity.isFinishing()) {
             return;
         }
@@ -204,7 +204,7 @@ public class FolderListFragment extends ListFragment implements Universal SyncSe
     }
 
     private void rescanAll() {
-        Universal SyncActivity activity = (Universal SyncActivity) getActivity();
+        UniversalSyncActivity activity = (UniversalSyncActivity) getActivity();
         if (activity == null || getView() == null || activity.isFinishing()) {
             return;
         }

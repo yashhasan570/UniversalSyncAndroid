@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SyncthingReceiverTestApp"
+rootProject.name = "UniversalSyncReceiverTestApp"
 include(":app")
  

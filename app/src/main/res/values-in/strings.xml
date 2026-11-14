@@ -16,7 +16,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Kirim ID Perangkat ke</string>
     <string name="usage_reporting_dialog_title">Perbolehkan Pelaporan Penggunaan Anonim?</string>
-    <string name="usage_reporting_dialog_description">Laporan penggunaan terenkripsi dikirim secara harian. Pelaporan ini digunakan untuk melacak jenis platform, ukuran folder dan versi aplikasi. Jika data yang terkirim berubah, jendela dialog ini akan terbuka kembali. \n \nStatistika teragregat secara terbuka tersedia di https://data.syncthing.net</string>
+    <string name="usage_reporting_dialog_description">Laporan penggunaan terenkripsi dikirim secara harian. Pelaporan ini digunakan untuk melacak jenis platform, ukuran folder dan versi aplikasi. Jika data yang terkirim berubah, jendela dialog ini akan terbuka kembali. \n \nStatistika teragregat secara terbuka tersedia di https://data.Universal Sync.net</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
     <string name="open_website">Buka Situs Web</string>
@@ -123,7 +123,7 @@
     <string name="settings_title">Pengaturan</string>
     <string name="category_run_conditions">Syarat Operasi</string>
     <string name="category_behaviour">Perilaku</string>
-    <string name="category_syncthing_options">Opsi Universal Sync</string>
+    <string name="category_universalsync_options">Opsi Universal Sync</string>
     <string name="category_experimental">Ujicoba</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Syarat Operasi</string>
@@ -167,7 +167,7 @@
     <string name="report_issue_title">Laporkan Masalah</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Versi Universal Sync</string>
+    <string name="universalsync_version_title">Versi Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Pemilih Folder</string>
@@ -181,7 +181,7 @@
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Lihat Log Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Lihat Log Universal Sync</string>
+    <string name="view_universalsync_log">Lihat Log Universal Sync</string>
     <string name="retrieving_logs">Memuat log…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Bagikan</string>
@@ -212,11 +212,11 @@
     <plurals name="file_name_title">
         <item quantity="other">Daftar Berkas</item>
     </plurals>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Keluar</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync dinyalakan</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync dinyalakan</string>
     <string name="state_syncing">Sinkronisasi (%1$d%%)</string>
     <string name="folder_type_sendonly">Kirim Saja</string>
     <string name="introduction">Pendahuluan</string>
@@ -240,7 +240,7 @@
     <string name="photo_shoot_intro_no_camera">Mohon maaf, perangkat ini tidak memiliki kamera.</string>
     <string name="photo_shoot_intro_missing_permissions">Aplikasi ini memerlukan izin penyimpanan dan izin kamera agar dapat digunakan.</string>
     <string name="photo_shoot_take_picture_success">Foto hasil pemotretan berhasil disimpan di folder Kamera Universal Sync.</string>
-    <string name="default_syncthing_camera_folder_label">Kamera Universal Sync</string>
+    <string name="default_universalsync_camera_folder_label">Kamera Universal Sync</string>
     <string name="activity_main_bottom_navigation_rescan_all">Pindai Ulang Semua</string>
     <string name="grant_camera_permission">Berikan izin kamera</string>
     <string name="photo_shoot_take_picture_failure">Gagal memotret foot atau pemotretan telah Anda batalkan.</string>
@@ -260,7 +260,7 @@
     <string name="device_last_seen">Terakhir dilihat:%1$s</string>
     <string name="device_last_seen_never">Takpernah</string>
     <string name="shared_folders_title_colon">"Folder: "</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Perhatian: Bila Universal SyncNative terinterupsi dan bertindak aneh, kesalahan ada pada Anda sendiri. Klik \'Lewati\' hanya jika device Anda tidak mendukung pemberian izin akses apl. Anda BETUL-BETUL YAKIN ingin melewati?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Perhatian: Bila UniversalSyncNative terinterupsi dan bertindak aneh, kesalahan ada pada Anda sendiri. Klik \'Lewati\' hanya jika device Anda tidak mendukung pemberian izin akses apl. Anda BETUL-BETUL YAKIN ingin melewati?</string>
     <string name="location_permission_desc">Universal Sync dapat dikonfigurasikan agar bekerja ada jaringan Wi-Fi terpilih. Maka dari itu, android mensyaratkan apl. agar memiliki izin lokasi untuk membaca nama jaringan Wi-Fi yang sedang aktif. Bila Anda ingin menggunakan fitur ini, tekan tombol di atas ini. Langkah ini dapat Anda lewati. Silakan buka kebijakan privasi untuk melihat detail lebih lanjut.</string>
     <string name="key_generation_title">Pembuatan Kunci</string>
     <string name="key_generation_success">Kunci aman penukaran data privat berhasil dibuat.</string>
@@ -277,10 +277,10 @@
     <string name="override_changes">Timpa perubahan</string>
     <string name="suggest_file_manager_app_dialog_title">Aplikasi pengelola berkas yang cocok tidak ditemukan</string>
     <string name="status_fragment_title">Status</string>
-    <string name="syncthing_starting">Universal Sync sedang dinyalakan.</string>
-    <string name="syncthing_running">Universal Sync sedang berjalan.</string>
-    <string name="syncthing_not_running">Synchting sedang tidak berjalan.</string>
-    <string name="syncthing_has_crashed">Universal Sync mogok.</string>
+    <string name="universalsync_starting">Universal Sync sedang dinyalakan.</string>
+    <string name="universalsync_running">Universal Sync sedang berjalan.</string>
+    <string name="universalsync_not_running">Synchting sedang tidak berjalan.</string>
+    <string name="universalsync_has_crashed">Universal Sync mogok.</string>
     <string name="location_permission_title">Izin Lokasi</string>
     <string name="location_permission_desc_api_29">Kiat untuk Android 10+: \"Izinkan sepanjang waktu\"</string>
     <string name="reason">Alasan:</string>

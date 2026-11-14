@@ -19,7 +19,7 @@ import com.universalsync.android.activities.FolderActivity;
 import com.universalsync.android.activities.LogActivity;
 import com.universalsync.android.activities.MainActivity;
 import com.universalsync.android.onboarding.OnboardingActivity;
-import com.universalsync.android.service.Universal SyncService.State;
+import com.universalsync.android.service.UniversalSyncService.State;
 
 import javax.inject.Inject;
 
@@ -32,9 +32,9 @@ public class NotificationHandler {
     private static final int ID_STOP_BACKGROUND_WARNING = 3;
     private static final int ID_CRASH = 9;
     private static final int ID_MISSING_PERM = 10;
-    private static final String CHANNEL_PERSISTENT = "01_syncthing_persistent";
-    private static final String CHANNEL_INFO = "02_syncthing_notifications";
-    private static final String CHANNEL_PERSISTENT_WAITING = "03_syncthing_persistent_waiting";
+    private static final String CHANNEL_PERSISTENT = "01_universalsync_persistent";
+    private static final String CHANNEL_INFO = "02_universalsync_notifications";
+    private static final String CHANNEL_PERSISTENT_WAITING = "03_universalsync_persistent_waiting";
 
     private final Context mContext;
     private final SharedPreferences mPreferences;
@@ -100,19 +100,19 @@ public class NotificationHandler {
     /**
      * Shows, updates or hides the notification.
      */
-    public void updatePersistentNotification(Universal SyncService service) {
+    public void updatePersistentNotification(UniversalSyncService service) {
         // Persist previous notification details.
         updatePersistentNotification(service, true, 0, 0);
     }
 
-    public void updatePersistentNotification(Universal SyncService service,
+    public void updatePersistentNotification(UniversalSyncService service,
                                                     Boolean persistNotificationDetails,
                                                     int onlineDeviceCount,
                                                     int totalSyncCompletion) {
         boolean startServiceOnBoot = mPreferences.getBoolean(Constants.PREF_START_SERVICE_ON_BOOT, false);
         State currentServiceState = service.getCurrentState();
-        boolean syncthingRunning = currentServiceState == Universal SyncService.State.ACTIVE ||
-                    currentServiceState == Universal SyncService.State.STARTING;
+        boolean universalsyncRunning = currentServiceState == UniversalSyncService.State.ACTIVE ||
+                    currentServiceState == UniversalSyncService.State.STARTING;
         boolean startForegroundService = false;
         if (!appShutdownInProgress) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
@@ -120,9 +120,9 @@ public class NotificationHandler {
                  * Android 7 and lower:
                  * The app may run in background and monitor run conditions even if it is not
                  * running as a foreground service. For that reason, we can use a normal
-                 * notification if syncthing is DISABLED.
+                 * notification if universalsync is DISABLED.
                  */
-                startForegroundService = startServiceOnBoot || syncthingRunning;
+                startForegroundService = startServiceOnBoot || universalsyncRunning;
             } else {
                 /**
                  * Android 8+:
@@ -150,24 +150,24 @@ public class NotificationHandler {
         switch (currentServiceState) {
             case ERROR:
             case INIT:
-                text = mContext.getString(R.string.syncthing_terminated);
+                text = mContext.getString(R.string.universalsync_terminated);
                 break;
             case DISABLED:
-                text = mContext.getString(R.string.syncthing_disabled);
+                text = mContext.getString(R.string.universalsync_disabled);
                 break;
             case STARTING:
-                text = mContext.getString(R.string.syncthing_starting);
+                text = mContext.getString(R.string.universalsync_starting);
                 break;
             case ACTIVE:
                 if (mLastNotificationText == null || !persistNotificationDetails) {
                     if (totalSyncCompletion == -1) {
                         mLastNotificationText = mContext.getString(
-                                R.string.syncthing_active_details,
+                                R.string.universalsync_active_details,
                                 mContext.getString(R.string.no_remote_devices_connected)
                         );
                     } else if (totalSyncCompletion == 100) {
                         mLastNotificationText = mContext.getString(
-                                R.string.syncthing_active_details,
+                                R.string.universalsync_active_details,
                                 mContext.getResources().getQuantityString(
                                         R.plurals.device_online_up_to_date,
                                         onlineDeviceCount,
@@ -176,7 +176,7 @@ public class NotificationHandler {
                         );
                     } else {
                         mLastNotificationText = mContext.getResources().getQuantityString(
-                                R.plurals.syncthing_active_syncing_device_online,
+                                R.plurals.universalsync_active_syncing_device_online,
                                 onlineDeviceCount,
                                 totalSyncCompletion,
                                 onlineDeviceCount
@@ -186,7 +186,7 @@ public class NotificationHandler {
                 text = mLastNotificationText;
                 break;
             default:
-                text = mContext.getString(R.string.syncthing_terminated);
+                text = mContext.getString(R.string.universalsync_terminated);
                 break;
         }
 
@@ -194,8 +194,8 @@ public class NotificationHandler {
          * Reason for two separate IDs: if one of the notification channels is hidden then
          * the startForeground() below won't update the notification but use the old one.
          */
-        int idToShow = syncthingRunning ? ID_PERSISTENT : ID_PERSISTENT_WAITING;
-        int idToCancel = syncthingRunning ? ID_PERSISTENT_WAITING : ID_PERSISTENT;
+        int idToShow = universalsyncRunning ? ID_PERSISTENT : ID_PERSISTENT_WAITING;
+        int idToCancel = universalsyncRunning ? ID_PERSISTENT_WAITING : ID_PERSISTENT;
         
         Intent openAppIntent = new Intent(mContext, MainActivity.class);
         
@@ -208,7 +208,7 @@ public class NotificationHandler {
                     PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT
         );
         
-        NotificationChannel channel = syncthingRunning ? mPersistentChannel : mPersistentChannelWaiting;
+        NotificationChannel channel = universalsyncRunning ? mPersistentChannel : mPersistentChannelWaiting;
         NotificationCompat.Builder builder = getNotificationBuilder(channel)
                 .setContentTitle(text)
                 .setSmallIcon(R.drawable.ic_stat_notify)
@@ -239,7 +239,7 @@ public class NotificationHandler {
     }
 
     /**
-     * Called by {@link Universal SyncService#onStart} {@link Universal SyncService#onDestroy}
+     * Called by {@link UniversalSyncService#onStart} {@link UniversalSyncService#onDestroy}
      * to indicate app startup and shutdown.
      */
     public void setAppShutdownInProgress(Boolean newValue) {
@@ -308,7 +308,7 @@ public class NotificationHandler {
     public void showStoragePermissionRevokedNotification() {
         Intent intent = new Intent(mContext, OnboardingActivity.class);
         Notification n = getNotificationBuilder(mInfoChannel)
-                .setContentTitle(mContext.getString(R.string.syncthing_terminated))
+                .setContentTitle(mContext.getString(R.string.universalsync_terminated))
                 .setContentText(mContext.getString(R.string.toast_write_storage_permission_required))
                 .setSmallIcon(R.drawable.ic_stat_notify)
                 .setContentIntent(PendingIntent.getActivity(mContext, 0, intent, PendingIntent.FLAG_IMMUTABLE))
@@ -343,12 +343,12 @@ public class NotificationHandler {
             intentAccept, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
         // Prepare "ignore" action.
-        Intent intentIgnore = new Intent(mContext, Universal SyncService.class)
-                .putExtra(Universal SyncService.EXTRA_NOTIFICATION_ID, notificationId)
-                .putExtra(Universal SyncService.EXTRA_DEVICE_ID, deviceId)
-                .putExtra(Universal SyncService.EXTRA_DEVICE_NAME, deviceName)
-                .putExtra(Universal SyncService.EXTRA_DEVICE_ADDRESS, deviceAddress);
-        intentIgnore.setAction(Universal SyncService.ACTION_IGNORE_DEVICE);
+        Intent intentIgnore = new Intent(mContext, UniversalSyncService.class)
+                .putExtra(UniversalSyncService.EXTRA_NOTIFICATION_ID, notificationId)
+                .putExtra(UniversalSyncService.EXTRA_DEVICE_ID, deviceId)
+                .putExtra(UniversalSyncService.EXTRA_DEVICE_NAME, deviceName)
+                .putExtra(UniversalSyncService.EXTRA_DEVICE_ADDRESS, deviceAddress);
+        intentIgnore.setAction(UniversalSyncService.ACTION_IGNORE_DEVICE);
         PendingIntent piIgnore = PendingIntent.getService(mContext, 0,
             intentIgnore, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -388,12 +388,12 @@ public class NotificationHandler {
             intentAccept, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
         // Prepare "ignore" action.
-        Intent intentIgnore = new Intent(mContext, Universal SyncService.class)
-                .putExtra(Universal SyncService.EXTRA_NOTIFICATION_ID, notificationId)
-                .putExtra(Universal SyncService.EXTRA_DEVICE_ID, deviceId)
-                .putExtra(Universal SyncService.EXTRA_FOLDER_ID, folderId)
-                .putExtra(Universal SyncService.EXTRA_FOLDER_LABEL, folderLabel);
-        intentIgnore.setAction(Universal SyncService.ACTION_IGNORE_FOLDER);
+        Intent intentIgnore = new Intent(mContext, UniversalSyncService.class)
+                .putExtra(UniversalSyncService.EXTRA_NOTIFICATION_ID, notificationId)
+                .putExtra(UniversalSyncService.EXTRA_DEVICE_ID, deviceId)
+                .putExtra(UniversalSyncService.EXTRA_FOLDER_ID, folderId)
+                .putExtra(UniversalSyncService.EXTRA_FOLDER_LABEL, folderLabel);
+        intentIgnore.setAction(UniversalSyncService.ACTION_IGNORE_FOLDER);
         PendingIntent piIgnore = PendingIntent.getService(mContext, 0,
             intentIgnore, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 

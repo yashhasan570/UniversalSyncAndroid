@@ -54,7 +54,7 @@
     <string name="photo_shoot_take_picture_success">已成功将图片保存到 Universal Sync 相机文件夹。</string>
     <string name="photo_shoot_take_picture_failure">拍照失败或您已取消操作。</string>
     <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_syncthing_camera_folder_label">Universal Sync 相机</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync 相机</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">重新扫描全部</string>
@@ -73,7 +73,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">将设备 ID 发送至</string>
     <string name="usage_reporting_dialog_title">允许发送匿名使用报告吗？</string>
-    <string name="usage_reporting_dialog_description">加密的使用情况报告每天发送一次。它用于跟踪常见平台、文件夹大小和应用版本。如果报告的数据集发生更改，系统将再次弹出此对话框提示您。 \n \n综合统计数据可在以下网址公开获取 https://data.syncthing.net 。</string>
+    <string name="usage_reporting_dialog_description">加密的使用情况报告每天发送一次。它用于跟踪常见平台、文件夹大小和应用版本。如果报告的数据集发生更改，系统将再次弹出此对话框提示您。 \n \n综合统计数据可在以下网址公开获取 https://data.Universal Sync.net 。</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="open_website">打开网站</string>
@@ -141,10 +141,10 @@
     <string name="button_follow_run_conditions">遵循运行条件</string>
     <string name="button_force_start">强制启动 \n忽略运行条件</string>
     <string name="button_force_stop">强制停止 \n忽略运行条件</string>
-    <string name="syncthing_starting">Universal Sync 正在启动。</string>
-    <string name="syncthing_running">Universal Sync 正在运行。</string>
-    <string name="syncthing_not_running">Universal Sync 未运行。</string>
-    <string name="syncthing_has_crashed">Universal Sync 已崩溃。</string>
+    <string name="universalsync_starting">Universal Sync 正在启动。</string>
+    <string name="universalsync_running">Universal Sync 正在运行。</string>
+    <string name="universalsync_not_running">Universal Sync 未运行。</string>
+    <string name="universalsync_has_crashed">Universal Sync 已崩溃。</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"下载： "</string>
@@ -171,7 +171,7 @@
     <string name="folder_fileWatcherDescription">要求操作系统通知文件的更改。如果禁用，则恢复为每小时定期扫描。</string>
     <!-- Setting title and description -->
     <string name="folder_ignore_delete_caption">忽略删除</string>
-    <string name="folder_ignore_delete_description">影响传入索引更新处理的专家选项。设置后，将忽略设置了删除标志的传入更新。请参阅 https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">影响传入索引更新处理的专家选项。设置后，将忽略设置了删除标志的传入更新。请参阅 https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <!-- Setting title -->
     <string name="folder_pause">暂停文件夹</string>
     <!-- Setting title -->
@@ -199,7 +199,7 @@
     <string name="folder_path_readonly">您的 Android 版本仅授予 Universal Sync 对所选文件夹的只读访问权限。</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
     <string name="folder_path_readwrite">您的 Android 版本授予 Universal Sync 对所选文件夹的读写权限。</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">抱歉，所选文件夹无法使用。请选择位于内部或外部存储上的文件夹。</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">不支持将现有文件夹切换为“加密接收”。</string>
     <string name="ignore_patterns">忽略模式</string>
@@ -285,8 +285,8 @@
     <string name="preference_app_theme_follow_light">浅色</string>
     <string name="preference_app_theme_follow_dark">深色</string>
     <string name="category_behaviour">行为</string>
-    <string name="category_syncthing_options">Universal Sync 选项</string>
-    <string name="category_syncthing_options_summary">此菜单仅在 Universal Sync 运行时可用。</string>
+    <string name="category_universalsync_options">Universal Sync 选项</string>
+    <string name="category_universalsync_options_summary">此菜单仅在 Universal Sync 运行时可用。</string>
     <string name="category_backup">导入与导出</string>
     <string name="category_debug">故障排除</string>
     <string name="category_experimental">实验性</string>
@@ -359,7 +359,7 @@
     <string name="crash_reporting">匿名崩溃报告</string>
     <string name="webui_tcp_port_title">Web UI TCP 端口</string>
     <string name="webui_remote_access_title">Web UI 远程访问</string>
-    <string name="webui_remote_access_summary">指定以允许从其他设备访问 Web UI。如果启用，您可以使用用户“syncthing”和 API 密钥作为密码登录。默认值：禁用（最安全）</string>
+    <string name="webui_remote_access_summary">指定以允许从其他设备访问 Web UI。如果启用，您可以使用用户“Universal Sync”和 API 密钥作为密码登录。默认值：禁用（最安全）</string>
     <string name="download_support_bundle_title">下载支持包</string>
     <!-- Summary shown when the user clicked the download support bundle button -->
     <string name="download_support_bundle_in_progress">正在准备支持包下载…</string>
@@ -421,7 +421,7 @@
     <string name="verbose_log_title">详细日志</string>
     <string name="verbose_log_summary">启用此选项将有助于生成非常详细的调试日志。</string>
     <string name="log_to_file_title">记录到文件</string>
-    <string name="log_to_file_summary">Universal SyncNative 的输出将写入文件。</string>
+    <string name="log_to_file_summary">UniversalSyncNative 的输出将写入文件。</string>
     <!-- Settings item that opens the log activity -->
     <string name="open_log">打开日志</string>
     <!-- Summary for the log activity -->
@@ -432,15 +432,15 @@
     <string name="open_issue_tracker_summary">打开位于 %1$s 的 Universal Sync-Fork 问题跟踪页</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync 版本</string>
+    <string name="universalsync_version_title">Universal Sync 版本</string>
     <!-- Title of the preference showing this app's version name -->
     <string name="app_version_title">Universal Sync-Fork 包装器版本</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="syncthing_api_key">Universal Sync API 密钥（单击复制）</string>
+    <string name="universalsync_api_key">Universal Sync API 密钥（单击复制）</string>
     <!-- Shown when the API key is copied to the clipboard -->
     <string name="api_key_copied_to_clipboard">Universal Sync API 密钥已复制到剪贴板</string>
     <!-- Title of the preference showing database size -->
-    <string name="syncthing_database_size">Universal Sync 数据库大小</string>
+    <string name="universalsync_database_size">Universal Sync 数据库大小</string>
     <!-- Title of the preference showing the OS open file limit -->
     <string name="os_open_file_limit">Android 打开文件限制</string>
     <!-- FolderPickerAcitivity -->
@@ -460,12 +460,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">向上</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Universal Sync 日志</string>
+    <string name="universalsync_log_title">Universal Sync 日志</string>
     <string name="android_log_title">Android 日志</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">查看 Android 日志</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">查看 Universal Sync 日志</string>
+    <string name="view_universalsync_log">查看 Universal Sync 日志</string>
     <string name="retrieving_logs">正在检索日志…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">分享</string>
@@ -504,7 +504,7 @@
     <!-- RunConditionMonitor -->
     <string name="reason_force_start">Universal Sync 正在运行，因为您强制启动它，而不管运行条件如何。</string>
     <string name="reason_force_stop">Universal Sync 未运行，因为您强制停止它，而不管运行条件如何。</string>
-    <!-- Explanations why syncthing is running or not running -->
+    <!-- Explanations why Universal Sync is running or not running -->
     <string name="reason_not_within_time_frame">您启用了“按照时间表运行”，最后同步不超过一小时前。</string>
     <string name="reason_not_within_time_frame_2">您启用了“按照时间表运行”，最后同步是在 %s 前。</string>
     <string name="reason_not_within_time_frame_0_min">不到一分钟</string>
@@ -536,22 +536,22 @@
     <string name="reason_run_condition_monitor_not_instantiated">RunConditionMonitor 未实例化。如果重启后此错误没有消失，请重启应用并提交错误报告。</string>
     <!-- Sync Conditions Dialog -->
     <string name="custom_wifi_ssid_whitelist_empty">没有 WiFi SSID 被列入白名单。请在设置中指定一些。</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">退出</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">正在运行</string>
-    <string name="syncthing_active_details">正在运行：%1$s</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">正在运行</string>
+    <string name="universalsync_active_details">正在运行：%1$s</string>
     <string name="no_remote_devices_connected">未连接远程设备</string>
     <plurals name="device_online_up_to_date">
         <item quantity="other">%1$d 台设备在线且处于最新状态</item>
     </plurals>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="other">正在同步：%1$d%% 已完成，%2$d 台设备在线</item>
     </plurals>
-    <string name="syncthing_disabled">睡眠</string>
-    <string name="syncthing_terminated">已终止</string>
-    <!-- Toast shown if syncthing failed to create or read the config -->
+    <string name="universalsync_disabled">睡眠</string>
+    <string name="universalsync_terminated">已终止</string>
+    <!-- Toast shown if Universal Sync failed to create or read the config -->
     <string name="executable_not_found">缺少核心可执行文件“%s”。请检查构建和日志输出。</string>
     <string name="config_create_failed">创建配置失败。请检查日志输出。</string>
     <string name="config_read_failed">读取配置失败。考虑备份同步文件夹中的数据，然后从 Android 设置中清除此应用的数据并重启。</string>
@@ -691,16 +691,16 @@
     <string name="qs_schedule_label_minutes" tools:ignore="PluralsCandidate">运行 %1$d 分钟</string>
     <string name="notification_permission_title">通知权限</string>
     <string name="toast_notification_permission_required">Universal Sync 需要通知权限保持其服务活动和连接。</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">小心：如果 Universal SyncNative 被中断并做了一些奇怪的事情，都怪您。仅在您的设备不支持授予权限的情况下跳过。真的要跳过？</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">小心：如果 UniversalSyncNative 被中断并做了一些奇怪的事情，都怪您。仅在您的设备不支持授予权限的情况下跳过。真的要跳过？</string>
     <string name="sleep_interval_minutes_title">同步暂停间隔持续时间</string>
     <string name="start_into_web_gui_title">启动直接进入 Web GUI</string>
     <string name="start_into_web_gui_summary">启动应用时，打开 Web GUI 而不是打开主屏幕</string>
     <string name="open_source_licenses_summary">显示使用的开放源代码许可</string>
     <string name="open_source_licenses_title">开放源代码许可</string>
     <string name="privacy_title">隐私政策</string>
-    <string name="privacy_summary">打开 syncthing-android 的隐私政策，其中涵盖了个人数据的使用（如果有的话），例如位置。</string>
-    <string name="syncthing_forum_title">Universal Sync 论坛</string>
-    <string name="syncthing_forum_summary">前往 Universal Sync 论坛获取支持</string>
+    <string name="privacy_summary">打开 Universal Sync Android 的隐私政策，其中涵盖了个人数据的使用（如果有的话），例如位置。</string>
+    <string name="universalsync_forum_title">Universal Sync 论坛</string>
+    <string name="universalsync_forum_summary">前往 Universal Sync 论坛获取支持</string>
     <string name="clear_stversions_title">清空所有版本控制文件夹</string>
     <string name="clear_stversions_done">已成功清除 .stversions 文件夹。</string>
     <string name="clear_stversions_question">这将删除 Universal Sync 处理的所有以前版本的文件。是否继续？</string>

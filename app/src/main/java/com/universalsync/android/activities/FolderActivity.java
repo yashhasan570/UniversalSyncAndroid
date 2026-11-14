@@ -40,15 +40,15 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.gson.Gson;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.model.Device;
 import com.universalsync.android.model.Folder;
 import com.universalsync.android.model.FolderIgnoreList;
 import com.universalsync.android.model.SharedWithDevice;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
-import com.universalsync.android.service.Universal SyncServiceBinder;
+import com.universalsync.android.service.UniversalSyncService;
+import com.universalsync.android.service.UniversalSyncServiceBinder;
 import com.universalsync.android.util.ConfigRouter;
 import com.universalsync.android.util.FileUtils;
 import com.universalsync.android.util.FileUtils.ExternalStorageDirType;
@@ -78,7 +78,7 @@ import static com.universalsync.android.service.RunConditionMonitor.EXTRA_BEGIN_
 /**
  * Shows folder details and allows changing them.
  */
-public class FolderActivity extends Universal SyncActivity {
+public class FolderActivity extends UniversalSyncActivity {
     public static final String EXTRA_DEVICE_ID =
             ".activities.FolderActivity.DEVICE_ID";
 
@@ -267,7 +267,7 @@ public class FolderActivity extends Universal SyncActivity {
         mConfig = new ConfigRouter(FolderActivity.this);
 
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
         setContentView(R.layout.activity_folder);
 
         mIsCreateMode = getIntent().getBooleanExtra(EXTRA_IS_CREATE, false);
@@ -513,9 +513,9 @@ public class FolderActivity extends Universal SyncActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Universal SyncService syncthingService = getService();
-        if (syncthingService != null) {
-            syncthingService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
+        UniversalSyncService universalsyncService = getService();
+        if (universalsyncService != null) {
+            universalsyncService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
         }
         mLabelView.removeTextChangedListener(mTextWatcher);
         mIdView.removeTextChangedListener(mTextWatcher);
@@ -543,9 +543,9 @@ public class FolderActivity extends Universal SyncActivity {
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         super.onServiceConnected(componentName, iBinder);
-        Universal SyncServiceBinder syncthingServiceBinder = (Universal SyncServiceBinder) iBinder;
-        Universal SyncService syncthingService = (Universal SyncService) syncthingServiceBinder.getService();
-        syncthingService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
+        UniversalSyncServiceBinder universalsyncServiceBinder = (UniversalSyncServiceBinder) iBinder;
+        UniversalSyncService universalsyncService = (UniversalSyncService) universalsyncServiceBinder.getService();
+        universalsyncService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
     }
 
     private void onReceiveFolderIgnoreList(FolderIgnoreList folderIgnoreList) {
@@ -673,10 +673,10 @@ public class FolderActivity extends Universal SyncActivity {
                 .setMessage(R.string.remove_folder_confirm)
                 .setPositiveButton(android.R.string.yes, (dialogInterface, i) -> {
                     mConfig.removeFolder(getApi(), mFolder.id);
-                    if (mFolder.id.equals(Constants.syncthingCameraFolderId)) {
+                    if (mFolder.id.equals(Constants.universalsyncCameraFolderId)) {
                         // Remove consent to "Universal Sync Camera" feature.
                         SharedPreferences.Editor editor = mPreferences.edit();
-                        editor.putBoolean(Constants.PREF_ENABLE_SYNCTHING_CAMERA, false);
+                        editor.putBoolean(Constants.PREF_ENABLE_UNIVERSALSYNC_CAMERA, false);
                         editor.apply();
                     }
                     mFolderNeedsToUpdate = false;
@@ -712,13 +712,13 @@ public class FolderActivity extends Universal SyncActivity {
             mFolder.path = FileUtils.cutTrailingSlash(targetPath);
             Log.v(TAG, "onActivityResult/CHOOSE_FOLDER_REQUEST: Got directory path '" + mFolder.path + "'");
             checkWriteAndUpdateUI();
-            // Postpone sending the config changes using syncthing REST API.
+            // Postpone sending the config changes using universalsync REST API.
             mFolderNeedsToUpdate = true;
         } else if (resultCode == Activity.RESULT_OK && requestCode == FolderPickerActivity.DIRECTORY_REQUEST_CODE) {
             mFolder.path = FileUtils.cutTrailingSlash(data.getStringExtra(FolderPickerActivity.EXTRA_RESULT_DIRECTORY));
             Log.v(TAG, "onActivityResult/DIRECTORY_REQUEST_CODE: Got directory path '" + mFolder.path + "'");
             checkWriteAndUpdateUI();
-            // Postpone sending the config changes using syncthing REST API.
+            // Postpone sending the config changes using universalsync REST API.
             mFolderNeedsToUpdate = true;
         } else if (resultCode == Activity.RESULT_OK && requestCode == FILE_VERSIONING_DIALOG_REQUEST) {
             updateVersioning(data.getExtras());
@@ -726,7 +726,7 @@ public class FolderActivity extends Universal SyncActivity {
             String newFolderType = data.getStringExtra(FolderTypeDialogActivity.EXTRA_RESULT_FOLDER_TYPE);
             if (!mIsCreateMode && newFolderType.equals(Constants.FOLDER_TYPE_RECEIVE_ENCRYPTED)) {
                 // Disallow switching existing folder's type to receiveEncrypted.
-                // Universal SyncNative also does this. Posting a wrong config will result in http code 500.
+                // UniversalSyncNative also does this. Posting a wrong config will result in http code 500.
                 Toast.makeText(this, R.string.folder_type_switch_to_receive_encrypted_not_allowed, Toast.LENGTH_LONG).show();
                 return;
             }
@@ -958,8 +958,8 @@ public class FolderActivity extends Universal SyncActivity {
 
     private void preCreateFolderStruct(Uri uriFolderRoot, String absolutePath) {
         /**
-         * Normally, syncthing takes care of creating the ".stfolder" marker.
-         * This fails on Android 5+ if the syncthing binary only has
+         * Normally, universalsync takes care of creating the ".stfolder" marker.
+         * This fails on Android 5+ if the universalsync binary only has
          * readonly access on the path and the user tries to configure a
          * sendOnly folder. To fix this, we'll precreate the marker using java code.
          */

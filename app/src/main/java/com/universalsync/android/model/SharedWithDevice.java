@@ -7,7 +7,7 @@ public class SharedWithDevice {
     public String introducedBy = "";
 
     // Since v1.12.0
-    // See https://github.com/syncthing/syncthing/pull/7055
+    // See https://github.com/universalsync/universalsync/pull/7055
     public String encryptionPassword = "";
 
     /**

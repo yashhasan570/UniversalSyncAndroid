@@ -17,7 +17,7 @@ import com.universalsync.android.model.SharedWithDevice;
 import com.universalsync.android.R;
 import com.universalsync.android.service.AppPrefs;
 import com.universalsync.android.service.Constants;
-import com.universalsync.android.service.Universal SyncRunnable;
+import com.universalsync.android.service.UniversalSyncRunnable;
 import com.universalsync.android.util.FileUtils.ExternalStorageDirType;
 
 import java.io.ByteArrayOutputStream;
@@ -61,7 +61,7 @@ import org.xml.sax.InputSource;
 
 /**
  * Provides direct access to the config.xml file in the file system.
- * This class should only be used if the syncthing API is not available (usually during startup).
+ * This class should only be used if the universalsync API is not available (usually during startup).
  */
 public class ConfigXml {
 
@@ -117,15 +117,15 @@ public class ConfigXml {
      * This should run within an AsyncTask as it can cause a full CPU load
      * for more than 30 seconds on older phone hardware.
      */
-    public void generateConfig() throws OpenConfigException, Universal SyncRunnable.ExecutableNotFoundException {
+    public void generateConfig() throws OpenConfigException, UniversalSyncRunnable.ExecutableNotFoundException {
         // Create new secret keys and config.
         Log.i(TAG, "(Re)Generating keys and config.");
-        new Universal SyncRunnable(mContext, Universal SyncRunnable.Command.generate).run(true);
+        new UniversalSyncRunnable(mContext, UniversalSyncRunnable.Command.generate).run(true);
         parseConfig();
         Boolean changed = false;
 
         // Set local device name.
-        Log.i(TAG, "Starting syncthing to retrieve local device id.");
+        Log.i(TAG, "Starting universalsync to retrieve local device id.");
         String localDeviceID = getLocalDeviceIDandStoreToPref();
         if (!TextUtils.isEmpty(localDeviceID)) {
             changed = changeLocalDeviceName(localDeviceID) || changed;
@@ -157,8 +157,8 @@ public class ConfigXml {
             throw new OpenConfigException();
         }
 
-        // Set user to "syncthing"
-        changed = setConfigElement(gui, "user", "syncthing") || changed;
+        // Set user to "universalsync"
+        changed = setConfigElement(gui, "user", "universalsync") || changed;
 
         // Initialiaze password to the API key
         changed = setConfigElement(gui, "password",  BCrypt.hashpw(getApiKey(), BCrypt.gensalt(4))) || changed;
@@ -176,7 +176,7 @@ public class ConfigXml {
             if (elementOptions != null) {
                 changed = setConfigElement(elementOptions, "listenAddress", new String[]{
                                 "tcp://:22001",
-                                "dynamic+https://relays.syncthing.net/endpoint"
+                                "dynamic+https://relays.universalsync.net/endpoint"
                         }
                 ) || changed;
             }
@@ -191,11 +191,11 @@ public class ConfigXml {
     private String getLocalDeviceIDfromPref() {
         String localDeviceID = PreferenceManager.getDefaultSharedPreferences(mContext).getString(Constants.PREF_LOCAL_DEVICE_ID, "");
         if (TextUtils.isEmpty(localDeviceID)) {
-            Log.d(TAG, "getLocalDeviceIDfromPref: Local device ID unavailable, trying to retrieve it from syncthing ...");
+            Log.d(TAG, "getLocalDeviceIDfromPref: Local device ID unavailable, trying to retrieve it from universalsync ...");
             try {
                 localDeviceID = getLocalDeviceIDandStoreToPref();
-            } catch (Universal SyncRunnable.ExecutableNotFoundException e) {
-                Log.e(TAG, "getLocalDeviceIDfromPref: Failed to execute syncthing core");
+            } catch (UniversalSyncRunnable.ExecutableNotFoundException e) {
+                Log.e(TAG, "getLocalDeviceIDfromPref: Failed to execute universalsync core");
             }
             if (TextUtils.isEmpty(localDeviceID)) {
                 Log.e(TAG, "getLocalDeviceIDfromPref: Local device ID unavailable");
@@ -204,8 +204,8 @@ public class ConfigXml {
         return localDeviceID;
     }
 
-    private String getLocalDeviceIDandStoreToPref() throws Universal SyncRunnable.ExecutableNotFoundException {
-        String logOutput = new Universal SyncRunnable(mContext, Universal SyncRunnable.Command.deviceid).run(true);
+    private String getLocalDeviceIDandStoreToPref() throws UniversalSyncRunnable.ExecutableNotFoundException {
+        String logOutput = new UniversalSyncRunnable(mContext, UniversalSyncRunnable.Command.deviceid).run(true);
         String localDeviceID = logOutput.replace("\n", "");
 
         // Verify that local device ID is correctly formatted.
@@ -216,7 +216,7 @@ public class ConfigXml {
             return "";
         }
 
-        // Store local device ID to pref. This saves us expensive calls to the syncthing binary if we need it later.
+        // Store local device ID to pref. This saves us expensive calls to the universalsync binary if we need it later.
         PreferenceManager.getDefaultSharedPreferences(mContext).edit()
             .putString(Constants.PREF_LOCAL_DEVICE_ID, localDeviceID)
             .apply();
@@ -292,8 +292,8 @@ public class ConfigXml {
     private void updateIfNeeded() {
         boolean changed = false;
 
-        /* Perform one-time migration tasks on syncthing's config file when coming from an older config version. */
-        changed = migrateUniversal SyncOptions() || changed;
+        /* Perform one-time migration tasks on universalsync's config file when coming from an older config version. */
+        changed = migrateUniversalSyncOptions() || changed;
 
         /* Get refs to important config objects */
         NodeList folders = mConfig.getDocumentElement().getElementsByTagName("folder");
@@ -334,7 +334,7 @@ public class ConfigXml {
             throw new OpenConfigException();
         }
 
-        /* Dismiss "fsWatcherNotification" according to https://github.com/syncthing/syncthing-android/pull/1051 */
+        /* Dismiss "fsWatcherNotification" according to https://github.com/universalsync/UniversalSyncAndroid/pull/1051 */
         NodeList childNodes = options.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             Node node = childNodes.item(i);
@@ -369,11 +369,11 @@ public class ConfigXml {
         }
 
         // Add the "Universal Sync Camera" folder if the user consented to use the feature.
-        Boolean prefEnableUniversal SyncCamera =
+        Boolean prefEnableUniversalSyncCamera =
                 PreferenceManager.getDefaultSharedPreferences(mContext)
-                        .getBoolean(Constants.PREF_ENABLE_SYNCTHING_CAMERA, false);
-        if (prefEnableUniversal SyncCamera) {
-            changed = addUniversal SyncCameraFolder() || changed;
+                        .getBoolean(Constants.PREF_ENABLE_UNIVERSALSYNC_CAMERA, false);
+        if (prefEnableUniversalSyncCamera) {
+            changed = addUniversalSyncCameraFolder() || changed;
         }
 
         // Save changes if we made any.
@@ -383,12 +383,12 @@ public class ConfigXml {
     }
 
     /**
-     * Updates syncthing options to a version specific target setting in the config file.
-     * Used for one-time config migration from a lower syncthing version to the current version.
+     * Updates universalsync options to a version specific target setting in the config file.
+     * Used for one-time config migration from a lower universalsync version to the current version.
      * Enables filesystem watcher.
      * Returns if changes to the config have been made.
      */
-    private boolean migrateUniversal SyncOptions() {
+    private boolean migrateUniversalSyncOptions() {
         Folder defaultFolder = new Folder();
 
         /* Read existing config version */
@@ -495,7 +495,7 @@ public class ConfigXml {
             
             folder.path = getAttributeOrDefault(r, "path", "");
             if (folder.path.startsWith("~/")) {
-                folder.path = folder.path.replaceFirst("^~", FileUtils.getUniversal SyncTildeAbsolutePath());
+                folder.path = folder.path.replaceFirst("^~", FileUtils.getUniversalSyncTildeAbsolutePath());
             }
             
             folder.type = getAttributeOrDefault(r, "type", Constants.FOLDER_TYPE_SEND_RECEIVE);
@@ -1212,35 +1212,35 @@ public class ConfigXml {
      * directory if it hasn't been added to the config yet.
      * Returns if changes to the config have been made.
      */
-    private boolean addUniversal SyncCameraFolder() {
-        // LogV("addUniversal SyncCameraFolder: Examining config if folder already exists ...");
+    private boolean addUniversalSyncCameraFolder() {
+        // LogV("addUniversalSyncCameraFolder: Examining config if folder already exists ...");
         NodeList nodeFolders = mConfig.getDocumentElement().getElementsByTagName("folder");
         Boolean folderAlreadyPresentInConfig = false;
         for (int i = 0; i < nodeFolders.getLength(); i++) {
             Element r = (Element) nodeFolders.item(i);
             String folderId = getAttributeOrDefault(r, "id", "");
-            if (!TextUtils.isEmpty(folderId) && folderId.equals(Constants.syncthingCameraFolderId)) {
+            if (!TextUtils.isEmpty(folderId) && folderId.equals(Constants.universalsyncCameraFolderId)) {
                 folderAlreadyPresentInConfig = true;
                 break;
             }
         }
         if (folderAlreadyPresentInConfig) {
-            // LogV("addUniversal SyncCameraFolder: Folder [" + Constants.syncthingCameraFolderId + "] already present in config.");
+            // LogV("addUniversalSyncCameraFolder: Folder [" + Constants.universalsyncCameraFolderId + "] already present in config.");
             return false;
         }
 
         // Get app specific directory, e.g. "/storage/emulated/0/Android/media/[PACKAGE_NAME]/Pictures".
         File storageDir = FileUtils.getExternalFilesDir(mContext, ExternalStorageDirType.INT_MEDIA, Environment.DIRECTORY_PICTURES);
         if (storageDir == null) {
-            Log.e(TAG, "addUniversal SyncCameraFolder: storageDir == null");
+            Log.e(TAG, "addUniversalSyncCameraFolder: storageDir == null");
             return false;
         }
 
         // Prepare folder element.
         Folder folder = new Folder();
         folder.minDiskFree = new Folder.MinDiskFree();
-        folder.id = Constants.syncthingCameraFolderId;
-        folder.label = mContext.getString(R.string.default_syncthing_camera_folder_label);
+        folder.id = Constants.universalsyncCameraFolderId;
+        folder.label = mContext.getString(R.string.default_universalsync_camera_folder_label);
         folder.path = storageDir.getAbsolutePath();
 
         // Add versioning.
@@ -1252,7 +1252,7 @@ public class ConfigXml {
         folder.versioning.fsType = "basic";
 
         // Add folder to config.
-        LogV("addUniversal SyncCameraFolder: Adding folder to config [" + folder.path + "]");
+        LogV("addUniversalSyncCameraFolder: Adding folder to config [" + folder.path + "]");
         addFolder(folder);
         return true;
     }

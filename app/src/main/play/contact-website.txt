@@ -1,1 +1,1 @@
-https://github.com/universalsync/syncthing-android
+https://github.com/universalsync/Universal Sync Android

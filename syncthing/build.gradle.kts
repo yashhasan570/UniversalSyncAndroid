@@ -67,7 +67,7 @@ abstract class BuildNativeTask @Inject constructor(
         execOps.exec {
             environment(fullEnv)
             workingDir(workDirFile)
-            commandLine(pythonBinary.get(), "-u", "./build-syncthing.py")
+            commandLine(pythonBinary.get(), "-u", "./build-universalsync.py")
         }
     }
 }

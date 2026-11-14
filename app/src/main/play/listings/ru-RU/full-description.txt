@@ -5,7 +5,7 @@
 * Индивидуальные условия синхронизации могут быть применены отдельно для устройств и папок
 * Интерфейс для недавних изменений, открытие файлов по нажатию.
 * Changes to folder and device config can be made regardless if Universal Sync is running or not
-* UI explains why syncthing is running or not.
+* UI explains why Universal Sync is running or not.
 * Проблема с расходом батареи решена.
 * Discover other Universal Sync devices on the same network and easily add them.
 * Supports two-way synchronization on external SD card since Android 11.
@@ -14,25 +14,25 @@ Universal Sync-Fork для Android - это обёртка для Universal Sync
 
 Цели форка:
 * Разрабатывать и проверять улучшения вместе с сообществом
-* Выпускать новые версии приложения чаще, чтобы найти и исправить ошибки, связанные с изменениями в подмодуле syncthing
+* Выпускать новые версии приложения чаще, чтобы найти и исправить ошибки, связанные с изменениями в подмодуле Universal Sync
 * Сделать улучшения конфигурируемыми в интерфейсе, пользователи должны иметь возможность включать и выключать их
 
 Сравнение между основным приложением и этим форком на момент написания:
-* Both contain the syncthing binary built from the official source at GitHub
+* Both contain the Universal Sync binary built from the official source at GitHub
 * Функционал и надёжность Universal Sync зависит от версии бинарного подмодуля sycthing.
 * Форк идёт в ногу с оригиналом, и иногда они подтягивают мои изменения.
 * Стратегия и частота релиза отличается
 * Форк касается только обёртки, содержащей Android UI .
 
-Сайт: https://github.com/universalsync/syncthing-android
+Сайт: https://github.com/universalsync/Universal Sync Android
 
-Исходный код: https://github.com/universalsync/syncthing-android
+Исходный код: https://github.com/universalsync/Universal Sync Android
 
-How Universal Sync writes to external SD card: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+How Universal Sync writes to external SD card: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ and helpful articles: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ and helpful articles: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Замечания: https://github.com/universalsync/syncthing-android/issues
+Замечания: https://github.com/universalsync/Universal Sync Android/issues
 
 Please help with the
-Перевод: https://hosted.weblate.org/projects/syncthing-fork/app/
+Перевод: https://hosted.weblate.org/projects/Universal Sync/app/

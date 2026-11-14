@@ -11,7 +11,7 @@ attrib +h "%PROJECT_ROOT%\.idea" >NUL:
 attrib +h "%PROJECT_ROOT%\.kotlin" >NUL:
 attrib +h "%PROJECT_ROOT%\app\build" >NUL:
 attrib +h "%PROJECT_ROOT%\build" >NUL:
-attrib +h "%PROJECT_ROOT%\syncthing\pkg" >NUL:
-attrib +h "%PROJECT_ROOT%\syncthing\src\github.com\syncthing\syncthing" >NUL:
+attrib +h "%PROJECT_ROOT%\universalsync\pkg" >NUL:
+attrib +h "%PROJECT_ROOT%\universalsync\src\github.com\universalsync\universalsync" >NUL:
 ::
 goto :eof

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.syncthingreceiver"
+    namespace = "com.example.universalsyncreceiver"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.syncthingreceiver"
+        applicationId = "com.example.universalsyncreceiver"
         minSdk = 29
         targetSdk = 35
         versionCode = 1

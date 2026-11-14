@@ -8,10 +8,10 @@ import android.util.Log;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.service.NotificationHandler;
 import com.universalsync.android.service.Constants;
-import com.universalsync.android.service.Universal SyncService;
+import com.universalsync.android.service.UniversalSyncService;
 
 import javax.inject.Inject;
 
@@ -45,7 +45,7 @@ public class AppConfigReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        ((Universal SyncApp) context.getApplicationContext()).component().inject(this);
+        ((UniversalSyncApp) context.getApplicationContext()).component().inject(this);
         String intentAction = intent.getAction().replaceFirst(context.getPackageName(), "");
         if (!getPrefBroadcastServiceControl(context)) {
             switch (intentAction) {
@@ -53,7 +53,7 @@ public class AppConfigReceiver extends BroadcastReceiver {
                 case ACTION_START:
                 case ACTION_STOP:
                     Log.w(TAG, "Ignored intent action \"" + intentAction +
-                                "\". Enable Settings > Experimental > Service Control by Broadcast if you like to control syncthing remotely.");
+                                "\". Enable Settings > Experimental > Service Control by Broadcast if you like to control universalsync remotely.");
                     break;
             }
             return;

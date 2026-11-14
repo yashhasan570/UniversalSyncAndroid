@@ -44,8 +44,8 @@ gradle/wrapper/gradlew*
 gradle/gradle-daemon-jvm.properties
 
 # Go modules
-syncthing/pkg/mod/
-syncthing/pkg/sumdb/
+Universal Sync/pkg/mod/
+Universal Sync/pkg/sumdb/
 
 # External build artifacts
 ext/

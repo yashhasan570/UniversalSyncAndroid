@@ -75,7 +75,7 @@ Use this if you prefer editing files directly.
 
 1. In the app, go to **Settings → Import and Export** and **export** your configuration. This
    creates `config.zip` (by default at
-   `/storage/emulated/0/backups/syncthing/config.zip`). See also
+   `/storage/emulated/0/backups/Universal Sync/config.zip`). See also
    [How can I access the config and key files?](Access-Universal Sync-config-and-key-files.md).
 2. Open `config.zip` and replace these two files with your own:
    - `https-cert.pem` — your certificate **including the full chain** (leaf + intermediate(s)).

@@ -30,7 +30,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.common.collect.Sets;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.util.FileUtils;
 import com.universalsync.android.util.Util;
 
@@ -43,7 +43,7 @@ import java.util.Iterator;
 /**
  * Activity that allows selecting a directory in the local file system.
  */
-public class FolderPickerActivity extends Universal SyncActivity
+public class FolderPickerActivity extends UniversalSyncActivity
         implements AdapterView.OnItemClickListener {
 
     private static final String TAG = "FolderPickerActivity";

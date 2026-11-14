@@ -5,7 +5,7 @@ Versió alternativa de l'embolcall Universal Sync-Android per al Universal Sync 
 * Es poden establir condicions de sincronització individuals per dispositiu i carpeta
 * Interfície gràfica de canvis recents, clic per obrir fitxers.
 * Changes to folder and device config can be made regardless if Universal Sync is running or not
-* UI explains why syncthing is running or not.
+* UI explains why Universal Sync is running or not.
 * Arreglat el problema amb el consum de bateria.
 * Discover other Universal Sync devices on the same network and easily add them.
 * Supports two-way synchronization on external SD card since Android 11.
@@ -14,25 +14,25 @@ El Universal Sync-Fork per Android és un embolcall per al Universal Sync que pr
 
 Objectius de la versió alternativa:
 * Desenvolupar i provar millores conjuntament amb la comunitat.
-* Publicar l'aplicació amb més freqüència per identificar i resoldre errors causats per canvis en el submòdul del syncthing
+* Publicar l'aplicació amb més freqüència per identificar i resoldre errors causats per canvis en el submòdul del Universal Sync
 * Fer les millores configurables des de la interfície, els usuaris han de poder activar-les i desactivar-les
 
 Comparativa entre la versió oficial i l'alternativa en el moment d'escriure això:
-* Both contain the syncthing binary built from the official source at GitHub
-* La funcionalitat i fiabilitat de la sincronització depen de la versió del submòdul binari del syncthing
+* Both contain the Universal Sync binary built from the official source at GitHub
+* La funcionalitat i fiabilitat de la sincronització depen de la versió del submòdul binari del Universal Sync
 * La versió alternativa es porta bé amb la oficial i a vegades recullen les millores que hi faig.
 * L'estratègia i la freqüència de publicació és diferent
 * La versió alternativa només s'encarrega de l'embolcall que conté la interfície d'usuari.
 
-Pàgina web: https://github.com/universalsync/syncthing-android
+Pàgina web: https://github.com/universalsync/Universal Sync Android
 
-Codi font: https://github.com/universalsync/syncthing-android
+Codi font: https://github.com/universalsync/Universal Sync Android
 
-How Universal Sync writes to external SD card: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+How Universal Sync writes to external SD card: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ and helpful articles: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ and helpful articles: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Problemes: https://github.com/universalsync/syncthing-android/issues
+Problemes: https://github.com/universalsync/Universal Sync Android/issues
 
 Please help with the
-Traducció: https://hosted.weblate.org/projects/syncthing-fork/app/
+Traducció: https://hosted.weblate.org/projects/Universal Sync/app/

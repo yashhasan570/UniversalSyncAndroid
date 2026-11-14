@@ -13,7 +13,7 @@ public class Constants {
     // Always set ENABLE_TEST_DATA to false before building debug or release APK's.
     public static final Boolean ENABLE_TEST_DATA = false;
 
-    public static final String FILENAME_SYNCTHING_BINARY        = "libsyncthingnative.so";
+    public static final String FILENAME_UNIVERSALSYNC_BINARY        = "libuniversalsyncnative.so";
     public static final String FILENAME_STIGNORE                = ".stignore";
     public static final String FILENAME_STFOLDER                = ".stfolder";
     public static final String FOLDER_NAME_STVERSIONS           = ".stversions";
@@ -112,7 +112,7 @@ public class Constants {
     /**
      * Cached information which is not available on SettingsActivity.
      */
-    public static final String PREF_ENABLE_SYNCTHING_CAMERA     = "enableUniversal SyncCamera";
+    public static final String PREF_ENABLE_UNIVERSALSYNC_CAMERA     = "enableUniversalSyncCamera";
     public static final String PREF_KNOWN_WIFI_SSIDS            = "knownWifiSsids";
     public static final String PREF_LAST_BINARY_VERSION         = "lastBinaryVersion";
     public static final String PREF_LOCAL_DEVICE_ID             = "localDeviceID";
@@ -126,9 +126,9 @@ public class Constants {
     public static final String PREF_CACHE_DEVICE_LASTSEEN_PREFIX        = "device_lastseen_";
 
     /**
-     * {@link ConfigXml#addUniversal SyncCameraFolder}
+     * {@link ConfigXml#addUniversalSyncCameraFolder}
      */
-    public static final String syncthingCameraFolderId          = "syncthingAndroidCamera-52x89-60es4";
+    public static final String universalsyncCameraFolderId          = "universalsyncAndroidCamera-52x89-60es4";
 
     /**
      * {@link RunConditionMonitor}
@@ -253,10 +253,10 @@ public class Constants {
     }
 
     /**
-     * Get libsyncthingnative.so absolute path and filename.
+     * Get libuniversalsyncnative.so absolute path and filename.
      */
-    public static File getUniversal SyncBinary(Context context) {
-        return new File(context.getApplicationInfo().nativeLibraryDir, FILENAME_SYNCTHING_BINARY);
+    public static File getUniversalSyncBinary(Context context) {
+        return new File(context.getApplicationInfo().nativeLibraryDir, FILENAME_UNIVERSALSYNC_BINARY);
     }
 
     /**
@@ -267,9 +267,9 @@ public class Constants {
         return new File(context.getCacheDir(), "android.log");
     }
 
-    public static File getUniversal SyncLogFile(Context context) {
-        // e.g. /data/data/${applicationId}/files/syncthing.log
-        return new File(context.getFilesDir(), "syncthing.log");
+    public static File getUniversalSyncLogFile(Context context) {
+        // e.g. /data/data/${applicationId}/files/universalsync.log
+        return new File(context.getFilesDir(), "universalsync.log");
     }
 
     /**
@@ -297,7 +297,7 @@ public class Constants {
      * Decide if we should enforce HTTPS when accessing the Web UI and REST API.
      * Android 4.4 and earlier don't have support for TLS 1.2 requiring us to
      * fall back to an unencrypted HTTP connection to localhost. This applies
-     * to syncthing core v0.14.53+.
+     * to universalsync core v0.14.53+.
      */
     public static Boolean osSupportsTLS12() {
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.N) {

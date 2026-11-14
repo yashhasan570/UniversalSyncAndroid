@@ -44,7 +44,7 @@
     <string name="create_folder">Loo kaust</string>
     <string name="edit_folder">Muuda kausta</string>
     <string name="create">Loo</string>
-    <string name="remove_folder_confirm">Kas sa kindlasti soovid selle kausta Universal Syncist eemaldada?</string>
+    <string name="remove_folder_confirm">Kas sa kindlasti soovid selle kausta UniversalSyncist eemaldada?</string>
     <string name="folder_id_required">Kausta tunnus ei tohi olla tühi</string>
     <string name="folder_label_required">Kausta silt ei tohi olla tühi</string>
     <string name="folder_path_required">Kausta asukoht ei tohi olla tühi</string>
@@ -61,7 +61,7 @@
         <item quantity="one">%1$d seade on võrgus ja uuendatud</item>
         <item quantity="other">%1$d seadet on võrgus ja uuendatud</item>
     </plurals>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Sünkroonimine: %1$d%% valmis, %2$d seade võrgus</item>
         <item quantity="other">Sünkroonimine: %1$d%% valmis, %2$d seadet võrgus</item>
     </plurals>
@@ -124,9 +124,9 @@
     <string name="cancel_title">Katkesta</string>
     <string name="folder_title">Kaust</string>
     <string name="exit">Välju</string>
-    <string name="syncthing_active">Töös</string>
-    <string name="syncthing_disabled">Puhkab</string>
-    <string name="syncthing_terminated">Lõpetatud</string>
+    <string name="universalsync_active">Töös</string>
+    <string name="universalsync_disabled">Puhkab</string>
+    <string name="universalsync_terminated">Lõpetatud</string>
     <string name="default_folder_id">%1$s-fotod</string>
     <string name="file_size_unit_B">B</string>
     <string name="file_size_unit_KiB">KB</string>
@@ -155,7 +155,7 @@
     <string name="photo_shoot_launcher_title">Kaamera sünkroonimine</string>
     <string name="photo_shoot_activity_title">Universal Sync-Fork\'i kaamera</string>
     <string name="photo_shoot_intro_permission_title">Nõutavad õigused</string>
-    <string name="default_syncthing_camera_folder_label">Universal Synci kaamera</string>
+    <string name="default_universalsync_camera_folder_label">UniversalSynci kaamera</string>
     <string name="activity_main_bottom_navigation_rescan_all">Skaneeri kõik uuesti</string>
     <string name="override_changes">Sürjuta muudatused</string>
     <string name="device_syncing">Sünkroonin (%1$d%%)</string>
@@ -181,7 +181,7 @@
     <string name="category_run_conditions">Käivitamise tingimused</string>
     <string name="category_user_interface">Kasutajaliides</string>
     <string name="preference_app_theme_follow_system">Järgi süsteemi kujundust</string>
-    <string name="category_syncthing_options">Universal Synci eelistused</string>
+    <string name="category_universalsync_options">UniversalSynci eelistused</string>
     <string name="run_conditions_title">Käivitamise tingimused</string>
     <string name="sync_only_wifi_ssids_location_permission_rejected_dialog_title">Õigused on vajalikud</string>
     <string name="power_source_ac_power">Võrgutoitel.</string>
@@ -210,19 +210,19 @@
     <string name="st_reset_database_title">Nulli ja lähtesta andmebaas</string>
     <string name="verbose_log_title">Jutukas logi</string>
     <string name="open_log">Ava logi</string>
-    <string name="syncthing_forum_title">Universal Synci foorum</string>
+    <string name="universalsync_forum_title">UniversalSynci foorum</string>
     <string name="privacy_title">Andmekaitse - ja privaatsusreeglid</string>
     <string name="report_issue_title">Teata veast või problemist</string>
-    <string name="syncthing_version_title">Universal Synci versioon</string>
+    <string name="universalsync_version_title">UniversalSynci versioon</string>
     <string name="folder_picker_title">Kaustavalija</string>
     <string name="select_folder">Vali kaust</string>
     <string name="folder_go_up">Liigu üles</string>
-    <string name="syncthing_log_title">Universal Synci logi</string>
+    <string name="universalsync_log_title">UniversalSynci logi</string>
     <string name="android_log_title">Androidi logi</string>
     <string name="retrieving_logs">Laadin logisid…</string>
     <string name="copy_progress">Jagan faile…</string>
     <string name="sub_folder">Alamkaust</string>
-    <string name="syncthing_active_details">Töös: %1$s</string>
+    <string name="universalsync_active_details">Töös: %1$s</string>
     <string name="default_android_camera_folder_label">Androidi kaamera</string>
     <string name="notifications_persistent_channel">Universal Sync on aktiivne</string>
     <string name="notifications_other_channel">Muud teavitused</string>
@@ -263,9 +263,9 @@
     <string name="device_disconnected_not_synced">Ühendus on katkestatud (%1$s ootel)</string>
     <string name="device_last_seen">Viimati nähtud: %1$s</string>
     <string name="button_follow_run_conditions">JÄRGI KÄIVITAMISTINGIMUSI</string>
-    <string name="syncthing_starting">Universal Sync on käivitumas.</string>
-    <string name="syncthing_running">Universal Sync on töös.</string>
-    <string name="syncthing_has_crashed">Universal Sync on kokku jooksnud.</string>
+    <string name="universalsync_starting">Universal Sync on käivitumas.</string>
+    <string name="universalsync_running">Universal Sync on töös.</string>
+    <string name="universalsync_has_crashed">Universal Sync on kokku jooksnud.</string>
     <string name="folder_fileWatcher">Jälgi muudatusi</string>
     <string name="close_device_id">Sulge seadmetunnus</string>
     <string name="scan_qr_code_description">Skaneeri QR-koodi</string>
@@ -282,7 +282,7 @@
     <string name="crash_reporting">Anonüümne teavitus kokkujooksmisest</string>
     <string name="webui_username_title">Kasutajanimi võrgupõhises kasutajaliideses</string>
     <string name="webui_password_title">Salasõna võrgupõhises kasutajaliideses</string>
-    <string name="photo_shoot_intro_welcome_title">Tere tulemast kasutama Universal Synci kaamerat</string>
+    <string name="photo_shoot_intro_welcome_title">Tere tulemast kasutama UniversalSynci kaamerat</string>
     <string name="photo_shoot_intro_no_camera">Vabandust, selles nutiseadmes pole kaamerat.</string>
     <string name="photo_shoot_intro_missing_permissions">Jätkamiseks vajame õigust andmeruumi ja kaamera kasutamiseks.</string>
     <string name="send_device_id_to">Jaga seadmetunnust siia</string>
@@ -290,8 +290,8 @@
     <string name="device_disconnected">Ühendus on katkestatud</string>
     <string name="device_paused">Peatatud</string>
     <string name="device_state_unused">Kasutamata</string>
-    <string name="syncthing_not_running">Universal Sync pole töös.</string>
-    <string name="dialog_confirm_restart">Kas sa soovid Universal Synci uuesti käivitada?</string>
+    <string name="universalsync_not_running">Universal Sync pole töös.</string>
+    <string name="dialog_confirm_restart">Kas sa soovid UniversalSynci uuesti käivitada?</string>
     <string name="remove_device_confirm">Kas sa kindlasti soovid selle seadme eemaldada?</string>
     <string name="device_id_required">Seadme tunnus ei saa jääda tühjaks</string>
     <string name="device_id_invalid">Seadme tunnus pole korrektselt vormindatud. Palun sisesta õige tunnus ja proovi uuesti.</string>
@@ -301,7 +301,7 @@
     <string name="folders_list_empty">Ühtegi kausta pole seadistatud. Klõpsa uue kausta lisamiseks.</string>
     <string name="no_recent_changes">Hiljutisi muudatusi pole.</string>
     <string name="web_page_loading">Laadin veebilehte: \n%1$s …</string>
-    <string name="category_syncthing_options_summary">See menüü on saadaval vaid siis, kui Universal Sync töötab.</string>
+    <string name="category_universalsync_options_summary">See menüü on saadaval vaid siis, kui Universal Sync töötab.</string>
     <string name="run_conditions_summary">Järgnevate eelistustega saad määrata millal Universal Sync töötab.</string>
     <string name="run_on_metered_wifi_title">Käivita mahupõhistes WiFi-võrkudes</string>
     <string name="run_on_wifi_summary">Käivita siis, kui nutiseade on ühendatud WiFi- või kohtvõrguga.</string>
@@ -328,9 +328,9 @@
     <string name="backup_password_set">✅ Salasõna on lisatud: %1$s</string>
     <string name="log_to_file_title">Logi faili</string>
     <string name="pizza_url_title">» Kassidele maitseb pitsa « 😺🍕</string>
-    <string name="syncthing_api_key">Universal Synci API võti (klõpsa kopeerimiseks)</string>
+    <string name="universalsync_api_key">UniversalSynci API võti (klõpsa kopeerimiseks)</string>
     <string name="api_key_copied_to_clipboard">Universal Sync API võti on kopeeritud lõikelauale</string>
-    <string name="syncthing_database_size">Universal Synci andmebaasi suurus</string>
+    <string name="universalsync_database_size">UniversalSynci andmebaasi suurus</string>
     <string name="os_open_file_limit">Avatud failide ülempiir Androidis</string>
     <string name="open_source_licenses_title">Avatud lähtekoodiga tarkvara litsentsid</string>
     <string name="open_source_licenses_summary">Näita kasutatud avatud lähtekoodiga tarkvara litsentse</string>
@@ -348,7 +348,7 @@
     <string name="create_folder_failed">Kausta loomine ei õnnestunud</string>
     <string name="share_log_file">Jaga logifaili</string>
     <string name="view_android_log">Vaata Androidi logi</string>
-    <string name="view_syncthing_log">Vaata Universal Synci logi</string>
+    <string name="view_universalsync_log">Vaata UniversalSynci logi</string>
     <string name="reason_not_charging">Telefon pole laadimas.</string>
     <string name="reason_not_on_battery_power">Telefon ei tööta akutoitel.</string>
     <string name="no_remote_devices_connected">Ühtegi kaugseadet pole ühendatud</string>

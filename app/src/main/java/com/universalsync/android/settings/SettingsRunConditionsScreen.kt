@@ -48,7 +48,7 @@ import com.google.accompanist.permissions.PermissionStatus
 import com.google.accompanist.permissions.rememberPermissionState
 import com.universalsync.android.R
 import com.universalsync.android.service.Constants
-import com.universalsync.android.service.Universal SyncService
+import com.universalsync.android.service.UniversalSyncService
 import me.zhanghai.compose.preference.ListPreference
 import me.zhanghai.compose.preference.Preference
 import me.zhanghai.compose.preference.PreferenceCategory
@@ -68,7 +68,7 @@ fun EntryProviderScope<SettingsRoute>.settingsRunConditionsEntry() {
 fun SettingsRunConditionsScreen() {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
 
     var pendingEvaluation by remember { mutableStateOf(false) }
 
@@ -337,8 +337,8 @@ private fun WifiSsidPreference(
                 Toast.LENGTH_LONG
             ).show()
         } else {
-            val intent = Intent(context, Universal SyncService::class.java)
-                .setAction(Universal SyncService.ACTION_REFRESH_NETWORK_INFO)
+            val intent = Intent(context, UniversalSyncService::class.java)
+                .setAction(UniversalSyncService.ACTION_REFRESH_NETWORK_INFO)
             context.startService(intent)
         }
     }

@@ -1,11 +1,11 @@
-這是 syncthing-android 的分支，他包含他包含以下主要的增強功能：
+這是 Universal Sync Android 的分支，他包含他包含以下主要的增強功能：
 * Folder, device and overall sync progress can easily be read off the UI.
 * "Universal Sync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private Universal Sync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
 * "Sync every hour" to save even more battery
 每臺裝置與資料夾都能單獨的設定同步狀態
 即時更改的使用者界面、點擊即開啟檔案
 * Changes to folder and device config can be made regardless if Universal Sync is running or not
-* UI explains why syncthing is running or not.
+* UI explains why Universal Sync is running or not.
 解決了耗電的問題
 * Discover other Universal Sync devices on the same network and easily add them.
 * Supports two-way synchronization on external SD card since Android 11.
@@ -18,21 +18,21 @@ Universal Sync-Fork for Android 提供了 android 系統本身的使用界面來
 *可在UI中配置增强功能，用户应能够打开和关闭它们
 
 在写这篇文章时上游和分叉之间的比较：
-* Both contain the syncthing binary built from the official source at GitHub
-*同步功能和可靠性取决于syncthing二进制子模块版本。
+* Both contain the Universal Sync binary built from the official source at GitHub
+*同步功能和可靠性取决于Universal Sync二进制子模块版本。
 * Fork与上游相处，有时他们会接受我的改进。
 *策略和发布频率不同
 *只有包含Android UI的包装器由fork处理。
 
-網站：https://github.com/universalsync/syncthing-android
+網站：https://github.com/universalsync/Universal Sync Android
 
-原始碼：https://github.com/universalsync/syncthing-android
+原始碼：https://github.com/universalsync/Universal Sync Android
 
-How Universal Sync writes to external SD card: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+How Universal Sync writes to external SD card: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ and helpful articles: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ and helpful articles: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-問題回報：https://github.com/universalsync/syncthing-android/issues
+問題回報：https://github.com/universalsync/Universal Sync Android/issues
 
 Please help with the
-翻譯：https://hosted.weblate.org/projects/syncthing-fork/app/
+翻譯：https://hosted.weblate.org/projects/Universal Sync/app/

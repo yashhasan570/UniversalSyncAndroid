@@ -19,10 +19,10 @@ Prerequisites:
 </receiver>
 ```
 
-- File a pull request against "service/RestApi.java" to let us add your app's package id as a receiver for the status broadcasts. Refer to function ["sendBroadcastToApps"](../../app/src/main/java/com/universalsync/syncthingandroid/service/RestApi.java), "packageIdList".
+- File a pull request against "service/RestApi.java" to let us add your app's package id as a receiver for the status broadcasts. Refer to function ["sendBroadcastToApps"](../../app/src/main/java/com/universalsync/UniversalSyncandroid/service/RestApi.java), "packageIdList".
 ```
 String[] packageIdList = {
-    "com.example.syncthingreceiver"
+    "com.example.UniversalSyncreceiver"
 };
 ```
 
@@ -45,10 +45,10 @@ public class SyncStatusReceiver extends BroadcastReceiver {
 }
 ```
 
-- [Test app source](../../scripts/debug/Universal SyncReceiverTestApp)
+- [Test app source](../../scripts/debug/UniversalSyncReceiverTestApp)
 ```
 # git clone ...
-cd "scripts/debug/Universal SyncReceiverTestApp/"
+cd "scripts/debug/UniversalSyncReceiverTestApp/"
 #
 # Build test app
 ./gradlew assembleDebug

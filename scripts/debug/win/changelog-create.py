@@ -7,7 +7,7 @@ import requests
 ## python changelog-create.py
 #
 # Consts.
-REPO = "researchxxl/syncthing-android"
+REPO = "researchxxl/UniversalSyncAndroid"
 TOKEN = "GHP_TOKEN"
 API_URL = f"https://api.github.com/repos/{REPO}/releases"
 #

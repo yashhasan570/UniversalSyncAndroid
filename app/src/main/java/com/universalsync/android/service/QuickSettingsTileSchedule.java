@@ -21,7 +21,7 @@ import static com.universalsync.android.service.RunConditionMonitor.ACTION_SYNC_
 import static com.universalsync.android.service.RunConditionMonitor.EXTRA_BEGIN_ACTIVE_TIME_WINDOW;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
-public class QuickSettingsTileSchedule extends TileService implements ServiceConnection, Universal SyncService.OnServiceStateChangeListener {
+public class QuickSettingsTileSchedule extends TileService implements ServiceConnection, UniversalSyncService.OnServiceStateChangeListener {
 
     private static final String TAG = "QuickSettingsTileSchedule";
     private static final boolean ENABLE_VERBOSE_LOG = false;
@@ -41,14 +41,14 @@ public class QuickSettingsTileSchedule extends TileService implements ServiceCon
             refreshTile();
         }
     };
-    private Universal SyncService mUniversal SyncService;
+    private UniversalSyncService mUniversalSyncService;
 
     @Override
     public void onDestroy() {
         LogV("onDestroy()");
-        if (mUniversal SyncService != null) {
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(this);
-            mUniversal SyncService = null;
+        if (mUniversalSyncService != null) {
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(this);
+            mUniversalSyncService = null;
         }
         if (mPreferences != null) {
             mPreferences.unregisterOnSharedPreferenceChangeListener(mPrefListener);
@@ -72,10 +72,10 @@ public class QuickSettingsTileSchedule extends TileService implements ServiceCon
             mPreferences.registerOnSharedPreferenceChangeListener(mPrefListener);
 
             try {
-                Intent bindIntent = new Intent(mContext, Universal SyncService.class);
+                Intent bindIntent = new Intent(mContext, UniversalSyncService.class);
                 mContext.bindService(bindIntent, this, Context.BIND_AUTO_CREATE);
             } catch (Exception e) {
-                Log.w(TAG, "Failed to bind to Universal SyncService", e);
+                Log.w(TAG, "Failed to bind to UniversalSyncService", e);
             }
 
             refreshTile();
@@ -107,16 +107,16 @@ public class QuickSettingsTileSchedule extends TileService implements ServiceCon
 
         // look through running services to see whether the app is currently running
         ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        boolean syncthingRunning = false;
+        boolean universalsyncRunning = false;
         for (ActivityManager.RunningServiceInfo service : am.getRunningServices(Integer.MAX_VALUE)) {
-            if (Universal SyncService.class.getName().equals(service.service.getClassName())) {
-                syncthingRunning = true;
+            if (UniversalSyncService.class.getName().equals(service.service.getClassName())) {
+                universalsyncRunning = true;
                 break;
             }
         }
 
-        // disable tile if app is not running, schedule is off, or syncthing is force-started/stopped
-        if (syncthingRunning && mPreferences.getBoolean(Constants.PREF_RUN_ON_TIME_SCHEDULE, false) && mPreferences.getInt(Constants.PREF_BTNSTATE_FORCE_START_STOP, Constants.BTNSTATE_NO_FORCE_START_STOP) == Constants.BTNSTATE_NO_FORCE_START_STOP) {
+        // disable tile if app is not running, schedule is off, or universalsync is force-started/stopped
+        if (universalsyncRunning && mPreferences.getBoolean(Constants.PREF_RUN_ON_TIME_SCHEDULE, false) && mPreferences.getInt(Constants.PREF_BTNSTATE_FORCE_START_STOP, Constants.BTNSTATE_NO_FORCE_START_STOP) == Constants.BTNSTATE_NO_FORCE_START_STOP) {
             return false;
         }
 
@@ -127,14 +127,14 @@ public class QuickSettingsTileSchedule extends TileService implements ServiceCon
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
         LogV(String.format("onServiceConnected(ComponentName=%s, IBinder=%s)", name.toString(), service.toString()));
-        Universal SyncServiceBinder syncthingServiceBinder = (Universal SyncServiceBinder) service;
-        mUniversal SyncService = syncthingServiceBinder.getService();
-        mUniversal SyncService.registerOnServiceStateChangeListener(this);
+        UniversalSyncServiceBinder universalsyncServiceBinder = (UniversalSyncServiceBinder) service;
+        mUniversalSyncService = universalsyncServiceBinder.getService();
+        mUniversalSyncService.registerOnServiceStateChangeListener(this);
     }
 
     @Override
     public void onServiceDisconnected(ComponentName componentName) {
-        mUniversal SyncService = null;
+        mUniversalSyncService = null;
     }
 
     private void updateTile(int newState) {
@@ -157,11 +157,11 @@ public class QuickSettingsTileSchedule extends TileService implements ServiceCon
     }
 
     @Override
-    public void onServiceStateChange(Universal SyncService.State currentState) {
+    public void onServiceStateChange(UniversalSyncService.State currentState) {
         LogV(String.format("onServiceStateChange: %s", currentState.toString()));
 
         mTilesAvailableState = Tile.STATE_INACTIVE;
-        if (currentState == Universal SyncService.State.STARTING || currentState == Universal SyncService.State.ACTIVE) {
+        if (currentState == UniversalSyncService.State.STARTING || currentState == UniversalSyncService.State.ACTIVE) {
             mTilesAvailableState = Tile.STATE_ACTIVE;
         }
         refreshTile();

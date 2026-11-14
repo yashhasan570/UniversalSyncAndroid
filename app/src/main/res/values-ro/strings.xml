@@ -54,7 +54,7 @@
     <string name="photo_shoot_take_picture_success">Imaginea a fost salvată cu succes în dosarul Universal Sync Camera.</string>
     <string name="photo_shoot_take_picture_failure">Nu s-a putut face o fotografie sau ai anulat.</string>
     <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_syncthing_camera_folder_label">Universal Sync Camera</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync Camera</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">Rescanează toate</string>
@@ -73,7 +73,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Trimite ID-ul dispozitivul prin</string>
     <string name="usage_reporting_dialog_title">Permiți trimiterea unui raport de utilizare anonim?</string>
-    <string name="usage_reporting_dialog_description">Raportul de utilizare este trimis zilnic în mod criptat. Este folosit pentru a urmări platformele comune, mărimile directoarelor și versiunile aplicației. Dacă datele raportate se schimbă vei fi întrebat din nou. \n \nStatisticile cumulate sunt disponibile public la https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Raportul de utilizare este trimis zilnic în mod criptat. Este folosit pentru a urmări platformele comune, mărimile directoarelor și versiunile aplicației. Dacă datele raportate se schimbă vei fi întrebat din nou. \n \nStatisticile cumulate sunt disponibile public la https://data.Universal Sync.net.</string>
     <string name="yes">Da</string>
     <string name="no">Nu</string>
     <string name="open_website">Deschide pagina web</string>
@@ -143,10 +143,10 @@
     <string name="button_follow_run_conditions">URMĂREȘTE CONDIȚIILE DE RULARE</string>
     <string name="button_force_start">PORNIRE FORȚATĂ \nIGNORĂ CONDIȚIILE DE RULARE</string>
     <string name="button_force_stop">OPRIRE FORȚATĂ \nIGNORĂ CONDIȚIILE DE RULARE</string>
-    <string name="syncthing_starting">Universal Sync pornește.</string>
-    <string name="syncthing_running">Universal Sync rulează.</string>
-    <string name="syncthing_not_running">Universal Sync nu rulează.</string>
-    <string name="syncthing_has_crashed">Universal Sync s-a oprit.</string>
+    <string name="universalsync_starting">Universal Sync pornește.</string>
+    <string name="universalsync_running">Universal Sync rulează.</string>
+    <string name="universalsync_not_running">Universal Sync nu rulează.</string>
+    <string name="universalsync_has_crashed">Universal Sync s-a oprit.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Descărcare: "</string>
@@ -173,7 +173,7 @@
     <string name="folder_fileWatcherDescription">Se cere sistemului să notifice despre schimbarea fișierelor. Dacă este dezactivat se folosește scanarea o dată pe oră.</string>
     <!-- Setting title and description -->
     <string name="folder_ignore_delete_caption">Ignorare Ștergere</string>
-    <string name="folder_ignore_delete_description">Opțiune de expert care afectează gestionarea actualizărilor de indexuri primite. Când este setat, actualizările primite marcate ca ștergere sunt ignorate. Consultă https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Opțiune de expert care afectează gestionarea actualizărilor de indexuri primite. Când este setat, actualizările primite marcate ca ștergere sunt ignorate. Consultă https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <!-- Setting title -->
     <string name="folder_pause">Întrerupe dosarul</string>
     <!-- Setting title -->
@@ -201,7 +201,7 @@
     <string name="folder_path_readonly">Versiunea de Android permite Synthing numai acces citire pentru dosarul selectat.</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
     <string name="folder_path_readwrite">Versiunea de Android a permis Synthing acces citire și scriere pentru dosarul selectat.</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">Ne pare rău. Dosarul selectat nu poate fi folosit. Alege un dosar localizat pe stocarea internă sau externă.</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">Comutarea dosarelor existente la „Primește criptat” nu este acceptată.</string>
     <string name="ignore_patterns">Șabloane de ignorare</string>
@@ -287,8 +287,8 @@
     <string name="preference_app_theme_follow_light">Luminoasă</string>
     <string name="preference_app_theme_follow_dark">Întunecată</string>
     <string name="category_behaviour">Comportament</string>
-    <string name="category_syncthing_options">Opțiuni Universal Sync</string>
-    <string name="category_syncthing_options_summary">Acest meniu este disponibil numai dacă Universal Sync rulează.</string>
+    <string name="category_universalsync_options">Opțiuni Universal Sync</string>
+    <string name="category_universalsync_options_summary">Acest meniu este disponibil numai dacă Universal Sync rulează.</string>
     <string name="category_backup">Import și Export</string>
     <string name="category_debug">Depanare</string>
     <string name="category_experimental">Experimentale</string>
@@ -361,7 +361,7 @@
     <string name="crash_reporting">Raportarea anonimă a problemelor</string>
     <string name="webui_tcp_port_title">Port Web UI TCP</string>
     <string name="webui_remote_access_title">Acces de la distanță Web UI</string>
-    <string name="webui_remote_access_summary">Specifică pentru a permite accesarea interfeței de utilizare web de pe alt dispozitiv. Dacă este activat, te poți conecta cu utilizatorul „syncthing” și cheia API ca parolă. Implicit: dezactivat (cel mai sigur)</string>
+    <string name="webui_remote_access_summary">Specifică pentru a permite accesarea interfeței de utilizare web de pe alt dispozitiv. Dacă este activat, te poți conecta cu utilizatorul „Universal Sync” și cheia API ca parolă. Implicit: dezactivat (cel mai sigur)</string>
     <!-- Titles for the preference to undo ignored devices and folders -->
     <string name="undo_ignored_devices_folders_title">Reface setarea de ignorare de dispozitive și directoare</string>
     <string name="undo_ignored_devices_folders_question">Această acțiune va reface decizia precedentă de ignorare a dispozitivelor și directoarelor. Continuați?</string>
@@ -418,13 +418,13 @@
     <string name="report_issue_title">Raportează problemă</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Versiune Universal Sync</string>
+    <string name="universalsync_version_title">Versiune Universal Sync</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="syncthing_api_key">Cheie API Universal Sync (faceți clic pentru a copia)</string>
+    <string name="universalsync_api_key">Cheie API Universal Sync (faceți clic pentru a copia)</string>
     <!-- Shown when the API key is copied to the clipboard -->
     <string name="api_key_copied_to_clipboard">Cheia API Universal Sync a fost copiată în clipboard</string>
     <!-- Title of the preference showing database size -->
-    <string name="syncthing_database_size">Dimensiunea bazei de date Universal Sync</string>
+    <string name="universalsync_database_size">Dimensiunea bazei de date Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Selector de director</string>
@@ -442,12 +442,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">Sus</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Jurnal de erori Universal Sync</string>
+    <string name="universalsync_log_title">Jurnal de erori Universal Sync</string>
     <string name="android_log_title">Jurnal de erori Android</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Vezi jurnal de erori Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Vezi jurnal de erori Universal Sync</string>
+    <string name="view_universalsync_log">Vezi jurnal de erori Universal Sync</string>
     <string name="retrieving_logs">Se preia jurnalele de erori…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Partajează</string>
@@ -492,7 +492,7 @@
     <!-- RunConditionMonitor -->
     <string name="reason_force_start">Universal Sync rulează deoarece l-ați obligat să pornească indiferent de condițiile de rulare.</string>
     <string name="reason_force_stop">Universal Sync nu se execută, deoarece l-ați forțat să se oprească indiferent de condițiile de rulare.</string>
-    <!-- Explanations why syncthing is running or not running -->
+    <!-- Explanations why Universal Sync is running or not running -->
     <string name="reason_not_within_time_frame">Ați activat „Executare conform graficului de timp”, iar ultima sincronizare nu a fost mai mult de o oră în urmă.</string>
     <string name="reason_not_within_time_frame_2">Ai activat „Executare conform orarului” și ultima sincronizare a avut loc acum %s.</string>
     <string name="reason_not_within_time_frame_0_min">mai puțin de un minut</string>
@@ -510,25 +510,25 @@
     <string name="reason_run_condition_monitor_not_instantiated">RunConditionMonitor nu este instanțiat. Repornește aplicația și trimite un raport de eroare dacă această eroare nu dispare după repornire.</string>
     <!-- Sync Conditions Dialog -->
     <string name="custom_wifi_ssid_whitelist_empty">Niciun SSID WiFi nu este inclus în lista albă. Specifică câteva în setări.</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Ieșire</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Rulează</string>
-    <string name="syncthing_active_details">Rulează: %1$s</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Rulează</string>
+    <string name="universalsync_active_details">Rulează: %1$s</string>
     <string name="no_remote_devices_connected">Nu sunt conectate dispozitive la distanță</string>
     <plurals name="device_online_up_to_date">
         <item quantity="one">%1$d dispozitiv online și actualizat</item>
         <item quantity="few">%1$d dispozitive online și actualizate</item>
         <item quantity="other">%1$d dispozitive online și actualizate</item>
     </plurals>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Sincronizare: %1$d%% complet, %2$d dispozitiv online</item>
         <item quantity="few">Sincronizare: %1$d%% complet, %2$d dispozitive online</item>
         <item quantity="other">Sincronizare: %1$d%% complet, %2$d dispozitive online</item>
     </plurals>
-    <string name="syncthing_disabled">Suspendat</string>
-    <string name="syncthing_terminated">Stopat</string>
+    <string name="universalsync_disabled">Suspendat</string>
+    <string name="universalsync_terminated">Stopat</string>
     <string name="config_create_failed">Creerea fișierului de configurare a eșuat</string>
     <!-- Toast shown if a config file crucial to operation is missing -->
     <string name="config_file_missing">Un fișier de configurare esențial pentru această operație lipsește</string>
@@ -683,7 +683,7 @@
     <string name="reason_wifi_disallowed">Universal Sync nu are permisiunea să ruleze prin WiFi sau Ethernet.</string>
     <string name="reason_not_nonmetered_wifi">Universal Sync nu rulează deoarece ai refuzat rularea prin conexiuni WiFi contorizate.</string>
     <string name="clear_stversions_title">Golește toate dosarele de versiuni</string>
-    <string name="syncthing_forum_summary">Accesează forumul de Universal Sync și obține sprijin</string>
+    <string name="universalsync_forum_summary">Accesează forumul de Universal Sync și obține sprijin</string>
     <string name="privacy_summary">Deschide Politica de confidențialitate Universal Sync, care acoperă utilizarea (dacă există) a datelor cu caracter personal, de ex. locația.</string>
     <string name="reason_not_on_whitelisted_wifi">Universal Sync nu rulează, deoarece numele actual al rețelei WiFi nu este în lista albă.</string>
     <string name="pizza_url_title">» Pisicile adoră pizza « 😺🍕</string>
@@ -702,8 +702,8 @@
     <string name="clear_stversions_question">Aceasta va șterge toate versiunile anterioare de fișiere gestionate de Universal Sync. Continui?</string>
     <string name="download_support_bundle_title">Descarcă pachetul de asistență</string>
     <string name="verbose_log_title">Jurnal detaliat</string>
-    <string name="log_to_file_summary">Jurnalul Universal SyncNative va fi scris în fișier.</string>
-    <string name="syncthing_forum_title">Forumul Universal Sync</string>
+    <string name="log_to_file_summary">Jurnalul UniversalSyncNative va fi scris în fișier.</string>
+    <string name="universalsync_forum_title">Forumul Universal Sync</string>
     <string name="privacy_title">Politica de confidențialitate</string>
     <string name="os_open_file_limit">Limita de fișiere deschise Android</string>
     <string name="reason_not_on_wifi">Universal Sync are permisiunea să ruleze prin WiFi, dar WiFi nu este conectat sau telefonul este în modul avion.</string>
@@ -711,7 +711,7 @@
     <string name="reason_location_unavailable">Ai activat „Rulează prin rețelele WiFi selectate” în setări. Serviciile de locație Android sunt în prezent dezactivate. Conform restricțiilor Android, sincronizarea nu poate determina numele actual al rețelei WiFi pentru a decide dacă ar trebui să ruleze. Soluție: Pornește locația, acordă permisiunea locației și reconectează-te la WiFi.</string>
     <string name="config_read_failed">Nu a reușit citirea configurației. Ia în considerare copierea de rezervă a datelor din dosarele de sincronizare, apoi șterge datele acestei aplicații din setările Android și lanseaz-o din nou.</string>
     <string name="executable_not_found">Executabilul de bază \"%s\" lipsește. Verifică jurnalele build și logcat.</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Atenție: Dacă Universal SyncNative este întrerupt și face ceva ciudat, ești de vină. Omite doar în cazul în care dispozitivul nu acceptă acordarea permisiunii. Chiar omiți?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Atenție: Dacă UniversalSyncNative este întrerupt și face ceva ciudat, ești de vină. Omite doar în cazul în care dispozitivul nu acceptă acordarea permisiunii. Chiar omiți?</string>
     <string name="toast_notification_permission_required">Universal Sync necesită permisiunea de notificare pentru a-și menține serviciul pornit și conectat.</string>
     <string name="download_support_bundle_in_progress">Pregătirea descărcării pachetului de asistență…</string>
     <string name="app_version_title">Versiunea Universal Sync-Fork Wrapper</string>

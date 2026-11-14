@@ -19,15 +19,15 @@ import android.widget.ArrayAdapter;
 
 import com.google.common.base.Optional;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.activities.MainActivity;
-import com.universalsync.android.activities.Universal SyncActivity;
+import com.universalsync.android.activities.UniversalSyncActivity;
 import com.universalsync.android.model.Connection;
 import com.universalsync.android.model.SystemStatus;
 import com.universalsync.android.service.AppPrefs;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
+import com.universalsync.android.service.UniversalSyncService;
 import com.universalsync.android.settings.SettingsActivity;
 import com.universalsync.android.util.Util;
 import com.universalsync.android.views.SegmentedButton;
@@ -44,9 +44,9 @@ import javax.inject.Inject;
 import static com.universalsync.android.service.RunConditionMonitor.ACTION_UPDATE_SHOULDRUN_DECISION;
 
 /**
- * Displays why syncthing is running or disabled.
+ * Displays why universalsync is running or disabled.
  */
-public class StatusFragment extends ListFragment implements Universal SyncService.OnServiceStateChangeListener {
+public class StatusFragment extends ListFragment implements UniversalSyncService.OnServiceStateChangeListener {
 
     private static final String TAG = "StatusFragment";
 
@@ -64,7 +64,7 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
 
     private MainActivity mActivity;
     private ArrayAdapter mAdapter;
-    private Universal SyncService.State mServiceState = Universal SyncService.State.INIT;
+    private UniversalSyncService.State mServiceState = UniversalSyncService.State.INIT;
     private final Handler mRestApiQueryHandler = new Handler();
     private Boolean mLastVisibleToUser = false;
     private SegmentedButton btnForceStartStop;
@@ -85,7 +85,7 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getActivity().getApplication()).component().inject(this);
+        ((UniversalSyncApp) getActivity().getApplication()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
     }
 
@@ -129,7 +129,7 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
     }
 
     @Override
-    public void onServiceStateChange(Universal SyncService.State currentState) {
+    public void onServiceStateChange(UniversalSyncService.State currentState) {
         mServiceState = currentState;
         updateStatus();
     }
@@ -198,45 +198,45 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
     };
 
     private void updateStatus() {
-        Universal SyncActivity syncthingActivity = (Universal SyncActivity) getActivity();
-        if (syncthingActivity == null || getView() == null || syncthingActivity.isFinishing()) {
+        UniversalSyncActivity universalsyncActivity = (UniversalSyncActivity) getActivity();
+        if (universalsyncActivity == null || getView() == null || universalsyncActivity.isFinishing()) {
             return;
         }
-        Universal SyncService syncthingService = syncthingActivity.getService();
-        if (syncthingService == null) {
+        UniversalSyncService universalsyncService = universalsyncActivity.getService();
+        if (universalsyncService == null) {
             return;
         }
 
-        // Add status line showing the syncthing service state.
+        // Add status line showing the universalsync service state.
         ArrayList<String> statusItems = new ArrayList<String>();
         switch (mServiceState) {
             case INIT:
             case STARTING:
-                statusItems.add(getString(R.string.syncthing_starting));
+                statusItems.add(getString(R.string.universalsync_starting));
                 break;
             case ACTIVE:
-                statusItems.add(getString(R.string.syncthing_running));
+                statusItems.add(getString(R.string.universalsync_running));
                 break;
             case DISABLED:
-                statusItems.add(getString(R.string.syncthing_not_running));
+                statusItems.add(getString(R.string.universalsync_not_running));
                 break;
             case ERROR:
-                statusItems.add(getString(R.string.syncthing_has_crashed));
+                statusItems.add(getString(R.string.universalsync_has_crashed));
                 break;
         }
 
-        // Add explanation why syncthing is (not) running.
+        // Add explanation why universalsync is (not) running.
         switch (mServiceState) {
             case ACTIVE:
             case DISABLED:
                 statusItems.add(getString(R.string.reason) + "\n" +
-                    "- " + syncthingService.getRunDecisionExplanation().trim().replace("\n", "\n- "));
+                    "- " + universalsyncService.getRunDecisionExplanation().trim().replace("\n", "\n- "));
             default:
                 break;
         }
 
         // Add status holders refreshed by callbacks to the list.
-        if (mServiceState == Universal SyncService.State.ACTIVE) {
+        if (mServiceState == UniversalSyncService.State.ACTIVE) {
             synchronized (mStatusHolderLock) {
                 if (!TextUtils.isEmpty(mUptime)) {
                     statusItems.add(getString(R.string.uptime) + ": " + mUptime);
@@ -264,7 +264,7 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
     }
 
     /**
-     * Invokes status callbacks via syncthing's REST API
+     * Invokes status callbacks via universalsync's REST API
      * while the user is looking at the current tab.
      */
     private void onTimerEvent() {
@@ -275,7 +275,7 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
         if (mainActivity.isFinishing()) {
             return;
         }
-        if (mServiceState != Universal SyncService.State.ACTIVE) {
+        if (mServiceState != UniversalSyncService.State.ACTIVE) {
             updateStatus();
             return;
         }
@@ -366,7 +366,7 @@ public class StatusFragment extends ListFragment implements Universal SyncServic
         if (mainActivity.isFinishing()) {
             return null;
         }
-        if (mServiceState != Universal SyncService.State.ACTIVE) {
+        if (mServiceState != UniversalSyncService.State.ACTIVE) {
             return null;
         }
         return mainActivity.getApi();

@@ -14,7 +14,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Enviar ID del dispositivo</string>
     <string name="usage_reporting_dialog_title">¿Permitir reportes de uso anónimos?</string>
-    <string name="usage_reporting_dialog_description">El reporte de uso encriptado es enviado diariamente. Es usado para rastrear plataformas comunes, tamaño de carpetas y versiones de la aplicación. Si se cambia el conjunto de datos reportados, se le presentará este diálogo de nuevo. \n \nLas estadísticas agregadas se encuentran disponibles públicamente en https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">El reporte de uso encriptado es enviado diariamente. Es usado para rastrear plataformas comunes, tamaño de carpetas y versiones de la aplicación. Si se cambia el conjunto de datos reportados, se le presentará este diálogo de nuevo. \n \nLas estadísticas agregadas se encuentran disponibles públicamente en https://data.Universal Sync.net.</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="open_website">Abrir Sitio web</string>
@@ -112,7 +112,7 @@
     <string name="web_gui_loading">Esperando por la Interfaz</string>
     <!-- SettingsFragment -->
     <string name="settings_title">Configuración</string>
-    <string name="category_syncthing_options">Opciones de Universal Sync</string>
+    <string name="category_universalsync_options">Opciones de Universal Sync</string>
     <string name="category_experimental">Experimental</string>
     <string name="sync_only_wifi_ssids_wifi_turn_on_wifi">Por favor encienda el WiFi para seleccionar redes.</string>
     <string name="device_name">Nombre del dispositivo</string>
@@ -144,7 +144,7 @@
     <string name="report_issue_title">Reportar un problema</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Versión de Universal Sync</string>
+    <string name="universalsync_version_title">Versión de Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Seleccionador de Carpetas</string>
@@ -158,14 +158,14 @@
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Ver registro de Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Ver registro de Universal Sync</string>
+    <string name="view_universalsync_log">Ver registro de Universal Sync</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Compartir</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Salir</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync está en ejecución</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync está en ejecución</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-photos</string>
     <!-- RestApi -->
@@ -174,7 +174,7 @@
     <!-- Text for positive button in restart dialog -->
     <!-- Text for the dismiss button of the restart Activity -->
     <!-- Text of the notification shown when a restart is needed -->
-    <string name="restart_notification_text">Clic aquí para reiniciar syncthing ahora</string>
+    <string name="restart_notification_text">Clic aquí para reiniciar Universal Sync ahora</string>
     <!-- Shown when a device ID is copied to the clipboard -->
     <string name="device_id_copied_to_clipboard">ID del dispositivo copiada al portapapeles</string>
     <!-- Strings representing units for file sizes, from smallest to largest -->

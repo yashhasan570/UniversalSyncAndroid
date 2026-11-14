@@ -75,7 +75,7 @@ public class Util {
     }
 
     /**
-     * Returns if the syncthing binary would be able to write a file into
+     * Returns if the universalsync binary would be able to write a file into
      * the given folder given the configured access level.
      */
     public static boolean nativeBinaryCanWriteToPath(Context context, String absoluteFolderPath) {
@@ -531,7 +531,7 @@ public class Util {
      *
      * Used as a fallback so the app can talk to a local Universal Sync instance whose HTTPS certificate
      * was replaced with one signed by a CA the user trusts at the OS level (see
-     * https://github.com/universalsync/syncthing-android/issues/222).
+     * https://github.com/universalsync/UniversalSyncAndroid/issues/222).
      *
      * @return the OS-backed trust manager, or {@code null} if it could not be built.
      */

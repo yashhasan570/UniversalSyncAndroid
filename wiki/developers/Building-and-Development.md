@@ -4,7 +4,7 @@
 
 A Linux VM, for example running Debian, is recommended to build this.
 
-Build Universal SyncNative and the Universal Sync-Android wrapper using the following commands:
+Build UniversalSyncNative and the Universal Sync-Android wrapper using the following commands:
 
 ```bash
 #
@@ -13,14 +13,14 @@ apt-get -y install gcc git golang-go openjdk-21-jdk-headless python3 unzip
 #
 # Clone repository.
 mkdir -p ~/git && cd ~/git
-git clone https://github.com/universalsync/syncthing-android.git --recursive
+git clone https://github.com/universalsync/Universal Sync Android.git --recursive
 #
 # Install prerequisites.
-cd ~/git/syncthing-android
+cd ~/git/Universal Sync Android
 python3 scripts/install_minimum_android_sdk_prerequisites.py
 #
 # Build.
-export ANDROID_HOME=~/git/syncthing-android-prereq
+export ANDROID_HOME=~/git/Universal Sync Android-prereq
 ./gradlew buildNative
 #
 # Flavor: debug
@@ -66,7 +66,7 @@ winget install --accept-source-agreements --source winget --exact --id "EclipseA
 winget install --accept-source-agreements --source winget --exact --id "Python.Python.3.13" --scope machine -h --override "/quiet InstallAllUsers=1 PrependPath=1 Include_doc=0 Include_launcher=0 Include_pip=0 Include_tcltk=0 Include_test=0"
 ::
 :: Clone repository.
-git clone https://github.com/universalsync/syncthing-android.git --recursive
+git clone https://github.com/universalsync/Universal Sync Android.git --recursive
 ::
 :: Build
 cd /d "YOUR_CLONED_GIT_ROOT"

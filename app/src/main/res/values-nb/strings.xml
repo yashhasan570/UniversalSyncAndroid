@@ -13,7 +13,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Send Enhets-ID til</string>
     <string name="usage_reporting_dialog_title">Tillat anonym rapportering av bruk?</string>
-    <string name="usage_reporting_dialog_description">Den krypterte rapporten over bruk sendes daglig. Den brukes til å spore felles plattformer, mappestørrelser og versjoner av appen. Hvis datasettet endres vil du bli vist denne dialogen på nytt. \n \nDen aggregerte statistikken er offentlig tilgjengelig på https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Den krypterte rapporten over bruk sendes daglig. Den brukes til å spore felles plattformer, mappestørrelser og versjoner av appen. Hvis datasettet endres vil du bli vist denne dialogen på nytt. \n \nDen aggregerte statistikken er offentlig tilgjengelig på https://data.Universal Sync.net.</string>
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
     <string name="open_website">Åpne nettsted</string>
@@ -114,7 +114,7 @@
     <string name="web_gui_loading">Venter på GUI</string>
     <!-- SettingsFragment -->
     <string name="settings_title">Innstillinger</string>
-    <string name="category_syncthing_options">Valg for Universal Sync</string>
+    <string name="category_universalsync_options">Valg for Universal Sync</string>
     <string name="category_experimental">Eksperimentelt</string>
     <string name="sync_only_wifi_ssids_wifi_turn_on_wifi">Vennligst slå på wifi for å velge nettverk.</string>
     <string name="device_name">Enhetsnavn</string>
@@ -138,7 +138,7 @@
     <!-- Title for the preference to reset Universal Sync indexes -->
     <string name="st_reset_database_title">Nullstill database</string>
     <!-- Universal Sync was reset -->
-    <string name="st_reset_database_done">Nullstilling av Universal Syncs database var vellykket</string>
+    <string name="st_reset_database_done">Nullstilling av UniversalSyncs database var vellykket</string>
     <string name="category_about">Om</string>
     <!-- Settings item that opens the log activity -->
     <string name="open_log">Åpne logg</string>
@@ -148,7 +148,7 @@
     <string name="report_issue_title">Rapporter Problem</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync-versjon</string>
+    <string name="universalsync_version_title">Universal Sync-versjon</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Mappe-velger</string>
@@ -162,14 +162,14 @@
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Vis Android-logg</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Vis Universal Sync-logg</string>
+    <string name="view_universalsync_log">Vis Universal Sync-logg</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Del</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Avslutt</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync kjører</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync kjører</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-foto</string>
     <!-- RestApi -->
@@ -227,10 +227,10 @@
     <string name="device_disconnected_not_synced">Frakoblet (%1$s venter)</string>
     <string name="device_last_seen">Sist sett: %1$s</string>
     <string name="device_last_seen_never">Aldri</string>
-    <string name="syncthing_starting">Universal Sync har startet.</string>
-    <string name="syncthing_running">Universal Sync kjører.</string>
-    <string name="syncthing_not_running">Universal Sync kjører ikke.</string>
-    <string name="syncthing_has_crashed">Universal Sync har krasjet.</string>
+    <string name="universalsync_starting">Universal Sync har startet.</string>
+    <string name="universalsync_running">Universal Sync kjører.</string>
+    <string name="universalsync_not_running">Universal Sync kjører ikke.</string>
+    <string name="universalsync_has_crashed">Universal Sync har krasjet.</string>
     <string name="pause_device">Sett enhet på pause</string>
     <string name="category_run_conditions">Kjør betingelser</string>
     <string name="devices_list_empty">Ingen enheter er konfigurert. Trykk for å legge til en ny enhet.</string>
@@ -274,7 +274,7 @@
     <string name="browse">Bla gjennom</string>
     <string name="photo_shoot_take_picture_success">Vellykket lagring av bilde i Universal Sync kamera mappen.</string>
     <string name="photo_shoot_take_picture_failure">Kunne ikke ta et bilde, eller du har avbrutt.</string>
-    <string name="default_syncthing_camera_folder_label">Universal Sync kamera</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync kamera</string>
     <string name="photo_shoot_launcher_title">Synk. kamera</string>
     <string name="page_x_of_y">Side %1$s av %2$s</string>
     <string name="override_changes_question">Dette vil angre alle endringer som er gjort på de andre enhetene som deler denne mappen. Fortsette?</string>
@@ -323,10 +323,10 @@
     <string name="sttrace_title">STTRACE alternativer</string>
     <string name="environment_variables">Miljøvariabler</string>
     <string name="toast_invalid_environment_variables">Verdi er ikke en gyldig miljøvariabel streng</string>
-    <string name="syncthing_log_title">Universal Sync logg</string>
+    <string name="universalsync_log_title">Universal Sync logg</string>
     <string name="android_log_title">Android logg</string>
     <string name="retrieving_logs">Mottar logger…</string>
-    <string name="syncthing_terminated">Universal Sync ble avsluttet</string>
+    <string name="universalsync_terminated">Universal Sync ble avsluttet</string>
     <string name="none">Ingen</string>
     <string name="could_not_access_deviceid">Kunne ikke aksessere enhet ID.</string>
     <string name="type_simple">Type: enkel</string>

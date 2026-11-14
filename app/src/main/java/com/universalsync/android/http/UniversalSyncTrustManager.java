@@ -28,7 +28,7 @@ import javax.net.ssl.X509TrustManager;
  * The local Universal Sync instance ships a self-signed certificate by default, which is verified by
  * pinning against the public key stored in https-cert.pem. A user may instead replace the HTTPS
  * certificate with one signed by a CA they trust at the Android OS level (see
- * https://github.com/universalsync/syncthing-android/issues/222); for that case we fall back to the
+ * https://github.com/universalsync/UniversalSyncAndroid/issues/222); for that case we fall back to the
  * OS trust store when the self-signed pin does not match.
  *
  * Security scope: this trust manager is only ever wired into the loopback-pinned connection to the
@@ -36,13 +36,13 @@ import javax.net.ssl.X509TrustManager;
  * the device, falling back to the OS trust store — which trusts user-installed CAs — does not open a
  * network MITM surface. Do not reuse this trust manager for any routable/remote connection.
  */
-class Universal SyncTrustManager implements X509TrustManager {
+class UniversalSyncTrustManager implements X509TrustManager {
 
-    private static final String TAG = "Universal SyncTrustManager";
+    private static final String TAG = "UniversalSyncTrustManager";
 
     private final File mHttpsCertPath;
 
-    Universal SyncTrustManager(File httpsCertPath) {
+    UniversalSyncTrustManager(File httpsCertPath) {
         mHttpsCertPath = httpsCertPath;
     }
 
@@ -53,7 +53,7 @@ class Universal SyncTrustManager implements X509TrustManager {
     }
 
     /**
-     * Verifies certs against the public key of the local syncthing instance (self-signed pin).
+     * Verifies certs against the public key of the local universalsync instance (self-signed pin).
      * If that fails, falls back to the Android OS trust store, which validates CA-signed
      * certificates against the system and user-installed certificate authorities.
      */
@@ -78,7 +78,7 @@ class Universal SyncTrustManager implements X509TrustManager {
 
     /**
      * Verifies that every presented certificate is signed by the public key of the certificate
-     * pinned in {@link #mHttpsCertPath} (the certificate the local syncthing instance generated).
+     * pinned in {@link #mHttpsCertPath} (the certificate the local universalsync instance generated).
      */
     private void verifyAgainstPinnedCert(X509Certificate[] certs) throws CertificateException {
         InputStream is = null;

@@ -15,7 +15,7 @@ PLATFORM_DIRS = {
 
 # Leave empty to auto-detect version by 'git describe'.
 FORCE_DISPLAY_SYNCTHING_VERSION = ''
-FILENAME_SYNCTHING_BINARY = 'libsyncthingnative.so'
+FILENAME_UNIVERSALSYNC_BINARY = 'libuniversalsyncnative.so'
 
 BUILD_TARGETS = [
     {
@@ -264,16 +264,16 @@ def install_go():
     os.environ["PATH"] = go_bin_path + os.pathsep + os.environ["PATH"]
     os.environ["GOROOT"] = go_build_dir
 
-def verify_native_version_matches_app(project_dir, syncthing_version_raw):
+def verify_native_version_matches_app(project_dir, universalsync_version_raw):
     """Compare native version with app version and fail if mismatch."""
-    native_version = extract_native_version(syncthing_version_raw)
+    native_version = extract_native_version(universalsync_version_raw)
 
     app_version_full = get_app_version(project_dir)
     app_version = ".".join(app_version_full.split(".")[:3])  # take major.minor.patch
 
     if native_version != app_version:
         fail(
-            "Universal SyncNative version (%s) differs from App version (%s). "
+            "UniversalSyncNative version (%s) differs from App version (%s). "
             "Please update gradle/libs.versions.toml.",
             native_version, app_version
         )
@@ -331,8 +331,8 @@ if platform.system() not in PLATFORM_DIRS:
 
 module_dir = os.path.dirname(os.path.realpath(__file__))
 project_dir = os.path.realpath(os.path.join(module_dir, '..'))
-syncthing_dir = os.path.join(module_dir, 'src', 'github.com', 'syncthing', 'syncthing')
-prerequisite_tools_dir = os.path.dirname(os.path.realpath(__file__)) + os.path.sep + ".." + os.path.sep + ".." + os.path.sep + "syncthing-android-prereq"
+universalsync_dir = os.path.join(module_dir, 'src', 'github.com', 'universalsync', 'universalsync')
+prerequisite_tools_dir = os.path.dirname(os.path.realpath(__file__)) + os.path.sep + ".." + os.path.sep + ".." + os.path.sep + "UniversalSyncAndroid-prereq"
 min_sdk = get_min_sdk(project_dir)
 
 # Check if git is available.
@@ -344,11 +344,11 @@ print('git_bin=\'' + git_bin + '\'')
 
 # Check for prebuilt libraries from cache
 def check_and_copy_prebuilt_libraries():
-    """Check if prebuilt libraries exist for current syncthing commit and copy them if found"""
+    """Check if prebuilt libraries exist for current universalsync commit and copy them if found"""
     try:
-        # Get syncthing commit hash
-        syncthing_commit = subprocess.check_output([
-            git_bin, '-C', syncthing_dir, 'rev-parse', 'HEAD'
+        # Get universalsync commit hash
+        universalsync_commit = subprocess.check_output([
+            git_bin, '-C', universalsync_dir, 'rev-parse', 'HEAD'
         ]).decode().strip()
         
         # Use platform-specific path for prebuilt libraries
@@ -357,15 +357,15 @@ def check_and_copy_prebuilt_libraries():
             prebuilt_base_dir = os.path.join(prerequisite_tools_dir, 'prebuilt-jnilibs')
         else:
             # On Linux/other platforms, use absolute path to match cache location
-            prebuilt_base_dir = '/opt/syncthing-android-prereq/prebuilt-jnilibs'
+            prebuilt_base_dir = '/opt/UniversalSyncAndroid-prereq/prebuilt-jnilibs'
         
-        prebuilt_dir = os.path.join(prebuilt_base_dir, syncthing_commit)
+        prebuilt_dir = os.path.join(prebuilt_base_dir, universalsync_commit)
         
         if not os.path.isdir(prebuilt_dir):
-            print('No prebuilt libraries found for syncthing commit', syncthing_commit, '- will build from scratch')
+            print('No prebuilt libraries found for universalsync commit', universalsync_commit, '- will build from scratch')
             return False
         
-        print('Found prebuilt libraries directory for syncthing commit', syncthing_commit)
+        print('Found prebuilt libraries directory for universalsync commit', universalsync_commit)
         
         # Check if all required architectures from BUILD_TARGETS are available
         missing_archs = []
@@ -374,7 +374,7 @@ def check_and_copy_prebuilt_libraries():
         for target in BUILD_TARGETS:
             jni_dir = target['jni_dir']
             arch_dir = os.path.join(prebuilt_dir, jni_dir)
-            lib_file = os.path.join(arch_dir, FILENAME_SYNCTHING_BINARY)
+            lib_file = os.path.join(arch_dir, FILENAME_UNIVERSALSYNC_BINARY)
             
             if os.path.isfile(lib_file):
                 available_archs.append(jni_dir)
@@ -403,8 +403,8 @@ def check_and_copy_prebuilt_libraries():
                 os.makedirs(dst_arch_dir)
             
             # Copy the library file
-            src_lib_file = os.path.join(src_arch_dir, FILENAME_SYNCTHING_BINARY)
-            dst_lib_file = os.path.join(dst_arch_dir, FILENAME_SYNCTHING_BINARY)
+            src_lib_file = os.path.join(src_arch_dir, FILENAME_UNIVERSALSYNC_BINARY)
+            dst_lib_file = os.path.join(dst_arch_dir, FILENAME_UNIVERSALSYNC_BINARY)
             
             shutil.copy2(src_lib_file, dst_lib_file)
             print('Copied prebuilt library for', jni_dir)
@@ -449,32 +449,32 @@ print('Invoking git fetch ...')
 subprocess.check_call([
     'git',
     '-C',
-    syncthing_dir,
+    universalsync_dir,
     'fetch',
     '--tags'
 ])
 
-subprocess.check_call([go_bin, 'env', '-w', 'GOFLAGS=-buildvcs=false'], cwd=syncthing_dir)
+subprocess.check_call([go_bin, 'env', '-w', 'GOFLAGS=-buildvcs=false'], cwd=universalsync_dir)
 
 if FORCE_DISPLAY_SYNCTHING_VERSION:
-    syncthingVersion = FORCE_DISPLAY_SYNCTHING_VERSION.replace("rc", "preview")
+    universalsyncVersion = FORCE_DISPLAY_SYNCTHING_VERSION.replace("rc", "preview")
 else:
     print('Invoking git describe ...')
-    syncthingVersion = subprocess.check_output([
+    universalsyncVersion = subprocess.check_output([
         git_bin,
         '-C',
-        syncthing_dir,
+        universalsync_dir,
         'describe',
         '--always'
     ]).strip()
-    syncthingVersion = syncthingVersion.decode().replace("rc", "preview")
+    universalsyncVersion = universalsyncVersion.decode().replace("rc", "preview")
 
-verify_native_version_matches_app(project_dir, syncthingVersion)
+verify_native_version_matches_app(project_dir, universalsyncVersion)
 
 repository = get_repository(git_bin, project_dir)
 print('Parent repository:', repository)
 
-print('Building syncthing version', syncthingVersion)
+print('Building universalsync version', universalsyncVersion)
 for target in BUILD_TARGETS:
     print('')
     print('*** Building for', target['arch'])
@@ -502,28 +502,28 @@ for target in BUILD_TARGETS:
         'STTRACE': '',
     })
 
-    subprocess.check_call([go_bin, 'mod', 'download'], cwd=syncthing_dir)
+    subprocess.check_call([go_bin, 'mod', 'download'], cwd=universalsync_dir)
     subprocess.check_call(
                               [go_bin, 'version'],
-                              env=environ, cwd=syncthing_dir)
+                              env=environ, cwd=universalsync_dir)
     subprocess.check_call([
                               go_bin, 'run', 'build.go', '-goos', 'android',
                               '-goarch', target['goarch'],
                               '-cc', cc,
-                              '-version', syncthingVersion
-                          ] + ['-no-upgrade', 'build'], env=environ, cwd=syncthing_dir)
+                              '-version', universalsyncVersion
+                          ] + ['-no-upgrade', 'build'], env=environ, cwd=universalsync_dir)
 
     # Determine path of source artifact
-    source_artifact = os.path.join(syncthing_dir, 'syncthing')
+    source_artifact = os.path.join(universalsync_dir, 'universalsync')
 
     # Copy compiled binary to jniLibs folder
     target_dir = os.path.join(project_dir, 'app', 'src', 'main', 'jniLibs', target['jni_dir'])
     if not os.path.isdir(target_dir):
         os.makedirs(target_dir)
-    target_artifact = os.path.join(target_dir, FILENAME_SYNCTHING_BINARY)
+    target_artifact = os.path.join(target_dir, FILENAME_UNIVERSALSYNC_BINARY)
     if os.path.exists(target_artifact):
         os.unlink(target_artifact)
-    os.rename(os.path.join(syncthing_dir, 'syncthing'), target_artifact)
+    os.rename(os.path.join(universalsync_dir, 'universalsync'), target_artifact)
 
     print('*** Finished build for', target['arch'])
 

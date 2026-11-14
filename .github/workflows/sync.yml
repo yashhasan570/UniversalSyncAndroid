@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Clone upstream
-        run: git clone --depth 1 https://github.com/Catfriend1/syncthing-android /tmp/upstream
+        run: git clone --depth 1 https://github.com/yashhasan570/UniversalSyncAndroid /tmp/upstream
 
       - name: Sync rebranded source
         run: |

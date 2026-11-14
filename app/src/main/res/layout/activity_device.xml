@@ -308,13 +308,13 @@
                 tools:visibility="visible" />
 
             <TextView
-                android:id="@+id/syncthingVersion"
+                android:id="@+id/UniversalSyncVersion"
                 style="@style/Widget.Universal Sync.TextView.Label.Details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="72dp"
                 android:enabled="false"
-                android:hint="@string/syncthing_version_title"
+                android:hint="@string/Universal Sync_version_title"
                 android:visibility="gone"
                 tools:visibility="visible"
                 tools:ignore="RtlSymmetry"/>

@@ -16,7 +16,7 @@ import android.util.Log;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.util.ConfigXml;
 import com.universalsync.android.util.FileUtils;
 import com.universalsync.android.util.Util;
@@ -38,18 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import javax.inject.Inject;
 
-import static com.universalsync.android.service.Universal SyncService.EXTRA_STOP_AFTER_CRASHED_NATIVE;
+import static com.universalsync.android.service.UniversalSyncService.EXTRA_STOP_AFTER_CRASHED_NATIVE;
 
 /**
- * Runs the syncthing binary from command line, and prints its output to logcat.
+ * Runs the universalsync binary from command line, and prints its output to logcat.
  *
- * @see <a href="http://docs.syncthing.net/users/syncthing.html">Command Line Docs</a>
+ * @see <a href="http://docs.universalsync.net/users/universalsync.html">Command Line Docs</a>
  */
-public class Universal SyncRunnable implements Runnable {
+public class UniversalSyncRunnable implements Runnable {
 
-    private static final String TAG = "Universal SyncRunnable";
-    private static final String TAG_NATIVE = "Universal SyncNativeCode";
-    private static final String TAG_NICE = "Universal SyncRunnableIoNice";
+    private static final String TAG = "UniversalSyncRunnable";
+    private static final String TAG_NATIVE = "UniversalSyncNativeCode";
+    private static final String TAG_NICE = "UniversalSyncRunnableIoNice";
 
     private Boolean ENABLE_VERBOSE_LOG = false;
     private static final int LOG_FILE_MAX_LINES = 200000;
@@ -57,9 +57,9 @@ public class Universal SyncRunnable implements Runnable {
 
     private static final AtomicReference<Process> mUniversal Sync = new AtomicReference<>();
     private final Context mContext;
-    private final File mUniversal SyncBinary;
+    private final File mUniversalSyncBinary;
     private String[] mCommand;
-    private final File mUniversal SyncLogFile;
+    private final File mUniversalSyncLogFile;
 
     @Inject
     SharedPreferences mPreferences;
@@ -80,30 +80,30 @@ public class Universal SyncRunnable implements Runnable {
      *
      * @param command Which type of Universal Sync command to execute.
      */
-    public Universal SyncRunnable(Context context, Command command) {
-        ((Universal SyncApp) context.getApplicationContext()).component().inject(this);
+    public UniversalSyncRunnable(Context context, Command command) {
+        ((UniversalSyncApp) context.getApplicationContext()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         mContext = context;
-        // Example: mUniversal SyncBinary="/data/app/${applicationId}-8HsN-IsVtZXc8GrE5-Hepw==/lib/x86/libsyncthingnative.so"
-        mUniversal SyncBinary = Constants.getUniversal SyncBinary(mContext);
-        mUniversal SyncLogFile = Constants.getUniversal SyncLogFile(mContext);
+        // Example: mUniversalSyncBinary="/data/app/${applicationId}-8HsN-IsVtZXc8GrE5-Hepw==/lib/x86/libuniversalsyncnative.so"
+        mUniversalSyncBinary = Constants.getUniversalSyncBinary(mContext);
+        mUniversalSyncLogFile = Constants.getUniversalSyncLogFile(mContext);
 
-        // Get preferences relevant to starting syncthing core.
+        // Get preferences relevant to starting universalsync core.
         switch (command) {
             case deviceid:
-                mCommand = new String[]{mUniversal SyncBinary.getPath(), "device-id"};
+                mCommand = new String[]{mUniversalSyncBinary.getPath(), "device-id"};
                 break;
             case generate:
-                mCommand = new String[]{mUniversal SyncBinary.getPath(), "generate"};
+                mCommand = new String[]{mUniversalSyncBinary.getPath(), "generate"};
                 break;
             case main:
-                mCommand = new String[]{mUniversal SyncBinary.getPath(), "serve", "--no-browser"};
+                mCommand = new String[]{mUniversalSyncBinary.getPath(), "serve", "--no-browser"};
                 break;
             case resetdatabase:
-                mCommand = new String[]{mUniversal SyncBinary.getPath(), "debug", "reset-database"};
+                mCommand = new String[]{mUniversalSyncBinary.getPath(), "debug", "reset-database"};
                 break;
             case resetdeltas:
-                mCommand = new String[]{mUniversal SyncBinary.getPath(), "serve", "--debug-reset-delta-idxs"};
+                mCommand = new String[]{mUniversalSyncBinary.getPath(), "serve", "--debug-reset-delta-idxs"};
                 break;
             default:
                 throw new InvalidParameterException("Unknown command option");
@@ -121,12 +121,12 @@ public class Universal SyncRunnable implements Runnable {
 
     public String run(boolean returnStdOut) throws ExecutableNotFoundException {
         Boolean sendStopToService = false;
-        Boolean restartUniversal SyncNative = false;
+        Boolean restartUniversalSyncNative = false;
         int exitCode;
         String capturedStdOut = "";
 
         // Trim Universal Sync log.
-        trimUniversal SyncLogFile();
+        trimUniversalSyncLogFile();
 
         MulticastLock multicastLock = null;
         Process process = null;
@@ -144,7 +144,7 @@ public class Universal SyncRunnable implements Runnable {
             }
 
             /**
-             * Setup and run a new syncthing instance
+             * Setup and run a new universalsync instance
              */
             HashMap<String, String> targetEnv = buildEnvironment();
             process = setupAndLaunch(targetEnv);
@@ -201,8 +201,8 @@ public class Universal SyncRunnable implements Runnable {
                     break;
                 case 3:
                     // Restart was requested via Rest API call.
-                    Log.i(TAG, "exit reason = exitRestarting. Restarting syncthing.");
-                    restartUniversal SyncNative = true;
+                    Log.i(TAG, "exit reason = exitRestarting. Restarting universalsync.");
+                    restartUniversalSyncNative = true;
                     break;
                 case 9:
                     // Native was force killed.
@@ -221,7 +221,7 @@ public class Universal SyncRunnable implements Runnable {
                     sendStopToService = true;
             }
         } catch (IOException | InterruptedException e) {
-            Log.e(TAG, "Failed to execute syncthing binary or read output", e);
+            Log.e(TAG, "Failed to execute universalsync binary or read output", e);
         } finally {
             if (multicastLock != null) {
                 multicastLock.release();
@@ -232,16 +232,16 @@ public class Universal SyncRunnable implements Runnable {
             }
         }
 
-        // Restart syncthing if it exited unexpectedly while running on a separate thread.
-        if (!returnStdOut && restartUniversal SyncNative) {
-            mContext.startService(new Intent(mContext, Universal SyncService.class)
-                    .setAction(Universal SyncService.ACTION_RESTART));
+        // Restart universalsync if it exited unexpectedly while running on a separate thread.
+        if (!returnStdOut && restartUniversalSyncNative) {
+            mContext.startService(new Intent(mContext, UniversalSyncService.class)
+                    .setAction(UniversalSyncService.ACTION_RESTART));
         }
 
-        // Notify {@link Universal SyncService} that service state State.ACTIVE is no longer valid.
+        // Notify {@link UniversalSyncService} that service state State.ACTIVE is no longer valid.
         if (!returnStdOut && sendStopToService) {
-            Intent intent = new Intent(mContext, Universal SyncService.class);
-            intent.setAction(Universal SyncService.ACTION_STOP);
+            Intent intent = new Intent(mContext, UniversalSyncService.class);
+            intent.setAction(UniversalSyncService.ACTION_STOP);
             intent.putExtra(EXTRA_STOP_AFTER_CRASHED_NATIVE, true);
             mContext.startService(intent);
         }
@@ -282,7 +282,7 @@ public class Universal SyncRunnable implements Runnable {
      *
      * @param is       The stream to log.
      * @param priority The priority level.
-     * @param saveLog  True if the log should be stored to {@link #mUniversal SyncLogFile}.
+     * @param saveLog  True if the log should be stored to {@link #mUniversalSyncLogFile}.
      */
     private Thread log(final InputStream is, final int priority) {
         Thread t = new Thread(() -> {
@@ -297,8 +297,8 @@ public class Universal SyncRunnable implements Runnable {
                         Log.println(priority, TAG_NATIVE, lineWithoutTimestamp);
                     }
                     */
-                    // Always output SynchtingNative's output to "syncthing.log".
-                    Files.append(line + "\n", mUniversal SyncLogFile, Charsets.UTF_8);
+                    // Always output SynchtingNative's output to "universalsync.log".
+                    Files.append(line + "\n", mUniversalSyncLogFile, Charsets.UTF_8);
                 }
             } catch (IOException e) {
                 Log.w(TAG, "Failed to read Universal Sync's command line output", e);
@@ -339,12 +339,12 @@ public class Universal SyncRunnable implements Runnable {
     /**
      * Only keep last {@link #LOG_FILE_MAX_LINES} lines in log file, to avoid bloat.
      */
-    private void trimUniversal SyncLogFile() {
-        if (!mUniversal SyncLogFile.exists()) {
+    private void trimUniversalSyncLogFile() {
+        if (!mUniversalSyncLogFile.exists()) {
             return;
         }
 
-        try (RandomAccessFile input = new RandomAccessFile(mUniversal SyncLogFile, "r")) {
+        try (RandomAccessFile input = new RandomAccessFile(mUniversalSyncLogFile, "r")) {
             // Find the offset of the (n + 1)th newline with constant memory. The last n lines is
             // everything after that point. This will read in block-aligned chunks if
             // LOG_FILE_BUFFER_SIZE is a multiple of the filesystem block size.
@@ -378,7 +378,7 @@ public class Universal SyncRunnable implements Runnable {
 
             input.seek(truncationOffset);
 
-            File tempFile = new File(mContext.getFilesDir().toString(), "syncthing.log.tmp");
+            File tempFile = new File(mContext.getFilesDir().toString(), "universalsync.log.tmp");
             long remain = length - truncationOffset;
 
             try (FileOutputStream output = new FileOutputStream(tempFile)) {
@@ -392,7 +392,7 @@ public class Universal SyncRunnable implements Runnable {
                 }
             }
 
-            tempFile.renameTo(mUniversal SyncLogFile);
+            tempFile.renameTo(mUniversalSyncLogFile);
         } catch (IOException e) {
             Log.w(TAG, "Failed to trim log file", e);
         }
@@ -402,7 +402,7 @@ public class Universal SyncRunnable implements Runnable {
         HashMap<String, String> targetEnv = new HashMap<>();
 
         // Set home directory to data folder for web GUI folder picker.
-        targetEnv.put("HOME", FileUtils.getUniversal SyncTildeAbsolutePath());
+        targetEnv.put("HOME", FileUtils.getUniversalSyncTildeAbsolutePath());
 
         // Set config, key and database directory.
         targetEnv.put("STHOMEDIR", mContext.getFilesDir().toString());
@@ -415,7 +415,7 @@ public class Universal SyncRunnable implements Runnable {
         // Database tuning against slowness.
         targetEnv.put("SQLITE_TMPDIR", mContext.getCacheDir().getAbsolutePath());
 
-        // Workaround Universal SyncNativeCode denied to read gatewayIP by Android 14+ restriction.
+        // Workaround UniversalSyncNativeCode denied to read gatewayIP by Android 14+ restriction.
         final String gatewayIpV4 = getGatewayIpV4(mContext);
         if (gatewayIpV4 != null) {
             targetEnv.put("FALLBACK_NET_GATEWAY_IPV4", gatewayIpV4);
@@ -450,7 +450,7 @@ public class Universal SyncRunnable implements Runnable {
     }
 
     private Process setupAndLaunch(HashMap<String, String> env) throws IOException, ExecutableNotFoundException {
-        // Check if "libsyncthingnative.so" exists.
+        // Check if "libuniversalsyncnative.so" exists.
         if (mCommand.length > 0) {
             File libUniversal Sync = new File(mCommand[0]);
             if (!libUniversal Sync.exists()) {

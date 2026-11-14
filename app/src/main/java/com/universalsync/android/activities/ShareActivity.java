@@ -27,12 +27,12 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.common.io.Files;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.model.Folder;
 import com.universalsync.android.service.AppPrefs;
 import com.universalsync.android.service.Constants;
-import com.universalsync.android.service.Universal SyncService;
-import com.universalsync.android.service.Universal SyncServiceBinder;
+import com.universalsync.android.service.UniversalSyncService;
+import com.universalsync.android.service.UniversalSyncServiceBinder;
 import com.universalsync.android.util.ConfigRouter;
 import com.universalsync.android.util.ConfigXml.OpenConfigException;
 import com.universalsync.android.util.Util;
@@ -57,19 +57,19 @@ import static com.universalsync.android.service.RunConditionMonitor.ACTION_SYNC_
 import static com.universalsync.android.service.RunConditionMonitor.EXTRA_BEGIN_ACTIVE_TIME_WINDOW;
 
 /**
- * Shares incoming files to syncthing folders.
+ * Shares incoming files to universalsync folders.
  * <p>
  * {@link #getDisplayNameForUri} and {@link #getDisplayNameFromContentResolver} are taken from
  * ownCloud Android {@see https://github.com/owncloud/android/blob/master/owncloudApp/src/main/java/com/owncloud/android/utils/UriUtils.java}
  */
-public class ShareActivity extends Universal SyncActivity
-        implements Universal SyncService.OnServiceStateChangeListener {
+public class ShareActivity extends UniversalSyncActivity
+        implements UniversalSyncService.OnServiceStateChangeListener {
 
     private static final String TAG = "ShareActivity";
 
     private Boolean ENABLE_VERBOSE_LOG = false;
 
-    private static final String PREF_PREVIOUSLY_SELECTED_SYNCTHING_FOLDER = "previously_selected_syncthing_folder";
+    private static final String PREF_PREVIOUSLY_SELECTED_UNIVERSALSYNC_FOLDER = "previously_selected_universalsync_folder";
 
     public static final String PREF_FOLDER_SAVED_SUBDIRECTORY = "saved_sub_directory_";
 
@@ -77,7 +77,7 @@ public class ShareActivity extends Universal SyncActivity
 
     private Spinner mFoldersSpinner;
 
-    private Universal SyncService mUniversal SyncService = null;
+    private UniversalSyncService mUniversalSyncService = null;
 
     private TextView mSubDirectoryTextView;
 
@@ -86,14 +86,14 @@ public class ShareActivity extends Universal SyncActivity
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         super.onServiceConnected(componentName, iBinder);
-        Universal SyncServiceBinder syncthingServiceBinder = (Universal SyncServiceBinder) iBinder;
-        Universal SyncService syncthingService = (Universal SyncService) syncthingServiceBinder.getService();
-        syncthingService.registerOnServiceStateChangeListener(ShareActivity.this);
-        mUniversal SyncService = syncthingService;
+        UniversalSyncServiceBinder universalsyncServiceBinder = (UniversalSyncServiceBinder) iBinder;
+        UniversalSyncService universalsyncService = (UniversalSyncService) universalsyncServiceBinder.getService();
+        universalsyncService.registerOnServiceStateChangeListener(ShareActivity.this);
+        mUniversalSyncService = universalsyncService;
     }
 
     @Override
-    public void onServiceStateChange(Universal SyncService.State currentState) {
+    public void onServiceStateChange(UniversalSyncService.State currentState) {
         List<Folder> folders = null;
         try {
             folders = mConfig.getFolders(getApi());
@@ -106,7 +106,7 @@ public class ShareActivity extends Universal SyncActivity
         // Get the index of the previously selected folder.
         int folderIndex = 0;
         String savedFolderId = mPreferences
-                .getString(PREF_PREVIOUSLY_SELECTED_SYNCTHING_FOLDER, "");
+                .getString(PREF_PREVIOUSLY_SELECTED_UNIVERSALSYNC_FOLDER, "");
         for (Folder folder : folders) {
             if (folder.id.equals(savedFolderId)) {
                 folderIndex = folders.indexOf(folder);
@@ -134,7 +134,7 @@ public class ShareActivity extends Universal SyncActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         mConfig = new ConfigRouter(ShareActivity.this);
         setContentView(R.layout.activity_share);
@@ -246,7 +246,7 @@ public class ShareActivity extends Universal SyncActivity
         if (mFoldersSpinner.getSelectedItem() != null) {
             Folder selectedFolder = (Folder) mFoldersSpinner.getSelectedItem();
             mPreferences.edit()
-                    .putString(PREF_PREVIOUSLY_SELECTED_SYNCTHING_FOLDER, selectedFolder.id)
+                    .putString(PREF_PREVIOUSLY_SELECTED_UNIVERSALSYNC_FOLDER, selectedFolder.id)
                     .apply();
         }
     }
@@ -270,8 +270,8 @@ public class ShareActivity extends Universal SyncActivity
 
     @Override
     protected void onDestroy() {
-        if (mUniversal SyncService != null) {
-            mUniversal SyncService.unregisterOnServiceStateChangeListener(ShareActivity.this);
+        if (mUniversalSyncService != null) {
+            mUniversalSyncService.unregisterOnServiceStateChangeListener(ShareActivity.this);
         }
         super.onDestroy();
     }
@@ -475,7 +475,7 @@ public class ShareActivity extends Universal SyncActivity
         // Check if feature "Sync according to time schedule" is enabled.
         boolean prefRunOnTimeSchedule = mPreferences.getBoolean(Constants.PREF_RUN_ON_TIME_SCHEDULE, false);
         if (prefRunOnTimeSchedule) {
-            // Notify {@link RunConditionMonitor} to start Universal SyncNative immediately for a certain amount of time.
+            // Notify {@link RunConditionMonitor} to start UniversalSyncNative immediately for a certain amount of time.
             LogV("prefRunOnTimeSchedule=true, notifying RunConditionMonitor via intent");
             LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(this);
             Intent intent = new Intent(ACTION_SYNC_TRIGGER_FIRED);

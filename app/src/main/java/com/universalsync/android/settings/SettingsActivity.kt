@@ -14,10 +14,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.lifecycle.lifecycleScope
-import com.universalsync.android.Universal SyncApp
-import com.universalsync.android.activities.Universal SyncActivity
+import com.universalsync.android.UniversalSyncApp
+import com.universalsync.android.activities.UniversalSyncActivity
 import com.universalsync.android.service.NotificationHandler
-import com.universalsync.android.service.Universal SyncService
+import com.universalsync.android.service.UniversalSyncService
 import com.universalsync.android.theme.ApplicationTheme
 import com.universalsync.android.util.LocalActivityScope
 import jakarta.inject.Inject
@@ -25,10 +25,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import me.zhanghai.compose.preference.Preferences
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 
-val LocalUniversal SyncService = staticCompositionLocalOf<Universal SyncService?> { null }
+val LocalUniversalSyncService = staticCompositionLocalOf<UniversalSyncService?> { null }
 val LocalServiceUpdateTick = staticCompositionLocalOf { 0 }
 
-class SettingsActivity : Universal SyncActivity() {
+class SettingsActivity : UniversalSyncActivity() {
 
     @Inject
     lateinit var sharedPreferences: SharedPreferences
@@ -36,16 +36,16 @@ class SettingsActivity : Universal SyncActivity() {
     @Inject
     lateinit var notificationHandler: NotificationHandler
 
-    private var syncthingServiceState by mutableStateOf<Universal SyncService?>(service)
+    private var universalsyncServiceState by mutableStateOf<UniversalSyncService?>(service)
 
-    // The ticker will help update the ui whenever the state of syncthing service updates
+    // The ticker will help update the ui whenever the state of universalsync service updates
     private var serviceUpdateTick by mutableIntStateOf(0)
-    val stateChangeListener = Universal SyncService.OnServiceStateChangeListener {
+    val stateChangeListener = UniversalSyncService.OnServiceStateChangeListener {
         serviceUpdateTick++
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        (application as Universal SyncApp).component().inject(this)
+        (application as UniversalSyncApp).component().inject(this)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
@@ -79,7 +79,7 @@ class SettingsActivity : Universal SyncActivity() {
                 CompositionLocalProvider(
                     LocalActivityScope provides activityScope,
                     LocalSettingsNavigator provides navigator,
-                    LocalUniversal SyncService provides syncthingServiceState,
+                    LocalUniversalSyncService provides universalsyncServiceState,
                     LocalServiceUpdateTick provides serviceUpdateTick,
                 ) {
                     ProvidePreferenceLocals(flow = prefFlow) {
@@ -94,27 +94,27 @@ class SettingsActivity : Universal SyncActivity() {
 
     override fun onServiceConnected(name: ComponentName, service: IBinder) {
         super.onServiceConnected(name, service)
-        syncthingServiceState = this.service
-        syncthingServiceState?.registerOnServiceStateChangeListener(stateChangeListener)
+        universalsyncServiceState = this.service
+        universalsyncServiceState?.registerOnServiceStateChangeListener(stateChangeListener)
         serviceUpdateTick++
     }
 
     override fun onServiceDisconnected(name: ComponentName) {
-        syncthingServiceState?.unregisterOnServiceStateChangeListener(stateChangeListener)
+        universalsyncServiceState?.unregisterOnServiceStateChangeListener(stateChangeListener)
         super.onServiceDisconnected(name)
-        syncthingServiceState = null
+        universalsyncServiceState = null
         serviceUpdateTick++
     }
 
     override fun onStop() {
-        syncthingServiceState?.let {
+        universalsyncServiceState?.let {
             notificationHandler.updatePersistentNotification(it)
         }
         super.onStop()
     }
 
     override fun onDestroy() {
-        syncthingServiceState?.unregisterOnServiceStateChangeListener(stateChangeListener)
+        universalsyncServiceState?.unregisterOnServiceStateChangeListener(stateChangeListener)
         super.onDestroy()
     }
 

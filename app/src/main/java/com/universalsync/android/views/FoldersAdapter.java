@@ -22,7 +22,7 @@ import com.universalsync.android.model.Folder;
 import com.universalsync.android.model.FolderStatus;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
+import com.universalsync.android.service.UniversalSyncService;
 import com.universalsync.android.util.FileUtils;
 import com.universalsync.android.util.Util;
 
@@ -325,9 +325,9 @@ public class FoldersAdapter extends ArrayAdapter<Folder> {
                 .setMessage(R.string.override_changes_question)
                 .setPositiveButton(android.R.string.ok, (dialogInterface, i) -> {
                     // Send "Override changes" through our service to the REST API.
-                    Intent intent = new Intent(mContext, Universal SyncService.class)
-                            .putExtra(Universal SyncService.EXTRA_FOLDER_ID, folder.id);
-                    intent.setAction(Universal SyncService.ACTION_OVERRIDE_CHANGES);
+                    Intent intent = new Intent(mContext, UniversalSyncService.class)
+                            .putExtra(UniversalSyncService.EXTRA_FOLDER_ID, folder.id);
+                    intent.setAction(UniversalSyncService.ACTION_OVERRIDE_CHANGES);
                     mContext.startService(intent);
                 })
                 .setNegativeButton(android.R.string.no, (dialogInterface, i) -> {});
@@ -340,9 +340,9 @@ public class FoldersAdapter extends ArrayAdapter<Folder> {
                 .setMessage(R.string.revert_local_changes_question)
                 .setPositiveButton(android.R.string.ok, (dialogInterface, i) -> {
                     // Send "Revert local changes" through our service to the REST API.
-                    Intent intent = new Intent(mContext, Universal SyncService.class)
-                            .putExtra(Universal SyncService.EXTRA_FOLDER_ID, folder.id);
-                    intent.setAction(Universal SyncService.ACTION_REVERT_LOCAL_CHANGES);
+                    Intent intent = new Intent(mContext, UniversalSyncService.class)
+                            .putExtra(UniversalSyncService.EXTRA_FOLDER_ID, folder.id);
+                    intent.setAction(UniversalSyncService.ACTION_REVERT_LOCAL_CHANGES);
                     mContext.startService(intent);
                 })
                 .setNegativeButton(android.R.string.no, (dialogInterface, i) -> {});

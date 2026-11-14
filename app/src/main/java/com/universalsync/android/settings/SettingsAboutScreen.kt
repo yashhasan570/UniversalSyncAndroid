@@ -34,7 +34,7 @@ fun SettingsAboutScreen() {
     val context = LocalContext.current
     val navigator = LocalSettingsNavigator.current
     val uriHandler = LocalUriHandler.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
     val stServiceTick = LocalServiceUpdateTick.current
 
     val loading = stringResource(R.string.state_loading)
@@ -67,13 +67,13 @@ fun SettingsAboutScreen() {
         }
         item {
             Preference(
-                title = { Text(stringResource(R.string.syncthing_version_title)) },
+                title = { Text(stringResource(R.string.universalsync_version_title)) },
                 summary = { Text(state.coreVersion) },
             )
         }
         item {
             Preference(
-                title = { Text(stringResource(R.string.syncthing_database_size)) },
+                title = { Text(stringResource(R.string.universalsync_database_size)) },
                 summary = { Text(state.dbSize) },
             )
         }
@@ -84,10 +84,10 @@ fun SettingsAboutScreen() {
             )
         }
         item {
-            val stForumUri = stringResource(R.string.syncthing_forum_url)
+            val stForumUri = stringResource(R.string.universalsync_forum_url)
             Preference(
-                title = { Text(stringResource(R.string.syncthing_forum_title)) },
-                summary = { Text(stringResource(R.string.syncthing_forum_summary)) },
+                title = { Text(stringResource(R.string.universalsync_forum_title)) },
+                summary = { Text(stringResource(R.string.universalsync_forum_summary)) },
                 onClick = { uriHandler.openUri(stForumUri) },
             )
         }

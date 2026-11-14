@@ -22,9 +22,9 @@ import com.universalsync.android.R;
 import com.universalsync.android.util.Util;
 
 /**
- * Holds a WebView that shows the web ui of the local syncthing instance.
+ * Holds a WebView that shows the web ui of the local universalsync instance.
  */
-public class WebViewActivity extends Universal SyncActivity {
+public class WebViewActivity extends UniversalSyncActivity {
 
     public static final String EXTRA_WEB_URL =
             ".activities.WebViewActivity.WEB_URL";

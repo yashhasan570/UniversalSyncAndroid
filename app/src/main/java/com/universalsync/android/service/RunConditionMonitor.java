@@ -23,7 +23,7 @@ import android.os.SystemClock;
 import android.util.Log;
 
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.util.JobUtils;
 
 import java.util.HashSet;
@@ -98,7 +98,7 @@ public class RunConditionMonitor {
     /**
      * Only relevant if the user has enabled turning Universal Sync on by
      * time schedule for a specific amount of time periodically.
-     * Holds true if we are within a "Universal SyncNative should run" time frame.
+     * Holds true if we are within a "UniversalSyncNative should run" time frame.
      * Initial status false because we check if the last sync was more than one hour ago on app start.
      */
     private Boolean mTimeConditionMatch = false;
@@ -129,7 +129,7 @@ public class RunConditionMonitor {
     public RunConditionMonitor(Context context,
             OnShouldRunChangedListener onShouldRunChangedListener,
             OnSyncPreconditionChangedListener onSyncPreconditionChangedListener) {
-        ((Universal SyncApp) context.getApplicationContext()).component().inject(this);
+        ((UniversalSyncApp) context.getApplicationContext()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         LogV("Created new instance");
         mContext = context;
@@ -187,7 +187,7 @@ public class RunConditionMonitor {
             lastSyncTimeSinceBootMillisecs = 0;
         }
 
-        // Initially determine if syncthing should run under current circumstances.
+        // Initially determine if universalsync should run under current circumstances.
         updateShouldRunDecision();
 
         // Initially schedule the SyncTrigger job.
@@ -287,9 +287,9 @@ public class RunConditionMonitor {
                 return;
             }
 
-            // extraBeginActiveTimeWindow determines whether syncthing should start or stop
+            // extraBeginActiveTimeWindow determines whether universalsync should start or stop
             if (extraBeginActiveTimeWindow) {
-                // We should immediately start Universal SyncNative for TRIGGERED_SYNC_DURATION_SECS.
+                // We should immediately start UniversalSyncNative for TRIGGERED_SYNC_DURATION_SECS.
                 mTimeConditionMatch = true;
                 JobUtils.cancelAllScheduledJobs(context);
                 JobUtils.scheduleSyncTriggerServiceJob(
@@ -323,15 +323,15 @@ public class RunConditionMonitor {
 
             /**
              * Reschedule the job.
-             * If we are within a "Universal SyncNative shouldn't run" time frame,
-             * let the receiver fire and change to "Universal SyncNative should run" after
+             * If we are within a "UniversalSyncNative shouldn't run" time frame,
+             * let the receiver fire and change to "UniversalSyncNative should run" after
              * triggeredSyncSleepIntervalS seconds elapsed.
-             * If we are within a "Universal SyncNative should run" time frame,
-             * the change to "Universal SyncNative shouldn't run" after
+             * If we are within a "UniversalSyncNative should run" time frame,
+             * the change to "UniversalSyncNative shouldn't run" after
              * TRIGGERED_SYNC_DURATION_SECS seconds elapsed should actually
              * be scheduled inside updateShouldRunDecision(), but his might
              * not always be the case.
-             * Thus we schedule an additional change to "Universal SyncNative shouldn't run"
+             * Thus we schedule an additional change to "UniversalSyncNative shouldn't run"
              * after TRIGGERED_SYNC_DURATION_SECS seconds elapsed, but without
              * cancelling other jobs. This should only serve as a backup job and
              * will not fire if the job inside updateShouldRunDecision() is
@@ -363,7 +363,7 @@ public class RunConditionMonitor {
 
     /**
      * Event handler that is fired after preconditions changed.
-     * We then need to decide if syncthing should run.
+     * We then need to decide if universalsync should run.
      */
     public void updateShouldRunDecision() {
         if (!Constants.isRunningOnEmulator()) {
@@ -376,13 +376,13 @@ public class RunConditionMonitor {
             /**
              * Trigger:
              *  a) Sync pre-conditions changed
-             *      a1) AND Universal SyncService.State should remain ACTIVE
-             *      a2) AND Universal SyncService.State should transition from INIT/DISABLED to ACTIVE
+             *      a1) AND UniversalSyncService.State should remain ACTIVE
+             *      a2) AND UniversalSyncService.State should transition from INIT/DISABLED to ACTIVE
              *  b) Sync pre-conditions did not change
-             *      b1) AND Universal SyncService.State should remain ACTIVE
+             *      b1) AND UniversalSyncService.State should remain ACTIVE
              *          because a reevaluation of the run conditions was forced from code.
              * Action:
-             *  Universal SyncService will evaluate custom per-object run conditions
+             *  UniversalSyncService will evaluate custom per-object run conditions
              *  and pause/unpause objects accordingly.
              */
              if (mOnSyncPreconditionChangedListener != null) {
@@ -396,7 +396,7 @@ public class RunConditionMonitor {
          */
         if (newShouldRun != lastDeterminedShouldRun) {
             /**
-             * Notify Universal SyncService in case it has to transition from
+             * Notify UniversalSyncService in case it has to transition from
              * a) INIT/DISABLED => STARTING => ACTIVE
              * b) ACTIVE => DISABLED
              */
@@ -576,7 +576,7 @@ public class RunConditionMonitor {
         if (SystemClock.elapsedRealtime() - mPreferences.getLong(Constants.PREF_LAST_RUN_TIME,0) > Integer.parseInt(mPreferences.getString(Constants.PREF_SLEEP_INTERVAL_MINUTES,"60")) * 60 * 1000)
             mTimeConditionMatch = true;
         if (prefRunOnTimeSchedule && !mTimeConditionMatch) {
-            // Currently, we aren't within a "Universal SyncNative should run" time frame.
+            // Currently, we aren't within a "UniversalSyncNative should run" time frame.
             LogV("decideShouldRun: PREF_RUN_ON_TIME_SCHEDULE && !mTimeConditionMatch");
             int minutes = (int) (SystemClock.elapsedRealtime() - mPreferences.getLong(Constants.PREF_LAST_RUN_TIME,0))/(60*1000);
             String minutesText;

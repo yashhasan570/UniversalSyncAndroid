@@ -47,7 +47,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Send Enheds-ID til</string>
     <string name="usage_reporting_dialog_title">Tillad Anonym Forbrugsrapportering</string>
-    <string name="usage_reporting_dialog_description">Den krypterede forbrugsrapport bliver send dagligt. Det bliver brugt til at undersøge mest burgte platforme, mappestørrelser og app versioner. Hvis det rapporterede dataset bliver ændret, vil du blive informeret med denne dialog igen. \n \nDe aggregerede statistikker er offentligt tilgængelige her https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Den krypterede forbrugsrapport bliver send dagligt. Det bliver brugt til at undersøge mest burgte platforme, mappestørrelser og app versioner. Hvis det rapporterede dataset bliver ændret, vil du blive informeret med denne dialog igen. \n \nDe aggregerede statistikker er offentligt tilgængelige her https://data.Universal Sync.net.</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
     <string name="open_website">Åben Hjemmeside</string>
@@ -94,10 +94,10 @@
     <string name="upload_title">Upload</string>
     <!-- StatusFragment -->
     <string name="status_fragment_title">Status</string>
-    <string name="syncthing_starting">Universal Sync starter.</string>
-    <string name="syncthing_running">Universal Sync kører.</string>
-    <string name="syncthing_not_running">Universal Sync kører ikke.</string>
-    <string name="syncthing_has_crashed">Universal Sync crashede</string>
+    <string name="universalsync_starting">Universal Sync starter.</string>
+    <string name="universalsync_running">Universal Sync kører.</string>
+    <string name="universalsync_not_running">Universal Sync kører ikke.</string>
+    <string name="universalsync_has_crashed">Universal Sync crashede</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Download: "</string>
@@ -146,7 +146,7 @@
     <string name="folder_path_readonly">Din Android version tillader kun Universal Sync at læse den valgte mappe.</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
     <string name="folder_path_readwrite">Din Android version tillader Universal Sync at læse og skrive til den valgte mappe.</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">Beklager. Den valgte mappe kan ikke blive brugt. Prøv at vælge en mappe placerede i det interne og eksterne lager.</string>
     <string name="ignore_patterns">Ignorer-mønstre</string>
     <!-- DeviceActivity -->
@@ -193,7 +193,7 @@
     <string name="settings_title">Indstillinger</string>
     <string name="category_run_conditions">Kør betingelser</string>
     <string name="category_behaviour">Adfærd</string>
-    <string name="category_syncthing_options">Universal Sync Muligheder</string>
+    <string name="category_universalsync_options">Universal Sync Muligheder</string>
     <string name="category_backup">Importer og Eksporter</string>
     <string name="category_debug">Fejlfinding</string>
     <string name="category_experimental">Eksperimentalt</string>
@@ -307,7 +307,7 @@
     <string name="report_issue_title">Rapporter problem</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync Version</string>
+    <string name="universalsync_version_title">Universal Sync Version</string>
     <!-- Title of the preference showing this app's version name -->
     <string name="app_version_title">Universal Sync-Fork Wrapper Version</string>
     <!-- FolderPickerAcitivity -->
@@ -321,12 +321,12 @@
     <string name="select_folder">Vælg Mappe</string>
     <string name="create_folder_failed">Det lykkedes ikke at oprette en ny mappe</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Universal Sync Log</string>
+    <string name="universalsync_log_title">Universal Sync Log</string>
     <string name="android_log_title">Android Logbog</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Vis Android Log</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Vis Universal Sync Log</string>
+    <string name="view_universalsync_log">Vis Universal Sync Log</string>
     <string name="retrieving_logs">Indhenter logs…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Del</string>
@@ -382,14 +382,14 @@
     <string name="reason_on_flight_mode">Universal Sync kører, som du tillod den, når flytilstand var slået til.</string>
     <!-- Sync Conditions Dialog -->
     <string name="custom_wifi_ssid_whitelist_empty">Intet WiFi SSID\'s som er whitelisted. Specificer nogle i indstillinger.</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Afslut</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync kører</string>
-    <string name="syncthing_disabled">Universal Sync sover</string>
-    <string name="syncthing_terminated">Universal Sync blev afbrudt</string>
-    <!-- Toast shown if syncthing failed to create or read the config -->
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync kører</string>
+    <string name="universalsync_disabled">Universal Sync sover</string>
+    <string name="universalsync_terminated">Universal Sync blev afbrudt</string>
+    <!-- Toast shown if Universal Sync failed to create or read the config -->
     <string name="executable_not_found">Core executable \"%s\" mangler. Tjek build og logcat output.</string>
     <string name="config_create_failed">Fejlede at lave en konfigurering. Tjek logcat output.</string>
     <string name="config_read_failed">Fejlede at læse konfigurationen. Prøv at sikkerhedskopiere fra din synkroniseringsmapper, derefter ryd denne app\'s data i Android instillinger og start den igen.</string>
@@ -494,7 +494,7 @@
     <string name="custom_sync_conditions_title">Brugerdefineret synkroniseringsbetingelser</string>
     <string name="custom_sync_conditions_description">Tillader dig at specificere undtagelser til globale kørebetingelser.</string>
     <string name="custom_sync_conditions_dialog">Specificer synkroniseringsbetingelser</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Vær forsigtig: Hvis Universal SyncNative bliver afbrudt og gør noget mærkeligt, er det din skyld. Spring kun over, hvis din enhed ikke understøtter tilladelsen. Vil du virkelig springe over?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Vær forsigtig: Hvis UniversalSyncNative bliver afbrudt og gør noget mærkeligt, er det din skyld. Spring kun over, hvis din enhed ikke understøtter tilladelsen. Vil du virkelig springe over?</string>
     <string name="dialog_all_files_access_not_supported">Din enhed understøtter ikke adgang til alle filer</string>
     <string name="ignore_doze_permission_os_notice">Android TV\'er er kendt for lejlighedsvis at afslutte appen, når den kører i baggrunden. En løsning er tilgængelig på wikien på \'%1$s/%2$s\'.</string>
 </resources>

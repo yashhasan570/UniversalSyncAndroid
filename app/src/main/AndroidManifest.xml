@@ -63,7 +63,7 @@
         android:description="@string/app_description"
         android:supportsRtl="true"
         android:installLocation="internalOnly"
-        android:name=".Universal SyncApp"
+        android:name=".UniversalSyncApp"
         android:hardwareAccelerated="true"
         android:requestLegacyExternalStorage="true"
         android:preserveLegacyExternalStorage="true"
@@ -192,7 +192,7 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <service
-            android:name=".service.Universal SyncService"
+            android:name=".service.UniversalSyncService"
             android:foregroundServiceType="specialUse">
                 <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Universal Sync is a continuous file sync app. If the user explicitly enables it running permanently in the background, it needs to monitor file changes at every time and receive or send changes made on the device or connected devices."/>
         </service>

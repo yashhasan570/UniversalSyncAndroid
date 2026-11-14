@@ -7,7 +7,7 @@ Switching is easier than you may think!
   - Now stop the official app entirely using the system app settings for Universal Sync.
     -  Force stop the app basically. We need to ensure it's not running.
   - Confirm you can see the config export by using a file browser.
-    - Default folder location: e.g. `/storage/emulated/0/backups/syncthing`
+    - Default folder location: e.g. `/storage/emulated/0/backups/Universal Sync`
   - Create a new file called `config.zip` comprised of the following files:
     - cert.pem
     - https-cert.pem
@@ -19,7 +19,7 @@ Switching is easier than you may think!
   - Universal Sync-Fork will require the `config.zip` to restore your config.
 
 - Migration
-  - Install our [latest release](https://github.com/universalsync/syncthing-android/releases/latest) from GitHub or F-Droid.
+  - Install our [latest release](https://github.com/universalsync/Universal Sync Android/releases/latest) from GitHub or F-Droid.
   - Start Universal Sync-Fork.
   - Complete the welcome slides.
   - In the Universal Sync-Fork settings, go to "Import & Export".

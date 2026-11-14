@@ -21,7 +21,7 @@ import androidx.navigation3.runtime.EntryProviderScope
 import com.universalsync.android.R
 import com.universalsync.android.activities.LogActivity
 import com.universalsync.android.service.Constants
-import com.universalsync.android.service.Universal SyncService
+import com.universalsync.android.service.UniversalSyncService
 import me.zhanghai.compose.preference.MultiSelectListPreference
 import me.zhanghai.compose.preference.Preference
 import me.zhanghai.compose.preference.SwitchPreference
@@ -148,7 +148,7 @@ private fun restartApp(activity: Activity?) {
         return
     }
 
-    val stopServiceIntent = Intent(activity, Universal SyncService::class.java)
+    val stopServiceIntent = Intent(activity, UniversalSyncService::class.java)
     activity.stopService(stopServiceIntent)
 
     val context = activity.applicationContext
@@ -178,8 +178,8 @@ private fun ResetDatabasePreference() {
                 TextButton(
                     onClick = {
                         showAlert = false
-                        val intent = Intent(context, Universal SyncService::class.java).apply {
-                            action = Universal SyncService.ACTION_RESET_DATABASE
+                        val intent = Intent(context, UniversalSyncService::class.java).apply {
+                            action = UniversalSyncService.ACTION_RESET_DATABASE
                         }
                         context.startService(intent)
                         Toast.makeText(context, R.string.st_reset_database_done, Toast.LENGTH_LONG).show()
@@ -216,8 +216,8 @@ private fun ResetDeltasPreference() {
                 TextButton(
                     onClick = {
                         showAlert = false
-                        val intent = Intent(context, Universal SyncService::class.java).apply {
-                            action = Universal SyncService.ACTION_RESET_DELTAS
+                        val intent = Intent(context, UniversalSyncService::class.java).apply {
+                            action = UniversalSyncService.ACTION_RESET_DELTAS
                         }
                         context.startService(intent)
                         Toast.makeText(context, R.string.st_reset_deltas_done, Toast.LENGTH_LONG).show()

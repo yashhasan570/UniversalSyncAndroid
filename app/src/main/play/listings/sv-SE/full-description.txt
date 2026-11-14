@@ -10,7 +10,7 @@ Detta är en förgrening av Universal Sync-Android-omslaget för Universal Sync 
 * Upptäck andra Universal Sync-enheter på samma nätverk och lägg enkelt till dem.
 * Stöder tvåvägssynkronisering på externt SD-kort sedan Android 11.
 
-Universal Sync-Fork för Android är ett omslag för Universal Sync som tillhandahåller ett Android-gränssnitt istället för Universal Syncs inbyggda webbgränssnitt. Universal Sync ersätter egenutvecklade synkroniserings- och molntjänster med något öppet, pålitligt och decentraliserat. Din data är ensam din data och du förtjänar att välja var den lagras, om den delas med någon tredje part och hur den överförs över Internet.
+Universal Sync-Fork för Android är ett omslag för Universal Sync som tillhandahåller ett Android-gränssnitt istället för UniversalSyncs inbyggda webbgränssnitt. Universal Sync ersätter egenutvecklade synkroniserings- och molntjänster med något öppet, pålitligt och decentraliserat. Din data är ensam din data och du förtjänar att välja var den lagras, om den delas med någon tredje part och hur den överförs över Internet.
 
 Mål med förgreningen:
 * Utveckla och prova förbättringar tillsammans med gemenskapen.
@@ -24,15 +24,15 @@ Jämförelse mellan uppströms och förgreningen när jag skriver detta:
 * Strategi och utgivningsfrekvens är olika
 * Endast omslaget som innehåller Android-gränssnittet adresseras av förgreningen.
 
-Webbplats: https://github.com/universalsync/syncthing-android
+Webbplats: https://github.com/universalsync/Universal Sync Android
 
-Källkod: https://github.com/universalsync/syncthing-android
+Källkod: https://github.com/universalsync/Universal Sync Android
 
-Hur Universal Sync skriver till externt SD-kort: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Hur Universal Sync skriver till externt SD-kort: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ och användbara artiklar: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ och användbara artiklar: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Problem: https://github.com/universalsync/syncthing-android/issues
+Problem: https://github.com/universalsync/Universal Sync Android/issues
 
 Snälla hjälp med
-översättningen: https://hosted.weblate.org/projects/syncthing-fork/app/
+översättningen: https://hosted.weblate.org/projects/Universal Sync/app/

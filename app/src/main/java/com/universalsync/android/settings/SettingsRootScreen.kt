@@ -8,7 +8,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
 import androidx.navigation3.runtime.EntryProviderScope
 import com.universalsync.android.R
-import com.universalsync.android.service.Universal SyncService
+import com.universalsync.android.service.UniversalSyncService
 import me.zhanghai.compose.preference.Preference
 
 fun EntryProviderScope<SettingsRoute>.settingsRootEntry() {
@@ -20,11 +20,11 @@ fun EntryProviderScope<SettingsRoute>.settingsRootEntry() {
 @Composable
 fun SettingsRootScreen() {
     val navigator = LocalSettingsNavigator.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
     val stServiceTick = LocalServiceUpdateTick.current
 
-    val isUniversal SyncOptionsEnabled by remember(stService, stServiceTick) {
-        derivedStateOf { stService != null && stService.currentState == Universal SyncService.State.ACTIVE }
+    val isUniversalSyncOptionsEnabled by remember(stService, stServiceTick) {
+        derivedStateOf { stService != null && stService.currentState == UniversalSyncService.State.ACTIVE }
     }
 
     SettingsScaffold(
@@ -51,10 +51,10 @@ fun SettingsRootScreen() {
         }
         item {
             Preference(
-                title = { Text(stringResource(R.string.category_syncthing_options)) },
-                summary = { Text(stringResource(R.string.category_syncthing_options_summary)) },
-                onClick = { navigator.navigateTo(SettingsRoute.Universal SyncOptions) },
-                enabled = isUniversal SyncOptionsEnabled,
+                title = { Text(stringResource(R.string.category_universalsync_options)) },
+                summary = { Text(stringResource(R.string.category_universalsync_options_summary)) },
+                onClick = { navigator.navigateTo(SettingsRoute.UniversalSyncOptions) },
+                enabled = isUniversalSyncOptionsEnabled,
             )
         }
         item {

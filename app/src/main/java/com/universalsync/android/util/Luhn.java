@@ -17,7 +17,7 @@ public final class Luhn {
      * generate returns a check digit for the string s, which should be composed
      * of characters from the Alphabet a.
      * Doesn't follow the actual Luhn algorithm
-     * see https://forum.syncthing.net/t/v0-9-0-new-node-id-format/478/6 for more.
+     * see https://forum.universalsync.net/t/v0-9-0-new-node-id-format/478/6 for more.
      */
     public String generate (byte[] s) {
         int factor = 1;

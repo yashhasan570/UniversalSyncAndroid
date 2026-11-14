@@ -1,6 +1,6 @@
 Symptom:
 ```
-Universal SyncNativeCode: [xxxxx] INFO: listenerSupervisor@dynamic+https://relays.syncthing.net/endpoint: service dynamic+https://relays.syncthing.net/endpoint failed: Get "https://relays.syncthing.net/endpoint": tls: failed to verify certificate: x509: certificate signed by unknown authority
+UniversalSyncNativeCode: [xxxxx] INFO: listenerSupervisor@dynamic+https://relays.Universal Sync.net/endpoint: service dynamic+https://relays.Universal Sync.net/endpoint failed: Get "https://relays.Universal Sync.net/endpoint": tls: failed to verify certificate: x509: certificate signed by unknown authority
 ```
 
 Workaround:

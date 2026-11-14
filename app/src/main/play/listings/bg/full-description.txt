@@ -13,14 +13,14 @@ Universal Sync-Fork за Андроид е обвивка за Universal Sync, �
 
 Първо потърсете помощ във форума и приложенията за социални мрежи преди да създавате доклади за дефекти в системата за управление на дефекти. Имайте предвид, че Universal Sync-Fork води началото си от личния стремеж да улесня семейството и приятелите си да използват Universal Sync на Андроид. Целта на разклонението никога не е била да бъде използвано от текущите повече от 100 000 потребители, въпреки че споделям резултатите с общността. Благодаря ви.
 
-Страница: https://github.com/universalsync/syncthing-android
+Страница: https://github.com/universalsync/Universal Sync Android
 
-Изходен код: https://github.com/universalsync/syncthing-android
+Изходен код: https://github.com/universalsync/Universal Sync Android
 
-Как Universal Sync записва на външна SD карта: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Как Universal Sync записва на външна SD карта: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, въпроси и отговори, и полезни статии: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, въпроси и отговори, и полезни статии: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Дефекти: https://github.com/universalsync/syncthing-android/issues
+Дефекти: https://github.com/universalsync/Universal Sync Android/issues
 
-Помогнете с превода: https://hosted.weblate.org/projects/syncthing-fork/app/
+Помогнете с превода: https://hosted.weblate.org/projects/Universal Sync/app/

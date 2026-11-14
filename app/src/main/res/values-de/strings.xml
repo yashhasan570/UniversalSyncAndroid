@@ -54,7 +54,7 @@
     <string name="photo_shoot_take_picture_success">Das Foto wurde erfolgreich im Universal Sync Kamera-Ordner gespeichert.</string>
     <string name="photo_shoot_take_picture_failure">Fotoaufnahme fehlgeschlagen oder wurde abgebrochen.</string>
     <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_syncthing_camera_folder_label">Universal Sync Kamera</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync Kamera</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">Alle neu scannen</string>
@@ -73,7 +73,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Geräte-ID senden an</string>
     <string name="usage_reporting_dialog_title">Anonymen Nutzungsbericht erlauben?</string>
-    <string name="usage_reporting_dialog_description">Der verschlüsselte Nutzungsbericht wird täglich versendet. Er dient der Statistik über genutzte Plattformen, Verzeichnisgrößen und Universal Sync-Versionen. Wenn sich der übermittelte Datenumfang ändert, wird erneut um Erlaubnis gefragt. \n \nDie zusammengeführten Statistiken sind unter https://data.syncthing.net zu finden.</string>
+    <string name="usage_reporting_dialog_description">Der verschlüsselte Nutzungsbericht wird täglich versendet. Er dient der Statistik über genutzte Plattformen, Verzeichnisgrößen und Universal Sync-Versionen. Wenn sich der übermittelte Datenumfang ändert, wird erneut um Erlaubnis gefragt. \n \nDie zusammengeführten Statistiken sind unter https://data.Universal Sync.net zu finden.</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
     <string name="open_website">Webseite öffnen</string>
@@ -142,10 +142,10 @@
     <string name="button_follow_run_conditions">Ausführungsbedingungen befolgen</string>
     <string name="button_force_start">Start erzwingen \nAusführungsbedingungen ignorieren</string>
     <string name="button_force_stop">Stopp erzwingen \nAusführungsbedingungen ignorieren</string>
-    <string name="syncthing_starting">Universal Sync wird gestartet.</string>
-    <string name="syncthing_running">Universal Sync läuft.</string>
-    <string name="syncthing_not_running">Universal Sync läuft nicht.</string>
-    <string name="syncthing_has_crashed">Universal Sync ist abgestürzt.</string>
+    <string name="universalsync_starting">Universal Sync wird gestartet.</string>
+    <string name="universalsync_running">Universal Sync läuft.</string>
+    <string name="universalsync_not_running">Universal Sync läuft nicht.</string>
+    <string name="universalsync_has_crashed">Universal Sync ist abgestürzt.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Herunterladen: "</string>
@@ -172,7 +172,7 @@
     <string name="folder_fileWatcherDescription">Fordert das Betriebssystem auf, über Änderungen an Dateien zu informieren. Falls deaktiviert, erfolgt stattdessen stündliches Scannen.</string>
     <!-- Setting title and description -->
     <string name="folder_ignore_delete_caption">Löschen ignorieren</string>
-    <string name="folder_ignore_delete_description">Expertenoption, die sich auf die Verarbeitung eingehender Indexaktualisierungen auswirkt. Wenn festgelegt, werden eingehende Aktualisierungen mit dem Löschkennzeichen ignoriert. Siehe https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Expertenoption, die sich auf die Verarbeitung eingehender Indexaktualisierungen auswirkt. Wenn festgelegt, werden eingehende Aktualisierungen mit dem Löschkennzeichen ignoriert. Siehe https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <!-- Setting title -->
     <string name="folder_pause">Ordner pausieren</string>
     <!-- Setting title -->
@@ -200,7 +200,7 @@
     <string name="folder_path_readonly">Diese Android-Version erlaubt Universal Sync nur schreibgeschützten Zugriff auf den ausgewählten Ordner.</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
     <string name="folder_path_readwrite">Diese Android-Version erlaubt Universal Sync Lese- und Schreibzugriff auf den ausgewählten Ordner.</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">Entschuldigung. Der ausgewählte Ordner kann nicht verwendet werden. Bitte einen Ordner auf dem internen oder externen Speicher auswählen.</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">Bestehende Ordner auf „Verschlüsselt empfangen“ umschalten wird nicht unterstützt.</string>
     <string name="ignore_patterns">Ausschlussmuster</string>
@@ -286,8 +286,8 @@
     <string name="preference_app_theme_follow_light">Hell</string>
     <string name="preference_app_theme_follow_dark">Dunkel</string>
     <string name="category_behaviour">Verhalten</string>
-    <string name="category_syncthing_options">Universal Sync-Optionen</string>
-    <string name="category_syncthing_options_summary">Dieses Menü ist nur verfügbar während Universal Sync läuft.</string>
+    <string name="category_universalsync_options">Universal Sync-Optionen</string>
+    <string name="category_universalsync_options_summary">Dieses Menü ist nur verfügbar während Universal Sync läuft.</string>
     <string name="category_backup">Import und Export</string>
     <string name="category_debug">Fehlerbehebung</string>
     <string name="category_experimental">Experimentell</string>
@@ -360,7 +360,7 @@
     <string name="crash_reporting">Anonymer Absturzbericht</string>
     <string name="webui_tcp_port_title">Web-UI TCP-Port</string>
     <string name="webui_remote_access_title">Web-UI Fernzugriff</string>
-    <string name="webui_remote_access_summary">Erlaubt es, von einem anderen Gerät aus auf die Weboberfläche zuzugreifen. Wenn aktiviert, ist es möglich sich als Benutzer „syncthing“ und dem API-Schlüssel als Passwort anzumelden. Standard: Deaktiviert (am sichersten)</string>
+    <string name="webui_remote_access_summary">Erlaubt es, von einem anderen Gerät aus auf die Weboberfläche zuzugreifen. Wenn aktiviert, ist es möglich sich als Benutzer „Universal Sync“ und dem API-Schlüssel als Passwort anzumelden. Standard: Deaktiviert (am sichersten)</string>
     <string name="download_support_bundle_title">Supportpaket herunterladen</string>
     <!-- Summary shown when the user clicked the download support bundle button -->
     <string name="download_support_bundle_in_progress">Supportpaket-Download wird vorbereitet …</string>
@@ -422,7 +422,7 @@
     <string name="verbose_log_title">Ausführliches Protokoll</string>
     <string name="verbose_log_summary">Aktivieren dieser Option wird sehr detaillierte Protokolle zur Fehlersuche liefern.</string>
     <string name="log_to_file_title">Logdatei schreiben</string>
-    <string name="log_to_file_summary">Die Ausgabe von Universal SyncNative wird in eine Datei geschrieben.</string>
+    <string name="log_to_file_summary">Die Ausgabe von UniversalSyncNative wird in eine Datei geschrieben.</string>
     <!-- Settings item that opens the log activity -->
     <string name="open_log">Protokoll öffnen</string>
     <!-- Summary for the log activity -->
@@ -433,15 +433,15 @@
     <string name="open_issue_tracker_summary">Universal Sync-Fork-Fehlersammlung bei %1$s öffnen</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync-Version</string>
+    <string name="universalsync_version_title">Universal Sync-Version</string>
     <!-- Title of the preference showing this app's version name -->
     <string name="app_version_title">Universal Sync-Fork-Wrapper-Version</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="syncthing_api_key">Universal Sync API-Schlüssel (Klicken zum Kopieren)</string>
+    <string name="universalsync_api_key">Universal Sync API-Schlüssel (Klicken zum Kopieren)</string>
     <!-- Shown when the API key is copied to the clipboard -->
     <string name="api_key_copied_to_clipboard">Universal Sync API-Schlüssel in die Zwischenablage kopiert</string>
     <!-- Title of the preference showing database size -->
-    <string name="syncthing_database_size">Universal Sync Datenbankgröße</string>
+    <string name="universalsync_database_size">Universal Sync Datenbankgröße</string>
     <!-- Title of the preference showing the OS open file limit -->
     <string name="os_open_file_limit">Android Offene-Dateien-Limit</string>
     <!-- FolderPickerAcitivity -->
@@ -461,12 +461,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">Aufwärts</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Universal Sync-Protokoll</string>
+    <string name="universalsync_log_title">Universal Sync-Protokoll</string>
     <string name="android_log_title">Android-Protokoll</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Android-Protokoll anzeigen</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Universal Sync-Protokoll anzeigen</string>
+    <string name="view_universalsync_log">Universal Sync-Protokoll anzeigen</string>
     <string name="retrieving_logs">Protokoll wird abgerufen …</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Teilen</string>
@@ -508,7 +508,7 @@
     <!-- RunConditionMonitor -->
     <string name="reason_force_start">Universal Sync läuft, weil Sie den Start unabhängig von den Ausführungsbedingungen erzwungen haben.</string>
     <string name="reason_force_stop">Universal Sync schläft, weil der Stopp unabhängig von den Ausführungsbedingungen erzwungen wurde.</string>
-    <!-- Explanations why syncthing is running or not running -->
+    <!-- Explanations why Universal Sync is running or not running -->
     <string name="reason_not_within_time_frame">Es ist „Gemäß Zeitplan synchronisieren“ aktiviert und die letzte Synchronisierung ist nicht länger als eine Stunde her.</string>
     <string name="reason_not_within_time_frame_2">Es ist „Gemäß Zeitplan synchronisieren“ aktiviert und die letzte Synchronisierung war vor %s.</string>
     <string name="reason_not_within_time_frame_0_min">weniger als einer Minute</string>
@@ -541,24 +541,24 @@
     <string name="reason_run_condition_monitor_not_instantiated">Laufkonditionen-Überwachung ist nicht instantiiert. Bitte die App neu starten und einen Fehlerbericht erstellen, falls das Problem nach dem Neustart nicht verschwindet.</string>
     <!-- Sync Conditions Dialog -->
     <string name="custom_wifi_ssid_whitelist_empty">Es sind keine WLAN-Netzwerknamen auf der Erlaubt-Liste. Bitte welche in den Einstellungen festlegen.</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Beenden</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Läuft</string>
-    <string name="syncthing_active_details">Läuft: %1$s</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Läuft</string>
+    <string name="universalsync_active_details">Läuft: %1$s</string>
     <string name="no_remote_devices_connected">Keine entfernten Geräte verbunden</string>
     <plurals name="device_online_up_to_date">
         <item quantity="one">%1$d Gerät online und aktuell</item>
         <item quantity="other">%1$d Geräte online und aktuell</item>
     </plurals>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Sync: %1$d %% fertig, %2$d Gerät online</item>
         <item quantity="other">Sync: %1$d %% fertig, %2$d Geräte online</item>
     </plurals>
-    <string name="syncthing_disabled">Schläft</string>
-    <string name="syncthing_terminated">Beendet</string>
-    <!-- Toast shown if syncthing failed to create or read the config -->
+    <string name="universalsync_disabled">Schläft</string>
+    <string name="universalsync_terminated">Beendet</string>
+    <!-- Toast shown if Universal Sync failed to create or read the config -->
     <string name="executable_not_found">Ausführbarer Kernbestandteil der App „%s“ fehlt. Bitte den Build und die Logcat-Ausgabe prüfen.</string>
     <string name="config_create_failed">Erstellen der Konfiguration fehlgeschlagen. Bitte die Logcat-Ausgabe prüfen.</string>
     <string name="config_read_failed">Fehler beim Lesen der Konfiguration. Bitte ggf. die Daten in den Sync-Ordnern sichern, dann die Daten der App in den Android-Einstellungen löschen und erneut starten.</string>
@@ -692,7 +692,7 @@
     <string name="qs_schedule_label">Für 5 Minuten ausführen</string>
     <string name="qs_schedule_disabled">Zeitplan deaktiviert</string>
     <string name="webui_username_title">Web-UI Benutzername</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Vorsicht: Wenn Universal SyncNative unterbrochen wird und etwas Seltsames tut, sind Sie schuld. Den Vorgang nur überspringen, wenn das Gerät die Erteilung der Berechtigung nicht unterstützt. Wirklich überspringen?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Vorsicht: Wenn UniversalSyncNative unterbrochen wird und etwas Seltsames tut, sind Sie schuld. Den Vorgang nur überspringen, wenn das Gerät die Erteilung der Berechtigung nicht unterstützt. Wirklich überspringen?</string>
     <string name="autoAcceptFolders">Automatisch annehmen</string>
     <string name="webui_password_title">Web-UI Passwort</string>
     <string name="notification_permission_desc">Erforderlich, um Benachrichtigungen über neue Geräteverbindungs- und Ordnerfreigabeanfragen anzuzeigen sowie den Dienst aktiv und verbunden zu halten.</string>
@@ -704,10 +704,10 @@
     <string name="start_into_web_gui_summary">Beim Start der App die Weboberfläche anstelle des Hauptfensters öffnen</string>
     <string name="open_source_licenses_title">Open-Source-Lizenzen</string>
     <string name="open_source_licenses_summary">Verwendete Open-Source-Lizenzen anzeigen</string>
-    <string name="syncthing_forum_title">Universal Sync-Forum</string>
+    <string name="universalsync_forum_title">Universal Sync-Forum</string>
     <string name="privacy_title">Datenschutzerklärung</string>
-    <string name="syncthing_forum_summary">Das Universal Sync-Forum besuchen und Unterstützung erhalten</string>
-    <string name="privacy_summary">Die Datenschutzerklärung von syncthing-android öffnen, welche die Verwendung personenbezogener Daten (falls vorhanden), z. B. des Standorts, abdeckt.</string>
+    <string name="universalsync_forum_summary">Das Universal Sync-Forum besuchen und Unterstützung erhalten</string>
+    <string name="privacy_summary">Die Datenschutzerklärung von Universal Sync Android öffnen, welche die Verwendung personenbezogener Daten (falls vorhanden), z. B. des Standorts, abdeckt.</string>
     <string name="clear_stversions_question">Damit werden alle früheren Versionen der von Universal Sync verwalteten Dateien gelöscht. Fortfahren?</string>
     <string name="clear_stversions_done">Erfolgreich .stversions-Ordner geleert.</string>
     <string name="clear_stversions_title">Alle Versionierungsordner leeren</string>

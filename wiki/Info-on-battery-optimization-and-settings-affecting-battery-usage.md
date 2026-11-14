@@ -1,7 +1,7 @@
 First things first:
 * Universal Sync-Fork requires to be exempted from doze which is asked during the welcome wizard. The app will cease to function if the permission is revoked.
 * The app doesn't require the permission to "waste" your battery. It does run a reliable so called "Android foreground service".
-* Technically speaking, it's required to avoid database corruption in case Android can't communicate with the Universal SyncNative before putting the app and Universal SyncNative in suspend.
+* Technically speaking, it's required to avoid database corruption in case Android can't communicate with the UniversalSyncNative before putting the app and UniversalSyncNative in suspend.
 
 Here is how you can reduce battery usage even further by optimizing Universal Sync's settings:
 * If you've configured your Universal Sync instances to connect using DynDNS or static IP addresses, turn off all discovery options: Go to "App/Settings/Universal Sync Options" and disable "Local discovery", "Global discovery", "NAT Traversal" and "Relay".

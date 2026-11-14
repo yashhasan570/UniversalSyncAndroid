@@ -11,11 +11,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class Universal SyncModule {
+public class UniversalSyncModule {
 
-    private final Universal SyncApp mApp;
+    private final UniversalSyncApp mApp;
 
-    public Universal SyncModule(Universal SyncApp app) {
+    public UniversalSyncModule(UniversalSyncApp app) {
         mApp = app;
     }
 

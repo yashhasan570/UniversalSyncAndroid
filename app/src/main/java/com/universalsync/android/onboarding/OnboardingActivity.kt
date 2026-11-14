@@ -21,12 +21,12 @@ import androidx.core.os.BundleCompat
 import java.io.Serializable
 import androidx.lifecycle.lifecycleScope
 import com.universalsync.android.R
-import com.universalsync.android.Universal SyncApp
+import com.universalsync.android.UniversalSyncApp
 import com.universalsync.android.activities.MainActivity
 import com.universalsync.android.activities.ThemedAppCompatActivity
 import com.universalsync.android.webgui.WebGuiActivity
 import com.universalsync.android.service.Constants
-import com.universalsync.android.service.Universal SyncRunnable.ExecutableNotFoundException
+import com.universalsync.android.service.UniversalSyncRunnable.ExecutableNotFoundException
 import com.universalsync.android.theme.ApplicationTheme
 import com.universalsync.android.util.ConfigXml
 import com.universalsync.android.util.ConfigXml.OpenConfigException
@@ -154,7 +154,7 @@ class OnboardingActivity : ThemedAppCompatActivity() {
         super.onCreate(savedInstanceState)
         // TODO: move to ThemedAppCompatActivity when every activity is compose
         enableEdgeToEdge()
-        (application as Universal SyncApp).component().inject(this)
+        (application as UniversalSyncApp).component().inject(this)
 
         val activityScope = this.lifecycleScope
 

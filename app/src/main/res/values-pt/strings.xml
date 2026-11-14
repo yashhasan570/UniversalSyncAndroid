@@ -123,7 +123,7 @@
     <string name="settings_title">Configurações</string>
     <string name="category_run_conditions">Condições de execução</string>
     <string name="category_behaviour">Comportamento</string>
-    <string name="category_syncthing_options">Opções do Universal Sync</string>
+    <string name="category_universalsync_options">Opções do Universal Sync</string>
     <string name="category_experimental">Experimental</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Condições de execução</string>
@@ -161,7 +161,7 @@
     <string name="report_issue_title">Reportar incidente</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Versão do</string>
+    <string name="universalsync_version_title">Versão do</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Selector de pasta</string>
@@ -175,15 +175,15 @@
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Ver registo do Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Ver o registo do Universal Sync</string>
+    <string name="view_universalsync_log">Ver o registo do Universal Sync</string>
     <string name="retrieving_logs">Obtendo registos…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Partilhar</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Sair</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">O Universal Sync está a correr</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">O Universal Sync está a correr</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">fotos-de-%1$s</string>
     <!-- RestApi -->
@@ -192,7 +192,7 @@
     <!-- Text for positive button in restart dialog -->
     <!-- Text for the dismiss button of the restart Activity -->
     <!-- Text of the notification shown when a restart is needed -->
-    <string name="restart_notification_text">Clique aqui para reiniciar o syncthing agora</string>
+    <string name="restart_notification_text">Clique aqui para reiniciar o Universal Sync agora</string>
     <!-- Shown when a device ID is copied to the clipboard -->
     <string name="device_id_copied_to_clipboard">O ID do dispositivo foi copiado para a área de transferência</string>
     <!-- Strings representing units for file sizes, from smallest to largest -->
@@ -225,10 +225,10 @@
     <string name="button_follow_run_conditions">SEGUIR CONDIÇÕES DE EXECUÇÃO</string>
     <string name="button_force_start">FORÇAR INÍCIO \nIGNORAR CONDIÇÕES DE EXECUÇÃO</string>
     <string name="button_force_stop">FORÇAR PARADA \nIGNORAR CONDIÇÕES DE EXECUÇÃO</string>
-    <string name="syncthing_starting">O Synthing está a iniciar.</string>
+    <string name="universalsync_starting">O Synthing está a iniciar.</string>
     <string name="status_fragment_title">Estado</string>
-    <string name="syncthing_running">O Universal Sync está em execução.</string>
-    <string name="syncthing_has_crashed">O Universal Sync travou.</string>
+    <string name="universalsync_running">O Universal Sync está em execução.</string>
+    <string name="universalsync_has_crashed">O Universal Sync travou.</string>
     <string name="folder_path_readwrite">A sua versão do Android concede ao Universal Sync acesso de leitura e escrita à pasta selecionada.</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">A mudança de pastas existentes para \'Receber criptografado\' não é suportada.</string>
     <string name="ignore_patterns">Filtros</string>
@@ -263,7 +263,7 @@
     <string name="verbose_log_title">Log detalhado</string>
     <string name="open_issue_tracker_summary">Acesse o rastreador de problemas em %1$s</string>
     <string name="folder_go_up">Subir</string>
-    <string name="syncthing_log_title">Logs do Universal Sync</string>
+    <string name="universalsync_log_title">Logs do Universal Sync</string>
     <string name="android_log_title">Logs do Android</string>
     <string name="share_activity_title">Gravar para o Universal Sync</string>
     <string name="save_title">Gravar</string>
@@ -277,7 +277,7 @@
     <string name="reason_not_on_whitelisted_wifi">O Universal Sync não executa já que o nome da rede WiFi atual não está na lista de redes permitidas.</string>
     <string name="custom_wifi_ssid_whitelist_empty">Sem SSIDs de WiFi na lista de redes permitidas. Especifique alguns nas configurações.</string>
     <string name="no_remote_devices_connected">Nenhum dispositivo remoto conectado</string>
-    <string name="syncthing_disabled">O Universal Sync está a dormir</string>
+    <string name="universalsync_disabled">O Universal Sync está a dormir</string>
     <string name="config_read_failed">Não foi possível ler a configuração. Considere fazer backup dos dados das pastas de sincronização, limpar os dados do app nas configurações do Android e então iniciá-lo novamente.</string>
     <string name="notifications_persistent_channel">Universal Sync ativado</string>
     <string name="notification_persistent_waiting_channel">A monitorar condições de execução</string>
@@ -335,7 +335,7 @@
     <string name="devices_list_empty">Nenhum dispositivo configurado. Toque para adicionar um novo dispositivo.</string>
     <string name="folder_fileWatcherDescription">Pede ao sistema em operação para notificar sobre mudanças em ficheiros. Se desativado cai para uma varredura periódica por hora.</string>
     <string name="folder_ignore_delete_caption">Ignorar exclusão</string>
-    <string name="folder_ignore_delete_description">Opção avançada que afeta o tratamento das atualizações de índice recebidas. Quando definida, as atualizações recebidas com o sinalizador de exclusão definido são ignoradas. Veja https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Opção avançada que afeta o tratamento das atualizações de índice recebidas. Quando definida, as atualizações recebidas com o sinalizador de exclusão definido são ignoradas. Veja https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <string name="pause_device">Pausar Dispositivo</string>
     <string name="preference_app_theme_title">Tema</string>
     <string name="preference_app_theme_follow_dark">Escuro</string>
@@ -386,7 +386,7 @@
     <string name="clean_out_after">Limpar depois de</string>
     <string name="versions_path_description">Caminho do diretório onde as versões são gravadas (deixe em branco para que seja o diretório padrão .stversions dentro da pasta partilhada).</string>
     <string name="webui_tcp_port_title">Porta TCP da interface web</string>
-    <string name="syncthing_api_key">Chave de API do Universal Sync (clique para copiar)</string>
+    <string name="universalsync_api_key">Chave de API do Universal Sync (clique para copiar)</string>
     <string name="api_key_copied_to_clipboard">Chave de API do Synchthing copiada para a área de transferência</string>
     <string name="folder_title">Pasta</string>
     <plurals name="copy_success">
@@ -401,7 +401,7 @@
     </plurals>
     <string name="reason_not_on_wifi">O Universal Sync está autorizado a executar no WiFi mas o WiFi não está conectado ou o telemóvel está no modo avião.</string>
     <string name="versions_path">Caminho das versões</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Cuidado. Se o Universal SyncNative for interrompido e fizer algo estranho, é a sua culpa. Apenas pule se o seu aparelho não suportar a concessão da permissão. Realmente quer pular?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Cuidado. Se o UniversalSyncNative for interrompido e fizer algo estranho, é a sua culpa. Apenas pule se o seu aparelho não suportar a concessão da permissão. Realmente quer pular?</string>
     <string name="finish">Finalizar</string>
     <string name="generic_help">Ajuda</string>
     <string name="grant_permission">Conceder permissão</string>
@@ -410,7 +410,7 @@
     <string name="page_x_of_y">Página %1$s de %2$s</string>
     <string name="photo_shoot_intro_missing_permissions">Requeremos permissão ao armazenamento e a câmara para continuar.</string>
     <string name="grant_camera_permission">Conceder permissão da câmara</string>
-    <string name="default_syncthing_camera_folder_label">Câmara Universal Sync</string>
+    <string name="default_universalsync_camera_folder_label">Câmara Universal Sync</string>
     <string name="activity_main_bottom_navigation_rescan_all">Reescanear tudo</string>
     <string name="open_main_menu">Abrir menu principal</string>
     <string name="folder_rejected">O dispositivo \"%1$s\" quer partilhar a pasta \"%2$s\"</string>
@@ -437,7 +437,7 @@
     <string name="web_page_loading">A carregar site: \n%1$s …</string>
     <string name="preference_app_theme_follow_system">Seguir sistema</string>
     <string name="preference_app_theme_follow_light">Claro</string>
-    <string name="category_syncthing_options_summary">Este menu só estará disponível se o Universal Sync estiver em execução.</string>
+    <string name="category_universalsync_options_summary">Este menu só estará disponível se o Universal Sync estiver em execução.</string>
     <string name="category_backup">Importar e exportar</string>
     <string name="category_debug">Resolução de problemas</string>
     <string name="run_conditions_summary">Use as seguintes opções para decidir quando o Universal Sync será executado.</string>
@@ -472,7 +472,7 @@
     <string name="dialog_exit_while_running_as_service_message">Para a sua consideração: configurou a app para iniciar automaticamente na inicialização. Portanto, ele monitora as condições de execução e sincroniza a qualquer momento em segundo plano quando as condições correspondem. Só deve sair manualmente se tiver problemas graves. Caso contrário, desative \'Iniciar automaticamente na inicialização\' nas configurações. Deseja sair agora até que o dispositivo seja reiniciado?</string>
     <string name="folder_pause">Repositório pausado</string>
     <string name="recent_changes_title">Mudanças recentes</string>
-    <string name="webui_remote_access_summary">Especifique para permitir o acesso à interface web de outro dispositivo. Se ativado, Pode entrar com o utilizador \'syncthing\' e a chave da API como palavra-passe. Padrão: desativado (mais seguro)</string>
+    <string name="webui_remote_access_summary">Especifique para permitir o acesso à interface web de outro dispositivo. Se ativado, Pode entrar com o utilizador \'Universal Sync\' e a chave da API como palavra-passe. Padrão: desativado (mais seguro)</string>
     <string name="reason_on_mobile_data">O Universal Sync está autorizado a executar nos dados móveis.</string>
     <string name="notification_crash_title">O Universal Sync fechou inesperadamente %1$s</string>
     <string name="pull_order_type_smallestFirst">Menores primeiro</string>
@@ -486,7 +486,7 @@
     <string name="no_versioning_description">Escolha um tipo de versionamento para habilitá-lo.</string>
     <string name="type_simple">Tipo: Simples</string>
     <string name="type_trashcan">Tipo: Lixo</string>
-    <string name="syncthing_not_running">Universal Sync não está ativo.</string>
+    <string name="universalsync_not_running">Universal Sync não está ativo.</string>
     <string name="folder_path_readonly">Sua versão de Android apenas permite Universal Sync acesso de leitura (readonly) à pasta selecionada.</string>
     <string name="photo_shoot_launcher_title">Sync. Camera</string>
     <string name="toast_notification_permission_required">Universal Sync requer a permissão de notificação para manter o serviço vivo e conectado.</string>

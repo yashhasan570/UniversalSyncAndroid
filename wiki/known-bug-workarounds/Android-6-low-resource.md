@@ -1,4 +1,4 @@
-On "old" phones with low hardware specs, Universal SyncNative might crash or exhaust resources while the user is only syncing a small set of data.
+On "old" phones with low hardware specs, UniversalSyncNative might crash or exhaust resources while the user is only syncing a small set of data.
 
 Workaround:
 - Go to Settings > Troubleshooting > Environment variables

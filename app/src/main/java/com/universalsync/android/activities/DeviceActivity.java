@@ -38,7 +38,7 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.fragments.DeviceIdDialogFragment;
 import com.universalsync.android.model.Connection;
 import com.universalsync.android.model.Device;
@@ -48,8 +48,8 @@ import com.universalsync.android.model.Options;
 import com.universalsync.android.model.SharedWithDevice;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncService;
-import com.universalsync.android.service.Universal SyncServiceBinder;
+import com.universalsync.android.service.UniversalSyncService;
+import com.universalsync.android.service.UniversalSyncServiceBinder;
 import com.universalsync.android.service.TestData;
 import com.universalsync.android.util.Compression;
 import com.universalsync.android.util.ConfigRouter;
@@ -77,7 +77,7 @@ import static com.universalsync.android.util.Compression.METADATA;
 /**
  * Shows device details and allows changing them.
  */
-public class DeviceActivity extends Universal SyncActivity {
+public class DeviceActivity extends UniversalSyncActivity {
 
     public static final String EXTRA_NOTIFICATION_ID =
             ".activities.DeviceActivity.NOTIFICATION_ID";
@@ -121,7 +121,7 @@ public class DeviceActivity extends Universal SyncActivity {
     private TextView mCustomSyncConditionsDescription;
     private TextView mCustomSyncConditionsDialog;
     private ViewGroup mFoldersContainer;
-    private TextView mUniversal SyncVersionView;
+    private TextView mUniversalSyncVersionView;
 
     @Inject
     SharedPreferences mPreferences;
@@ -252,7 +252,7 @@ public class DeviceActivity extends Universal SyncActivity {
         mConfig = new ConfigRouter(DeviceActivity.this);
 
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
         setContentView(R.layout.activity_device);
 
         mIsCreateMode = getIntent().getBooleanExtra(EXTRA_IS_CREATE, false);
@@ -278,7 +278,7 @@ public class DeviceActivity extends Universal SyncActivity {
         mCustomSyncConditionsDescription = findViewById(R.id.customSyncConditionsDescription);
         mCustomSyncConditionsDialog = findViewById(R.id.customSyncConditionsDialog);
         mFoldersContainer = findViewById(R.id.foldersContainer);
-        mUniversal SyncVersionView = findViewById(R.id.syncthingVersion);
+        mUniversalSyncVersionView = findViewById(R.id.universalsyncVersion);
 
         if (Util.isRunningOnTV(this)) {
             mQrButton.setVisibility(View.GONE);
@@ -361,20 +361,20 @@ public class DeviceActivity extends Universal SyncActivity {
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         super.onServiceConnected(componentName, iBinder);
-        Universal SyncServiceBinder syncthingServiceBinder = (Universal SyncServiceBinder) iBinder;
-        Universal SyncService syncthingService = (Universal SyncService) syncthingServiceBinder.getService();
-        syncthingService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
-        RestApi restApi = syncthingService.getApi();
+        UniversalSyncServiceBinder universalsyncServiceBinder = (UniversalSyncServiceBinder) iBinder;
+        UniversalSyncService universalsyncService = (UniversalSyncService) universalsyncServiceBinder.getService();
+        universalsyncService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
+        RestApi restApi = universalsyncService.getApi();
         if (restApi != null) {
             // Query device connection info from cache.
-            boolean viewsExist = mUniversal SyncVersionView != null && mCurrentAddressView != null;
+            boolean viewsExist = mUniversalSyncVersionView != null && mCurrentAddressView != null;
             if (viewsExist && (mDevice != null)) {
                 Connection connection = restApi.getRemoteDeviceStatus(mDevice.deviceID);
                 if (!connection.at.isEmpty()) {
                     mCurrentAddressView.setVisibility(VISIBLE);
-                    mUniversal SyncVersionView.setVisibility(VISIBLE);
+                    mUniversalSyncVersionView.setVisibility(VISIBLE);
                     mCurrentAddressView.setText(connection.address);
-                    mUniversal SyncVersionView.setText(connection.clientVersion);
+                    mUniversalSyncVersionView.setText(connection.clientVersion);
                 }
             }
 
@@ -392,9 +392,9 @@ public class DeviceActivity extends Universal SyncActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Universal SyncService syncthingService = getService();
-        if (syncthingService != null) {
-            syncthingService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
+        UniversalSyncService universalsyncService = getService();
+        if (universalsyncService != null) {
+            universalsyncService.getNotificationHandler().cancelConsentNotification(getIntent().getIntExtra(EXTRA_NOTIFICATION_ID, 0));
         }
         mEditDeviceId.removeTextChangedListener(mIdTextWatcher);
         mNameView.removeTextChangedListener(mNameTextWatcher);
@@ -820,7 +820,7 @@ public class DeviceActivity extends Universal SyncActivity {
             TextView emptyView = new TextView(mDiscoveredDevicesContainer.getContext());
             emptyView.setGravity(CENTER_VERTICAL);
             if (options.localAnnounceEnabled) {
-                emptyView.setText(getString(R.string.discovered_device_list_empty, getString(R.string.url_syncthing_homepage)));
+                emptyView.setText(getString(R.string.discovered_device_list_empty, getString(R.string.url_universalsync_homepage)));
             } else {
                 emptyView.setText(R.string.local_discovery_disabled);
             }

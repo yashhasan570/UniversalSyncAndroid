@@ -13,7 +13,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Zdielať ID Zariadenia s použitím</string>
     <string name="usage_reporting_dialog_title">Povoliť anonymné hlásenia o používaní?</string>
-    <string name="usage_reporting_dialog_description">Šifrované dáta o používaní sú zasielané denne. Sú používané na získavanie štatistík o platformách, veľkostiach zdielaných adresárov a verziách aplikácie. Ak sa rozsah zbieraných údajov v budúcnosti zmení, budete na zmenu upozornený opätovným zobrazením tohoto dialógu. \n \nSúhrn získaných štatistýk je verejne dostupný na https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Šifrované dáta o používaní sú zasielané denne. Sú používané na získavanie štatistík o platformách, veľkostiach zdielaných adresárov a verziách aplikácie. Ak sa rozsah zbieraných údajov v budúcnosti zmení, budete na zmenu upozornený opätovným zobrazením tohoto dialógu. \n \nSúhrn získaných štatistýk je verejne dostupný na https://data.Universal Sync.net.</string>
     <string name="yes">Áno</string>
     <string name="no">Nie</string>
     <string name="open_website">Otvoriť Webovú Stránku</string>
@@ -104,7 +104,7 @@
     <string name="web_gui_loading">Čakám na GUI</string>
     <!-- SettingsFragment -->
     <string name="settings_title">Nastavenia</string>
-    <string name="category_syncthing_options">Nastavenia Universal Sync</string>
+    <string name="category_universalsync_options">Nastavenia Universal Sync</string>
     <string name="device_name">Názov Zariadenia</string>
     <string name="listen_address">Adresa pre Sync Protokol</string>
     <string name="max_recv_kbps">Limit Rýchlosti Sťahovania (KiB/s)</string>
@@ -132,7 +132,7 @@
     <string name="report_issue_title">Nahlásiť problém</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Verzia Universal Sync</string>
+    <string name="universalsync_version_title">Verzia Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Výver Adresára</string>
@@ -146,14 +146,14 @@
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Zobraziť záznam Androidu</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Zobraziť záznam Universal Sync</string>
+    <string name="view_universalsync_log">Zobraziť záznam Universal Sync</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Zdielať</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Koniec</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync beží</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync beží</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-fotografie</string>
     <!-- RestApi -->

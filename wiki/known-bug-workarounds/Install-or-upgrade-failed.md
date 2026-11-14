@@ -25,8 +25,8 @@ If that didn't solve the problem, you could try this workaround:
   - Install ADB
   - Open command line to completely uninstall the app
 ```
-adb uninstall com.github.universalsync.syncthingandroid
-adb uninstall com.github.universalsync.syncthingandroid.debug
+adb uninstall com.github.universalsync.UniversalSyncandroid
+adb uninstall com.github.universalsync.UniversalSyncandroid.debug
 adb uninstall com.universalsync.android
 adb uninstall com.universalsync.android.debug
 ```

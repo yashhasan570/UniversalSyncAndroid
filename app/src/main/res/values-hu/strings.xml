@@ -11,12 +11,12 @@
     <string name="welcome_text">A Universal Sync egy nyílt forráskódú fájlszinkronizáló alkalmazás. Az adatok más eszközökkel való megosztásához hozzá kell adnia azok egyedi eszközazonosítóját az eszközlistához. Ezután kiválaszthatja, hogy melyik mappát melyik eszközzel kívánja megosztani. \n \nKérjük, hogy a GitHubon keresztül jelezzen minden felmerülő problémát.</string>
     <!-- Slide "Storage Permission" -->
     <string name="storage_permission_title">Tárolási engedély</string>
-    <string name="storage_permission_desc">A fájlszinkronizáláshoz a Universal Syncnek hozzá kell férnie a tárolóhoz.</string>
+    <string name="storage_permission_desc">A fájlszinkronizáláshoz a UniversalSyncnek hozzá kell férnie a tárolóhoz.</string>
     <string name="dialog_all_files_access_not_supported">Az eszköz nem támogatja az összes fájl elérését</string>
     <!-- Slide "Ignore battery optimizations" -->
     <string name="ignore_doze_permission_title">Akkumulátor optimalizáció</string>
     <string name="ignore_doze_permission_os_notice">Az Android TV-ről ismert, hogy időnként befejezi az alkalmazást, amikor az a háttérben fut. A megoldás elérhető a wikiben \'%1$s/%2$s\' címen.</string>
-    <string name="ignore_doze_permission_desc">Az Android egy idő után leállíthatja a szinkronizálást. Ennek megakadályozására kapcsolja ki az akkumulátor optimalizálását. Egyes készülékeken további leállító alkalmazások vannak előtelepítve. Az ő fehérlistájukra is érdemes felvenni a Universal Syncet.</string>
+    <string name="ignore_doze_permission_desc">Az Android egy idő után leállíthatja a szinkronizálást. Ennek megakadályozására kapcsolja ki az akkumulátor optimalizálását. Egyes készülékeken további leállító alkalmazások vannak előtelepítve. Az ő fehérlistájukra is érdemes felvenni a UniversalSyncet.</string>
     <string name="toast_ignore_doze_permission_required">Ez az alkalmazás csak akkor működik megbízhatóan, ha mentesül a \"szundi\" energiatakarékos üzemmód alól.</string>
     <string name="dialog_disable_battery_optimizations_not_supported">Az eszközöd nem támogatja az akkumulátor optimalizálás letiltását</string>
     <!-- Slide "Location Permission" -->
@@ -54,7 +54,7 @@
     <string name="photo_shoot_take_picture_success">Sikeresen elmentette a képet a Universal Sync kamera mappába.</string>
     <string name="photo_shoot_take_picture_failure">Nem sikerült képet készíteni, vagy le lett állítva.</string>
     <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_syncthing_camera_folder_label">Universal Sync kamera</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync kamera</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">Minden újraolvasása</string>
@@ -73,7 +73,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Eszközazonosító megosztása</string>
     <string name="usage_reporting_dialog_title">Engedélyezed a névtelen használati statisztikák küldését?</string>
-    <string name="usage_reporting_dialog_description">A titkosított használati statisztikákat naponta küldjük el. Ennek segítségével követjük a platformokat, mappaméreteket és az alkalmazás verzióját. Ha a megosztott adat tartalma megváltozik, újra engedélyt fogunk kérni a megosztás előtt. Az összesített statisztika nyilvánosan elérhető a https://data.syncthing.net linken.</string>
+    <string name="usage_reporting_dialog_description">A titkosított használati statisztikákat naponta küldjük el. Ennek segítségével követjük a platformokat, mappaméreteket és az alkalmazás verzióját. Ha a megosztott adat tartalma megváltozik, újra engedélyt fogunk kérni a megosztás előtt. Az összesített statisztika nyilvánosan elérhető a https://data.Universal Sync.net linken.</string>
     <string name="yes">Igen</string>
     <string name="no">Nem</string>
     <string name="open_website">Weblap megnyitása</string>
@@ -142,10 +142,10 @@
     <string name="button_follow_run_conditions">FUTTATÁSI FELTÉTELEK BETARTÁSA</string>
     <string name="button_force_start">ERŐSZAKOS START \nFUTÁSI FELTÉTELEK KIKAPCSOLÁSA</string>
     <string name="button_force_stop">ERŐSZAKOS STOP \nFUTÁSI FELTÉTELEK KIKAPCSOLÁSA</string>
-    <string name="syncthing_starting">A Universal Sync elindul.</string>
-    <string name="syncthing_running">A szinkronizálás fut.</string>
-    <string name="syncthing_not_running">A Universal Sync nem fut.</string>
-    <string name="syncthing_has_crashed">A Universal Sync összeomlott.</string>
+    <string name="universalsync_starting">A Universal Sync elindul.</string>
+    <string name="universalsync_running">A szinkronizálás fut.</string>
+    <string name="universalsync_not_running">A Universal Sync nem fut.</string>
+    <string name="universalsync_has_crashed">A Universal Sync összeomlott.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Letöltve: "</string>
@@ -158,7 +158,7 @@
     <!-- Title for uptime status -->
     <string name="uptime">Üzemidő</string>
     <string name="restart">Újraindítás</string>
-    <string name="dialog_confirm_restart">Biztosan újraindítod a Universal Syncet?</string>
+    <string name="dialog_confirm_restart">Biztosan újraindítod a UniversalSyncet?</string>
     <!-- FolderActivity -->
     <!-- Setting title -->
     <string name="folder_id">Mappa azonosító</string>
@@ -172,7 +172,7 @@
     <string name="folder_fileWatcherDescription">Megkéri az operációs rendszert, hogy értesítsen a fájlok módosításairól. Kikapcsolt állapotban, visszatér az időszakos óránkénti ellenőrzésekhez.</string>
     <!-- Setting title and description -->
     <string name="folder_ignore_delete_caption">Törlés figyelmen kívül hagyása</string>
-    <string name="folder_ignore_delete_description">Szakértői beállítás, amely a bejövő indexfrissítések kezelését befolyásolja. Ha be van állítva, a bejövő frissítéseket, amelyeknél a törlési jelző be van állítva, a rendszer figyelmen kívül hagyja. Lásd https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Szakértői beállítás, amely a bejövő indexfrissítések kezelését befolyásolja. Ha be van állítva, a bejövő frissítéseket, amelyeknél a törlési jelző be van állítva, a rendszer figyelmen kívül hagyja. Lásd https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <!-- Setting title -->
     <string name="folder_pause">Mappa szüneteltetés</string>
     <!-- Setting title -->
@@ -188,7 +188,7 @@
     <!-- Menu item to confirm folder creation -->
     <string name="create">Létrehozás</string>
     <!-- Dialog shown when attempting to remove a folder -->
-    <string name="remove_folder_confirm">Biztosan el szeretnéd távolítani ezt a mappát a Universal Syncből?</string>
+    <string name="remove_folder_confirm">Biztosan el szeretnéd távolítani ezt a mappát a UniversalSyncből?</string>
     <!-- Toast shown when trying to create a folder with an empty ID -->
     <string name="folder_id_required">A mappaazonosító nem lehet üres</string>
     <!-- Toast shown when trying to create a folder with an empty label -->
@@ -197,10 +197,10 @@
     <string name="folder_path_required">A mappaútvonal nem lehet üres</string>
     <string name="dialog_discard_changes">Elveted a módosításaidat?</string>
     <!-- Summary shown if we only have readonly access to the folder path -->
-    <string name="folder_path_readonly">Az Ön Android-verziója csak olvasási hozzáférést biztosít a Universal Syncnek a kiválasztott mappához.</string>
+    <string name="folder_path_readonly">Az Ön Android-verziója csak olvasási hozzáférést biztosít a UniversalSyncnek a kiválasztott mappához.</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
     <string name="folder_path_readwrite">Az Ön Android-verziója biztosítja a Universal Sync számára az olvasási és írási hozzáférést a kiválasztott mappához.</string>
-    <!-- Toast shown if the user selected an invalid location for a new syncthing folder -->
+    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
     <string name="toast_invalid_folder_selected">A kiválasztott mappa nem használható. Kérjük, válasszon belső vagy külső tárhelyen található mappát.</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">A meglévő mappák átállítása \"Titkosított fogadásra\" nem lehetséges.</string>
     <string name="ignore_patterns">Kihagyási minták</string>
@@ -286,8 +286,8 @@
     <string name="preference_app_theme_follow_light">Világos</string>
     <string name="preference_app_theme_follow_dark">Sötét</string>
     <string name="category_behaviour">Viselkedés</string>
-    <string name="category_syncthing_options">Universal Sync opciók</string>
-    <string name="category_syncthing_options_summary">Ez a menü csak akkor érhető el, ha a Universal Sync fut.</string>
+    <string name="category_universalsync_options">Universal Sync opciók</string>
+    <string name="category_universalsync_options_summary">Ez a menü csak akkor érhető el, ha a Universal Sync fut.</string>
     <string name="category_backup">Import és export</string>
     <string name="category_debug">Hibaelhárítás</string>
     <string name="category_experimental">Kísérleti</string>
@@ -360,7 +360,7 @@
     <string name="crash_reporting">Névtelen összeomlás-bejelentés</string>
     <string name="webui_tcp_port_title">Web UI TCP Port</string>
     <string name="webui_remote_access_title">Webes felhasználói felület távoli elérése</string>
-    <string name="webui_remote_access_summary">Legyen engedélyezve a webes felhasználói felület más eszközről történő elérése. Ha engedélyezve van, akkor a \"syncthing\" felhasználóval és jelszóként az API-kulccsal lehet bejelentkezni. Alapértelmezett: letiltva (legbiztonságosabb)</string>
+    <string name="webui_remote_access_summary">Legyen engedélyezve a webes felhasználói felület más eszközről történő elérése. Ha engedélyezve van, akkor a \"Universal Sync\" felhasználóval és jelszóként az API-kulccsal lehet bejelentkezni. Alapértelmezett: letiltva (legbiztonságosabb)</string>
     <string name="download_support_bundle_title">Támogatási csomag letöltése</string>
     <!-- Summary shown when the user clicked the download support bundle button -->
     <string name="download_support_bundle_in_progress">Felkészülés a támogatási csomag letöltésére …</string>
@@ -422,7 +422,7 @@
     <string name="verbose_log_title">Bővebb napló</string>
     <string name="verbose_log_summary">Az opció engedélyezése segít a hibakeresési naplók nagyon részletes szintű létrehozásában.</string>
     <string name="log_to_file_title">Naplózás fájlba</string>
-    <string name="log_to_file_summary">A Universal SyncNative kimenete kiíródik a fájlba.</string>
+    <string name="log_to_file_summary">A UniversalSyncNative kimenete kiíródik a fájlba.</string>
     <!-- Settings item that opens the log activity -->
     <string name="open_log">Napló megnyitása</string>
     <!-- Summary for the log activity -->
@@ -433,15 +433,15 @@
     <string name="open_issue_tracker_summary">Nyissa meg a Universal Sync-Fork hibakövetőt a következő címen %1$s</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync verzió</string>
+    <string name="universalsync_version_title">Universal Sync verzió</string>
     <!-- Title of the preference showing this app's version name -->
     <string name="app_version_title">Universal Sync-Fork Wrapper Version</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="syncthing_api_key">Universal Sync API kulcs (kattintson a másoláshoz)</string>
+    <string name="universalsync_api_key">Universal Sync API kulcs (kattintson a másoláshoz)</string>
     <!-- Shown when the API key is copied to the clipboard -->
     <string name="api_key_copied_to_clipboard">Universal Sync API kulcs a vágólapra másolva</string>
     <!-- Title of the preference showing database size -->
-    <string name="syncthing_database_size">Universal Sync adatbázis mérete</string>
+    <string name="universalsync_database_size">Universal Sync adatbázis mérete</string>
     <!-- Title of the preference showing the OS open file limit -->
     <string name="os_open_file_limit">Android nyitott fájlok korlátozása</string>
     <!-- FolderPickerAcitivity -->
@@ -461,12 +461,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">Menj feljebb</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Universal Sync napló</string>
+    <string name="universalsync_log_title">Universal Sync napló</string>
     <string name="android_log_title">Android napló</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Android napló megtekintése</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Universal Sync napló megtekintése</string>
+    <string name="view_universalsync_log">Universal Sync napló megtekintése</string>
     <string name="retrieving_logs">Naplók betöltése…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Megosztás</string>
@@ -508,7 +508,7 @@
     <!-- RunConditionMonitor -->
     <string name="reason_force_start">A Universal Sync azért fut, mert a futtatási feltételektől függetlenül kényszerítette az indításra.</string>
     <string name="reason_force_stop">A Universal Sync nem fut, mert a futási feltételektől függetlenül leállásra kényszerítette.</string>
-    <!-- Explanations why syncthing is running or not running -->
+    <!-- Explanations why Universal Sync is running or not running -->
     <string name="reason_not_within_time_frame">Bekapcsolta a \"Futtatás időbeosztás szerint\" opciót, és az utolsó szinkronizálás legfeljebb egy órája történt.</string>
     <string name="reason_not_within_time_frame_2">Bekapcsolta a \'Futtatás időbeosztás szerint\' opciót, és az utolsó szinkronizálás ennyivel %s korábban volt.</string>
     <string name="reason_not_within_time_frame_0_min">kevesebb mint egy perce</string>
@@ -541,24 +541,24 @@
     <string name="reason_run_condition_monitor_not_instantiated">A RunConditionMonitor nincs létrehozva. Kérjük, indítsa újra az alkalmazást, és küldjön hibajelentést, ha a hiba nem szűnik meg az újraindítás után.</string>
     <!-- Sync Conditions Dialog -->
     <string name="custom_wifi_ssid_whitelist_empty">Nincsenek fehérlistás WiFi SSID-k. Kérjük, adjon meg néhányat a beállításokban.</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Kilépés</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">A Universal Sync fut</string>
-    <string name="syncthing_active_details">A szinkronizálás fut:%1$s</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">A Universal Sync fut</string>
+    <string name="universalsync_active_details">A szinkronizálás fut:%1$s</string>
     <string name="no_remote_devices_connected">Nincs távoli eszköz csatlakoztatva</string>
     <plurals name="device_online_up_to_date">
         <item quantity="one">%1$deszköz online és naprakész</item>
         <item quantity="other">%1$deszköz online és naprakész</item>
     </plurals>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Szinkronizálás: %1$d%%teljes, %2$d eszköz online</item>
         <item quantity="other">Szinkronizálás:%1$d%% teljes, %2$d eszköz online</item>
     </plurals>
-    <string name="syncthing_disabled">A Universal Sync alvó állapotban van</string>
-    <string name="syncthing_terminated">A Universal Sync leállt</string>
-    <!-- Toast shown if syncthing failed to create or read the config -->
+    <string name="universalsync_disabled">A Universal Sync alvó állapotban van</string>
+    <string name="universalsync_terminated">A Universal Sync leállt</string>
+    <!-- Toast shown if Universal Sync failed to create or read the config -->
     <string name="executable_not_found">Hiányzik a(z) \"%s\" futtatható állomány. Ellenőrizze a build és a logcat naplókat.</string>
     <string name="config_create_failed">Nem sikerült létrehozni a konfigurációs fájlt</string>
     <string name="config_read_failed">A konfiguráció olvasása sikertelen. Fontolja meg az adatok biztonsági mentését a szinkronizálási mappákból, majd törölje az alkalmazás adatait az Android beállításaiból, és indítsa el újra.</string>

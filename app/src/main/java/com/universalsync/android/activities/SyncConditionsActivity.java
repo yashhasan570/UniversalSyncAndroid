@@ -20,7 +20,7 @@ import android.widget.TextView;
 import androidx.activity.OnBackPressedCallback;
 
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.service.Constants;
 
 import java.util.Arrays;
@@ -38,7 +38,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 /**
  * Activity that allows selecting a directory in the local file system.
  */
-public class SyncConditionsActivity extends Universal SyncActivity {
+public class SyncConditionsActivity extends UniversalSyncActivity {
 
     private static final String TAG = "SyncConditionsActivity";
 
@@ -98,7 +98,7 @@ public class SyncConditionsActivity extends Universal SyncActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
 
         Intent intent = getIntent();
         if (!intent.hasExtra(EXTRA_OBJECT_PREFIX_AND_ID) ||

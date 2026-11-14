@@ -24,7 +24,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.service.Constants;
 import com.universalsync.android.util.FileUtils;
 import com.universalsync.android.util.FileUtils.ExternalStorageDirType;
@@ -58,7 +58,7 @@ public class PhotoShootActivity extends ThemedAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((Universal SyncApp) getApplication()).component().inject(this);
+        ((UniversalSyncApp) getApplication()).component().inject(this);
 
         // Check if required camera hardware is present.
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)) {
@@ -71,10 +71,10 @@ public class PhotoShootActivity extends ThemedAppCompatActivity {
         }
 
         // Check if user granted permissions before and consented to use this feature.
-        Boolean prefEnableUniversal SyncCamera = mPreferences.getBoolean(Constants.PREF_ENABLE_SYNCTHING_CAMERA, false);
+        Boolean prefEnableUniversalSyncCamera = mPreferences.getBoolean(Constants.PREF_ENABLE_UNIVERSALSYNC_CAMERA, false);
         Boolean haveRequiredPermissions = PermissionUtil.haveStoragePermission(this) && haveCameraPermission();
-        Log.v(TAG, "prefEnableUniversal SyncCamera=" + Boolean.toString(prefEnableUniversal SyncCamera) + ", haveRequiredPermissions=" + Boolean.toString(haveRequiredPermissions));
-        if (haveRequiredPermissions && prefEnableUniversal SyncCamera) {
+        Log.v(TAG, "prefEnableUniversalSyncCamera=" + Boolean.toString(prefEnableUniversalSyncCamera) + ", haveRequiredPermissions=" + Boolean.toString(haveRequiredPermissions));
+        if (haveRequiredPermissions && prefEnableUniversalSyncCamera) {
             // Take a shortcut and offer to take a picture instantly.
             Log.v(TAG, "User completed intro and consented before. Warp to take a picture.");
             openCameraIntent();
@@ -132,7 +132,7 @@ public class PhotoShootActivity extends ThemedAppCompatActivity {
 
                 // Store user consent.
                 SharedPreferences.Editor editor = mPreferences.edit();
-                editor.putBoolean(Constants.PREF_ENABLE_SYNCTHING_CAMERA, true);
+                editor.putBoolean(Constants.PREF_ENABLE_UNIVERSALSYNC_CAMERA, true);
                 editor.apply();
 
                 // Warp to take a picture.

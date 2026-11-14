@@ -1,4 +1,4 @@
-package com.example.syncthingreceiver;
+package com.example.universalsyncreceiver;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;

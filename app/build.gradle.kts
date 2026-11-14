@@ -49,7 +49,7 @@ android {
 
     externalNativeBuild {
         ndkBuild {
-            path = file("src/main/cpp/libUniversal SyncNative.mk")
+            path = file("src/main/cpp/libUniversalSyncNative.mk")
         }
     }
 
@@ -76,9 +76,9 @@ android {
             fun propOrEnv(key: String): String? =
                 localProps.getProperty(key) ?: System.getenv(key)
             
-            storeFile = propOrEnv("SYNCTHING_RELEASE_STORE_FILE")?.let(::file)
+            storeFile = propOrEnv("UNIVERSALSYNC_RELEASE_STORE_FILE")?.let(::file)
             storePassword = propOrEnv("SIGNING_PASSWORD")
-            keyAlias = propOrEnv("SYNCTHING_RELEASE_KEY_ALIAS")
+            keyAlias = propOrEnv("UNIVERSALSYNC_RELEASE_KEY_ALIAS")
             keyPassword = storePassword
         }
     }
@@ -139,7 +139,7 @@ android {
 
     packaging {
         jniLibs {
-            // Otherwise libsyncthing.so doesn't appear where it should in installs
+            // Otherwise libuniversalsync.so doesn't appear where it should in installs
             // based on app bundles, and thus nothing works.
             useLegacyPackaging = true
         }
@@ -201,7 +201,7 @@ project.afterEvaluate {
         tasks
             .matching { it.name.startsWith("merge") && it.name.endsWith("JniLibFolders") }
             .configureEach {
-                dependsOn(":syncthing:buildNative")
+                dependsOn(":universalsync:buildNative")
             }
     }
 }

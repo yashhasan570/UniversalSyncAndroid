@@ -38,15 +38,15 @@ public class QuickSettingsTileForce extends TileService {
 
             // search through running services to see whether the app is currently running
             ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-            boolean syncthingRunning = false;
+            boolean universalsyncRunning = false;
             for (ActivityManager.RunningServiceInfo service : am.getRunningServices(Integer.MAX_VALUE)) {
-                if (Universal SyncService.class.getName().equals(service.service.getClassName())) {
-                    syncthingRunning = true;
+                if (UniversalSyncService.class.getName().equals(service.service.getClassName())) {
+                    universalsyncRunning = true;
                     break;
                 }
             }
             // disable tile if app is not running
-            if (!syncthingRunning) {
+            if (!universalsyncRunning) {
                 tile.setState(Tile.STATE_UNAVAILABLE);
                 tile.updateTile();
                 return;

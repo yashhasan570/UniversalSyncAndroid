@@ -14,8 +14,8 @@ import com.universalsync.android.receiver.AppConfigReceiver;
 import com.universalsync.android.service.RunConditionMonitor;
 import com.universalsync.android.service.EventProcessor;
 import com.universalsync.android.service.RestApi;
-import com.universalsync.android.service.Universal SyncRunnable;
-import com.universalsync.android.service.Universal SyncService;
+import com.universalsync.android.service.UniversalSyncRunnable;
+import com.universalsync.android.service.UniversalSyncService;
 import com.universalsync.android.settings.SettingsActivity;
 
 import javax.inject.Singleton;
@@ -23,7 +23,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Singleton
-@Component(modules = {Universal SyncModule.class})
+@Component(modules = {UniversalSyncModule.class})
 public interface DaggerComponent {
     void inject(AppConfigReceiver appConfigReceiver);
     void inject(DeviceActivity activity);
@@ -40,7 +40,7 @@ public interface DaggerComponent {
     void inject(ShareActivity activity);
     void inject(StatusFragment fragment);
     void inject(SyncConditionsActivity activity);
-    void inject(Universal SyncApp app);
-    void inject(Universal SyncRunnable syncthingRunnable);
-    void inject(Universal SyncService service);
+    void inject(UniversalSyncApp app);
+    void inject(UniversalSyncRunnable universalsyncRunnable);
+    void inject(UniversalSyncService service);
 }

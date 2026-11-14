@@ -24,15 +24,15 @@ Universal Sync-Fork за Android је обвезник за Universal Sync ко�
 * Стратегија и учесталост објављивања су различити.
 * Само обвезник који садржи Android интерфејс је адресиран од стране форка.
 
-Вебсајт: https://github.com/universalsync/syncthing-android
+Вебсајт: https://github.com/universalsync/Universal Sync Android
 
-Изворни код: https://github.com/universalsync/syncthing-android
+Изворни код: https://github.com/universalsync/Universal Sync Android
 
-Како Universal Sync пише на спољну SD картицу: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Како Universal Sync пише на спољну SD картицу: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Вики, ЧПП и корисни чланци: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Вики, ЧПП и корисни чланци: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Проблеми: https://github.com/universalsync/syncthing-android/issues
+Проблеми: https://github.com/universalsync/Universal Sync Android/issues
 
 Молимо вас да помогнете са
-Превод: https://hosted.weblate.org/projects/syncthing-fork/app/
+Превод: https://hosted.weblate.org/projects/Universal Sync/app/

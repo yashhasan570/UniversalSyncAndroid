@@ -24,7 +24,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import com.universalsync.android.R;
-import com.universalsync.android.Universal SyncApp;
+import com.universalsync.android.UniversalSyncApp;
 import com.universalsync.android.model.Device;
 import com.universalsync.android.model.Event;
 import com.universalsync.android.model.Folder;
@@ -38,7 +38,7 @@ import java.util.Map;
 import javax.inject.Inject;
 
 /**
- * Run by the syncthing service to convert syncthing events into local broadcasts.
+ * Run by the universalsync service to convert universalsync events into local broadcasts.
  *
  * It uses {@link RestApi#getEvents} to read the pending events and wait for new events.
  */
@@ -49,7 +49,7 @@ public class EventProcessor implements  Runnable, RestApi.OnReceiveEventListener
     private Boolean ENABLE_VERBOSE_LOG = false;
 
     /**
-     * Minimum interval in seconds at which the events are polled from syncthing and processed.
+     * Minimum interval in seconds at which the events are polled from universalsync and processed.
      * This interval will not wake up the device to save battery power.
      */
     private static final long EVENT_UPDATE_INTERVAL = TimeUnit.SECONDS.toMillis(5);
@@ -69,7 +69,7 @@ public class EventProcessor implements  Runnable, RestApi.OnReceiveEventListener
     @Inject NotificationHandler mNotificationHandler;
 
     public EventProcessor(Context context, RestApi restApi) {
-        ((Universal SyncApp) context.getApplicationContext()).component().inject(this);
+        ((UniversalSyncApp) context.getApplicationContext()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         mContext = context;
         mRestApi = restApi;
@@ -83,7 +83,7 @@ public class EventProcessor implements  Runnable, RestApi.OnReceiveEventListener
         }
 
         // First check if the event number ran backwards.
-        // If that's the case we've to start at zero because syncthing was restarted.
+        // If that's the case we've to start at zero because universalsync was restarted.
         mRestApi.getEvents(0, 1, new RestApi.OnReceiveEventListener() {
             @Override
             public void onError() {

@@ -37,7 +37,7 @@ fun EntryProviderScope<SettingsRoute>.settingsUserInterfaceEntry() {
 fun SettingsUserInterfaceScreen() {
     val context = LocalContext.current
     val scope = LocalActivityScope.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
 
     val themeNames = stringArrayResource(R.array.app_theme_names)
     val themeValues = stringArrayResource(R.array.app_theme_values)

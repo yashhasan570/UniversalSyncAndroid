@@ -55,7 +55,7 @@ import androidx.core.net.toUri
 import androidx.navigation3.runtime.EntryProviderScope
 import com.universalsync.android.R
 import com.universalsync.android.service.Constants
-import com.universalsync.android.service.Universal SyncService
+import com.universalsync.android.service.UniversalSyncService
 import com.universalsync.android.util.CertificateValidator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -83,7 +83,7 @@ fun EntryProviderScope<SettingsRoute>.settingsCustomCertificateEntry() {
 fun SettingsCustomCertificateScreen() {
     val context = LocalContext.current
     val navigator = LocalSettingsNavigator.current
-    val stService = LocalUniversal SyncService.current
+    val stService = LocalUniversalSyncService.current
 
     var certBytes by rememberSaveable { mutableStateOf<ByteArray?>(null) }
     var keyBytes by rememberSaveable { mutableStateOf<ByteArray?>(null) }
@@ -273,7 +273,7 @@ fun SettingsCustomCertificateScreen() {
                                 null
                             } else {
                                 ApplyFailure(
-                                    outcome ?: Universal SyncService.HttpsCertReplaceResult.FAILED,
+                                    outcome ?: UniversalSyncService.HttpsCertReplaceResult.FAILED,
                                     detail,
                                 )
                             }
@@ -348,7 +348,7 @@ private fun checkTitle(check: CertificateValidator.Check): Int = when (check) {
  * "Could not apply the certificate" does not — and a toast cannot carry the help link.
  */
 private data class ApplyFailure(
-    val outcome: Universal SyncService.HttpsCertReplaceResult,
+    val outcome: UniversalSyncService.HttpsCertReplaceResult,
     val detail: String?,
 )
 
@@ -363,7 +363,7 @@ private val ApplyFailureSaver = listSaver<ApplyFailure?, String>(
     },
     restore = { saved ->
         saved.takeIf { it.size == 2 }?.let { (name, detail) ->
-            runCatching { Universal SyncService.HttpsCertReplaceResult.valueOf(name) }
+            runCatching { UniversalSyncService.HttpsCertReplaceResult.valueOf(name) }
                 .getOrNull()
                 ?.let { ApplyFailure(it, detail.ifEmpty { null }) }
         }
@@ -372,16 +372,16 @@ private val ApplyFailureSaver = listSaver<ApplyFailure?, String>(
 
 @Composable
 private fun applyFailureMessage(failure: ApplyFailure): String = when (failure.outcome) {
-    Universal SyncService.HttpsCertReplaceResult.FAILED_CERT_REJECTED ->
+    UniversalSyncService.HttpsCertReplaceResult.FAILED_CERT_REJECTED ->
         stringResource(R.string.custom_cert_failed_rejected)
-    Universal SyncService.HttpsCertReplaceResult.FAILED_NOT_ONLINE ->
+    UniversalSyncService.HttpsCertReplaceResult.FAILED_NOT_ONLINE ->
         stringResource(R.string.custom_cert_failed_not_online)
     else -> stringResource(R.string.custom_cert_failed, failure.detail ?: "")
 }
 
-private fun isSuccess(outcome: Universal SyncService.HttpsCertReplaceResult?): Boolean =
-    outcome == Universal SyncService.HttpsCertReplaceResult.SUCCESS ||
-            outcome == Universal SyncService.HttpsCertReplaceResult.SUCCESS_PENDING_START
+private fun isSuccess(outcome: UniversalSyncService.HttpsCertReplaceResult?): Boolean =
+    outcome == UniversalSyncService.HttpsCertReplaceResult.SUCCESS ||
+            outcome == UniversalSyncService.HttpsCertReplaceResult.SUCCESS_PENDING_START
 
 /**
  * Reports the outcome of an apply. Success leaves the screen; failure stays put and is returned so it
@@ -390,15 +390,15 @@ private fun isSuccess(outcome: Universal SyncService.HttpsCertReplaceResult?): B
 private fun onApplyOutcome(
     context: Context,
     navigator: Navigator<SettingsRoute>,
-    outcome: Universal SyncService.HttpsCertReplaceResult?,
+    outcome: UniversalSyncService.HttpsCertReplaceResult?,
     detail: String?,
 ): ApplyFailure? {
     when (outcome) {
-        Universal SyncService.HttpsCertReplaceResult.SUCCESS ->
+        UniversalSyncService.HttpsCertReplaceResult.SUCCESS ->
             Toast.makeText(context.applicationContext, R.string.custom_cert_applied, Toast.LENGTH_LONG).show()
-        Universal SyncService.HttpsCertReplaceResult.SUCCESS_PENDING_START ->
+        UniversalSyncService.HttpsCertReplaceResult.SUCCESS_PENDING_START ->
             Toast.makeText(context.applicationContext, R.string.custom_cert_applied_pending, Toast.LENGTH_LONG).show()
-        else -> return ApplyFailure(outcome ?: Universal SyncService.HttpsCertReplaceResult.FAILED, detail)
+        else -> return ApplyFailure(outcome ?: UniversalSyncService.HttpsCertReplaceResult.FAILED, detail)
     }
     navigator.navigateUp()
     return null

@@ -35,7 +35,7 @@ public class Device {
     public Integer maxSendKbps = 0;
 
     // Since v1.12.0
-    // See https://github.com/syncthing/syncthing/pull/7055
+    // See https://github.com/universalsync/universalsync/pull/7055
     public boolean untrusted = false;
 
     // Since v1.25.0
@@ -64,12 +64,12 @@ public class Device {
     }
 
     /**
-     * Returns if a syncthing device ID is correctly formatted.
+     * Returns if a universalsync device ID is correctly formatted.
      */
     public Boolean checkDeviceID() {
         /**
-         * See https://github.com/syncthing/syncthing/blob/master/lib/protocol/deviceid.go
-         * how syncthing validates device IDs.
+         * See https://github.com/universalsync/universalsync/blob/master/lib/protocol/deviceid.go
+         * how universalsync validates device IDs.
          * Old dirty way to check was: return deviceID.matches("^([A-Z0-9]{7}-){7}[A-Z0-9]{7}$");
          */
         String deviceID = new String(this.deviceID);
@@ -134,7 +134,7 @@ public class Device {
 
     /**
      * Returns if device.addresses elements are correctly formatted.
-     * See https://docs.syncthing.net/users/config.html#device-element for what is correct.
+     * See https://docs.universalsync.net/users/config.html#device-element for what is correct.
      * It can be improved in the future because it doesn't catch all mistakes a user can do.
      * It catches the most common mistakes.
      */

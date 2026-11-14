@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.universalsync.android.service.AppPrefs;
 import com.universalsync.android.service.Constants;
-import com.universalsync.android.service.Universal SyncService;
+import com.universalsync.android.service.UniversalSyncService;
 
 import java.lang.SecurityException;
 
@@ -42,7 +42,7 @@ public class BootReceiver extends BroadcastReceiver {
      * https://stackoverflow.com/a/44505719/1837158
      */
     public static void startServiceCompat(Context context) {
-        Intent intent = new Intent(context, Universal SyncService.class);
+        Intent intent = new Intent(context, UniversalSyncService.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             context.startForegroundService(intent);
         }

@@ -20,5 +20,5 @@ dependencyResolutionManagement {
 
 include(
     ":app",
-    ":syncthing"
+    ":universalsync"
 )

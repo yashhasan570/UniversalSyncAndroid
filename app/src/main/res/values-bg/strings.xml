@@ -17,7 +17,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Изпращане на идентификатора чрез</string>
     <string name="usage_reporting_dialog_title">Разрешавате ли анонимно отчитане на употребата?</string>
-    <string name="usage_reporting_dialog_description">Шифрованият доклад се изпраща ежедневно. Използва се, за отчитане на ползваните платформи, размер на папки и издания на приложението. Ако вида на събираните данни се промени, ще бъдете информирани с подобено известие.\n\nОбобщената статистика ще намерите на https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Шифрованият доклад се изпраща ежедневно. Използва се, за отчитане на ползваните платформи, размер на папки и издания на приложението. Ако вида на събираните данни се промени, ще бъдете информирани с подобено известие.\n\nОбобщената статистика ще намерите на https://data.Universal Sync.net.</string>
     <string name="yes">Да</string>
     <string name="no">Не</string>
     <string name="open_website">Отваряне сайта</string>
@@ -121,7 +121,7 @@
     <string name="settings_title">Настройки</string>
     <string name="category_run_conditions">Условия за работа</string>
     <string name="category_behaviour">Поведение</string>
-    <string name="category_syncthing_options">Настройки на Universal Sync</string>
+    <string name="category_universalsync_options">Настройки на Universal Sync</string>
     <string name="category_experimental">Експериментални</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Условия за работа</string>
@@ -159,7 +159,7 @@
     <string name="report_issue_title">Докладване на дефект</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Издание на Universal Sync</string>
+    <string name="universalsync_version_title">Издание на Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Избор на папка</string>
@@ -173,15 +173,15 @@
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Преглед на дневника на Андроид</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Преглед на дневника на Universal Sync</string>
+    <string name="view_universalsync_log">Преглед на дневника на Universal Sync</string>
     <string name="retrieving_logs">Получаване на дневниците…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Споделяне</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Изход</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Работи</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Работи</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">snimki-ot-%1$s</string>
     <!-- RestApi -->
@@ -260,8 +260,8 @@
     <string name="deviceEncryptionPasswordHint">При недоверено задайте парола за шифроване</string>
     <string name="shared_folders_title_colon">"Папки: "</string>
     <string name="button_follow_run_conditions">Спазване на\nусловията за работа</string>
-    <string name="syncthing_not_running">Universal Sync не работи.</string>
-    <string name="syncthing_has_crashed">Universal Sync се срина.</string>
+    <string name="universalsync_not_running">Universal Sync не работи.</string>
+    <string name="universalsync_has_crashed">Universal Sync се срина.</string>
     <string name="uptime">Работи от</string>
     <string name="folder_fileWatcherDescription">Операционната система известява при промяна на файловете. Ако е изключено използва ежечасно обхождане.</string>
     <string name="folder_pause">Пауза на папката</string>
@@ -288,16 +288,16 @@
     <string name="button_force_stop">Принудително спране\nпренебрегва\nусловията за работа</string>
     <string name="advanced_directory_selection">Разширен избор на папки</string>
     <string name="folder_ignore_delete_caption">Пренебрегване на изтриванията</string>
-    <string name="folder_ignore_delete_description">Разширена настройка, която влияе върху обработката на входящите промени на индекса. Когато е отметната, входящите промени със вдигнат флаг за изтриване биват пренебрегнати. Вижте https://docs.syncthing.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Разширена настройка, която влияе върху обработката на входящите промени на индекса. Когато е отметната, входящите промени със вдигнат флаг за изтриване биват пренебрегнати. Вижте https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
     <string name="photo_shoot_take_picture_success">Изображението е запазено в папката Universal Sync Камера.</string>
-    <string name="default_syncthing_camera_folder_label">Universal Sync Камера</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync Камера</string>
     <string name="exception_known_bug_notice">Възникнал е известен дефект, който все още не е решен. За повече информация, вижте %1$s/%2$s. Оставете ни точно описание на случилото се преди това.</string>
     <string name="dialog_exit_while_running_as_service_title">Потвърдете за изход от приложението</string>
     <string name="revert_local_changes_question">По този начин ще отмените промените от устройството. Желаете ли да продължите?</string>
     <string name="open_file_manager">Управление на файлове</string>
     <string name="open_file_no_compatible_app">Не е намерено приложение, което да отвори файла.</string>
     <string name="suggest_file_manager_app_dialog_text">Препоръчваме ви да инсталирате приложението за управление на файлове с отворен код „Material Files“. Желаети ли да видите страницата му в магазина за приложения?</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">Внимателно: Ако Universal SyncNative бъде прекъснат и направи нещо странно, вие сте си виновни. Прескочете само в случай, че устройството ви не поддържа даване на разрешение. Желаете ли да прескочите стъпката?</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">Внимателно: Ако UniversalSyncNative бъде прекъснат и направи нещо странно, вие сте си виновни. Прескочете само в случай, че устройството ви не поддържа даване на разрешение. Желаете ли да прескочите стъпката?</string>
     <string name="key_generation_title">Създаване на ключове</string>
     <string name="photo_shoot_activity_title">Universal Sync-Fork Камера</string>
     <string name="grant_storage_permission">Разрешаване на достъп до файловете</string>
@@ -315,8 +315,8 @@
     <string name="device_state_unused">Неизползвано</string>
     <string name="device_last_seen">Последно видяно: %1$s</string>
     <string name="button_force_start">Принудителна работа\nпренебрегва\nусловията за работа</string>
-    <string name="syncthing_starting">Universal Sync стартира.</string>
-    <string name="syncthing_running">Universal Sync работи.</string>
+    <string name="universalsync_starting">Universal Sync стартира.</string>
+    <string name="universalsync_running">Universal Sync работи.</string>
     <string name="folder_label_required">Етикетът на папката не може да бъде празен</string>
     <string name="folder_type_send_receive">Изпраща и получава</string>
     <string name="folder_type_send_only">Само изпраща</string>
@@ -327,11 +327,11 @@
     <string name="pull_order_oldest_first">Първо най-старите</string>
     <string name="pull_order_newest_first">Първо най-новите</string>
     <string name="versioning_type_none">Изключено</string>
-    <plurals name="syncthing_active_syncing_device_online">
+    <plurals name="universalsync_active_syncing_device_online">
         <item quantity="one">Syncing: %1$d %% готови, %2$d свързано у-во</item>
         <item quantity="other">Syncing: %1$d %% готови, %2$d свързани у-ва</item>
     </plurals>
-    <string name="syncthing_disabled">Почива</string>
+    <string name="universalsync_disabled">Почива</string>
     <string name="folder_type_receiveonly">Само получава</string>
     <string name="toast_ignore_doze_permission_required">Това приложение работи стабилно само ако за него е изключена настройката за пестене на батерия.</string>
     <string name="generic_example">Пример</string>
@@ -381,7 +381,7 @@
     <string name="verbose_log_summary">Когато е отментато, записите в дневника ще съдържат подробности.</string>
     <string name="log_to_file_title">Записване на дневника във файл</string>
     <string name="app_version_title">Издание на Universal Sync-Fork</string>
-    <string name="syncthing_api_key">Ключ за ППИ на Universal Sync (докоснете за копиране)</string>
+    <string name="universalsync_api_key">Ключ за ППИ на Universal Sync (докоснете за копиране)</string>
     <string name="current_path">Текущ път: %1$s</string>
     <string name="folder_path_readonly">Това издание на Андроид дава на Universal Sync само права за четене на избраната папка.</string>
     <string name="toast_invalid_folder_selected">Избраната папка не може да бъде използвана. Изберете папка, разположена във вътрешното или външното хранилище.</string>
@@ -389,15 +389,15 @@
     <string name="untrusted_device_explanation">Папките, споделени с устройството трябва да бъдат защитени с парола, така че данните да са недостъпни без нея.</string>
     <string name="device_addresses_invalid">Адресът на устройството не отговаря на формата. Въведете го отново. За подробности вижте документацията на Universal Sync.</string>
     <string name="install_barcode_scanner_app_message">Това действие изисква приложение за сканиране. Желаете ли да бъде инсталирано приложението „Binary Eye“ от F-Droid?</string>
-    <string name="category_syncthing_options_summary">Това меню е достъпно само докато Universal Sync работи.</string>
+    <string name="category_universalsync_options_summary">Това меню е достъпно само докато Universal Sync работи.</string>
     <string name="sync_only_wifi_ssids_need_to_grant_location_permission">За да използвате тази настройка, трябва да дадете разрешение за местоположението.</string>
     <string name="respect_battery_saving_summary">Спиране на Universal Sync в режим за пестене на батерия.</string>
     <string name="expert_mode_summary">Когато е отметнато ще бъдат показани разширени настройки. Първо трябва да прочетете документацията на Universal Sync, за да сте сигурни, че знаете как да ги използвате. Неправилните настройки могат да доведат до изтощаване на батерията, разхищение на системни ресурси или частично синхронизиране.</string>
-    <string name="webui_remote_access_summary">Когато е отметнато е разрешен достъпа до уеб интерфейса от друго устройство. Тогава можете да влезете с потребител „syncthing“ и ключа за ППИ като парола. По подразбиране: изключено (най-сигурно)</string>
+    <string name="webui_remote_access_summary">Когато е отметнато е разрешен достъпа до уеб интерфейса от друго устройство. Тогава можете да влезете с потребител „Universal Sync“ и ключа за ППИ като парола. По подразбиране: изключено (най-сигурно)</string>
     <string name="download_support_bundle_title">Изтегляне на пакет за поддръжка</string>
     <string name="download_support_bundle_succeeded">Пакетът за поддръжка е изтеглен в %s.</string>
     <string name="broadcast_service_control_summary">Подразбирано: Изключено. Когато е отметнато дава възможност на adb или други приложения напр. приложения за автоматизиране да дават инструкции на Universal Sync да спазва условията за работа, насилствено да спира или работи.</string>
-    <string name="log_to_file_summary">Извежданата информация от Universal SyncNative ще бъде запазвана във файл.</string>
+    <string name="log_to_file_summary">Извежданата информация от UniversalSyncNative ще бъде запазвана във файл.</string>
     <string name="open_issue_tracker_summary">Отваряне на системата за проследяване на дефекти в %1$s</string>
     <string name="advanced_storage_path_overview">Разширен преглед на пътя на хранилището</string>
     <string name="untrusted_device">Недоверено устройство</string>
@@ -432,7 +432,7 @@
     <string name="dialog_settings_restart_app_title">Необходим е рестарт</string>
     <string name="st_reset_deltas_title">Нулиране на промените на индексите</string>
     <string name="api_key_copied_to_clipboard">Ключът за ППИ на Universal Sync е копиран</string>
-    <string name="syncthing_database_size">Размер на хранилището на Universal Sync</string>
+    <string name="universalsync_database_size">Размер на хранилището на Universal Sync</string>
     <string name="pull_order_type_random">В случаен ред</string>
     <string name="ignore_patterns">Шаблони за пренебрегване</string>
     <string name="device_id_invalid">Идентификаторът на устройството не отговаря на формата. Въведете го отново.</string>
@@ -451,7 +451,7 @@
     <string name="st_reset_deltas_done">Промените на индексите на Universal Sync са нулирани</string>
     <string name="st_reset_deltas_question">Това действие трябва да бъде извършвано само след препоръка от екип по поддръжка.\nЖелаете ли промените на индексите да бъдат нулирани?</string>
     <string name="folder_go_up">Нагоре</string>
-    <string name="syncthing_log_title">Дневник на Universal Sync</string>
+    <string name="universalsync_log_title">Дневник на Universal Sync</string>
     <string name="android_log_title">Дневник на Андроид</string>
     <string name="reason_force_stop">Universal Sync не работи, защото сте избрали принудително да спре без да следва условията.</string>
     <string name="reason_not_within_time_frame">Настройката „Работи по график“ е включена, а последната синхронизация е била преди по-малко от час.</string>
@@ -497,9 +497,9 @@
     <string name="reason_not_on_wifi">Universal Sync може да работи в безжична мрежа, няма връзка или е включен самолетен режим.</string>
     <string name="reason_on_flight_mode">Universal Sync работи, защото сте разрешили работа по време на самолетен режим.</string>
     <string name="custom_wifi_ssid_whitelist_empty">Списъкът с имена на разрешени безжични мрежи е празен. Добавете от настройките.</string>
-    <string name="syncthing_active_details">Работи: %1$s</string>
+    <string name="universalsync_active_details">Работи: %1$s</string>
     <string name="no_remote_devices_connected">Няма свързани отдалечени устройства</string>
-    <string name="syncthing_terminated">Насилствено спряно</string>
+    <string name="universalsync_terminated">Насилствено спряно</string>
     <string name="config_create_failed">Грешка при създаване на файла с настройки. Проверете дневника.</string>
     <string name="config_file_missing">Липсва основен за работата на приложението файл с настройки</string>
     <string name="webui_tcp_port_unavailable">Портът за интерфейса за уеб %s е зает. Дали няма друг работещ екземпляр?</string>
@@ -598,13 +598,13 @@
     <string name="privacy_title">Политика за поверителност</string>
     <string name="pizza_url_title">» Котките обичат пица « 😺🍕</string>
     <string name="clear_stversions_summary">Когато Universal Sync замени или премахне файлове те биват премествани в папката .stversions. Можете да намерите и възстановите случайно премахнати файлове там, но остарелите им версии заемат място за съхранение на устройството ви.</string>
-    <string name="syncthing_forum_summary">Посетете форума на Universal Sync и получете поддръжка</string>
+    <string name="universalsync_forum_summary">Посетете форума на Universal Sync и получете поддръжка</string>
     <string name="pizza_url_summary">Само с едно докосване можете да оставите топло парченце доброта с добавка от добри вибрации, за да продължат котките да мъркат щастливо.</string>
-    <string name="privacy_summary">Отворете политиката за поверителност на syncthing-android, която обхваща използването (ако има такова) на лични данни, например местоположение.</string>
+    <string name="privacy_summary">Отворете политиката за поверителност на Universal Sync Android, която обхваща използването (ако има такова) на лични данни, например местоположение.</string>
     <string name="open_source_licenses_summary">Показва използваните лицензи на отворен код</string>
     <string name="clear_stversions_title">Изпразване на всички папки с версии на файлове</string>
     <string name="folder_run_script_description">Разширена настройка за изпълняване на скриптове, след като дадена папка промени състоянието си на синхронизираност. Ще бъдат изпълнявани скриптове само от папката „.stfolder“, други местоположения не се поддържат от съображения за сигурност.\nПример за изпълняване на скрипт: „.stfolder/rename-files.sh sync_complete</string>
-    <string name="syncthing_forum_title">Форум на Universal Sync</string>
+    <string name="universalsync_forum_title">Форум на Universal Sync</string>
     <plurals name="conflicts">
         <item quantity="one">%1$d конфликт</item>
         <item quantity="other">%1$d конфликта</item>

@@ -18,21 +18,21 @@ Universal Sync-Fork for Android は Universal Sync のラッパーで、Universa
 * UIで機能拡張を設定可能にし、ユーザーはそれらをオン/オフできるようにする。
 
 これを書いている時点でのオリジナルとフォークの比較: 
-* Both contain the syncthing binary built from the official source at GitHub
+* Both contain the Universal Sync binary built from the official source at GitHub
 * 同期機能と信頼性は、Universal Sync バイナリのサブモジュールのバージョンに依存します。
 * フォークは上流と仲良くしていて、たまに改善点を拾ってくれることもあります。
 * 戦略とリリース頻度が異なります。
 * Android UIを含むラッパーのみがフォークで指定されるものです。
 
-Webサイト: https://github.com/universalsync/syncthing-android
+Webサイト: https://github.com/universalsync/Universal Sync Android
 
-ソースコード: https://github.com/universalsync/syncthing-android
+ソースコード: https://github.com/universalsync/Universal Sync Android
 
-Universal Syncに外部SDカード書き込み許可を与える方法：  https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Universal Syncに外部SDカード書き込み許可を与える方法：  https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ, 役立つ記事: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ, 役立つ記事: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-問題: https://github.com/universalsync/syncthing-android/issues
+問題: https://github.com/universalsync/Universal Sync Android/issues
 
 一緒に手伝って下さい：
-翻訳： https://hosted.weblate.org/projects/syncthing-fork/app/
+翻訳： https://hosted.weblate.org/projects/Universal Sync/app/

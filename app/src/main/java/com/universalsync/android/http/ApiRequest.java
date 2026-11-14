@@ -50,7 +50,7 @@ public abstract class ApiRequest {
     private Boolean ENABLE_VERBOSE_LOG = false;
 
     /**
-     * The name of the HTTP header used for the syncthing API key.
+     * The name of the HTTP header used for the universalsync API key.
      */
     private static final String HEADER_API_KEY = "X-API-Key";
 
@@ -83,7 +83,7 @@ public abstract class ApiRequest {
 
     ApiRequest(Context context, URL url, String path, String apiKey) {
         mContext = context;
-        // The app only ever talks to the local syncthing instance. Pin the connection to the
+        // The app only ever talks to the local universalsync instance. Pin the connection to the
         // loopback interface regardless of the configured GUI listen address (which is 0.0.0.0
         // when remote access is enabled), keeping the API key and config off any routable interface.
         mUrl           = forceLoopbackHost(url);
@@ -104,7 +104,7 @@ public abstract class ApiRequest {
      *   <li>It keeps the API key and configuration off any routable interface.</li>
      *   <li>It is the precondition that makes the two TLS relaxations safe: disabling hostname
      *       verification ({@link NetworkStack#createConnection}) and falling back to the OS trust
-     *       store / user-installed CAs ({@link Universal SyncTrustManager}). On loopback there is no
+     *       store / user-installed CAs ({@link UniversalSyncTrustManager}). On loopback there is no
      *       network position for a MITM to occupy, so neither relaxation can be abused.</li>
      * </ul>
      * Do not "simplify" this by connecting to the configured address directly: {@code 0.0.0.0} is
@@ -240,7 +240,7 @@ public abstract class ApiRequest {
                 // interface (see forceLoopbackHost), so there is no network MITM surface and the
                 // certificate's SAN/CN need not match 127.0.0.1 (a user-supplied CA cert is
                 // typically issued for a real hostname, not the loopback address). Trust is still
-                // enforced by Universal SyncTrustManager: the self-signed pin first, then the OS trust
+                // enforced by UniversalSyncTrustManager: the self-signed pin first, then the OS trust
                 // store.
                 connection.setHostnameVerifier((hostname, session) -> true);
                 return connection;
@@ -253,7 +253,7 @@ public abstract class ApiRequest {
         try {
             SSLContext sslContext = SSLContext.getInstance("TLS");
             File httpsCertPath = Constants.getHttpsCertFile(mContext);
-            sslContext.init(null, new TrustManager[]{new Universal SyncTrustManager(httpsCertPath)},
+            sslContext.init(null, new TrustManager[]{new UniversalSyncTrustManager(httpsCertPath)},
                     new SecureRandom());
             return sslContext.getSocketFactory();
         } catch (NoSuchAlgorithmException | KeyManagementException e) {

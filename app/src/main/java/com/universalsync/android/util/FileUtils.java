@@ -368,11 +368,11 @@ public class FileUtils {
     
     /**
      * Expands the "~" path.
-     * Equals Universal SyncRunnable env "HOME"
-     * Result: e.g. /storage/emulated/0/syncthing
+     * Equals UniversalSyncRunnable env "HOME"
+     * Result: e.g. /storage/emulated/0/universalsync
      */
-    public static String getUniversal SyncTildeAbsolutePath() {
-        return FileUtils.getInternalStorageRootAbsolutePath() + "/syncthing";
+    public static String getUniversalSyncTildeAbsolutePath() {
+        return FileUtils.getInternalStorageRootAbsolutePath() + "/universalsync";
     }
     
     private static String getInternalStorageRootAbsolutePath() {

@@ -29,10 +29,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.universalsync.android.R
-import com.universalsync.android.activities.Universal SyncActivity
+import com.universalsync.android.activities.UniversalSyncActivity
 import com.universalsync.android.service.Constants
-import com.universalsync.android.service.Universal SyncService
-import com.universalsync.android.service.Universal SyncServiceBinder
+import com.universalsync.android.service.UniversalSyncService
+import com.universalsync.android.service.UniversalSyncServiceBinder
 import com.universalsync.android.theme.ApplicationTheme
 import com.universalsync.android.util.ConfigXml
 import com.universalsync.android.util.Util
@@ -51,9 +51,9 @@ import java.security.cert.X509Certificate
 import androidx.core.net.toUri
 
 /**
- * Holds a WebView that shows the web ui of the local syncthing instance.
+ * Holds a WebView that shows the web ui of the local universalsync instance.
  */
-class WebGuiActivity : Universal SyncActivity(), Universal SyncService.OnServiceStateChangeListener {
+class WebGuiActivity : UniversalSyncActivity(), UniversalSyncService.OnServiceStateChangeListener {
 
     private lateinit var config: ConfigXml
 
@@ -65,7 +65,7 @@ class WebGuiActivity : Universal SyncActivity(), Universal SyncService.OnService
      */
     private lateinit var webGuiUrl: URL
     private var caCertificate: X509Certificate? = null
-    private var registeredService: Universal SyncService? = null
+    private var registeredService: UniversalSyncService? = null
     private var webView: WebView? = null
     private var webGuiLoadStarted = false
     private var serviceActive = false
@@ -149,13 +149,13 @@ class WebGuiActivity : Universal SyncActivity(), Universal SyncService.OnService
             }
         }
 
-        startUniversal SyncService()
+        startUniversalSyncService()
         onBackPressedDispatcher.addCallback(this, backPressedCallback)
     }
 
     override fun onServiceConnected(componentName: ComponentName, binder: IBinder) {
         super.onServiceConnected(componentName, binder)
-        registerServiceListener((binder as Universal SyncServiceBinder).service)
+        registerServiceListener((binder as UniversalSyncServiceBinder).service)
     }
 
     override fun onServiceDisconnected(componentName: ComponentName) {
@@ -163,9 +163,9 @@ class WebGuiActivity : Universal SyncActivity(), Universal SyncService.OnService
         super.onServiceDisconnected(componentName)
     }
 
-    override fun onServiceStateChange(newState: Universal SyncService.State) {
+    override fun onServiceStateChange(newState: UniversalSyncService.State) {
         Log.v(TAG, "onServiceStateChange($newState)")
-        serviceActive = newState == Universal SyncService.State.ACTIVE
+        serviceActive = newState == UniversalSyncService.State.ACTIVE
         loadWebGuiIfNeeded()
     }
 
@@ -244,8 +244,8 @@ class WebGuiActivity : Universal SyncActivity(), Universal SyncService.OnService
         }
     }
 
-    private fun startUniversal SyncService() {
-        val serviceIntent = Intent(this, Universal SyncService::class.java)
+    private fun startUniversalSyncService() {
+        val serviceIntent = Intent(this, UniversalSyncService::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(serviceIntent)
         } else {
@@ -253,7 +253,7 @@ class WebGuiActivity : Universal SyncActivity(), Universal SyncService.OnService
         }
     }
 
-    private fun registerServiceListener(service: Universal SyncService) {
+    private fun registerServiceListener(service: UniversalSyncService) {
         unregisterServiceListener()
         registeredService = service
         service.registerOnServiceStateChangeListener(this)

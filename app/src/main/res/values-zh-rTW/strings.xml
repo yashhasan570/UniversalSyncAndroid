@@ -46,7 +46,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">傳送裝置識別碼給</string>
     <string name="usage_reporting_dialog_title">允許匿名使用報告？</string>
-    <string name="usage_reporting_dialog_description">每天會傳送被加密的使用報告。它被來用在追蹤常用的平台、資料夾大小及應用程式版本。如果回報的資料集被修改，你將會再收到這個提示。 \n \n匯集的統計資料會公開在 https://data.syncthing.net。</string>
+    <string name="usage_reporting_dialog_description">每天會傳送被加密的使用報告。它被來用在追蹤常用的平台、資料夾大小及應用程式版本。如果回報的資料集被修改，你將會再收到這個提示。 \n \n匯集的統計資料會公開在 https://data.Universal Sync.net。</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="open_website">打開網站</string>
@@ -157,7 +157,7 @@
     <string name="settings_title">設定</string>
     <string name="category_run_conditions">執行條件</string>
     <string name="category_behaviour">行為</string>
-    <string name="category_syncthing_options">Universal Sync 選項</string>
+    <string name="category_universalsync_options">Universal Sync 選項</string>
     <string name="category_debug">除錯</string>
     <string name="category_experimental">實驗性</string>
     <!-- Preference screen - Run conditions -->
@@ -210,7 +210,7 @@
     <string name="report_issue_title">回報問題</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Universal Sync 版本</string>
+    <string name="universalsync_version_title">Universal Sync 版本</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">資料夾選擇器</string>
@@ -222,12 +222,12 @@
     <string name="select_folder">選擇資料夾</string>
     <string name="create_folder_failed">建立資料夾時失敗</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Universal Sync 日誌</string>
+    <string name="universalsync_log_title">Universal Sync 日誌</string>
     <string name="android_log_title">Android 日誌</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">檢視 Android 日誌</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">檢視 Universal Sync 日誌</string>
+    <string name="view_universalsync_log">檢視 Universal Sync 日誌</string>
     <string name="retrieving_logs">正在取得日誌…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">分享</string>
@@ -260,11 +260,11 @@
     </plurals>
     <!-- Sub Folder title -->
     <string name="sub_folder">子資料夾</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">離開</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Universal Sync 正在執行</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Universal Sync 正在執行</string>
     <string name="config_create_failed">無法建立設定檔</string>
     <!-- Label of the default folder created of first start (camera folder). -->
     <string name="default_android_camera_folder_label">Android 相機</string>
@@ -279,7 +279,7 @@
     <!-- Text for positive button in restart dialog -->
     <!-- Text for the dismiss button of the restart Activity -->
     <!-- Text of the notification shown when a restart is needed -->
-    <string name="restart_notification_text">按此以重新啟動 syncthing</string>
+    <string name="restart_notification_text">按此以重新啟動 Universal Sync</string>
     <!-- Shown when a device ID is copied to the clipboard -->
     <string name="device_id_copied_to_clipboard">裝置識別碼已複製至剪貼版</string>
     <!-- Strings representing units for file sizes, from smallest to largest -->
@@ -343,7 +343,7 @@
     <string name="photo_shoot_launcher_title">同步相機</string>
     <string name="welcome_text">Universal Sync 是一款開源的檔案同步應用程式。如欲與其他裝置分享檔案，您將需要將它們的唯一裝置識別字串加入裝置列表。此後您將能選擇要對哪些裝置分享哪個資料夾。 \n \n若有任何疑問，請至本專案的 Github 頁面分享您在使用上遇到的任何問題。</string>
     <string name="undo_ignored_devices_folders_question">這將還原方才「忽略裝置與資料夾」的操作，請問要繼續嗎？</string>
-    <string name="dialog_confirm_skip_ignore_doze_permission">警告：假如 Universal SyncNative 被干擾且有異常行為時，您得自負責任。請僅在裝置無法授予相關權限時略過本步驟！確定略過嗎？</string>
+    <string name="dialog_confirm_skip_ignore_doze_permission">警告：假如 UniversalSyncNative 被干擾且有異常行為時，您得自負責任。請僅在裝置無法授予相關權限時略過本步驟！確定略過嗎？</string>
     <string name="location_permission_desc">您可以指定 Universal Sync 僅在特定無線網路作動。Android 要求應用程式需要擁有位置權限以讀取活躍中的無線網路名稱。假如您打算使用本功能，請按下上方的按鈕。您或許會想要略過本步驟，如需進一步說明，請參閱我們的隱私權政策。</string>
     <string name="location_permission_desc_api_29">Android 10 以上的建議選項：「一律允許」</string>
     <string name="key_generation_success">已產生用於私密傳輸的安全金鑰。</string>
@@ -351,7 +351,7 @@
     <string name="photo_shoot_take_picture_success">成功儲存圖片至 Universal Sync 相機資料夾。</string>
     <string name="photo_shoot_intro_permission_desc">Universal Sync 需要您的同意以拍攝相片並儲存在您的裝置上。本功能為非必要的選用功能。要使用本功能，請授予權限並按下「下一步」。我們將為您新增一個 Universal Sync Camera 資料夾以利您後續分享至其他 Universal Sync 裝置。</string>
     <string name="photo_shoot_take_picture_failure">無法拍照或您已取消。</string>
-    <string name="default_syncthing_camera_folder_label">Universal Sync Camera</string>
+    <string name="default_universalsync_camera_folder_label">Universal Sync Camera</string>
     <string name="activity_main_bottom_navigation_rescan_all">重新掃描全部</string>
     <string name="dialog_settings_restart_app_question">改變本選項將會強制重新啟動應用程式，方才的其他改變將被放棄，確定要繼續嗎？</string>
     <string name="app_version_title">Universal Sync 衍生版封装版本</string>
@@ -361,8 +361,8 @@
     <string name="back">上一步</string>
     <string name="ignore_doze_permission_desc">Android 系統可能會在裝置閒置一段時間後停止自動同步。為了避免這個現象，我們建議停用電池最佳化。在一些裝置上還會有預安裝的程序清除軟體，您也需要將 Universal Sync 加入到它們的白名單中。</string>
     <string name="toast_notification_permission_required">Universal Sync 需要通知權限來維持背景服務以及保持連線。</string>
-    <string name="syncthing_starting">Universal Sync 正在啟動。</string>
-    <string name="syncthing_running">Universal Sync 執行中。</string>
+    <string name="universalsync_starting">Universal Sync 正在啟動。</string>
+    <string name="universalsync_running">Universal Sync 執行中。</string>
     <string name="dialog_exit_while_running_as_service_title">確認退出應用程式</string>
     <string name="privacy_title">隱私權政策</string>
     <string name="open_source_licenses_title">開放原始碼授權</string>

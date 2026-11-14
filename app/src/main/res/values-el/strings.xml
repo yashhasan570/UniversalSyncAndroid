@@ -18,7 +18,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Αποστολή ID συσκευής στο</string>
     <string name="usage_reporting_dialog_title">Να επιτραπεί η ανώνυμη αναφορά δεδομένων χρήσης;</string>
-    <string name="usage_reporting_dialog_description">Η κρυπτογραφημένη αναφορά χρήσης αποστέλλεται καθημερινά. Χρησιμοποιείται για την καταγραφή πλατφορμών, μεγεθών φακέλων και εκδόσεων της εφαρμογής. Αν υπάρξει κάποια μεταβολή στο σύνολο δεδομένων που συλλέγονται, θα ειδοποιηθείτε και πάλι με αυτό το παράθυρο. \n \nΤα ομαδοποιημένα στατιστικά στοιχεία είναι ελεύθερα προσβάσιμα στο https://data.syncthing.net.</string>
+    <string name="usage_reporting_dialog_description">Η κρυπτογραφημένη αναφορά χρήσης αποστέλλεται καθημερινά. Χρησιμοποιείται για την καταγραφή πλατφορμών, μεγεθών φακέλων και εκδόσεων της εφαρμογής. Αν υπάρξει κάποια μεταβολή στο σύνολο δεδομένων που συλλέγονται, θα ειδοποιηθείτε και πάλι με αυτό το παράθυρο. \n \nΤα ομαδοποιημένα στατιστικά στοιχεία είναι ελεύθερα προσβάσιμα στο https://data.Universal Sync.net.</string>
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
     <string name="open_website">Άνοιγμα ιστοσελίδας</string>
@@ -128,7 +128,7 @@
     <string name="settings_title">Ρυθμίσεις</string>
     <string name="category_run_conditions">Συνθήκες εκτέλεσης</string>
     <string name="category_behaviour">Συμπεριφορά</string>
-    <string name="category_syncthing_options">Επιλογές Universal Sync</string>
+    <string name="category_universalsync_options">Επιλογές Universal Sync</string>
     <string name="category_experimental">Πειραματικά</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Συνθήκες εκτέλεσης</string>
@@ -180,7 +180,7 @@
     <string name="report_issue_title">Αναφορά προβλήματος</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="syncthing_version_title">Έκδοση Universal Sync</string>
+    <string name="universalsync_version_title">Έκδοση Universal Sync</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Επιλογέας φακέλων</string>
@@ -192,12 +192,12 @@
     <string name="select_folder">Επιλογή φακέλου</string>
     <string name="create_folder_failed">Η δημιουργία φακέλου απέτυχε</string>
     <!-- LogActivity -->
-    <string name="syncthing_log_title">Καταγραφή συμβάντων Universal Sync</string>
+    <string name="universalsync_log_title">Καταγραφή συμβάντων Universal Sync</string>
     <string name="android_log_title">Καταγραφή συμβάντων Android</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Εμφάνιση καταγραφής Android</string>
     <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_syncthing_log">Εμφάνιση καταγραφής Universal Sync</string>
+    <string name="view_universalsync_log">Εμφάνιση καταγραφής Universal Sync</string>
     <string name="retrieving_logs">Ανάκτηση καταγραφών…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Κοινή χρήση</string>
@@ -233,11 +233,11 @@
     </plurals>
     <!-- Sub Folder title -->
     <string name="sub_folder">Υποφάκελος</string>
-    <!-- Universal SyncService -->
+    <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Έξοδος</string>
-    <!-- Title of the notification shown while syncthing is running and enabled -->
-    <string name="syncthing_active">Το Universal Sync εκτελείται</string>
+    <!-- Title of the notification shown while Universal Sync is running and enabled -->
+    <string name="universalsync_active">Το Universal Sync εκτελείται</string>
     <string name="config_create_failed">Αδυναμία δημιουργίας αρχείου ρυθμίσεων</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-photos</string>

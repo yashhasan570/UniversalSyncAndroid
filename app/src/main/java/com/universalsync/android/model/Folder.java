@@ -13,8 +13,8 @@ import java.util.Map;
 
 /**
  * Sources:
- * - https://github.com/syncthing/syncthing/tree/master/lib/config
- * - https://github.com/syncthing/syncthing/blob/master/lib/config/folderconfiguration.go
+ * - https://github.com/universalsync/universalsync/tree/master/lib/config
+ * - https://github.com/universalsync/universalsync/blob/master/lib/config/folderconfiguration.go
  */
 public class Folder {
 
@@ -30,7 +30,7 @@ public class Folder {
     private List<SharedWithDevice> devices = new ArrayList<>();
     /**
      * Folder rescan interval defaults to 3600s as it is the default in
-     * syncthing when the file watcher is enabled and a new folder is created.
+     * universalsync when the file watcher is enabled and a new folder is created.
      */
     public int rescanIntervalS = 3600;
     public boolean ignorePerms = true;
@@ -68,7 +68,7 @@ public class Folder {
     public String copyRangeMethod = "standard";
 
     // Since v1.9.0
-    // see https://github.com/syncthing/syncthing/commit/932d8c69de9e34824ecc4d5de0a482dfdb71936e
+    // see https://github.com/universalsync/universalsync/commit/932d8c69de9e34824ecc4d5de0a482dfdb71936e
     public Boolean caseSensitiveFS = false;
 
     // Since v1.21.0

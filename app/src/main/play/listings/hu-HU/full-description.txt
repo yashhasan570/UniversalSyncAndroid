@@ -24,15 +24,15 @@ A fork céljai:
 * A stratégia és a kiadási gyakoriság eltérő
 * A fork csak az Android felhasználói felületet tartalmazó wrappert szólítja meg.
 
-Weboldal: https://github.com/universalsync/syncthing-android
+Weboldal: https://github.com/universalsync/Universal Sync Android
 
-Forráskód: https://github.com/universalsync/syncthing-android
+Forráskód: https://github.com/universalsync/Universal Sync Android
 
-Hogyan ír a Universal Sync külső SD-kártyára: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Hogyan ír a Universal Sync külső SD-kártyára: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ és hasznos leírások: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, FAQ és hasznos leírások: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Hibajelentés: https://github.com/universalsync/syncthing-android/issues
+Hibajelentés: https://github.com/universalsync/Universal Sync Android/issues
 
 Kérem, segítsen
-Fordítás: https://hosted.weblate.org/projects/syncthing-fork/app/
+Fordítás: https://hosted.weblate.org/projects/Universal Sync/app/

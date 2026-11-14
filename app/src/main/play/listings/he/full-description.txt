@@ -13,15 +13,15 @@ Universal Sync-Fork עבור אנדרואיד הוא עטיפה עבור Univers
 
 נא לפנות לעזרה בפורום או ביישומי מדיה חברתית קודם לפני יצירת בעיות בעוקב. נא לזכור כי Universal Sync-Fork נולד כעניין אישי כדי לעזור למשפחה ולחברים להשתמש ב-Universal Sync באנדרואיד. היישום לא היה מכוון על יותר מ-100,000 המשתמשים הנוכחיים למרות שהתוצאות משותפות איתך ועם הקהילה. תודה לך.
 
-אתר: https://github.com/universalsync/syncthing-android
+אתר: https://github.com/universalsync/Universal Sync Android
 
-קוד מקור: https://github.com/universalsync/syncthing-android
+קוד מקור: https://github.com/universalsync/Universal Sync Android
 
-איך Universal Sync כותב לכרטיס SD חיצוני: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+איך Universal Sync כותב לכרטיס SD חיצוני: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-אתר שיתופי, שאלות נוספות ומאמרים מועילים: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+אתר שיתופי, שאלות נוספות ומאמרים מועילים: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-בעיות: https://github.com/universalsync/syncthing-android/issues
+בעיות: https://github.com/universalsync/Universal Sync Android/issues
 
 נא לעזור עם
-תרגום: https://hosted.weblate.org/projects/syncthing-fork/app/
+תרגום: https://hosted.weblate.org/projects/Universal Sync/app/

@@ -13,15 +13,15 @@ Android 版 Universal Sync-Fork 是 Universal Sync 的包装器，它提供 Andr
 
 请先在论坛和/或社交媒体应用上寻求帮助，再在问题跟踪器中创建问题。请记住，Universal Sync-Fork 最初只是源于个人兴趣，旨在帮助家人和朋友在 Android 设备上使用 Universal Sync。尽管目前其成果已与您及整个社区共享，但它并非旨在面向目前超过十万的用户群体。谢谢
 
-网站：https://github.com/universalsync/syncthing-android
+网站：https://github.com/universalsync/Universal Sync Android
 
-源代码：https://github.com/universalsync/syncthing-android
+源代码：https://github.com/universalsync/Universal Sync Android
 
-Universal Sync 如何写入外部 SD 卡：https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Universal Sync 如何写入外部 SD 卡：https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki、常见问题解答和有用的文章：https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki、常见问题解答和有用的文章：https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-问题反馈：https://github.com/universalsync/syncthing-android/issues
+问题反馈：https://github.com/universalsync/Universal Sync Android/issues
 
 请帮助
-翻译：https://hosted.weblate.org/projects/syncthing-fork/app/
+翻译：https://hosted.weblate.org/projects/Universal Sync/app/

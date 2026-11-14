@@ -14,25 +14,25 @@ Universal Sync-Fork cho Android là một wrapper cho Universal Sync cung cấp 
 
 Mục tiêu của fork này:
 * Phát triển và thử các cải thiện cùng với cộng đồng.
-* Phát hành wrapper thường xuyên hơn để phát hiện và sửa lỗi do các thay đổi trong mô đun con syncthing gây ra
+* Phát hành wrapper thường xuyên hơn để phát hiện và sửa lỗi do các thay đổi trong mô đun con Universal Sync gây ra
 * Làm cho các cải thiện có thể thiết lập được trong giao diện, người dùng nên có thể bật và tắt chúng
 
 So sánh giữa dự án gốc và fork tại thời điểm viết:
-* Cả hai chứa tệp nhị phân syncthing được xây dựng từ mã nguồn chính thức tại GitHub
-* Chức năng và độ tin cậy của việc đồng bộ tùy thuộc vào phiên bản mô đun con tệp nhị phân syncthing.
+* Cả hai chứa tệp nhị phân Universal Sync được xây dựng từ mã nguồn chính thức tại GitHub
+* Chức năng và độ tin cậy của việc đồng bộ tùy thuộc vào phiên bản mô đun con tệp nhị phân Universal Sync.
 * Fork hòa hợp với dự án gốc và thỉnh thoảng họ chấp nhận các cải thiện của tôi.
 * Chiến thuật và tần suất phát hành là khác nhau
 * Chỉ có wrapper chứa giao diện Android được fork này giải quyết.
 
-Trang web: https://github.com/universalsync/syncthing-android
+Trang web: https://github.com/universalsync/Universal Sync Android
 
-Mã nguồn: https://github.com/universalsync/syncthing-android
+Mã nguồn: https://github.com/universalsync/Universal Sync Android
 
-Cách Universal Sync ghi vào thẻ SD ngoài: https://github.com/universalsync/syncthing-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Cách Universal Sync ghi vào thẻ SD ngoài: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, câu hỏi thường gặp và bài viết hữu ích: https://github.com/universalsync/syncthing-android/tree/main/wiki#readme
+Wiki, câu hỏi thường gặp và bài viết hữu ích: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
 
-Các vấn đề: https://github.com/universalsync/syncthing-android/issues
+Các vấn đề: https://github.com/universalsync/Universal Sync Android/issues
 
 Vui lòng giúp đỡ việc
-Phiên dịch: https://hosted.weblate.org/projects/syncthing-fork/app/
+Phiên dịch: https://hosted.weblate.org/projects/Universal Sync/app/
