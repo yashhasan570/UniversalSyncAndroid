@@ -15,7 +15,7 @@ PLATFORM_DIRS = {
 
 # Leave empty to auto-detect version by 'git describe'.
 FORCE_DISPLAY_SYNCTHING_VERSION = ''
-FILENAME_UNIVERSALSYNC_BINARY = 'libuniversalsyncnative.so'
+FILENAME_UNIVERSALSYNC_BINARY = 'libsyncthingnative.so'
 
 BUILD_TARGETS = [
     {

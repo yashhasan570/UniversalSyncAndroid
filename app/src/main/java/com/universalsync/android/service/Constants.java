@@ -13,7 +13,7 @@ public class Constants {
     // Always set ENABLE_TEST_DATA to false before building debug or release APK's.
     public static final Boolean ENABLE_TEST_DATA = false;
 
-    public static final String FILENAME_UNIVERSALSYNC_BINARY        = "libuniversalsyncnative.so";
+    public static final String FILENAME_UNIVERSALSYNC_BINARY        = "libsyncthingnative.so";
     public static final String FILENAME_STIGNORE                = ".stignore";
     public static final String FILENAME_STFOLDER                = ".stfolder";
     public static final String FOLDER_NAME_STVERSIONS           = ".stversions";
@@ -253,7 +253,7 @@ public class Constants {
     }
 
     /**
-     * Get libuniversalsyncnative.so absolute path and filename.
+     * Get libsyncthingnative.so absolute path and filename.
      */
     public static File getUniversalSyncBinary(Context context) {
         return new File(context.getApplicationInfo().nativeLibraryDir, FILENAME_UNIVERSALSYNC_BINARY);
