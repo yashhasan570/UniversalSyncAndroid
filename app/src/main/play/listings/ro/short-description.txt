@@ -1,0 +1,1 @@
+Wrapper for Universal Sync - Sincronizare de fișiere în mod deschis și descentralizat

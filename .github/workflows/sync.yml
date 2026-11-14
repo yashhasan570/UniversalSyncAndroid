@@ -1,0 +1,35 @@
+name: Sync from upstream
+
+on:
+  schedule:
+    - cron: "10 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Clone upstream
+        run: git clone --depth 1 https://github.com/Catfriend1/syncthing-android /tmp/upstream
+
+      - name: Sync rebranded source
+        run: |
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'scripts/' \
+            /tmp/upstream/ ./
+
+      - name: Rebrand
+        run: python3 scripts/migrate.py
+
+      - name: Commit and push
+        run: |
+          git config user.name yashhasan570
+          git config user.email hasankhalid700570@gmail.com
+          git add -A
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Sync rebranded source from upstream (Universal Sync Android)"
+          git push

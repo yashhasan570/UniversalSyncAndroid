@@ -1,0 +1,8 @@
+### Fixes
+- fix(Universal SyncRunnable): only acquire MulticastLock when local discovery is on @Elliotisnt
+- fix(RestApi): skip the conflict file walk while the folder sequence is unchanged @Elliotisnt
+
+### Other
+- go 1.27.3
+- updated dependencies
+- updated translations
