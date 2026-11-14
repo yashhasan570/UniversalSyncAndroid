@@ -17,8 +17,8 @@ public class SystemStatus {
     public double cpuPercent;
 
     // Example:
-    //  connectionServiceStatus: {dynamic+https://relays.universalsync.net/endpoint: {error: null, lanAddresses: [], wanAddresses: []},…}
-    //      dynamic+https://relays.universalsync.net/endpoint: {error: null, lanAddresses: [], wanAddresses: []}
+    //  connectionServiceStatus: {dynamic+https:///endpoint: {error: null, lanAddresses: [], wanAddresses: []},…}
+    //      dynamic+https:///endpoint: {error: null, lanAddresses: [], wanAddresses: []}
     //      quic://0.0.0.0:22000: {error: null, lanAddresses: ["quic://0.0.0.0:22000"],…}
     //      tcp://0.0.0.0:22000: {error: null, lanAddresses: ["tcp://0.0.0.0:22000"], wanAddresses: ["tcp://0.0.0.0:22000"]}
     public Map<String, SystemStatusConnectionServiceStatusElement> connectionServiceStatus;
@@ -30,7 +30,7 @@ public class SystemStatus {
     //  discoveryErrors: {,…}
     //      IPv4 local: "listen udp4 :21027: bind: Normalerweise darf jede Socketadresse (Protokoll, Netzwerkadresse oder Anschluss) nur jeweils einmal verwendet werden."
     //      IPv6 local: "listen udp6 [ff12::8384]:21027: bind: Der Zugriff auf einen Socket war aufgrund der Zugriffsrechte des Sockets unzulässig."
-    //      global@https://discovery-v6.universalsync.net/v2/: "Post https://discovery-v6.universalsync.net/v2/: dial tcp: lookup discovery-v6.universalsync.net: no such host"
+    //      global@https:///v2/: "Post https:///v2/: dial tcp: lookup : no such host"
     public Map<String, String> discoveryErrors;
 
     // Example: 5

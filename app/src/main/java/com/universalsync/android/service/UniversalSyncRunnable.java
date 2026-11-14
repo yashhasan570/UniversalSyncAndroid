@@ -84,7 +84,7 @@ public class UniversalSyncRunnable implements Runnable {
         ((UniversalSyncApp) context.getApplicationContext()).component().inject(this);
         ENABLE_VERBOSE_LOG = AppPrefs.getPrefVerboseLog(mPreferences);
         mContext = context;
-        // Example: mUniversalSyncBinary="/data/app/${applicationId}-8HsN-IsVtZXc8GrE5-Hepw==/lib/x86/libsyncthingnative.so"
+        // Example: mUniversalSyncBinary="/data/app/${applicationId}-8HsN-IsVtZXc8GrE5-Hepw==/lib/x86/"
         mUniversalSyncBinary = Constants.getUniversalSyncBinary(mContext);
         mUniversalSyncLogFile = Constants.getUniversalSyncLogFile(mContext);
 
@@ -450,7 +450,7 @@ public class UniversalSyncRunnable implements Runnable {
     }
 
     private Process setupAndLaunch(HashMap<String, String> env) throws IOException, ExecutableNotFoundException {
-        // Check if "libsyncthingnative.so" exists.
+        // Check if "" exists.
         if (mCommand.length > 0) {
             File libUniversal Sync = new File(mCommand[0]);
             if (!libUniversal Sync.exists()) {

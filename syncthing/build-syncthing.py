@@ -14,8 +14,8 @@ PLATFORM_DIRS = {
 }
 
 # Leave empty to auto-detect version by 'git describe'.
-FORCE_DISPLAY_SYNCTHING_VERSION = ''
-FILENAME_UNIVERSALSYNC_BINARY = 'libsyncthingnative.so'
+FORCE_DISPLAY_UNIVERSAL SYNC_VERSION = ''
+FILENAME_UNIVERSALSYNC_BINARY = ''
 
 BUILD_TARGETS = [
     {
@@ -456,8 +456,8 @@ subprocess.check_call([
 
 subprocess.check_call([go_bin, 'env', '-w', 'GOFLAGS=-buildvcs=false'], cwd=universalsync_dir)
 
-if FORCE_DISPLAY_SYNCTHING_VERSION:
-    universalsyncVersion = FORCE_DISPLAY_SYNCTHING_VERSION.replace("rc", "preview")
+if FORCE_DISPLAY_UNIVERSAL SYNC_VERSION:
+    universalsyncVersion = FORCE_DISPLAY_UNIVERSAL SYNC_VERSION.replace("rc", "preview")
 else:
     print('Invoking git describe ...')
     universalsyncVersion = subprocess.check_output([
