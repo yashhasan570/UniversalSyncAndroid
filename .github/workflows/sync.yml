@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "10 5 * * *"
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   sync:
@@ -33,3 +35,4 @@ jobs:
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Sync rebranded source from upstream (Universal Sync Android)"
           git push
+
