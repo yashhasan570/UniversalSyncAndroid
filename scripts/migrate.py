@@ -28,7 +28,10 @@ def main():
     changed = 0
     for dirpath, dirnames, filenames in os.walk(ROOT):
         rel = os.path.relpath(dirpath, ROOT).replace(os.sep, '/')
-        dirnames[:] = [d for d in dirnames if rel.split('/')[0] not in SKIP]
+        if rel == '.':
+            dirnames[:] = [d for d in dirnames if d not in SKIP]
+        elif rel.split('/')[0] in SKIP:
+            dirnames[:] = []
         for fn in filenames:
             p = Path(dirpath) / fn
             if p.suffix.lower() not in TEXT_EXTS: continue
