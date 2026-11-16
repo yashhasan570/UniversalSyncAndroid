@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parent.parent
 #  - lowercase 'universal sync' REST-API + protocol strings kept for core compatibility
 ANCHORS = [
     '*.syncthing.net',
-]REPL = [
+]
+
+REPL = [
     ('SyncthingNative', 'UniversalSyncNative'),
     ('SYNCTHING', 'UNIVERSAL SYNC'),
     ('Syncthing', 'UniversalSync'),
@@ -21,7 +23,7 @@ ANCHORS = [
 def main():
     TEXT_EXTS = {'.java', '.kt', '.kts', '.xml', '.md', '.txt', '.sh', '.py', '.cmd',
                  '.gradle', '.toml', '.properties', '.yml', '.yaml', '.json', '.mk', '.mk.bak'}
-    SKIP = {'.git', 'scripts', 'node_modules'}
+    SKIP = {'.git', '.github', 'scripts', 'node_modules'}
     changed = 0
     for dirpath, dirnames, filenames in os.walk(ROOT):
         rel = os.path.relpath(dirpath, ROOT).replace(os.sep, '/')
