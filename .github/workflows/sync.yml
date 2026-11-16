@@ -27,8 +27,7 @@ jobs:
       - name: Rebrand
         run: |
           pip3 install --quiet pillow
-        run: python3 scripts/migrate.py
-
+          python3 scripts/migrate.py
       - name: Commit and push
         run: |
           git config user.name yashhasan570
