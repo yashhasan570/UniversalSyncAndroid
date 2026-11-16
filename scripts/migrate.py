@@ -10,15 +10,12 @@ ROOT = Path(__file__).resolve().parent.parent
 #  -  /  (core build + ABI artifact names)
 #  - lowercase 'universal sync' REST-API + protocol strings kept for core compatibility
 ANCHORS = [
-    '', '', '',
-    '', '', '',
-    '', '', '',
-]
-REPL = [
-    ('UniversalSyncNative', 'UniversalSyncNative'),
-    ('UNIVERSAL SYNC', 'UNIVERSAL SYNC'),
-    ('UniversalSync', 'UniversalSync'),
-    ('universal sync', 'universal sync'),
+    '*.syncthing.net',
+]REPL = [
+    ('SyncthingNative', 'UniversalSyncNative'),
+    ('SYNCTHING', 'UNIVERSAL SYNC'),
+    ('Syncthing', 'UniversalSync'),
+    ('syncthing', 'universal sync'),
 ]
 
 def main():
