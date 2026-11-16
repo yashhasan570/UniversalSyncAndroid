@@ -25,6 +25,8 @@ jobs:
             /tmp/upstream/ ./
 
       - name: Rebrand
+        run: |
+          pip3 install --quiet pillow
         run: python3 scripts/migrate.py
 
       - name: Commit and push
