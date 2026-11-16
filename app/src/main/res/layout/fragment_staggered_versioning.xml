@@ -25,7 +25,7 @@
 
         <fragment
             android:id="@+id/fragment"
-            android:name="com.universalsync.android.fragments.NumberPickerFragment"
+            android:name="com.nutomic.universalSyncandroid.fragments.NumberPickerFragment"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:tag="numberpicker_staggered_versioning"
@@ -52,7 +52,7 @@
 
         <TextView
             android:id="@+id/directoryTextView"
-            style="@style/Widget.Universal Sync.TextView.Label.Details"
+            style="@style/Widget.UniversalSync.TextView.Label.Details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:drawableLeftCompat="@drawable/baseline_folder_24"

@@ -1,38 +1,38 @@
-Versió alternativa de l'embolcall Universal Sync-Android per al Universal Sync que incorpora grans millores com:
+Versió alternativa de l'embolcall UniversalSync-Android per al UniversalSync que incorpora grans millores com:
 * Folder, device and overall sync progress can easily be read off the UI.
-* "Universal Sync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private Universal Sync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
+* "UniversalSync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private UniversalSync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
 * "Sync every hour" to save even more battery
 * Es poden establir condicions de sincronització individuals per dispositiu i carpeta
 * Interfície gràfica de canvis recents, clic per obrir fitxers.
-* Changes to folder and device config can be made regardless if Universal Sync is running or not
-* UI explains why Universal Sync is running or not.
+* Changes to folder and device config can be made regardless if UniversalSync is running or not
+* UI explains why universal sync is running or not.
 * Arreglat el problema amb el consum de bateria.
-* Discover other Universal Sync devices on the same network and easily add them.
+* Discover other UniversalSync devices on the same network and easily add them.
 * Supports two-way synchronization on external SD card since Android 11.
 
-El Universal Sync-Fork per Android és un embolcall per al Universal Sync que proporciona una interfície Android enlloc de la interfície web integrada amb el Universal Sync's. El Universal Sync substitueix els serveis propietaris de sincronització i d'emmagatzematge en el núvol per una alternativa oberta, confiable i descentralitzada. Les vostres dades són només vostres, i heu de poder triar on voleu que s'emmagatzemin, si es comparteixen amb tercers i com es transmeten per Internet.
+El UniversalSync-Fork per Android és un embolcall per al UniversalSync que proporciona una interfície Android enlloc de la interfície web integrada amb el UniversalSync's. El UniversalSync substitueix els serveis propietaris de sincronització i d'emmagatzematge en el núvol per una alternativa oberta, confiable i descentralitzada. Les vostres dades són només vostres, i heu de poder triar on voleu que s'emmagatzemin, si es comparteixen amb tercers i com es transmeten per Internet.
 
 Objectius de la versió alternativa:
 * Desenvolupar i provar millores conjuntament amb la comunitat.
-* Publicar l'aplicació amb més freqüència per identificar i resoldre errors causats per canvis en el submòdul del Universal Sync
+* Publicar l'aplicació amb més freqüència per identificar i resoldre errors causats per canvis en el submòdul del universal sync
 * Fer les millores configurables des de la interfície, els usuaris han de poder activar-les i desactivar-les
 
 Comparativa entre la versió oficial i l'alternativa en el moment d'escriure això:
-* Both contain the Universal Sync binary built from the official source at GitHub
-* La funcionalitat i fiabilitat de la sincronització depen de la versió del submòdul binari del Universal Sync
+* Both contain the universal sync binary built from the official source at GitHub
+* La funcionalitat i fiabilitat de la sincronització depen de la versió del submòdul binari del universal sync
 * La versió alternativa es porta bé amb la oficial i a vegades recullen les millores que hi faig.
 * L'estratègia i la freqüència de publicació és diferent
 * La versió alternativa només s'encarrega de l'embolcall que conté la interfície d'usuari.
 
-Pàgina web: https://github.com/universalsync/Universal Sync Android
+Pàgina web: https://github.com/researchxxl/universal sync-android
 
-Codi font: https://github.com/universalsync/Universal Sync Android
+Codi font: https://github.com/researchxxl/universal sync-android
 
-How Universal Sync writes to external SD card: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+How UniversalSync writes to external SD card: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ and helpful articles: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+Wiki, FAQ and helpful articles: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-Problemes: https://github.com/universalsync/Universal Sync Android/issues
+Problemes: https://github.com/researchxxl/universal sync-android/issues
 
 Please help with the
-Traducció: https://hosted.weblate.org/projects/Universal Sync/app/
+Traducció: https://hosted.weblate.org/projects/universal sync-fork/app/

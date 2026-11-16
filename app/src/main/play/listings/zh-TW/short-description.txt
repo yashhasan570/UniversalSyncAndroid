@@ -1,1 +1,1 @@
-Wrapper for Universal Sync - 開放靠及去中心化的檔案同步
+Wrapper for UniversalSync - 開放靠及去中心化的檔案同步

@@ -101,6 +101,6 @@
     <issue id="VectorPath" severity="ignore" />
     <!-- Skip proceed onReceivedSslError -->
     <issue id="WebViewClientOnReceivedSslError" severity="ignore">
-        <ignore path="src/main/java/com/universalsync/UniversalSyncandroid/activities/WebViewActivity.java" />
+        <ignore path="src/main/java/com/nutomic/universalSyncandroid/activities/WebViewActivity.java" />
     </issue>
 </lint>

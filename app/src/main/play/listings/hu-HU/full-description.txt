@@ -1,38 +1,38 @@
-Ez a Universal Sync-Android wrapper forkja a Universal Sync számára, amely jelentős fejlesztéseket hordoz, mint például:
+Ez a UniversalSync-Android wrapper forkja a UniversalSync számára, amely jelentős fejlesztéseket hordoz, mint például:
 * A mappa, az eszköz és a teljes szinkronizálás folyamata könnyen leolvasható a felhasználói felületről.
-* "Universal Sync Camera" - egy opcionális funkció (engedély szükséges a kamera használatához), ahol fényképeket készíthetsz barátaiddal, partnereddel, ... két telefonnal egyetlen közös és privát Universal Sync mappába. Felhőben tárolásra nincs szükség hozzá. - A FUNKCIÓ JELENLEG BÉTA ÁLLAPOTBAN VAN -
+* "UniversalSync Camera" - egy opcionális funkció (engedély szükséges a kamera használatához), ahol fényképeket készíthetsz barátaiddal, partnereddel, ... két telefonnal egyetlen közös és privát UniversalSync mappába. Felhőben tárolásra nincs szükség hozzá. - A FUNKCIÓ JELENLEG BÉTA ÁLLAPOTBAN VAN -
 * "Óránkénti szinkronizálás", hogy még több akkumulátorhasználatot takarítson meg
 * Egyedi szinkronizálási feltételek állíthatók be eszközönként és mappánként.
 * Legutóbbi változások a felhasználói felületben - kattintson a fájlok megnyitásához.
-* A mappák és eszközök konfigurációjának módosítása attól függetlenül elvégezhető, hogy a Universal Sync fut-e vagy sem.
+* A mappák és eszközök konfigurációjának módosítása attól függetlenül elvégezhető, hogy a UniversalSync fut-e vagy sem.
 * A felhasználói felület megmagyarázza, hogy a szinkronizálás miért fut vagy miért nem.
 * Az "akkumulátor-evő" probléma javítva.
-* Felfedezhet más Universal Sync eszközöket ugyanazon a hálózaton, és könnyen hozzáadhatja őket.
+* Felfedezhet más UniversalSync eszközöket ugyanazon a hálózaton, és könnyen hozzáadhatja őket.
 * Támogatja a kétirányú szinkronizálást külső SD-kártyán az Android 11 óta.
 
-A Universal Sync-Fork for Android egy wrapper a Universal Sync számára, amely Android felhasználói felületet biztosít a Universal Sync beépített webes felhasználói felülete helyett. A Universal Sync a jogvédett szinkronizálási és felhőszolgáltatásokat nyílt, megbízható és decentralizált megoldással váltja fel. Az Ön adatai csakis az Ön adatai, joga van megválasztani, hogy hol tárolja őket, megosztja-e valamilyen harmadik féllel, és hogyan továbbítja az interneten keresztül.
+A UniversalSync-Fork for Android egy wrapper a UniversalSync számára, amely Android felhasználói felületet biztosít a UniversalSync beépített webes felhasználói felülete helyett. A UniversalSync a jogvédett szinkronizálási és felhőszolgáltatásokat nyílt, megbízható és decentralizált megoldással váltja fel. Az Ön adatai csakis az Ön adatai, joga van megválasztani, hogy hol tárolja őket, megosztja-e valamilyen harmadik féllel, és hogyan továbbítja az interneten keresztül.
 
 A fork céljai:
 * A fejlesztések és azok kipróbálása a közösséggel együttműködve.
-* A wrapper gyakoribb kiadása a Universal Sync almodul változásai által okozott hibák azonosítása és javítása érdekében.
+* A wrapper gyakoribb kiadása a UniversalSync almodul változásai által okozott hibák azonosítása és javítása érdekében.
 * A fejlesztéseket konfigurálhatóvá kell tenni a felhasználói felületen, a felhasználó számára ezeknek be- és kikapcsolhatónak kell lenniük.
 
 Összehasonlítás a fő fejlesztés és a fork között a jelen írás idején:
-* Mindkettő a GitHub-on található hivatalos forrásból épített Universal Sync bináris változatot tartalmazza.
-* A szinkronizálás funkcionalitása és megbízhatósága a Universal Sync bináris almodul verziójától függ.
+* Mindkettő a GitHub-on található hivatalos forrásból épített UniversalSync bináris változatot tartalmazza.
+* A szinkronizálás funkcionalitása és megbízhatósága a UniversalSync bináris almodul verziójától függ.
 * A fork jól kijön a fő fejlesztési iránnyal, és néha ők is átveszik az én fejlesztéseimet.
 * A stratégia és a kiadási gyakoriság eltérő
 * A fork csak az Android felhasználói felületet tartalmazó wrappert szólítja meg.
 
-Weboldal: https://github.com/universalsync/Universal Sync Android
+Weboldal: https://github.com/researchxxl/universal sync-android
 
-Forráskód: https://github.com/universalsync/Universal Sync Android
+Forráskód: https://github.com/researchxxl/universal sync-android
 
-Hogyan ír a Universal Sync külső SD-kártyára: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Hogyan ír a UniversalSync külső SD-kártyára: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ és hasznos leírások: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+Wiki, FAQ és hasznos leírások: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-Hibajelentés: https://github.com/universalsync/Universal Sync Android/issues
+Hibajelentés: https://github.com/researchxxl/universal sync-android/issues
 
 Kérem, segítsen
-Fordítás: https://hosted.weblate.org/projects/Universal Sync/app/
+Fordítás: https://hosted.weblate.org/projects/universal sync-fork/app/

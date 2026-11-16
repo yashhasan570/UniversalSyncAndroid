@@ -1,10 +1,10 @@
 ### Use your own HTTPS certificate for the Web GUI
 
-By default, Universal Sync creates its own **self-signed** certificate for the local Web GUI / API, and
+By default, UniversalSync creates its own **self-signed** certificate for the local Web GUI / API, and
 the app trusts exactly that certificate. If you'd rather use a certificate signed by your own
 Certificate Authority (CA) — for example one issued by a private CA such as
 [Smallstep](https://smallstep.com/), an internal company CA, or a public CA — you can replace the
-built-in certificate and the app will still be able to talk to Universal Sync.
+built-in certificate and the app will still be able to talk to UniversalSync.
 
 This is an advanced, optional setup. The default self-signed certificate is perfectly secure for
 local use, so only do this if you specifically need a CA-signed certificate.
@@ -15,8 +15,8 @@ local use, so only do this if you specifically need a CA-signed certificate.
 
 You will need:
 
-1. **A certificate and its private key** for the Universal Sync Web GUI, in PEM format. The private key
-   must be **unencrypted** — Universal Sync cannot read a password-protected key, and the app will refuse
+1. **A certificate and its private key** for the UniversalSync Web GUI, in PEM format. The private key
+   must be **unencrypted** — UniversalSync cannot read a password-protected key, and the app will refuse
    one rather than let you apply it. If yours is encrypted, decrypt it first:
 
    ```
@@ -33,8 +33,8 @@ You will need:
    install here.
 
 > The hostname in the certificate does **not** matter. The app always connects to your local
-> Universal Sync on the loopback address (`127.0.0.1`), and it does not require the certificate to be
-> issued for `127.0.0.1`. (If you also use Universal Sync's "Remote access" feature from other devices,
+> UniversalSync on the loopback address (`127.0.0.1`), and it does not require the certificate to be
+> issued for `127.0.0.1`. (If you also use UniversalSync's "Remote access" feature from other devices,
 > add the relevant hostnames/IPs to the certificate's SAN for those devices — that is independent
 > of the app on the phone.)
 
@@ -43,10 +43,10 @@ You will need:
 ### Method A — in the app (recommended)
 
 The app has a built-in screen that validates your certificate before applying it and restarts
-Universal Sync for you, rolling back automatically if anything goes wrong.
+UniversalSync for you, rolling back automatically if anything goes wrong.
 
 1. Install your **root CA** on the phone if you haven't already (see *Before you start*, step 3).
-2. In the app, go to **Settings → Universal Sync Options → Web GUI → Custom HTTPS certificate**.
+2. In the app, go to **Settings → UniversalSync Options → Web GUI → Custom HTTPS certificate**.
 3. Tap **Select certificate (.pem)** and choose your certificate file (leaf + full chain), then
    **Select private key (.pem)** and choose the matching key. (If you pick them in the wrong order,
    the app sorts it out automatically.)
@@ -56,12 +56,12 @@ Universal Sync for you, rolling back automatically if anything goes wrong.
      device trusts)
    - **Validity period** — not expired / not yet valid.
    - **Private key** — does the key match the certificate?
-5. Tap **Apply certificate**. Universal Sync restarts with the new certificate, and the app then confirms
-   that the certificate actually in use is the one you supplied. If Universal Sync didn't come back
+5. Tap **Apply certificate**. UniversalSync restarts with the new certificate, and the app then confirms
+   that the certificate actually in use is the one you supplied. If UniversalSync didn't come back
    online, or it rejected the certificate and generated its own instead, the previous certificate is
    restored automatically and the reason stays on screen with a link to this page.
 
-To go back to the default, use **Reset to auto-generated certificate** on the same screen — Universal Sync
+To go back to the default, use **Reset to auto-generated certificate** on the same screen — UniversalSync
 creates a fresh self-signed certificate.
 
 > This screen only appears when the Web UI is served over HTTPS (it is on all modern Android
@@ -75,8 +75,8 @@ Use this if you prefer editing files directly.
 
 1. In the app, go to **Settings → Import and Export** and **export** your configuration. This
    creates `config.zip` (by default at
-   `/storage/emulated/0/backups/Universal Sync/config.zip`). See also
-   [How can I access the config and key files?](Access-Universal Sync-config-and-key-files.md).
+   `/storage/emulated/0/backups/universal sync/config.zip`). See also
+   [How can I access the config and key files?](Access-UniversalSync-config-and-key-files.md).
 2. Open `config.zip` and replace these two files with your own:
    - `https-cert.pem` — your certificate **including the full chain** (leaf + intermediate(s)).
    - `https-key.pem` — the matching **private key**.
@@ -86,14 +86,14 @@ Use this if you prefer editing files directly.
    layout), and copy it back to the export location.
 4. Install your **root CA** on the phone if you haven't already (see *Before you start*, step 3).
 5. In the app, go to **Settings → Import and Export** and **import** the configuration.
-6. Start/restart Universal Sync. The app should now connect normally, and the local Web GUI should open
+6. Start/restart UniversalSync. The app should now connect normally, and the local Web GUI should open
    using your certificate.
 
 ---
 
 ### If the app can't connect after the change
 
-If Universal Sync is clearly running and syncing, you can open the Web GUI in a normal browser, but the
+If UniversalSync is clearly running and syncing, you can open the Web GUI in a normal browser, but the
 **app itself** never finishes loading (it shows your folders/devices but stays stuck, or the API
 seems unreachable), check the following — almost always it's one of these:
 
@@ -104,7 +104,7 @@ seems unreachable), check the following — almost always it's one of these:
   certificate(s) after the leaf, not just the leaf on its own.
 - **The wrong key was used.** `https-key.pem` must be the private key that matches the leaf
   certificate in `https-cert.pem`.
-- **The key is encrypted.** Universal Sync cannot read a password-protected key. Note what it does in that
+- **The key is encrypted.** UniversalSync cannot read a password-protected key. Note what it does in that
   case: rather than failing, it quietly generates a *new self-signed* certificate and starts with
   that, so the Web GUI keeps working and your certificate is simply gone. Method A detects this and
   puts your previous certificate back; with Method B there is nothing to warn you.
@@ -121,14 +121,14 @@ apply a certificate the app wouldn't be able to trust, so it's the easier path i
 
 ### Good to know (security & privacy)
 
-- The app only ever talks to the Universal Sync instance **on the same phone**, over the loopback
+- The app only ever talks to the UniversalSync instance **on the same phone**, over the loopback
   interface (`127.0.0.1`). Your API key and configuration never leave the device for these calls,
   even if you enable "Remote access".
-- The app first checks for Universal Sync's built-in self-signed certificate. Only if that doesn't match
+- The app first checks for UniversalSync's built-in self-signed certificate. Only if that doesn't match
   does it fall back to the certificates trusted by Android — including the CA **you** installed.
   This keeps the default setup unchanged for everyone who doesn't use a custom certificate.
 - Trusting your installed CA for the app is scoped to the **local** connection only; it does not
-  change how Universal Sync verifies the other devices you sync with (that uses Universal Sync's own
+  change how UniversalSync verifies the other devices you sync with (that uses UniversalSync's own
   device-ID-based security and is unaffected).
 - Reverting is easy: use **Reset to auto-generated certificate** (Method A), import an unmodified
   `config.zip`, and the app goes back to the default self-signed certificate.

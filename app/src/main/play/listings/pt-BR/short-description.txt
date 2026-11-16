@@ -1,1 +1,1 @@
-Pacote para o Universal Sync - Sincronização aberta e descentralizada de arquivos
+Pacote para o UniversalSync - Sincronização aberta e descentralizada de arquivos

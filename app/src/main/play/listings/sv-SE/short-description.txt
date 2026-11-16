@@ -1,1 +1,1 @@
-Wrapper for Universal Sync - Öppen, pålitlig och decentraliserad filsynkronisering
+Wrapper for UniversalSync - Öppen, pålitlig och decentraliserad filsynkronisering

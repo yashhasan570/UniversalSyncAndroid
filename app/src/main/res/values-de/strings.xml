@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Universal Sync-Fork</string>
+    <string name="app_name">UniversalSync-Fork</string>
     <string name="app_description">Eine offene, vertrauenswürdige und dezentralisierte Anwendung zur Dateisynchronisation.</string>
     <!-- FirstStartActivity -->
     <!-- Title for dialog displayed on first start -->
-    <string name="welcome_title">Willkommen bei Universal Sync für Android</string>
+    <string name="welcome_title">Willkommen bei UniversalSync für Android</string>
     <!-- Welcome wizard -->
     <!-- Slide "Introduction" -->
     <string name="introduction">Einführung</string>
-    <string name="welcome_text">Universal Sync ist eine quelloffene Software zur Dateisynchronisierung. Um Daten mit anderen Geräten zu teilen, müssen Sie deren eindeutige Geräte-IDs zur Geräteliste hinzufügen. Danach können Sie festlegen, welche Ordner mit welchen Geräten geteilt werden. \n \nBitte melden Sie auftretende Probleme via GitHub.</string>
+    <string name="welcome_text">UniversalSync ist eine quelloffene Software zur Dateisynchronisierung. Um Daten mit anderen Geräten zu teilen, müssen Sie deren eindeutige Geräte-IDs zur Geräteliste hinzufügen. Danach können Sie festlegen, welche Ordner mit welchen Geräten geteilt werden. \n \nBitte melden Sie auftretende Probleme via GitHub.</string>
     <!-- Slide "Storage Permission" -->
     <string name="storage_permission_title">Speicher-Berechtigung</string>
-    <string name="storage_permission_desc">Universal Sync muss auf den Speicher zugreifen können, um Dateien zu synchronisieren.</string>
+    <string name="storage_permission_desc">UniversalSync muss auf den Speicher zugreifen können, um Dateien zu synchronisieren.</string>
     <string name="dialog_all_files_access_not_supported">Das Gerät unterstützt keinen uneingeschränkten Dateizugriff</string>
     <!-- Slide "Ignore battery optimizations" -->
     <string name="ignore_doze_permission_title">Akku-Optimierung</string>
     <string name="ignore_doze_permission_os_notice">Es ist bekannt, dass Android TVs die App gelegentlich beenden, wenn sie im Hintergrund ausgeführt wird. Eine Lösung ist im Wiki unter „%1$s/%2$s“ verfügbar.</string>
-    <string name="ignore_doze_permission_desc">Android kann die Synchronisation nach einiger Zeit stoppen. Um dies zu verhindern, muss die Akku-Optimierung deaktiviert werden. Einige Geräte haben Apps vorinstalliert, welche Hintergrundaktivitäten unterbinden. Universal Sync sollte deshalb auf deren Ausnahmeliste hinzugefügt werden.</string>
+    <string name="ignore_doze_permission_desc">Android kann die Synchronisation nach einiger Zeit stoppen. Um dies zu verhindern, muss die Akku-Optimierung deaktiviert werden. Einige Geräte haben Apps vorinstalliert, welche Hintergrundaktivitäten unterbinden. UniversalSync sollte deshalb auf deren Ausnahmeliste hinzugefügt werden.</string>
     <string name="toast_ignore_doze_permission_required">Diese App funktioniert nur dann zuverlässig, wenn sie vom „Doze“ Energiesparmodus ausgenommen wird.</string>
     <string name="dialog_disable_battery_optimizations_not_supported">Dieses Gerät unterstützt das Deaktivieren der Batterielaufzeit-Optimierung nicht</string>
     <!-- Slide "Location Permission" -->
     <string name="location_permission_title">Standortberechtigung</string>
-    <string name="location_permission_desc">Universal Sync kann eingestellt werden, in bestimmten WLAN-Netzwerken zu arbeiten. Android erfordert, dass die App über die Standortberechtigung verfügt, um den Namen des aktiven Wi-Fi-Netzwerks auszulesen. Wenn Sie diese Funktion verwenden möchten, betätigen Sie die Schaltfläche oben. Sie können diesen Schritt überspringen. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</string>
+    <string name="location_permission_desc">UniversalSync kann eingestellt werden, in bestimmten WLAN-Netzwerken zu arbeiten. Android erfordert, dass die App über die Standortberechtigung verfügt, um den Namen des aktiven Wi-Fi-Netzwerks auszulesen. Wenn Sie diese Funktion verwenden möchten, betätigen Sie die Schaltfläche oben. Sie können diesen Schritt überspringen. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</string>
     <string name="location_permission_desc_api_29">Android 10+ Tipp: „Immer zulassen“</string>
     <!-- Slide "Key Generation" -->
     <string name="key_generation_title">Schlüsselerstellung</string>
@@ -43,18 +43,18 @@
     <string name="refresh">Aktualisieren</string>
     <!-- PhotoShootActivity -->
     <string name="photo_shoot_launcher_title">Sync. Kamera</string>
-    <string name="photo_shoot_activity_title">Universal Sync-Fork Kamera</string>
-    <string name="photo_shoot_intro_welcome_title">Willkommen zur Universal Sync Kamera</string>
+    <string name="photo_shoot_activity_title">UniversalSync-Fork Kamera</string>
+    <string name="photo_shoot_intro_welcome_title">Willkommen zur UniversalSync Kamera</string>
     <string name="photo_shoot_intro_permission_title">Erforderliche Berechtigungen</string>
     <string name="photo_shoot_intro_no_camera">Entschuldigung, dieses Gerät hat keine Kamera.</string>
     <string name="photo_shoot_intro_missing_permissions">Wir benötigen Speicher- und Kameraberechtigung, um fortzufahren.</string>
     <string name="grant_storage_permission">Speicherzugriff gewähren</string>
     <string name="grant_camera_permission">Kamerazugriff gewähren</string>
-    <string name="photo_shoot_intro_permission_desc">Universal Sync Kamera erfordert Zustimmung, um Fotos aufzunehmen und auf diesem Gerät zu speichern. Das Feature ist optional. Um es zu verwenden, die Berechtigungen erteilen und auf „Weiter“ tippen. Wir richten einen Universal Sync Kamera-Ordner ein, der später für andere Universal Sync-Geräte freigeben werden kann.</string>
-    <string name="photo_shoot_take_picture_success">Das Foto wurde erfolgreich im Universal Sync Kamera-Ordner gespeichert.</string>
+    <string name="photo_shoot_intro_permission_desc">UniversalSync Kamera erfordert Zustimmung, um Fotos aufzunehmen und auf diesem Gerät zu speichern. Das Feature ist optional. Um es zu verwenden, die Berechtigungen erteilen und auf „Weiter“ tippen. Wir richten einen UniversalSync Kamera-Ordner ein, der später für andere UniversalSync-Geräte freigeben werden kann.</string>
+    <string name="photo_shoot_take_picture_success">Das Foto wurde erfolgreich im UniversalSync Kamera-Ordner gespeichert.</string>
     <string name="photo_shoot_take_picture_failure">Fotoaufnahme fehlgeschlagen oder wurde abgebrochen.</string>
-    <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_universalsync_camera_folder_label">Universal Sync Kamera</string>
+    <!-- Label of the folder created by the UniversalSync Camera feature. -->
+    <string name="default_universal sync_camera_folder_label">UniversalSync Kamera</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">Alle neu scannen</string>
@@ -65,7 +65,7 @@
     <string name="exception_known_bug_notice">Ein bekannter Fehler, der noch nicht behoben wurde, ist aufgetreten. Mehr Details dazu unter %1$s/%2$s. Wir bitten um eine genaue Beschreibung dessen was zuvor .</string>
     <!-- Title of the exit app when running as a service confirmation dialog -->
     <string name="dialog_exit_while_running_as_service_title">Beenden der App bestätigen</string>
-    <string name="dialog_exit_while_running_as_service_message">Zur Erinnerung: Universal Sync wurde eingerichtet, automatisch beim Hochfahren zu starten. Deshalb überwacht es die Ausführungsbedingungen und synchronisiert, wenn die Bedingungen zutreffen. Es sollte nur manuell beendet werden, falls man größere Probleme feststellt. Andernfalls „Automatisch beim Hochfahren starten“ in den Einstellungen ausschalten. Soll es jetzt beendet werden, bis das Gerät neu gestartet wurde?</string>
+    <string name="dialog_exit_while_running_as_service_message">Zur Erinnerung: UniversalSync wurde eingerichtet, automatisch beim Hochfahren zu starten. Deshalb überwacht es die Ausführungsbedingungen und synchronisiert, wenn die Bedingungen zutreffen. Es sollte nur manuell beendet werden, falls man größere Probleme feststellt. Andernfalls „Automatisch beim Hochfahren starten“ in den Einstellungen ausschalten. Soll es jetzt beendet werden, bis das Gerät neu gestartet wurde?</string>
     <!-- Title of the "add folder" menu action -->
     <string name="add_folder">Ordner hinzufügen</string>
     <!-- Title of the "share device id" menu action -->
@@ -73,7 +73,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Geräte-ID senden an</string>
     <string name="usage_reporting_dialog_title">Anonymen Nutzungsbericht erlauben?</string>
-    <string name="usage_reporting_dialog_description">Der verschlüsselte Nutzungsbericht wird täglich versendet. Er dient der Statistik über genutzte Plattformen, Verzeichnisgrößen und Universal Sync-Versionen. Wenn sich der übermittelte Datenumfang ändert, wird erneut um Erlaubnis gefragt. \n \nDie zusammengeführten Statistiken sind unter https://data.Universal Sync.net zu finden.</string>
+    <string name="usage_reporting_dialog_description">Der verschlüsselte Nutzungsbericht wird täglich versendet. Er dient der Statistik über genutzte Plattformen, Verzeichnisgrößen und UniversalSync-Versionen. Wenn sich der übermittelte Datenumfang ändert, wird erneut um Erlaubnis gefragt. \n \nDie zusammengeführten Statistiken sind unter https://data.universal sync.net zu finden.</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
     <string name="open_website">Webseite öffnen</string>
@@ -142,10 +142,10 @@
     <string name="button_follow_run_conditions">Ausführungsbedingungen befolgen</string>
     <string name="button_force_start">Start erzwingen \nAusführungsbedingungen ignorieren</string>
     <string name="button_force_stop">Stopp erzwingen \nAusführungsbedingungen ignorieren</string>
-    <string name="universalsync_starting">Universal Sync wird gestartet.</string>
-    <string name="universalsync_running">Universal Sync läuft.</string>
-    <string name="universalsync_not_running">Universal Sync läuft nicht.</string>
-    <string name="universalsync_has_crashed">Universal Sync ist abgestürzt.</string>
+    <string name="universal sync_starting">UniversalSync wird gestartet.</string>
+    <string name="universal sync_running">UniversalSync läuft.</string>
+    <string name="universal sync_not_running">UniversalSync läuft nicht.</string>
+    <string name="universal sync_has_crashed">UniversalSync ist abgestürzt.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Herunterladen: "</string>
@@ -158,7 +158,7 @@
     <!-- Title for uptime status -->
     <string name="uptime">Betriebszeit</string>
     <string name="restart">Neustart</string>
-    <string name="dialog_confirm_restart">Soll Universal Sync neu gestartet werden?</string>
+    <string name="dialog_confirm_restart">Soll UniversalSync neu gestartet werden?</string>
     <!-- FolderActivity -->
     <!-- Setting title -->
     <string name="folder_id">Ordner-ID</string>
@@ -172,7 +172,7 @@
     <string name="folder_fileWatcherDescription">Fordert das Betriebssystem auf, über Änderungen an Dateien zu informieren. Falls deaktiviert, erfolgt stattdessen stündliches Scannen.</string>
     <!-- Setting title and description -->
     <string name="folder_ignore_delete_caption">Löschen ignorieren</string>
-    <string name="folder_ignore_delete_description">Expertenoption, die sich auf die Verarbeitung eingehender Indexaktualisierungen auswirkt. Wenn festgelegt, werden eingehende Aktualisierungen mit dem Löschkennzeichen ignoriert. Siehe https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Expertenoption, die sich auf die Verarbeitung eingehender Indexaktualisierungen auswirkt. Wenn festgelegt, werden eingehende Aktualisierungen mit dem Löschkennzeichen ignoriert. Siehe https://docs.universal sync.net/advanced/folder-ignoredelete.html</string>
     <!-- Setting title -->
     <string name="folder_pause">Ordner pausieren</string>
     <!-- Setting title -->
@@ -188,7 +188,7 @@
     <!-- Menu item to confirm folder creation -->
     <string name="create">Erstellen</string>
     <!-- Dialog shown when attempting to remove a folder -->
-    <string name="remove_folder_confirm">Soll dieser Ordner wirklich aus Universal Sync entfernt werden?</string>
+    <string name="remove_folder_confirm">Soll dieser Ordner wirklich aus UniversalSync entfernt werden?</string>
     <!-- Toast shown when trying to create a folder with an empty ID -->
     <string name="folder_id_required">Die Ordner-ID darf nicht leer sein</string>
     <!-- Toast shown when trying to create a folder with an empty label -->
@@ -197,10 +197,10 @@
     <string name="folder_path_required">Der Ordnerpfad darf nicht leer sein</string>
     <string name="dialog_discard_changes">Die Änderungen verwerfen?</string>
     <!-- Summary shown if we only have readonly access to the folder path -->
-    <string name="folder_path_readonly">Diese Android-Version erlaubt Universal Sync nur schreibgeschützten Zugriff auf den ausgewählten Ordner.</string>
+    <string name="folder_path_readonly">Diese Android-Version erlaubt UniversalSync nur schreibgeschützten Zugriff auf den ausgewählten Ordner.</string>
     <!-- Summary shown if we only have readwrite access to the folder path -->
-    <string name="folder_path_readwrite">Diese Android-Version erlaubt Universal Sync Lese- und Schreibzugriff auf den ausgewählten Ordner.</string>
-    <!-- Toast shown if the user selected an invalid location for a new Universal Sync folder -->
+    <string name="folder_path_readwrite">Diese Android-Version erlaubt UniversalSync Lese- und Schreibzugriff auf den ausgewählten Ordner.</string>
+    <!-- Toast shown if the user selected an invalid location for a new universal sync folder -->
     <string name="toast_invalid_folder_selected">Entschuldigung. Der ausgewählte Ordner kann nicht verwendet werden. Bitte einen Ordner auf dem internen oder externen Speicher auswählen.</string>
     <string name="folder_type_switch_to_receive_encrypted_not_allowed">Bestehende Ordner auf „Verschlüsselt empfangen“ umschalten wird nicht unterstützt.</string>
     <string name="ignore_patterns">Ausschlussmuster</string>
@@ -212,7 +212,7 @@
     <!-- Status text -->
     <string name="discovered_device_list_empty">Die lokale Geräteerkennung hat im lokalen Netzwerk keine Geräte gefunden. Bitte diese App auf einem zweiten Telefon starten. Installationsdateien für Computer stehen unter %1$s zur Verfügung.</string>
     <!-- Status text -->
-    <string name="local_discovery_disabled">Die lokale Geräteerkennung unter „Einstellungen“ &gt; „Universal Sync-Optionen“ &gt; „Lokale Gerätesuche“ ist deaktiviert. Diese bitte aktivieren, um im lokalen Netzwerk nach Geräten zu suchen.</string>
+    <string name="local_discovery_disabled">Die lokale Geräteerkennung unter „Einstellungen“ &gt; „UniversalSync-Optionen“ &gt; „Lokale Gerätesuche“ ist deaktiviert. Diese bitte aktivieren, um im lokalen Netzwerk nach Geräten zu suchen.</string>
     <!-- Setting title -->
     <string name="name">Name</string>
     <!-- Setting title -->
@@ -250,7 +250,7 @@
     <!-- Toast shown when trying to create a device with an empty name -->
     <string name="device_name_required">Der Gerätename darf nicht leer sein</string>
     <!-- Toast shown when trying to create a device with invalid addresses -->
-    <string name="device_addresses_invalid">Die Geräteadressen sind nicht im richtigen Format. Bitte erneut versuchen. Für weitere Hilfe in die Universal Sync-Doku schauen.</string>
+    <string name="device_addresses_invalid">Die Geräteadressen sind nicht im richtigen Format. Bitte erneut versuchen. Für weitere Hilfe in die UniversalSync-Doku schauen.</string>
     <!-- Content description for device ID qr code icon -->
     <string name="scan_qr_code_description">QR-Code scannen</string>
     <!-- Dialog message if no compatible barcode scanner app is installed -->
@@ -286,18 +286,18 @@
     <string name="preference_app_theme_follow_light">Hell</string>
     <string name="preference_app_theme_follow_dark">Dunkel</string>
     <string name="category_behaviour">Verhalten</string>
-    <string name="category_universalsync_options">Universal Sync-Optionen</string>
-    <string name="category_universalsync_options_summary">Dieses Menü ist nur verfügbar während Universal Sync läuft.</string>
+    <string name="category_universal sync_options">UniversalSync-Optionen</string>
+    <string name="category_universal sync_options_summary">Dieses Menü ist nur verfügbar während UniversalSync läuft.</string>
     <string name="category_backup">Import und Export</string>
     <string name="category_debug">Fehlerbehebung</string>
     <string name="category_experimental">Experimentell</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Ausführungsbedingungen</string>
-    <string name="run_conditions_summary">Folgenden Optionen verwenden, um zu bestimmen, wann Universal Sync läuft.</string>
+    <string name="run_conditions_summary">Folgenden Optionen verwenden, um zu bestimmen, wann UniversalSync läuft.</string>
     <string name="run_on_mobile_data_title">Bei mobiler Datenverbindung starten</string>
     <string name="run_on_mobile_data_summary">Starten, wenn das Gerät über das mobile Datennetzwerk verbunden ist. Warnung: Wenn große Datenmengen synchronisiert werden, kann dies zu einem hohen Verbrauch des verfügbaren Datenvolumens führen.</string>
     <string name="run_on_roaming_title">Beim Roaming starten</string>
-    <string name="run_on_roaming_summary">Universal Sync gestatten, bei Roaming mobile Daten zu verwenden.</string>
+    <string name="run_on_roaming_summary">UniversalSync gestatten, bei Roaming mobile Daten zu verwenden.</string>
     <string name="run_on_wifi_title">Bei WLAN-Verbindung starten</string>
     <string name="run_on_wifi_summary">Starten, wenn das Gerät mit einem WLAN- oder Kabelnetzwerk verbunden ist.</string>
     <string name="run_on_metered_wifi_title">Bei getakteter WLAN-Verbindung starten</string>
@@ -316,11 +316,11 @@
     <string name="power_source_ac_power">Ladegerät</string>
     <string name="power_source_battery_power">Akku</string>
     <string name="respect_battery_saving_title">Android Energiesparmodus berücksichtigen</string>
-    <string name="respect_battery_saving_summary">Universal Sync stoppen, wenn der Energiesparmodus aktiv ist.</string>
+    <string name="respect_battery_saving_summary">UniversalSync stoppen, wenn der Energiesparmodus aktiv ist.</string>
     <string name="respect_master_sync_title">„Autom. Datensynchronisierung“ berücksichtigen</string>
-    <string name="respect_master_sync_summary">Stoppt Universal Sync, sobald die „Automatische Datensynchronisierung“ in Android ausgeschaltet wird.</string>
+    <string name="respect_master_sync_summary">Stoppt UniversalSync, sobald die „Automatische Datensynchronisierung“ in Android ausgeschaltet wird.</string>
     <string name="run_in_flight_mode_title">Ohne Netzwerkverbindung starten</string>
-    <string name="run_in_flight_mode_summary">Durch Aktivieren der Option wird Universal Sync auch dann laufen, wenn das Gerät offline ist. Dies aktivieren, wenn das Telefon Probleme beim Erkennen von manuell hergestellten WLAN-Verbindungen im Flugmodus hat.</string>
+    <string name="run_in_flight_mode_summary">Durch Aktivieren der Option wird UniversalSync auch dann laufen, wenn das Gerät offline ist. Dies aktivieren, wenn das Telefon Probleme beim Erkennen von manuell hergestellten WLAN-Verbindungen im Flugmodus hat.</string>
     <string name="run_on_time_schedule_title">Gemäß Zeitplan synchronisieren</string>
     <string name="run_on_time_schedule_summary">Durch Aktivieren dieser Option wird versucht, stündlich für eine konfigurierte Dauer zu synchronisieren, wenn die Ausführungsbedingungen erfüllt sind und seit der letzten Synchronisierung ein bestimmter Zeitraum verstrichen ist. Dies kann eine Menge Batterie einsparen, erfordert jedoch, dass Synchronisierungspartner online sind. Hinweis: Dies kann unvollständige temporäre Dateien zurücklassen, bis die nächste geplante Synchronisierung stattfindet und abgeschlossen ist.</string>
     <string name="sync_duration_minutes_title">Dauer des Synchronisationszyklus</string>
@@ -329,7 +329,7 @@
     <string name="behaviour_autostart_title">Autostart</string>
     <string name="behaviour_autostart_summary">App automatisch beim Hochfahren starten.</string>
     <string name="expert_mode_title">Expertenmodus</string>
-    <string name="expert_mode_summary">Durch Aktivieren dieser Option werden erweiterte Konfigurationsoptionen angezeigt. Um deren richtige Verwendung sicherzustellen, zuerst einen Blick in die Universal Sync-Dokumentation werfen. Falsche Einstellungen können zu hohem Batterieverbrauch, Erschöpfen der Systemressourcen oder unvollständiger Synchronisation führen.</string>
+    <string name="expert_mode_summary">Durch Aktivieren dieser Option werden erweiterte Konfigurationsoptionen angezeigt. Um deren richtige Verwendung sicherzustellen, zuerst einen Blick in die UniversalSync-Dokumentation werfen. Falsche Einstellungen können zu hohem Batterieverbrauch, Erschöpfen der Systemressourcen oder unvollständiger Synchronisation führen.</string>
     <string name="preference_language_title">Sprache</string>
     <string name="preference_language_summary">Anwendungssprache ändern</string>
     <string name="pref_language_default">Standardsprache</string>
@@ -360,7 +360,7 @@
     <string name="crash_reporting">Anonymer Absturzbericht</string>
     <string name="webui_tcp_port_title">Web-UI TCP-Port</string>
     <string name="webui_remote_access_title">Web-UI Fernzugriff</string>
-    <string name="webui_remote_access_summary">Erlaubt es, von einem anderen Gerät aus auf die Weboberfläche zuzugreifen. Wenn aktiviert, ist es möglich sich als Benutzer „Universal Sync“ und dem API-Schlüssel als Passwort anzumelden. Standard: Deaktiviert (am sichersten)</string>
+    <string name="webui_remote_access_summary">Erlaubt es, von einem anderen Gerät aus auf die Weboberfläche zuzugreifen. Wenn aktiviert, ist es möglich sich als Benutzer „universal sync“ und dem API-Schlüssel als Passwort anzumelden. Standard: Deaktiviert (am sichersten)</string>
     <string name="download_support_bundle_title">Supportpaket herunterladen</string>
     <!-- Summary shown when the user clicked the download support bundle button -->
     <string name="download_support_bundle_in_progress">Supportpaket-Download wird vorbereitet …</string>
@@ -389,7 +389,7 @@
     <!-- Toast after entering invalid http proxy address -->
     <string name="toast_invalid_http_proxy_address">Die Eingabe entspricht nicht der Form „http://[IP/HOSTNAME]:[PORT]“</string>
     <string name="broadcast_service_control_title">Dienstkontrolle über Broadcast</string>
-    <string name="broadcast_service_control_summary">Standard: Deaktiviert. Diese Option aktivieren, damit adb oder Anwendungen von Drittanbietern, z. B. Automatisierungsanwendungen, Universal Sync anweisen können, den Ausführungsbedingungen zu folgen und den Start oder Stopp zu erzwingen.</string>
+    <string name="broadcast_service_control_summary">Standard: Deaktiviert. Diese Option aktivieren, damit adb oder Anwendungen von Drittanbietern, z. B. Automatisierungsanwendungen, UniversalSync anweisen können, den Ausführungsbedingungen zu folgen und den Start oder Stopp zu erzwingen.</string>
     <!-- Dialog shown before config export -->
     <string name="dialog_confirm_export">Soll die Konfiguration wirklich exportiert werden? Das vorhandene Archiv wird überschrieben.</string>
     <!-- Dialog shown before config import -->
@@ -406,18 +406,18 @@
     <string name="environment_variables">Umgebungsvariablen</string>
     <!-- Toast after entering invalid STTRACE params -->
     <string name="toast_invalid_environment_variables">Wert ist kein gültiger Umgebungsvariablenstring</string>
-    <!-- Title for the preference to reset Universal Sync indexes -->
+    <!-- Title for the preference to reset UniversalSync indexes -->
     <string name="st_reset_database_title">Datenbank zurücksetzen</string>
-    <!-- Universal Sync was reset -->
-    <string name="st_reset_database_question">Diese Aktion sollte nur auf Empfehlung des Supportteams ausgeführt werden. \nSoll die Universal Sync-Datenbank wirklich geleert werden?</string>
-    <!-- Universal Sync was reset -->
+    <!-- UniversalSync was reset -->
+    <string name="st_reset_database_question">Diese Aktion sollte nur auf Empfehlung des Supportteams ausgeführt werden. \nSoll die UniversalSync-Datenbank wirklich geleert werden?</string>
+    <!-- UniversalSync was reset -->
     <string name="st_reset_database_done">Datenbank erfolgreich zurückgesetzt</string>
-    <!-- Title for the preference to reset Universal Sync indexes -->
+    <!-- Title for the preference to reset UniversalSync indexes -->
     <string name="st_reset_deltas_title">Änderungsindex zurücksetzen</string>
-    <!-- Universal Sync was reset -->
-    <string name="st_reset_deltas_question">Diese Aktion sollte nur auf Empfehlung des Supportteams ausgeführt werden. \nSoll der Universal Sync-Änderungsindex wirklich zurückgesetzt werden?</string>
-    <!-- Universal Sync was reset -->
-    <string name="st_reset_deltas_done">Universal Sync-Änderungsindex erfolgreich zurückgesetzt</string>
+    <!-- UniversalSync was reset -->
+    <string name="st_reset_deltas_question">Diese Aktion sollte nur auf Empfehlung des Supportteams ausgeführt werden. \nSoll der UniversalSync-Änderungsindex wirklich zurückgesetzt werden?</string>
+    <!-- UniversalSync was reset -->
+    <string name="st_reset_deltas_done">UniversalSync-Änderungsindex erfolgreich zurückgesetzt</string>
     <string name="category_about">Über</string>
     <string name="verbose_log_title">Ausführliches Protokoll</string>
     <string name="verbose_log_summary">Aktivieren dieser Option wird sehr detaillierte Protokolle zur Fehlersuche liefern.</string>
@@ -426,22 +426,22 @@
     <!-- Settings item that opens the log activity -->
     <string name="open_log">Protokoll öffnen</string>
     <!-- Summary for the log activity -->
-    <string name="open_log_summary">Das Universal Sync- und Android-Protokollfenster</string>
+    <string name="open_log_summary">Das UniversalSync- und Android-Protokollfenster</string>
     <!-- Settings item that opens issue tracker -->
     <string name="report_issue_title">Fehler melden</string>
     <!-- Summary for the issue tracker settings item -->
-    <string name="open_issue_tracker_summary">Universal Sync-Fork-Fehlersammlung bei %1$s öffnen</string>
+    <string name="open_issue_tracker_summary">UniversalSync-Fork-Fehlersammlung bei %1$s öffnen</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="universalsync_version_title">Universal Sync-Version</string>
+    <string name="universal sync_version_title">UniversalSync-Version</string>
     <!-- Title of the preference showing this app's version name -->
-    <string name="app_version_title">Universal Sync-Fork-Wrapper-Version</string>
+    <string name="app_version_title">UniversalSync-Fork-Wrapper-Version</string>
     <!-- Title of the preference showing the REST API key -->
-    <string name="universalsync_api_key">Universal Sync API-Schlüssel (Klicken zum Kopieren)</string>
+    <string name="universal sync_api_key">UniversalSync API-Schlüssel (Klicken zum Kopieren)</string>
     <!-- Shown when the API key is copied to the clipboard -->
-    <string name="api_key_copied_to_clipboard">Universal Sync API-Schlüssel in die Zwischenablage kopiert</string>
+    <string name="api_key_copied_to_clipboard">UniversalSync API-Schlüssel in die Zwischenablage kopiert</string>
     <!-- Title of the preference showing database size -->
-    <string name="universalsync_database_size">Universal Sync Datenbankgröße</string>
+    <string name="universal sync_database_size">UniversalSync Datenbankgröße</string>
     <!-- Title of the preference showing the OS open file limit -->
     <string name="os_open_file_limit">Android Offene-Dateien-Limit</string>
     <!-- FolderPickerAcitivity -->
@@ -461,12 +461,12 @@
     <!-- Menu item to go up to parent folder -->
     <string name="folder_go_up">Aufwärts</string>
     <!-- LogActivity -->
-    <string name="universalsync_log_title">Universal Sync-Protokoll</string>
+    <string name="universal sync_log_title">UniversalSync-Protokoll</string>
     <string name="android_log_title">Android-Protokoll</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Android-Protokoll anzeigen</string>
-    <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_universalsync_log">Universal Sync-Protokoll anzeigen</string>
+    <!-- Title of the "log UniversalSync" menu button -->
+    <string name="view_universal sync_log">UniversalSync-Protokoll anzeigen</string>
     <string name="retrieving_logs">Protokoll wird abgerufen …</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Teilen</string>
@@ -474,7 +474,7 @@
     <!-- Toast if user didn't complete the welcome wizard yet -->
     <string name="complete_welcome_wizard_first">Zuerst die App aus der App-Übersicht starten und den Willkommensassistenten abschließen, bevor Dateien geteilt werden.</string>
     <!-- Title of the "share" activity -->
-    <string name="share_activity_title">In Universal Sync speichern</string>
+    <string name="share_activity_title">In UniversalSync speichern</string>
     <!-- Title of the "save" button -->
     <string name="save_title">Speichern</string>
     <!-- Title of the "cancel" button -->
@@ -506,9 +506,9 @@
     <!-- Sub Folder title -->
     <string name="sub_folder">Unterordner</string>
     <!-- RunConditionMonitor -->
-    <string name="reason_force_start">Universal Sync läuft, weil Sie den Start unabhängig von den Ausführungsbedingungen erzwungen haben.</string>
-    <string name="reason_force_stop">Universal Sync schläft, weil der Stopp unabhängig von den Ausführungsbedingungen erzwungen wurde.</string>
-    <!-- Explanations why Universal Sync is running or not running -->
+    <string name="reason_force_start">UniversalSync läuft, weil Sie den Start unabhängig von den Ausführungsbedingungen erzwungen haben.</string>
+    <string name="reason_force_stop">UniversalSync schläft, weil der Stopp unabhängig von den Ausführungsbedingungen erzwungen wurde.</string>
+    <!-- Explanations why universal sync is running or not running -->
     <string name="reason_not_within_time_frame">Es ist „Gemäß Zeitplan synchronisieren“ aktiviert und die letzte Synchronisierung ist nicht länger als eine Stunde her.</string>
     <string name="reason_not_within_time_frame_2">Es ist „Gemäß Zeitplan synchronisieren“ aktiviert und die letzte Synchronisierung war vor %s.</string>
     <string name="reason_not_within_time_frame_0_min">weniger als einer Minute</string>
@@ -518,47 +518,47 @@
     </plurals>
     <string name="reason_not_charging">Telefon wird nicht aufgeladen.</string>
     <string name="reason_not_on_battery_power">Telefon wird nicht batteriebetrieben.</string>
-    <string name="reason_not_while_power_saving">Universal Sync läuft nicht, weil das Telefon im Energiesparmodus ist.</string>
-    <string name="reason_not_while_auto_sync_data_disabled">Universal Sync läuft nicht, weil in Android die „Automatische Datensynchronisation“ ausgeschaltet ist.</string>
+    <string name="reason_not_while_power_saving">UniversalSync läuft nicht, weil das Telefon im Energiesparmodus ist.</string>
+    <string name="reason_not_while_auto_sync_data_disabled">UniversalSync läuft nicht, weil in Android die „Automatische Datensynchronisation“ ausgeschaltet ist.</string>
     <!-- … Mobile data -->
-    <string name="reason_mobile_data_disallowed">Universal Sync wurde nicht konfiguriert, die mobile Datenverbindung zu nutzen.</string>
-    <string name="reason_on_mobile_data">Universal Sync darf die mobile Datenverbindung nutzen.</string>
-    <string name="reason_not_on_mobile_data">Universal Sync darf bei mobiler Datenverbindung laufen, jedoch sind mobile Daten nicht verbunden.</string>
+    <string name="reason_mobile_data_disallowed">UniversalSync wurde nicht konfiguriert, die mobile Datenverbindung zu nutzen.</string>
+    <string name="reason_on_mobile_data">UniversalSync darf die mobile Datenverbindung nutzen.</string>
+    <string name="reason_not_on_mobile_data">UniversalSync darf bei mobiler Datenverbindung laufen, jedoch sind mobile Daten nicht verbunden.</string>
     <!-- … Roaming -->
-    <string name="reason_on_roaming_nonroaming_mobile_data">Universal Sync darf bei mobilen Roaming- und Nicht-Roaming-Datenverbindungen ausgeführt werden.</string>
-    <string name="reason_on_nonroaming_mobile_data">Universal Sync darf auf mobilen Datenverbindungen ohne Roaming ausgeführt werden. Die aktive Verbindung ist ohne Roaming.</string>
-    <string name="reason_not_nonroaming_mobile_data">Universal Sync läuft nicht, da verboten wurde, dass es auf mobilen Datenverbindungen mit Roaming läuft.</string>
-    <string name="reason_wifi_disallowed">Universal Sync wurde verboten, die WLAN- oder Kabelverbindung zu nutzen.</string>
-    <string name="reason_on_wifi">Universal Sync darf bei WLAN-Verbindung laufen und WLAN ist gerade verbunden.</string>
-    <string name="reason_not_on_wifi">Universal Sync darf bei WLAN-Verbindung laufen, jedoch ist WLAN gerade nicht verbunden oder das Telefon befindet sich im Flugzeugmodus.</string>
-    <string name="reason_on_metered_nonmetered_wifi">Universal Sync darf bei getakteter und nicht-getakteter WLAN-Verbindung laufen.</string>
-    <string name="reason_on_whitelisted_wifi">Universal Sync darf im aktuellen WLAN-Netzwerk laufen.</string>
-    <string name="reason_not_on_whitelisted_wifi">Universal Sync läuft nicht, weil der Name des aktuellen WLAN-Netzwerks nicht auf der weißen Liste steht.</string>
-    <string name="reason_on_nonmetered_wifi">Universal Sync darf bei nicht-getakteter WLAN-Verbindung laufen. Die aktive WLAN-Verbindung ist nicht-getaktet.</string>
-    <string name="reason_not_nonmetered_wifi">Universal Sync läuft nicht, weil verboten wurde, dass es bei getakteten WLAN-Verbindungen läuft.</string>
-    <string name="reason_location_unavailable">In den Einstellungen ist „In ausgewählten WLAN-Netzwerken starten“ aktiviert. Die Android-Standorterfassung ist derzeit ausgeschaltet. Aufgrund von Android-Beschränkungen kann Universal Sync den aktuellen WLAN-Netzwerknamen nicht ermitteln, um zu entscheiden, ob es starten soll. Lösung: Den Standort einschalten, Standortberechtigung erteilen und WLAN erneut verbinden.</string>
-    <string name="reason_on_flight_mode">Universal Sync läuft, weil erlaubt wurde, dass es bei eingeschaltetem Flugzeugmodus läuft.</string>
+    <string name="reason_on_roaming_nonroaming_mobile_data">UniversalSync darf bei mobilen Roaming- und Nicht-Roaming-Datenverbindungen ausgeführt werden.</string>
+    <string name="reason_on_nonroaming_mobile_data">UniversalSync darf auf mobilen Datenverbindungen ohne Roaming ausgeführt werden. Die aktive Verbindung ist ohne Roaming.</string>
+    <string name="reason_not_nonroaming_mobile_data">UniversalSync läuft nicht, da verboten wurde, dass es auf mobilen Datenverbindungen mit Roaming läuft.</string>
+    <string name="reason_wifi_disallowed">UniversalSync wurde verboten, die WLAN- oder Kabelverbindung zu nutzen.</string>
+    <string name="reason_on_wifi">UniversalSync darf bei WLAN-Verbindung laufen und WLAN ist gerade verbunden.</string>
+    <string name="reason_not_on_wifi">UniversalSync darf bei WLAN-Verbindung laufen, jedoch ist WLAN gerade nicht verbunden oder das Telefon befindet sich im Flugzeugmodus.</string>
+    <string name="reason_on_metered_nonmetered_wifi">UniversalSync darf bei getakteter und nicht-getakteter WLAN-Verbindung laufen.</string>
+    <string name="reason_on_whitelisted_wifi">UniversalSync darf im aktuellen WLAN-Netzwerk laufen.</string>
+    <string name="reason_not_on_whitelisted_wifi">UniversalSync läuft nicht, weil der Name des aktuellen WLAN-Netzwerks nicht auf der weißen Liste steht.</string>
+    <string name="reason_on_nonmetered_wifi">UniversalSync darf bei nicht-getakteter WLAN-Verbindung laufen. Die aktive WLAN-Verbindung ist nicht-getaktet.</string>
+    <string name="reason_not_nonmetered_wifi">UniversalSync läuft nicht, weil verboten wurde, dass es bei getakteten WLAN-Verbindungen läuft.</string>
+    <string name="reason_location_unavailable">In den Einstellungen ist „In ausgewählten WLAN-Netzwerken starten“ aktiviert. Die Android-Standorterfassung ist derzeit ausgeschaltet. Aufgrund von Android-Beschränkungen kann UniversalSync den aktuellen WLAN-Netzwerknamen nicht ermitteln, um zu entscheiden, ob es starten soll. Lösung: Den Standort einschalten, Standortberechtigung erteilen und WLAN erneut verbinden.</string>
+    <string name="reason_on_flight_mode">UniversalSync läuft, weil erlaubt wurde, dass es bei eingeschaltetem Flugzeugmodus läuft.</string>
     <string name="reason_run_condition_monitor_not_instantiated">Laufkonditionen-Überwachung ist nicht instantiiert. Bitte die App neu starten und einen Fehlerbericht erstellen, falls das Problem nach dem Neustart nicht verschwindet.</string>
     <!-- Sync Conditions Dialog -->
     <string name="custom_wifi_ssid_whitelist_empty">Es sind keine WLAN-Netzwerknamen auf der Erlaubt-Liste. Bitte welche in den Einstellungen festlegen.</string>
     <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Beenden</string>
-    <!-- Title of the notification shown while Universal Sync is running and enabled -->
-    <string name="universalsync_active">Läuft</string>
-    <string name="universalsync_active_details">Läuft: %1$s</string>
+    <!-- Title of the notification shown while universal sync is running and enabled -->
+    <string name="universal sync_active">Läuft</string>
+    <string name="universal sync_active_details">Läuft: %1$s</string>
     <string name="no_remote_devices_connected">Keine entfernten Geräte verbunden</string>
     <plurals name="device_online_up_to_date">
         <item quantity="one">%1$d Gerät online und aktuell</item>
         <item quantity="other">%1$d Geräte online und aktuell</item>
     </plurals>
-    <plurals name="universalsync_active_syncing_device_online">
+    <plurals name="universal sync_active_syncing_device_online">
         <item quantity="one">Sync: %1$d %% fertig, %2$d Gerät online</item>
         <item quantity="other">Sync: %1$d %% fertig, %2$d Geräte online</item>
     </plurals>
-    <string name="universalsync_disabled">Schläft</string>
-    <string name="universalsync_terminated">Beendet</string>
-    <!-- Toast shown if Universal Sync failed to create or read the config -->
+    <string name="universal sync_disabled">Schläft</string>
+    <string name="universal sync_terminated">Beendet</string>
+    <!-- Toast shown if universal sync failed to create or read the config -->
     <string name="executable_not_found">Ausführbarer Kernbestandteil der App „%s“ fehlt. Bitte den Build und die Logcat-Ausgabe prüfen.</string>
     <string name="config_create_failed">Erstellen der Konfiguration fehlgeschlagen. Bitte die Logcat-Ausgabe prüfen.</string>
     <string name="config_read_failed">Fehler beim Lesen der Konfiguration. Bitte ggf. die Daten in den Sync-Ordnern sichern, dann die Daten der App in den Android-Einstellungen löschen und erneut starten.</string>
@@ -572,7 +572,7 @@
     <string name="default_folder_id">%1$s-Bilder</string>
     <string name="notification_crash_title">Abgestürzt (Exitcode %1$s)</string>
     <string name="notification_crash_text">Klick für Protokolle (%1$s)</string>
-    <string name="notifications_persistent_channel">Universal Sync läuft</string>
+    <string name="notifications_persistent_channel">UniversalSync läuft</string>
     <string name="notification_persistent_waiting_channel">Ausführungsbedingungen werden überwacht</string>
     <string name="notifications_other_channel">Andere Benachrichtigungen</string>
     <!-- EventProcessor -->
@@ -583,7 +583,7 @@
     <!-- Text for positive button in restart dialog -->
     <!-- Text for the dismiss button of the restart Activity -->
     <!-- Text of the notification shown when a restart is needed -->
-    <string name="restart_notification_text">Hier klicken, um Universal Sync neu zu starten</string>
+    <string name="restart_notification_text">Hier klicken, um UniversalSync neu zu starten</string>
     <!-- Shown when a device ID is copied to the clipboard -->
     <string name="device_id_copied_to_clipboard">Geräte-ID in die Zwischenablage kopiert</string>
     <!-- Strings representing units for file sizes, from smallest to largest -->
@@ -650,15 +650,15 @@
     <string name="maximum_age">Höchstalter</string>
     <string name="clean_out_after">Bereinigen nach</string>
     <string name="file_versioning">Dateiversionierung</string>
-    <string name="file_versioning_generic_description">Universal Sync unterstützt das Archivieren der alten Version einer Datei, wenn diese gelöscht oder durch eine neuere Version aus dem Cluster ersetzt wird. Hier klicken, um die verfügbaren Versionierungsstrategien anzuzeigen. Die Dateiversionierung wird pro Ordner und Gerät konfiguriert. Gewählte Strategie:</string>
+    <string name="file_versioning_generic_description">UniversalSync unterstützt das Archivieren der alten Version einer Datei, wenn diese gelöscht oder durch eine neuere Version aus dem Cluster ersetzt wird. Hier klicken, um die verfügbaren Versionierungsstrategien anzuzeigen. Die Dateiversionierung wird pro Ordner und Gerät konfiguriert. Gewählte Strategie:</string>
     <string name="none">Keine</string>
     <string name="versions_path">Versionspfad</string>
     <string name="command">Befehl</string>
     <!-- File versioning dialog descriptions for file versioning types and file versioning configuration options. -->
     <string name="keep_versions_description">Anzahl der alten Versionen, die von jeder Datei behalten werden sollen.</string>
-    <string name="simple_file_versioning_description">Dateien werden mit einem Datumsstempel im Namen versehen und in ein .stversions-Verzeichnis verschoben, wenn sie von Universal Sync ersetzt oder gelöscht werden.</string>
-    <string name="trashcan_versioning_description">Dateien werden in das .stversions-Verzeichnis verschoben, wenn sie von Universal Sync ersetzt oder gelöscht werden.</string>
-    <string name="staggered_versioning_description">Dateien werden mit einem Datumsstempel im Namen versehen und in ein .stversions-Verzeichnis verschoben, wenn sie von Universal Sync ersetzt oder gelöscht werden. Alte Dateiversionen werden automatisch gelöscht, wenn sie älter als das angegebene Höchstalter sind oder die angegebene Höchstzahl an Dateien erreicht ist. \n \nEs wird in folgenden Abständen versioniert: In der ersten Stunde wird alle 30 Sekunden eine Version behalten, am ersten Tag eine jede Stunde, in den ersten 30 Tagen eine jeden Tag. Danach wird bis zum angegebenen Höchstalter eine Version pro Woche behalten.</string>
+    <string name="simple_file_versioning_description">Dateien werden mit einem Datumsstempel im Namen versehen und in ein .stversions-Verzeichnis verschoben, wenn sie von UniversalSync ersetzt oder gelöscht werden.</string>
+    <string name="trashcan_versioning_description">Dateien werden in das .stversions-Verzeichnis verschoben, wenn sie von UniversalSync ersetzt oder gelöscht werden.</string>
+    <string name="staggered_versioning_description">Dateien werden mit einem Datumsstempel im Namen versehen und in ein .stversions-Verzeichnis verschoben, wenn sie von UniversalSync ersetzt oder gelöscht werden. Alte Dateiversionen werden automatisch gelöscht, wenn sie älter als das angegebene Höchstalter sind oder die angegebene Höchstzahl an Dateien erreicht ist. \n \nEs wird in folgenden Abständen versioniert: In der ersten Stunde wird alle 30 Sekunden eine Version behalten, am ersten Tag eine jede Stunde, in den ersten 30 Tagen eine jeden Tag. Danach wird bis zum angegebenen Höchstalter eine Version pro Woche behalten.</string>
     <string name="maximum_age_description">Die längste Zeit, die alte Versionen vorgehalten werden (in Tagen, 0 um alte Versionen für immer zu behalten).</string>
     <string name="versions_path_description">Pfad, in dem Versionen gespeichert werden sollen (leer lassen, wenn das Standard-.stversions-Verzeichnis im geteilten Ordner verwendet werden soll).</string>
     <string name="cleanout_after_description">Anzahl der Tage, die Dateien im Papierkorb belassen werden. 0 bedeutet für immer</string>
@@ -698,20 +698,20 @@
     <string name="notification_permission_desc">Erforderlich, um Benachrichtigungen über neue Geräteverbindungs- und Ordnerfreigabeanfragen anzuzeigen sowie den Dienst aktiv und verbunden zu halten.</string>
     <string name="qs_schedule_label_minutes" tools:ignore="PluralsCandidate">Für %1$d Minuten ausführen</string>
     <string name="notification_permission_title">Benachrichtigungsrecht</string>
-    <string name="toast_notification_permission_required">Universal Sync benötigt das Benachrichtigungsrecht, um seinen Dienst aufrecht und verbunden zu halten.</string>
+    <string name="toast_notification_permission_required">UniversalSync benötigt das Benachrichtigungsrecht, um seinen Dienst aufrecht und verbunden zu halten.</string>
     <string name="sleep_interval_minutes_title">Dauer des Synchronisationspausenintervalls</string>
     <string name="start_into_web_gui_title">Direkt die Weboberfläche öffnen</string>
     <string name="start_into_web_gui_summary">Beim Start der App die Weboberfläche anstelle des Hauptfensters öffnen</string>
     <string name="open_source_licenses_title">Open-Source-Lizenzen</string>
     <string name="open_source_licenses_summary">Verwendete Open-Source-Lizenzen anzeigen</string>
-    <string name="universalsync_forum_title">Universal Sync-Forum</string>
+    <string name="universal sync_forum_title">UniversalSync-Forum</string>
     <string name="privacy_title">Datenschutzerklärung</string>
-    <string name="universalsync_forum_summary">Das Universal Sync-Forum besuchen und Unterstützung erhalten</string>
-    <string name="privacy_summary">Die Datenschutzerklärung von Universal Sync Android öffnen, welche die Verwendung personenbezogener Daten (falls vorhanden), z. B. des Standorts, abdeckt.</string>
-    <string name="clear_stversions_question">Damit werden alle früheren Versionen der von Universal Sync verwalteten Dateien gelöscht. Fortfahren?</string>
+    <string name="universal sync_forum_summary">Das UniversalSync-Forum besuchen und Unterstützung erhalten</string>
+    <string name="privacy_summary">Die Datenschutzerklärung von universal sync-android öffnen, welche die Verwendung personenbezogener Daten (falls vorhanden), z. B. des Standorts, abdeckt.</string>
+    <string name="clear_stversions_question">Damit werden alle früheren Versionen der von UniversalSync verwalteten Dateien gelöscht. Fortfahren?</string>
     <string name="clear_stversions_done">Erfolgreich .stversions-Ordner geleert.</string>
     <string name="clear_stversions_title">Alle Versionierungsordner leeren</string>
-    <string name="clear_stversions_summary">Dateien werden in das Verzeichnis .stversions verschoben, wenn sie von Universal Sync ersetzt oder gelöscht werden. Versehentlich gelöschte Dateien lassen sich wahrscheinlich dort finden und wiederherstellen, allerdings belegen veraltete Versionen der Dateien Speicherplatz auf diesem Gerät.</string>
+    <string name="clear_stversions_summary">Dateien werden in das Verzeichnis .stversions verschoben, wenn sie von UniversalSync ersetzt oder gelöscht werden. Versehentlich gelöschte Dateien lassen sich wahrscheinlich dort finden und wiederherstellen, allerdings belegen veraltete Versionen der Dateien Speicherplatz auf diesem Gerät.</string>
     <string name="folder_run_script_caption">Skript ausführen</string>
     <string name="folder_run_script_description">Expertenoption zur Ausführung von Skripten, nachdem ein Ordner seinen Synchronisierungsstatus geändert hat. Skripte unter „.stfolder/*.sh“ werden ausgeführt, andere Speicherorte werden aus Sicherheitsgründen nicht unterstützt.\nBeispiel für einen Skriptaufruf: „.stfolder/rename-files.sh sync_complete“</string>
     <string name="pizza_url_summary">Schenken Sie eine gehörige Portion Freundlichkeit und besonders gute Stimmung obendrein mit nur einem Fingertipp – damit die Katzen auch weiterhin glücklich schnurren.</string>
@@ -729,7 +729,7 @@
     <string name="config_export_successful_no_path">Konfiguration wurde exportiert. Bitte das Passwort für einen späteren Import merken.</string>
     <string name="backup_rel_path_to_zip">Relativer Pfad zum Konfigurationsarchiv</string>
     <string name="backup_password_title">Passwort für den Konfigurationsschutz</string>
-    <string name="backup_password_summary">ℹ️ Empfohlen:\nGeben Sie ein sicheres Passwort ein, um Ihre Konfiguration beim Export zu verschlüsseln und beim Import zu entschlüsseln. Bewahren Sie dieses Passwort für den Wiederherstellungsprozess an einem sicheren Ort auf. Sie benötigen es, um die Importfunktion zu nutzen.\n\n⚠️ Nicht empfohlen:\nWenn Sie kein Passwort verwenden, können andere Anwendungen möglicherweise Ihre Universal Sync-Konfiguration lesen und manipulieren. Die Preisgabe der Konfiguration birgt das Risiko, dass ein bösartiger Akteur mit gestohlenen Konfigurationsexporten unbefugten Zugriff auf Ihre Dateien erhält.</string>
+    <string name="backup_password_summary">ℹ️ Empfohlen:\nGeben Sie ein sicheres Passwort ein, um Ihre Konfiguration beim Export zu verschlüsseln und beim Import zu entschlüsseln. Bewahren Sie dieses Passwort für den Wiederherstellungsprozess an einem sicheren Ort auf. Sie benötigen es, um die Importfunktion zu nutzen.\n\n⚠️ Nicht empfohlen:\nWenn Sie kein Passwort verwenden, können andere Anwendungen möglicherweise Ihre UniversalSync-Konfiguration lesen und manipulieren. Die Preisgabe der Konfiguration birgt das Risiko, dass ein bösartiger Akteur mit gestohlenen Konfigurationsexporten unbefugten Zugriff auf Ihre Dateien erhält.</string>
     <string name="preference_category_explanation">Erklärung</string>
     <string name="config_import_failed_no_path">Der Import der Konfiguration ist fehlgeschlagen. Gehen Sie zu Einstellungen&gt;Fehlerbehebung&gt;Protokoll öffnen, um Details zu sehen.</string>
     <string name="backup_password_set_masked">✅ Passwort festgelegt – Zum Ändern tippen</string>

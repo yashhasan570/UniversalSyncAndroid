@@ -1,5 +1,5 @@
 ## Localhost connection between two instances in different user profiles
-Android 17+ restricts apps from connecting to their other instance over localhost when they are running in different user profiles. This affects both actual users and also profiles. For example private space or work profile. For folks who run multiple instances of the app to sync files locally between users, the traffic is now forced to go through Universal Sync community relays due to this restriction.
+Android 17+ restricts apps from connecting to their other instance over localhost when they are running in different user profiles. This affects both actual users and also profiles. For example private space or work profile. For folks who run multiple instances of the app to sync files locally between users, the traffic is now forced to go through UniversalSync community relays due to this restriction.
 
 However, the cross user profile communication permission can be manually granted to allow direct connection via the local loopback interface. This requires `adb`.
 
@@ -27,9 +27,9 @@ However, the cross user profile communication permission can be manually granted
 
 To actually set up direct loopback connection between two app instances via localhost:
 
-1. In each instance, go to `Settings -> Universal Sync Options -> Listen Address` and set a listen address with a fixed port number, such as `tcp4://:22000`. Each instance needs a different port number.
+1. In each instance, go to `Settings -> UniversalSync Options -> Listen Address` and set a listen address with a fixed port number, such as `tcp4://:22000`. Each instance needs a different port number.
 
-2. After adding one instance as a remote device to another instance, go to `Devices -> <Device name> -> Click to Edit -> Listen Address` and change the value from `dynamic` to `tcp4://localhost:[port]`. This is necessary because Universal Sync does not try to connect via localhost by default.
+2. After adding one instance as a remote device to another instance, go to `Devices -> <Device name> -> Click to Edit -> Listen Address` and change the value from `dynamic` to `tcp4://localhost:[port]`. This is necessary because UniversalSync does not try to connect via localhost by default.
 
 Sources:
 - [Android Developer](https://developer.android.com/about/versions/17/behavior-changes-all#block-cross-profile-loopback)

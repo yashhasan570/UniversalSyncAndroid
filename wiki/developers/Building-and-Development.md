@@ -4,7 +4,7 @@
 
 A Linux VM, for example running Debian, is recommended to build this.
 
-Build UniversalSyncNative and the Universal Sync-Android wrapper using the following commands:
+Build UniversalSyncNative and the UniversalSync-Android wrapper using the following commands:
 
 ```bash
 #
@@ -13,14 +13,14 @@ apt-get -y install gcc git golang-go openjdk-21-jdk-headless python3 unzip
 #
 # Clone repository.
 mkdir -p ~/git && cd ~/git
-git clone https://github.com/universalsync/Universal Sync Android.git --recursive
+git clone https://github.com/researchxxl/universal sync-android.git --recursive
 #
 # Install prerequisites.
-cd ~/git/Universal Sync Android
+cd ~/git/universal sync-android
 python3 scripts/install_minimum_android_sdk_prerequisites.py
 #
 # Build.
-export ANDROID_HOME=~/git/Universal Sync Android-prereq
+export ANDROID_HOME=~/git/universal sync-android-prereq
 ./gradlew buildNative
 #
 # Flavor: debug
@@ -66,7 +66,7 @@ winget install --accept-source-agreements --source winget --exact --id "EclipseA
 winget install --accept-source-agreements --source winget --exact --id "Python.Python.3.13" --scope machine -h --override "/quiet InstallAllUsers=1 PrependPath=1 Include_doc=0 Include_launcher=0 Include_pip=0 Include_tcltk=0 Include_test=0"
 ::
 :: Clone repository.
-git clone https://github.com/universalsync/Universal Sync Android.git --recursive
+git clone https://github.com/researchxxl/universal sync-android.git --recursive
 ::
 :: Build
 cd /d "YOUR_CLONED_GIT_ROOT"
@@ -75,10 +75,10 @@ call build
 
 ## Development Notes
 
-The Universal Sync native used for this android application provides a web interface by default. It can be accessed via the Settings menu -> 'Web GUI'. It is quite helpful to access this web interface from your development machine. Read android documentation on how to access the network of your emulator. Or use the following command to connect to the single currently running emulator/AVD.
+The UniversalSync native used for this android application provides a web interface by default. It can be accessed via the Settings menu -> 'Web GUI'. It is quite helpful to access this web interface from your development machine. Read android documentation on how to access the network of your emulator. Or use the following command to connect to the single currently running emulator/AVD.
 
 ```bash
 adb forward tcp:18384 tcp:8384
 ```
 
-Start Universal Sync app on your emulator and access the web interface from you favorite browser of your development machine via [`127.0.0.1:18384`](https://127.0.0.1:18384)
+Start UniversalSync app on your emulator and access the web interface from you favorite browser of your development machine via [`127.0.0.1:18384`](https://127.0.0.1:18384)

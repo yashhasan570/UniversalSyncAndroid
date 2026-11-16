@@ -9,7 +9,7 @@
 -keep class com.mikepenz.aboutlibraries.** { *; }
 
 # Gson model classes
--keep class com.universalsync.android.model.** { *; }
+-keep class com.nutomic.syncthingandroid.model.** { *; }
 
 # Preserve generic type signatures used by Guava TypeToken
 -keepattributes Signature,InnerClasses,EnclosingMethod

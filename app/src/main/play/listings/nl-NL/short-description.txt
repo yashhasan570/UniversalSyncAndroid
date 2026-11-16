@@ -1,1 +1,1 @@
-Wrapper voor Universal Sync - Open, en gedecentraliseerde bestandssynchronisatie
+Wrapper voor UniversalSync - Open, en gedecentraliseerde bestandssynchronisatie

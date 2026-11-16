@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Universal Sync-Fork</string>
+    <string name="app_name">UniversalSync-Fork</string>
     <string name="app_description">Avoin, luotettava ja hajautettu tiedostojensynkronointisovellus.</string>
     <!-- FirstStartActivity -->
     <!-- Title for dialog displayed on first start -->
@@ -8,20 +8,20 @@
     <!-- Welcome wizard -->
     <!-- Slide "Introduction" -->
     <string name="introduction">Johdanto</string>
-    <string name="welcome_text">Universal Sync on avoimen lähdekoodin tiedostojensynkronointisovellus. Jakaaksesi tiedostoja muiden laitteiden kanssa tarvitset niiden uniikit laitetunnukset laitelistaasi. Myöhemmin voit valita, mitä kansioita jaat millekin laitteille. \n \n</string>
+    <string name="welcome_text">UniversalSync on avoimen lähdekoodin tiedostojensynkronointisovellus. Jakaaksesi tiedostoja muiden laitteiden kanssa tarvitset niiden uniikit laitetunnukset laitelistaasi. Myöhemmin voit valita, mitä kansioita jaat millekin laitteille. \n \n</string>
     <!-- Slide "Storage Permission" -->
     <string name="storage_permission_title">Tallennustilan lupa</string>
-    <string name="storage_permission_desc">Universal Sync on käytettävä tallennustilaa tiedostojen synkronointia varten.</string>
+    <string name="storage_permission_desc">UniversalSync on käytettävä tallennustilaa tiedostojen synkronointia varten.</string>
     <string name="dialog_all_files_access_not_supported">Laitteesi ei tue kaikkien tiedostojen käyttöä</string>
     <!-- Slide "Ignore battery optimizations" -->
     <string name="ignore_doze_permission_title">Akun käytön optimointi</string>
     <string name="ignore_doze_permission_os_notice">Android TV:t tiedettävästi sulkevat toisinaan sovelluksen, kun se on käynnissä taustalla. Ratkaisu on saatavilla wikissä kohdassa \'%1$s/%2$s.</string>
-    <string name="ignore_doze_permission_desc">Android voi lopettaa synkronoinnin jonkin ajan kuluttua. Poista akun käytön optimointi käytöstä estääksesi tämän. Joissakin laitteissa voi olla ylimääräisiä tehtävienlopetussovelluksia esiasennettuna. Universal Sync lopettaminen tulisi estää näiden sovellusten asetuksissa.</string>
+    <string name="ignore_doze_permission_desc">Android voi lopettaa synkronoinnin jonkin ajan kuluttua. Poista akun käytön optimointi käytöstä estääksesi tämän. Joissakin laitteissa voi olla ylimääräisiä tehtävienlopetussovelluksia esiasennettuna. UniversalSync lopettaminen tulisi estää näiden sovellusten asetuksissa.</string>
     <string name="toast_ignore_doze_permission_required">Tämä sovellus toimii luotettavasti vain, jos se on sallittu \'doze\'-virransäästötilassa.</string>
     <string name="dialog_disable_battery_optimizations_not_supported">Laitteesi ei tue akun käytön optimoinnin poistamista käytöstä</string>
     <!-- Slide "Location Permission" -->
     <string name="location_permission_title">Sijainnin käyttöoikeus</string>
-    <string name="location_permission_desc">Universal Sync voidaan asettaa toimimaan vain valituissa Wi-Fi-verkoissa. Android vaatii sijainnin käyttöoikeuden aktiivisen Wi-Fi-verkon nimen lukemiseksi. Paina yllä olevaa painiketta, jos haluat käyttää tätä ominaisuutta. Voit ohittaa tämän vaiheen. Katso lisätietoja tietosuojakäytännöstämme.</string>
+    <string name="location_permission_desc">UniversalSync voidaan asettaa toimimaan vain valituissa Wi-Fi-verkoissa. Android vaatii sijainnin käyttöoikeuden aktiivisen Wi-Fi-verkon nimen lukemiseksi. Paina yllä olevaa painiketta, jos haluat käyttää tätä ominaisuutta. Voit ohittaa tämän vaiheen. Katso lisätietoja tietosuojakäytännöstämme.</string>
     <string name="location_permission_desc_api_29">Vinkki Android-versioille 10+: \"Salli aina\"</string>
     <!-- Slide "Key Generation" -->
     <string name="key_generation_title">Avainten luonti</string>
@@ -43,16 +43,16 @@
     <string name="refresh">Virkistä</string>
     <!-- PhotoShootActivity -->
     <string name="photo_shoot_launcher_title">Sync. Kamera</string>
-    <string name="photo_shoot_activity_title">Universal Sync-Fork Kamera</string>
-    <string name="photo_shoot_intro_welcome_title">Tervetuloa Universal Sync Kameraan</string>
+    <string name="photo_shoot_activity_title">UniversalSync-Fork Kamera</string>
+    <string name="photo_shoot_intro_welcome_title">Tervetuloa UniversalSync Kameraan</string>
     <string name="photo_shoot_intro_permission_title">Vaaditut käyttöoikeudet</string>
     <string name="photo_shoot_intro_no_camera">Pahoittelut, tässä laitteessa ei ole kameraa.</string>
     <string name="photo_shoot_intro_missing_permissions">Tarvitsemme tallennustilan ja kameran käyttöoikeudet jatkaaksemme.</string>
     <string name="grant_storage_permission">Myönnä tallennustilan käyttöoikeus</string>
     <string name="grant_camera_permission">Myönnä kameran käyttöoikeus</string>
-    <string name="photo_shoot_intro_permission_desc">Universal Sync Kamera vaatii lupasi kuvien ottamiseen ja tallentamiseen laitteeseen. Tämä ominaisuus on valinnainen. Käyttääksesi sitä, myönnä käyttöoikeudet ja napauta \"Jatka\". Asetamme sinulle Universal Sync Kamera -kansion, jonka voit myöhemmin jakaa muiden Universal Sync-laitteiden kanssa.</string>
-    <!-- Label of the folder created by the Universal Sync Camera feature. -->
-    <string name="default_universalsync_camera_folder_label">Universal Sync Kamera</string>
+    <string name="photo_shoot_intro_permission_desc">UniversalSync Kamera vaatii lupasi kuvien ottamiseen ja tallentamiseen laitteeseen. Tämä ominaisuus on valinnainen. Käyttääksesi sitä, myönnä käyttöoikeudet ja napauta \"Jatka\". Asetamme sinulle UniversalSync Kamera -kansion, jonka voit myöhemmin jakaa muiden UniversalSync-laitteiden kanssa.</string>
+    <!-- Label of the folder created by the UniversalSync Camera feature. -->
+    <string name="default_universal sync_camera_folder_label">UniversalSync Kamera</string>
     <!-- MainActivity -->
     <!-- Main bottom navigation view -->
     <string name="activity_main_bottom_navigation_rescan_all">Skannaa kaikki uudelleen</string>
@@ -71,7 +71,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Jaa laitetunnus</string>
     <string name="usage_reporting_dialog_title">Salli anonyymi käytön seuranta?</string>
-    <string name="usage_reporting_dialog_description">Salatut käyttötiedot lähetetään päivittäin. Niitä käytetään seuraamaan yleisiä alustoja, kansioiden kokoja ja sovellusten versioita. Jos ilmoitettu tietosisältö muuttuu, sinulta kysytään lupa uudelleen. \n \nKoostetut tilastot ovat julkisesti saatavilla osoitteessa https://data.Universal Sync.net.</string>
+    <string name="usage_reporting_dialog_description">Salatut käyttötiedot lähetetään päivittäin. Niitä käytetään seuraamaan yleisiä alustoja, kansioiden kokoja ja sovellusten versioita. Jos ilmoitettu tietosisältö muuttuu, sinulta kysytään lupa uudelleen. \n \nKoostetut tilastot ovat julkisesti saatavilla osoitteessa https://data.universal sync.net.</string>
     <string name="yes">Kyllä</string>
     <string name="no">Ei</string>
     <string name="open_website">Avaa verkkosivu</string>
@@ -135,10 +135,10 @@
     <string name="button_follow_run_conditions">NOUDATA KÄYNTIEHTOJA</string>
     <string name="button_force_start">PAKOTA KÄYNNISTYMINEN \nOHITA KÄYNTIEHDOT</string>
     <string name="button_force_stop">PAKOTA PYSÄYTTÄMINEN \nOHITA KÄYNTIEHDOT</string>
-    <string name="universalsync_starting">Universal Sync on käynnistymässä.</string>
-    <string name="universalsync_running">Universal Sync on käynnissä.</string>
-    <string name="universalsync_not_running">Universal Sync ei ole käynnissä.</string>
-    <string name="universalsync_has_crashed">Universal Sync on kaatunut.</string>
+    <string name="universal sync_starting">UniversalSync on käynnistymässä.</string>
+    <string name="universal sync_running">UniversalSync on käynnissä.</string>
+    <string name="universal sync_not_running">UniversalSync ei ole käynnissä.</string>
+    <string name="universal sync_has_crashed">UniversalSync on kaatunut.</string>
     <!-- DrawerFragment -->
     <!-- Same as download_title with a colon and space appended -->
     <string name="download_title_colon">"Lataus: "</string>
@@ -164,7 +164,7 @@
     <string name="folder_fileWatcherDescription">Pyytää käyttöjärjestelmää ilmoittamaan muutoksista tiedostoihin. Kerran tunnissa skannaus otetaan käyttöön, jos tämä on pois päältä.</string>
     <!-- Setting title and description -->
     <string name="folder_ignore_delete_caption">Ohita poistot</string>
-    <string name="folder_ignore_delete_description">Edistynyt asetus, joka vaikuttaa saapuviin indeksin päivityksiin. Käytössä ollessaan saapuvat päivitykset, joissa on poistomerkintä, jätetään huomioimatta. Katso See https://docs.Universal Sync.net/advanced/folder-ignoredelete.html</string>
+    <string name="folder_ignore_delete_description">Edistynyt asetus, joka vaikuttaa saapuviin indeksin päivityksiin. Käytössä ollessaan saapuvat päivitykset, joissa on poistomerkintä, jätetään huomioimatta. Katso See https://docs.universal sync.net/advanced/folder-ignoredelete.html</string>
     <!-- Setting title -->
     <string name="folder_pause">Keskeytä kansio</string>
     <!-- Setting title -->
@@ -231,12 +231,12 @@
     <string name="settings_title">Asetukset</string>
     <string name="category_run_conditions">Käyntiehdot</string>
     <string name="category_behaviour">Käyttäytyminen</string>
-    <string name="category_universalsync_options">Universal Sync asetukset</string>
-    <string name="category_universalsync_options_summary">Tämä valikko on käytettävissä vain, jos Universal Sync on käynnissä.</string>
+    <string name="category_universal sync_options">UniversalSync asetukset</string>
+    <string name="category_universal sync_options_summary">Tämä valikko on käytettävissä vain, jos UniversalSync on käynnissä.</string>
     <string name="category_experimental">Kokeellinen</string>
     <!-- Preference screen - Run conditions -->
     <string name="run_conditions_title">Käyntiehdot</string>
-    <string name="run_conditions_summary">Käytä seuraavia valintoja päättääksesi, koska Universal Sync on käynnissä.</string>
+    <string name="run_conditions_summary">Käytä seuraavia valintoja päättääksesi, koska UniversalSync on käynnissä.</string>
     <string name="run_on_mobile_data_title">Käytä mobiilidatalla</string>
     <string name="run_on_mobile_data_summary">Käytä laitteen ollessa yhteydessä mobiiliverkkoon. Varoitus: Tämä voi käyttää paljon dataa operaattorisi datansiirtomäärästä, jos synkronoit suuria määriä dataa.</string>
     <string name="run_on_roaming_title">Käytä verkkovierailun aikana</string>
@@ -279,9 +279,9 @@
     <string name="import_config">Tuo asetukset</string>
     <!-- Toast shown after config was imported -->
     <string name="config_imported_successful">Asetukset tuotiin</string>
-    <!-- Title for the preference to reset Universal Sync indexes -->
+    <!-- Title for the preference to reset UniversalSync indexes -->
     <string name="st_reset_database_title">Nollaa tietokanta</string>
-    <!-- Universal Sync was reset -->
+    <!-- UniversalSync was reset -->
     <string name="st_reset_database_done">UniversalSyncin tietokannan tyhjentäminen onnistui</string>
     <string name="category_about">Tietoja</string>
     <!-- Settings item that opens the log activity -->
@@ -292,7 +292,7 @@
     <string name="report_issue_title">Ilmoita ongelmasta</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="universalsync_version_title">UniversalSyncin versio</string>
+    <string name="universal sync_version_title">UniversalSyncin versio</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Kansionvalitsin</string>
@@ -304,12 +304,12 @@
     <string name="select_folder">Valitse kansio</string>
     <string name="create_folder_failed">Kansion luominen epäonnistui</string>
     <!-- LogActivity -->
-    <string name="universalsync_log_title">UniversalSyncin loki</string>
+    <string name="universal sync_log_title">UniversalSyncin loki</string>
     <string name="android_log_title">Androidin loki</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Näytä Android loki</string>
-    <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_universalsync_log">Näytä Synching loki</string>
+    <!-- Title of the "log UniversalSync" menu button -->
+    <string name="view_universal sync_log">Näytä Synching loki</string>
     <string name="retrieving_logs">Noudetaan lokeja…</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Jaa</string>
@@ -332,43 +332,43 @@
     <!-- Sub Folder title -->
     <string name="sub_folder">Alikansio</string>
     <!-- RunConditionMonitor -->
-    <string name="reason_force_start">Universal Sync on käynnissä, koska pakotit sen käynnistymään käyntiehdoista riippumatta.</string>
-    <string name="reason_force_stop">Universal Sync ei ole käynnissä, koska pakotit sen pysähtymään käyntiehdoista riippumatta.</string>
-    <!-- Explanations why Universal Sync is running or not running -->
+    <string name="reason_force_start">UniversalSync on käynnissä, koska pakotit sen käynnistymään käyntiehdoista riippumatta.</string>
+    <string name="reason_force_stop">UniversalSync ei ole käynnissä, koska pakotit sen pysähtymään käyntiehdoista riippumatta.</string>
+    <!-- Explanations why universal sync is running or not running -->
     <string name="reason_not_within_time_frame">Otit käyttöön \'Käytä aikataulun mukaisesti\' ja viimeisin synkronointi oli alle tunti sitten.</string>
     <string name="reason_not_on_battery_power">Puhelin ei ole käynnissä akkuvirralla.</string>
-    <string name="reason_not_while_power_saving">Universal Sync ei ole käynnissä, koska puhelin on virransäästötilassa.</string>
-    <string name="reason_not_while_auto_sync_data_disabled">Universal Sync ei ole käynnissä, koska Androidin asetus \'Synkronoi tiedot automaattisesti\' on pois päältä.</string>
+    <string name="reason_not_while_power_saving">UniversalSync ei ole käynnissä, koska puhelin on virransäästötilassa.</string>
+    <string name="reason_not_while_auto_sync_data_disabled">UniversalSync ei ole käynnissä, koska Androidin asetus \'Synkronoi tiedot automaattisesti\' on pois päältä.</string>
     <!-- … Mobile data -->
-    <string name="reason_mobile_data_disallowed">Universal Sync ei ole asetettu käytettäväksi mobiilidatayhteydellä.</string>
+    <string name="reason_mobile_data_disallowed">UniversalSync ei ole asetettu käytettäväksi mobiilidatayhteydellä.</string>
     <string name="reason_on_mobile_data">UniversalSyncin käyttö mobiilidatalla on sallittu.</string>
     <string name="reason_not_on_mobile_data">UniversalSyncin käyttö on sallittu mobiilidatayhteydellä, mutta mobiilidatayhteyttä ei ole.</string>
     <!-- … Roaming -->
     <string name="reason_on_roaming_nonroaming_mobile_data">UniversalSyncin käyttö on sallittu mobiiliverkossa sekä verkkovierailun aikana että kotiverkossa.</string>
     <string name="reason_on_nonroaming_mobile_data">UniversalSyncin käyttö on sallittu mobiiliverkossa muutoin kuin verkkovierailun aikana. Aktiivinen yhteys on kotiverkkoon.</string>
-    <string name="reason_not_nonroaming_mobile_data">Universal Sync ei ole käynnissä, koska kielsit sen käytön verkkovierailun aikana.</string>
+    <string name="reason_not_nonroaming_mobile_data">UniversalSync ei ole käynnissä, koska kielsit sen käytön verkkovierailun aikana.</string>
     <string name="reason_wifi_disallowed">Synthingin käyttöä ei ole sallittu WiFi- tai ethernet-verkoissa.</string>
     <string name="reason_on_wifi">UniversalSyncin käyttö on sallittu WiFi-verkoissa ja WiFi on tällä hetkellä yhdistettynä.</string>
     <string name="reason_not_on_wifi">UniversalSyncin käyttö on sallittu WiFi-verkoissa mutta WiFi ei ole tällä hetkellä yhdistettynä tai puhelin on lentotilassa.</string>
     <string name="reason_on_metered_nonmetered_wifi">UniversalSyncin käyttö on sallittu käytön mukaan laskutettavilla ja kiinteähintaisilla WiFi-verkkoyhteyksillä.</string>
     <string name="reason_on_whitelisted_wifi">UniversalSyncin käyttö on sallittu yhdistetyssä WiFi-verkossa.</string>
-    <string name="reason_not_on_whitelisted_wifi">Universal Sync ei ole käynnissä, koska yhdistetyn WiFi-verkon nimi ei ole sallittujen listalla.</string>
+    <string name="reason_not_on_whitelisted_wifi">UniversalSync ei ole käynnissä, koska yhdistetyn WiFi-verkon nimi ei ole sallittujen listalla.</string>
     <string name="reason_on_nonmetered_wifi">UniversalSyncin käyttö on sallittu WiFi-yhteyksillä, jotka eivät ole käytön mukaan laskutettavia. Aktiivinen yhteys ei ole käytön mukaan laskutettava.</string>
-    <string name="reason_not_nonmetered_wifi">Universal Sync ei ole käynnissä, koska se on estetty käytön mukaan laskutettavilla WiFi-verkkoyhteyksillä.</string>
-    <string name="reason_location_unavailable">Valitsit \'Käytä valituissa WiFi-verkoissa\' asetuksissa. Androidin sijaintipalvelut ovat pois päältä. Androidin rajotteiden mukaisesti Universal Sync ei voi selvittää nykyisen WiFi-verkon nimeä päätelläkseen pitäisikö sen olla käytössä. Ratkaisu: Laita sijainti päälle, salli sijainnin käyttöoikeus ja yhdistä uudelleen WiFi-verkkoon.</string>
-    <string name="reason_on_flight_mode">Universal Sync on käynnissä, koska sallit sen käytön lentotilassa.</string>
+    <string name="reason_not_nonmetered_wifi">UniversalSync ei ole käynnissä, koska se on estetty käytön mukaan laskutettavilla WiFi-verkkoyhteyksillä.</string>
+    <string name="reason_location_unavailable">Valitsit \'Käytä valituissa WiFi-verkoissa\' asetuksissa. Androidin sijaintipalvelut ovat pois päältä. Androidin rajotteiden mukaisesti UniversalSync ei voi selvittää nykyisen WiFi-verkon nimeä päätelläkseen pitäisikö sen olla käytössä. Ratkaisu: Laita sijainti päälle, salli sijainnin käyttöoikeus ja yhdistä uudelleen WiFi-verkkoon.</string>
+    <string name="reason_on_flight_mode">UniversalSync on käynnissä, koska sallit sen käytön lentotilassa.</string>
     <string name="reason_run_condition_monitor_not_instantiated">RunConditionMonitor ei ole alustettu. Ole hyvä ja käynnistä sovellus uudelleen ja tee bugiraportti, jos tämä virhe ei katoa uudelleenkäynnistyksen jälkeen.</string>
     <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Poistu</string>
-    <!-- Title of the notification shown while Universal Sync is running and enabled -->
-    <string name="universalsync_active">Universal Sync on käynnissä</string>
-    <string name="universalsync_active_details">Universal Sync on käynnissä: %1$s</string>
+    <!-- Title of the notification shown while universal sync is running and enabled -->
+    <string name="universal sync_active">UniversalSync on käynnissä</string>
+    <string name="universal sync_active_details">UniversalSync on käynnissä: %1$s</string>
     <!-- Label of the default folder created of first start (camera folder). -->
     <string name="default_android_camera_folder_label">Android Kamera</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-kuvat</string>
-    <string name="notification_crash_title">Universal Sync kaatui %1$s</string>
+    <string name="notification_crash_title">UniversalSync kaatui %1$s</string>
     <string name="notification_persistent_waiting_channel">Tarkkaillaan käyntiehtoja</string>
     <!-- RestApi -->
     <!-- Title of the notification shown when a restart is needed -->
@@ -429,7 +429,7 @@
     <string name="untrusted_device">Ei-luotettu laite</string>
     <string name="device_name_required">Laitteen nimi ei voi olla tyhjä</string>
     <string name="folders">Kansiot</string>
-    <plurals name="universalsync_active_syncing_device_online">
+    <plurals name="universal sync_active_syncing_device_online">
         <item quantity="one">Synkronointi: %1$d %% valmis, %2$d laite verkossa</item>
         <item quantity="other">Synkronointi: %1$d %% valmis, %2$d laitetta verkossa</item>
     </plurals>

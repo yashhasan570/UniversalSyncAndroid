@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Universal Sync-Fork</string>
+    <string name="app_name">UniversalSync-Fork</string>
     <string name="app_description">Ein open, påliteleg og desentralisert app for filsynkronisering.</string>
     <!-- FirstStartActivity -->
     <!-- Title for dialog displayed on first start -->
@@ -13,7 +13,7 @@
     <!-- Shown in the chooser dialog when sharing a Device ID -->
     <string name="send_device_id_to">Send einings-ID til</string>
     <string name="usage_reporting_dialog_title">Tillate anonym rapportering av bruk?</string>
-    <string name="usage_reporting_dialog_description">Den krypterte rapporten blir send dagleg. Den brukast til å spore felles plattformer. mappestorleikar og app-versjonar. Om dataa som sendast blir endra, blir du spurt på ny. \n \nDei aggregerte statistikkane er offentlege på https://data.Universal Sync.net.</string>
+    <string name="usage_reporting_dialog_description">Den krypterte rapporten blir send dagleg. Den brukast til å spore felles plattformer. mappestorleikar og app-versjonar. Om dataa som sendast blir endra, blir du spurt på ny. \n \nDei aggregerte statistikkane er offentlege på https://data.universal sync.net.</string>
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
     <string name="open_website">Opne nettstad</string>
@@ -51,7 +51,7 @@
     <!-- Title for announce server status -->
     <string name="announce_server">Søketener</string>
     <string name="restart">Omstart</string>
-    <string name="dialog_confirm_restart">Vil du starte om att Universal Sync?</string>
+    <string name="dialog_confirm_restart">Vil du starte om att UniversalSync?</string>
     <!-- FolderActivity -->
     <!-- Setting title -->
     <string name="folder_id">Mappe-ID</string>
@@ -72,7 +72,7 @@
     <!-- Menu item to confirm folder creation -->
     <string name="create">Opprett</string>
     <!-- Dialog shown when attempting to remove a folder -->
-    <string name="remove_folder_confirm">Vil du verkeleg fjerne denne mappa frå Universal Sync?</string>
+    <string name="remove_folder_confirm">Vil du verkeleg fjerne denne mappa frå UniversalSync?</string>
     <!-- Toast shown when trying to create a folder with an empty ID -->
     <string name="folder_id_required">Mappe-ID kan ikkje vere tom</string>
     <!-- Toast shown when trying to create a folder with an empty path -->
@@ -114,7 +114,7 @@
     <string name="web_gui_loading">Venter på grafisk grensesnitt</string>
     <!-- SettingsFragment -->
     <string name="settings_title">Innstillingar</string>
-    <string name="category_universalsync_options">Universal Sync-innstillingar</string>
+    <string name="category_universal sync_options">UniversalSync-innstillingar</string>
     <string name="category_experimental">Eksperiment</string>
     <string name="sync_only_wifi_ssids_wifi_turn_on_wifi">Skru på WiFi for å velje nettverk.</string>
     <string name="device_name">Einingsnamn</string>
@@ -135,20 +135,20 @@
     <string name="import_config">Importer innstillingar</string>
     <!-- Toast shown after config was imported -->
     <string name="config_imported_successful">Innstillingar vart importerte</string>
-    <!-- Title for the preference to reset Universal Sync indexes -->
+    <!-- Title for the preference to reset UniversalSync indexes -->
     <string name="st_reset_database_title">Nullstill database</string>
-    <!-- Universal Sync was reset -->
+    <!-- UniversalSync was reset -->
     <string name="st_reset_database_done">Vellukka nullstilling av UniversalSyncs database</string>
     <string name="category_about">Om</string>
     <!-- Settings item that opens the log activity -->
     <string name="open_log">Opne logg</string>
     <!-- Summary for the log activity -->
-    <string name="open_log_summary">Opne loggvindauget for Universal Sync og Android</string>
+    <string name="open_log_summary">Opne loggvindauget for UniversalSync og Android</string>
     <!-- Settings item that opens issue tracker -->
     <string name="report_issue_title">Meld problem</string>
     <!-- Menu item to donate -->
     <!-- Title of the preference showing upstream version name -->
-    <string name="universalsync_version_title">Universal Sync-versjon</string>
+    <string name="universal sync_version_title">UniversalSync-versjon</string>
     <!-- FolderPickerAcitivity -->
     <!-- Activity title -->
     <string name="folder_picker_title">Mappeveljar</string>
@@ -161,15 +161,15 @@
     <string name="create_folder_failed">Lukkast ikkje med å lage mappe</string>
     <!-- Title of the "log android" menu button -->
     <string name="view_android_log">Vis Android-logg</string>
-    <!-- Title of the "log Universal Sync" menu button -->
-    <string name="view_universalsync_log">Vis Synchting-logg</string>
+    <!-- Title of the "log UniversalSync" menu button -->
+    <string name="view_universal sync_log">Vis Synchting-logg</string>
     <!-- Title of the "share log" menu button -->
     <string name="share_title">Del</string>
     <!-- UniversalSyncService -->
     <!-- Text for the exit button on the drawer -->
     <string name="exit">Avslutt</string>
-    <!-- Title of the notification shown while Universal Sync is running and enabled -->
-    <string name="universalsync_active">Universal Sync køyrer</string>
+    <!-- Title of the notification shown while universal sync is running and enabled -->
+    <string name="universal sync_active">UniversalSync køyrer</string>
     <!-- ID of the default folder created on first start (camera folder). Must only contain 'a-z0-9_-'. Parameter is the device name-->
     <string name="default_folder_id">%1$s-foto</string>
     <!-- RestApi -->
@@ -178,7 +178,7 @@
     <!-- Text for positive button in restart dialog -->
     <!-- Text for the dismiss button of the restart Activity -->
     <!-- Text of the notification shown when a restart is needed -->
-    <string name="restart_notification_text">Trykk her for å starte Universal Sync om att no</string>
+    <string name="restart_notification_text">Trykk her for å starte UniversalSync om att no</string>
     <!-- Shown when a device ID is copied to the clipboard -->
     <string name="device_id_copied_to_clipboard">Einings-ID kopiert til utklippstavla</string>
     <!-- Strings representing units for file sizes, from smallest to largest -->

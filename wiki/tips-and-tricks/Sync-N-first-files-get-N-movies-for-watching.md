@@ -1,6 +1,6 @@
-User [SerVB](https://github.com/SerVB) made a script to care about moving files into the Universal Sync folder until N movie episodes are present.
+User [SerVB](https://github.com/SerVB) made a script to care about moving files into the UniversalSync folder until N movie episodes are present.
 
-See [Universal Sync#1279](https://github.com/Universal Sync/Universal Sync Android/issues/1279) for more details on the idea.
+See [universal sync#1279](https://github.com/universal sync/universal sync-android/issues/1279) for more details on the idea.
 
 Thanks for your contribution!
 
@@ -11,12 +11,12 @@ Copy of the script from the source linked above by 2019-02-24_16:19
 
 ```python
 # "Sequential Mover":
-# The script for moving a few episodes from the source dir to the Universal Sync "dist" dir.
+# The script for moving a few episodes from the source dir to the universal sync "dist" dir.
 #
 # This script uses a json config file. Here is the example:
 # {
 #     "source": "D:/series/",
-#     "dist": "D:/_Universal Sync/_few_episodes/",
+#     "dist": "D:/_universal sync/_few_episodes/",
 #     "count": 2,
 #     "exceptions": [
 #         "Chaos - A mathematical adventure",
@@ -42,7 +42,7 @@ Copy of the script from the source linked above by 2019-02-24_16:19
 # The script searches for the same series in the "dist" dist dir and determines how many episodes to move.
 # Assume "count" = 2. After script run, the "dist" dir will look like this:
 # D\
-#  +-_Universal Sync\
+#  +-_universal sync\
 #              +-_few_episodes\
 #                             +-series1\
 #                             |        +-series1-e1.mp4
@@ -66,7 +66,7 @@ Copy of the script from the source linked above by 2019-02-24_16:19
 # https://www.howtogeek.com/tips/how-to-run-a-scheduled-task-without-a-command-window-appearing/
 #
 # The pre-history of the script is here:
-# https://github.com/Universal Sync/Universal Sync Android/issues/1279
+# https://github.com/universal sync/universal sync-android/issues/1279
 
 import json
 import os

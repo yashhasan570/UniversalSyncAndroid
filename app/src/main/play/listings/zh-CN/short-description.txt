@@ -1,1 +1,1 @@
-Universal Sync 包装程序—开放且去中心化的文件同步
+UniversalSync 包装程序—开放且去中心化的文件同步

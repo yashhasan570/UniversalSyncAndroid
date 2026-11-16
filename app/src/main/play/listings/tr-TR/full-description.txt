@@ -1,27 +1,27 @@
-Bu, Universal Sync için Universal Sync-Android sarmalayıcısının bir çatalıdır ve aşağıdaki gibi önemli geliştirmeler sağlar:
+Bu, UniversalSync için UniversalSync-Android sarmalayıcısının bir çatalıdır ve aşağıdaki gibi önemli geliştirmeler sağlar:
 * Klasör, cihaz ve genel eşitleme ilerlemesi kullanıcı arayüzünden kolayca okunabilir.
 * Daha da fazla pil tasarrufu için "her saat eşitleyin"
 * Cihaz başına ve klasör başına ayrı eşitleme koşulları uygulanabilir
 * Son değişiklikler kullanıcı arayüzü, dosyaları açmak için tıklayın.
-* Universal Sync'in çalışıp çalışmadığına bakılmaksızın klasör ve cihaz yapılandırmasında değişiklikler yapılabilir
+* UniversalSync'in çalışıp çalışmadığına bakılmaksızın klasör ve cihaz yapılandırmasında değişiklikler yapılabilir
 * Kullanıcı arayüzü eşitlemenin neden çalışıp çalışmadığını açıklar.
 * "Pili tüketme" sorunu düzeltildi.
-* Aynı ağdaki diğer Universal Sync cihazlarını keşfedin ve bunları kolayca ekleyin.
+* Aynı ağdaki diğer UniversalSync cihazlarını keşfedin ve bunları kolayca ekleyin.
 * Android 11'den bu yana harici SD kartta iki yönlü eşitlemeyi destekler.
 
-Android için Universal Sync-Fork, Universal Sync'in yerleşik Web Kullanıcı Arayüzü yerine bir Android Kullanıcı Arayüzü sağlayan Universal Sync için bir sarmalayıcıdır. Universal Sync, tescilli eşitleme ve bulut hizmetlerinin yerini açık, güvenilir ve merkezi olmayan bir şeyle değiştirir. Verileriniz yalnızca size ait verilerdir ve bunların nerede saklanacağını, üçüncü taraflarla paylaşılıp paylaşılmayacağını ve İnternet üzerinden nasıl aktarılacağını seçme hakkına sahipsiniz.
+Android için UniversalSync-Fork, UniversalSync'in yerleşik Web Kullanıcı Arayüzü yerine bir Android Kullanıcı Arayüzü sağlayan UniversalSync için bir sarmalayıcıdır. UniversalSync, tescilli eşitleme ve bulut hizmetlerinin yerini açık, güvenilir ve merkezi olmayan bir şeyle değiştirir. Verileriniz yalnızca size ait verilerdir ve bunların nerede saklanacağını, üçüncü taraflarla paylaşılıp paylaşılmayacağını ve İnternet üzerinden nasıl aktarılacağını seçme hakkına sahipsiniz.
 
-Lütfen izleyicide sorun konuları oluşturmadan önce forum ve/veya sosyal medya uygulamalarında yardım isteyin. Universal Sync-Fork'un aile ve arkadaşların Android'de Universal Sync kullanmalarına yardımcı olmak için kişisel bir ilgi olarak doğduğunu lütfen unutmayın. Sonuçların sizinle ve toplulukla paylaşılmasına rağmen şu anda 100.000'den fazla kullanıcıyı hedeflememekte. Teşekkür ederim.
+Lütfen izleyicide sorun konuları oluşturmadan önce forum ve/veya sosyal medya uygulamalarında yardım isteyin. UniversalSync-Fork'un aile ve arkadaşların Android'de UniversalSync kullanmalarına yardımcı olmak için kişisel bir ilgi olarak doğduğunu lütfen unutmayın. Sonuçların sizinle ve toplulukla paylaşılmasına rağmen şu anda 100.000'den fazla kullanıcıyı hedeflememekte. Teşekkür ederim.
 
-Web sitesi: https://github.com/universalsync/Universal Sync Android
+Web sitesi: https://github.com/researchxxl/universal sync-android
 
-Kaynak kodu: https://github.com/universalsync/Universal Sync Android
+Kaynak kodu: https://github.com/researchxxl/universal sync-android
 
-Universal Sync harici SD karta nasıl yazar: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+UniversalSync harici SD karta nasıl yazar: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Viki, SSS ve faydalı makaleler: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+Viki, SSS ve faydalı makaleler: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-Sorunlar: https://github.com/universalsync/Universal Sync Android/issues
+Sorunlar: https://github.com/researchxxl/universal sync-android/issues
 
 Lütfen çeviri konusunda
-yardım edin: https://hosted.weblate.org/projects/Universal Sync/app/
+yardım edin: https://hosted.weblate.org/projects/universal sync-fork/app/

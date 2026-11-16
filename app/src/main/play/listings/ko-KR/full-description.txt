@@ -1,38 +1,38 @@
-This is a fork of the Universal Sync-Android wrapper for Universal Sync that brings major enhancements like:
+This is a fork of the UniversalSync-Android wrapper for UniversalSync that brings major enhancements like:
 * Folder, device and overall sync progress can easily be read off the UI.
-* "Universal Sync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private Universal Sync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
+* "UniversalSync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private UniversalSync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
 * "Sync every hour" to save even more battery
 * Individual sync conditions can be applied per device and per folder
 * Recent changes UI, click to open files.
-* Changes to folder and device config can be made regardless if Universal Sync is running or not
-* UI explains why Universal Sync is running or not.
+* Changes to folder and device config can be made regardless if UniversalSync is running or not
+* UI explains why universal sync is running or not.
 * "Battery eater" problem is fixed.
-* Discover other Universal Sync devices on the same network and easily add them.
+* Discover other UniversalSync devices on the same network and easily add them.
 * Supports two-way synchronization on external SD card since Android 11.
 
-Universal Sync-Fork for Android is a wrapper for Universal Sync that provides an Android UI instead of Universal Sync's built-in Web UI. Universal Sync replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
+UniversalSync-Fork for Android is a wrapper for UniversalSync that provides an Android UI instead of UniversalSync's built-in Web UI. UniversalSync replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
 
 Goals of the fork:
 * Develop and try out enhancements together with the community.
-* Release the wrapper more frequently to identify and fix bugs caused by changes in the Universal Sync submodule
+* Release the wrapper more frequently to identify and fix bugs caused by changes in the universal sync submodule
 * Make enhancements configurable in the UI, users should be able to turn them on and off
 
 Comparison between upstream and fork at the time of writing this:
-* Both contain the Universal Sync binary built from the official source at GitHub
-* Syncing functionality and reliability depends on the Universal Sync binary submodule version.
+* Both contain the universal sync binary built from the official source at GitHub
+* Syncing functionality and reliability depends on the universal sync binary submodule version.
 * Fork gets along with upstream and sometimes they pick up my improvements.
 * Strategy and release frequency is different
 * Only the wrapper containing the Android UI is addressed by the fork.
 
-Website: https://github.com/universalsync/Universal Sync Android
+Website: https://github.com/researchxxl/universal sync-android
 
-소스 코드: https://github.com/universalsync/Universal Sync Android
+소스 코드: https://github.com/researchxxl/universal sync-android
 
-How Universal Sync writes to external SD card: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+How UniversalSync writes to external SD card: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ and helpful articles: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+Wiki, FAQ and helpful articles: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-문제 제기: https://github.com/universalsync/Universal Sync Android/issues
+문제 제기: https://github.com/researchxxl/universal sync-android/issues
 
 Please help with the
-Translation: https://hosted.weblate.org/projects/Universal Sync/app/
+Translation: https://hosted.weblate.org/projects/universal sync-fork/app/

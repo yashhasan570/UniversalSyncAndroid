@@ -1,1 +1,1 @@
-Wrapper für Universal Sync - Offene und dezentrale Dateisynchronisation
+Wrapper für UniversalSync - Offene und dezentrale Dateisynchronisation

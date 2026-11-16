@@ -1,4 +1,4 @@
-nVidia Shield TV's Android OS seem to lack the "regular" battery optimization consent and settings dialogs as they are known from mobile phones and tablets. Because of the missing functionality, you can't setup Universal Sync-Fork on those TV's without making some steps to prepare the installation of the Universal Sync-Fork app first.
+nVidia Shield TV's Android OS seem to lack the "regular" battery optimization consent and settings dialogs as they are known from mobile phones and tablets. Because of the missing functionality, you can't setup UniversalSync-Fork on those TV's without making some steps to prepare the installation of the UniversalSync-Fork app first.
 
 The following instructions to solve the problem by preparing the Android TV for running the app have been contributed by @o-l-a-v :
 
@@ -8,7 +8,7 @@ The following instructions to solve the problem by preparing the Android TV for 
 * Locate / Download Google platform-tools, navigate to folder where adb.exe resides. Open Command Prompt here
 * Type the following:
 
-    ${applicationId} = com.universalsync.android
+    ${applicationId} = com.github.catfriend1.universalSyncfork
 
 ```
     adb start-server
@@ -20,7 +20,7 @@ The following instructions to solve the problem by preparing the Android TV for 
 ```
     adb devices
 ```
-* To whitelist Universal Sync-Fork from doze / Android Battery Optimization, type the following
+* To whitelist UniversalSync-Fork from doze / Android Battery Optimization, type the following
 ```
     adb shell dumpsys deviceidle whitelist +${applicationId}
 ```

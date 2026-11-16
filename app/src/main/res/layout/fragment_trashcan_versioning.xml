@@ -29,7 +29,7 @@
 
         <fragment
             android:id="@+id/fragment"
-            android:name="com.universalsync.android.fragments.NumberPickerFragment"
+            android:name="com.nutomic.universalSyncandroid.fragments.NumberPickerFragment"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:tag="numberpicker_trashcan_versioning"

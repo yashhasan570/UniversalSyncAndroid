@@ -1,1 +1,1 @@
-Wrapper per Universal Sync - Sincronizzazione file aperta e decentralizzata
+Wrapper per UniversalSync - Sincronizzazione file aperta e decentralizzata

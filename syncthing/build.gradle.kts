@@ -67,14 +67,14 @@ abstract class BuildNativeTask @Inject constructor(
         execOps.exec {
             environment(fullEnv)
             workingDir(workDirFile)
-            commandLine(pythonBinary.get(), "-u", "./build-universalsync.py")
+            commandLine(pythonBinary.get(), "-u", "./build-universal sync.py")
         }
     }
 }
 
 tasks.register<BuildNativeTask>("buildNative") {
     group = "build"
-    description = "Builds native Universal Sync binaries"
+    description = "Builds native UniversalSync binaries"
 
     inputDir.set(layout.projectDirectory.dir("src"))
     workingDir.set(layout.projectDirectory)

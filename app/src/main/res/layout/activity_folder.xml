@@ -31,7 +31,7 @@
 
                 <EditText
                     android:id="@+id/label"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details.Field"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details.Field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:drawableLeftCompat="@drawable/baseline_sort_by_alpha_24"
@@ -43,7 +43,7 @@
 
                 <EditText
                     android:id="@+id/id"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details.Field"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details.Field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:drawableLeftCompat="@drawable/ic_id"
@@ -64,7 +64,7 @@
 
                     <TextView
                         android:id="@+id/directoryTextView"
-                        style="@style/Widget.Universal Sync.TextView.Label.Details.Field"
+                        style="@style/Widget.UniversalSync.TextView.Label.Details.Field"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -88,7 +88,7 @@
                 </LinearLayout>
 
                 <TextView
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:drawableLeftCompat="@drawable/ic_device_hub_black_24dp_active"
@@ -116,7 +116,7 @@
 
                     <TextView
                         android:id="@+id/folderTypeTitle"
-                        style="@style/Widget.Universal Sync.TextView.Label.Details"
+                        style="@style/Widget.UniversalSync.TextView.Label.Details"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -152,7 +152,7 @@
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/fileWatcher"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -171,7 +171,7 @@
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/folderPause"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -190,7 +190,7 @@
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/customSyncConditionsSwitch"
-                        style="@style/Widget.Universal Sync.TextView.Label.Details"
+                        style="@style/Widget.UniversalSync.TextView.Label.Details"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:checked="false"
@@ -210,7 +210,7 @@
 
                     <TextView
                         android:id="@+id/customSyncConditionsDialog"
-                        style="@style/Widget.Universal Sync.TextView.Label.Details"
+                        style="@style/Widget.UniversalSync.TextView.Label.Details"
                         android:layout_marginStart="56dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                     android:focusable="true">
 
                     <TextView
-                        style="@style/Widget.Universal Sync.TextView.Label.Details"
+                        style="@style/Widget.UniversalSync.TextView.Label.Details"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -275,7 +275,7 @@
                     android:focusable="true">
 
                 <TextView
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -321,7 +321,7 @@
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/ignoreDelete"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -352,7 +352,7 @@
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/runScriptSwitch"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -381,7 +381,7 @@
 
                 <TextView
                     android:id="@+id/edit_ignore_list_title"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -392,7 +392,7 @@
 
                 <EditText
                     android:id="@+id/edit_ignore_list_content"
-                    style="@style/Widget.Universal Sync.TextView.Label.Details"
+                    style="@style/Widget.UniversalSync.TextView.Label.Details"
                     android:inputType="textMultiLine|textNoSuggestions"
                     android:gravity="top|start"
                     android:hint="@string/ignore_patterns"

@@ -1,3 +1,3 @@
-[submodule "Universal Sync"]
-	path = Universal Sync/src/github.com/Universal Sync/Universal Sync
-	url = https://github.com/Universal Sync/Universal Sync.git
+[submodule "syncthing"]
+	path = syncthing/src/github.com/syncthing/syncthing
+	url = https://github.com/syncthing/syncthing.git

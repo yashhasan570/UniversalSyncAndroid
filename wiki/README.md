@@ -1,6 +1,6 @@
-## Welcome to the Universal Sync-Fork for Android wiki!
+## Welcome to the UniversalSync-Fork for Android wiki!
 
-If you are a new user, we suggest you read [Universal Sync's getting started guide](https://docs.Universal Sync.net/intro/getting-started.html#getting-started).
+If you are a new user, we suggest you read [UniversalSync's getting started guide](https://docs.universal sync.net/intro/getting-started.html#getting-started).
 
 You can see all available wiki articles [here](../wiki/#readme)
 

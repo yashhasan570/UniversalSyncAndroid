@@ -1,1 +1,1 @@
-Wrapper for Universal Sync - Sincronització de fitxers oberta i descentralitzada.
+Wrapper for UniversalSync - Sincronització de fitxers oberta i descentralitzada.

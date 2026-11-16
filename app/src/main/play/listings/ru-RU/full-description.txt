@@ -1,38 +1,38 @@
-Это продолжение клиента Universal Sync для Android, включающее значительные улучшения, к примеру:
+Это продолжение клиента UniversalSync для Android, включающее значительные улучшения, к примеру:
 * Folder, device and overall sync progress can easily be read off the UI.
-* "Universal Sync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private Universal Sync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
+* "UniversalSync Camera" - an optional feature (with optional permission to use the camera) where you can take pictures with your friend, partner, ... on two phones into one shared and private UniversalSync folder. No cloud involved. - FEATURE CURRENTLY IN BETA STAGE -
 * "Sync every hour" to save even more battery
 * Индивидуальные условия синхронизации могут быть применены отдельно для устройств и папок
 * Интерфейс для недавних изменений, открытие файлов по нажатию.
-* Changes to folder and device config can be made regardless if Universal Sync is running or not
-* UI explains why Universal Sync is running or not.
+* Changes to folder and device config can be made regardless if UniversalSync is running or not
+* UI explains why universal sync is running or not.
 * Проблема с расходом батареи решена.
-* Discover other Universal Sync devices on the same network and easily add them.
+* Discover other UniversalSync devices on the same network and easily add them.
 * Supports two-way synchronization on external SD card since Android 11.
 
-Universal Sync-Fork для Android - это обёртка для Universal Sync, предоставляющая интерфейс Android вместо встроенного в Universal Sync веб-интерфейса. Universal Sync заменяет проприетарные облачные сервисы чем-то открытым, достойным доверия и децентрализованным. Ваши данные - только ваши, и вы достойны решать, где они будут храниться, будут ли они доступны третьим сторонам и как они будут передаваться через Интернет.
+UniversalSync-Fork для Android - это обёртка для UniversalSync, предоставляющая интерфейс Android вместо встроенного в UniversalSync веб-интерфейса. UniversalSync заменяет проприетарные облачные сервисы чем-то открытым, достойным доверия и децентрализованным. Ваши данные - только ваши, и вы достойны решать, где они будут храниться, будут ли они доступны третьим сторонам и как они будут передаваться через Интернет.
 
 Цели форка:
 * Разрабатывать и проверять улучшения вместе с сообществом
-* Выпускать новые версии приложения чаще, чтобы найти и исправить ошибки, связанные с изменениями в подмодуле Universal Sync
+* Выпускать новые версии приложения чаще, чтобы найти и исправить ошибки, связанные с изменениями в подмодуле universal sync
 * Сделать улучшения конфигурируемыми в интерфейсе, пользователи должны иметь возможность включать и выключать их
 
 Сравнение между основным приложением и этим форком на момент написания:
-* Both contain the Universal Sync binary built from the official source at GitHub
-* Функционал и надёжность Universal Sync зависит от версии бинарного подмодуля sycthing.
+* Both contain the universal sync binary built from the official source at GitHub
+* Функционал и надёжность UniversalSync зависит от версии бинарного подмодуля sycthing.
 * Форк идёт в ногу с оригиналом, и иногда они подтягивают мои изменения.
 * Стратегия и частота релиза отличается
 * Форк касается только обёртки, содержащей Android UI .
 
-Сайт: https://github.com/universalsync/Universal Sync Android
+Сайт: https://github.com/researchxxl/universal sync-android
 
-Исходный код: https://github.com/universalsync/Universal Sync Android
+Исходный код: https://github.com/researchxxl/universal sync-android
 
-How Universal Sync writes to external SD card: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+How UniversalSync writes to external SD card: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, FAQ and helpful articles: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+Wiki, FAQ and helpful articles: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-Замечания: https://github.com/universalsync/Universal Sync Android/issues
+Замечания: https://github.com/researchxxl/universal sync-android/issues
 
 Please help with the
-Перевод: https://hosted.weblate.org/projects/Universal Sync/app/
+Перевод: https://hosted.weblate.org/projects/universal sync-fork/app/

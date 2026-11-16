@@ -1,6 +1,6 @@
 ### Huawei: 'device disconnected' workaround
 
-If your desktop constantly reports your Huawei device as disconnected, open Universal Sync UI of your desktop. Go to 'remote devices', expand the phone's entry, click 'Edit', switch to 'Advanced'. Put your phone IP address into 'Addresses' like this:
+If your desktop constantly reports your Huawei device as disconnected, open UniversalSync UI of your desktop. Go to 'remote devices', expand the phone's entry, click 'Edit', switch to 'Advanced'. Put your phone IP address into 'Addresses' like this:
 
 ```
 tcp4://(ipAddress), dynamic

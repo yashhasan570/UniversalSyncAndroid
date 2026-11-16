@@ -1,17 +1,17 @@
 First things first:
-* Universal Sync-Fork requires to be exempted from doze which is asked during the welcome wizard. The app will cease to function if the permission is revoked.
+* UniversalSync-Fork requires to be exempted from doze which is asked during the welcome wizard. The app will cease to function if the permission is revoked.
 * The app doesn't require the permission to "waste" your battery. It does run a reliable so called "Android foreground service".
 * Technically speaking, it's required to avoid database corruption in case Android can't communicate with the UniversalSyncNative before putting the app and UniversalSyncNative in suspend.
 
-Here is how you can reduce battery usage even further by optimizing Universal Sync's settings:
-* If you've configured your Universal Sync instances to connect using DynDNS or static IP addresses, turn off all discovery options: Go to "App/Settings/Universal Sync Options" and disable "Local discovery", "Global discovery", "NAT Traversal" and "Relay".
-* If you've configured your Universal Sync instances to connect devices which are located on the same local network, turn off global discovery and relay options: Go to "App/Settings/Universal Sync Options" and disable "Global discovery", "NAT Traversal" and "Relay".
+Here is how you can reduce battery usage even further by optimizing UniversalSync's settings:
+* If you've configured your UniversalSync instances to connect using DynDNS or static IP addresses, turn off all discovery options: Go to "App/Settings/UniversalSync Options" and disable "Local discovery", "Global discovery", "NAT Traversal" and "Relay".
+* If you've configured your UniversalSync instances to connect devices which are located on the same local network, turn off global discovery and relay options: Go to "App/Settings/UniversalSync Options" and disable "Global discovery", "NAT Traversal" and "Relay".
 * If you don't need your changes immediately synced between devices and can wait for up to an hour until the changes are synced, go to "App/Settings/Run conditions" and check "Sync every hour for 5 minutes". The app will then stay in the background showing its notification all time but will only do its work in "5-minute-time-windows" every hour. This will save a lot of battery but practically require an always-on device on the other side.
 
 Short summary:
 * Optimize for better battery life
   * Pros:
-    * You'll totally love Universal Sync's efficiency.
+    * You'll totally love UniversalSync's efficiency.
     * Good for advanced and expert users.
   * Cons:
     * You have to do more "caretaking" on how you setup communication between devices yourself.
@@ -31,6 +31,6 @@ You should not attempt to sync the following files or folders:
 - `/storage/emulated/0/Android/media` *2)
 - `/storage/emulated/0/WhatsApp` *2)
 
-*1) If you'd like to backup apps or app data, you can use third-party apps like e.g. "App Manager". Universal Sync is not designed to replace an os specific backup utility.
+*1) If you'd like to backup apps or app data, you can use third-party apps like e.g. "App Manager". UniversalSync is not designed to replace an os specific backup utility.
 
 *2) Syncing constantly changing files like logs or databases is not supported. It may cause massive battery drain.

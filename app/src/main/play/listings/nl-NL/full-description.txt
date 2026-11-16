@@ -1,27 +1,27 @@
-Dit is een fork van de Universal Sync-Android-wrapper voor Universal Sync die belangrijke verbeteringen biedt, zoals:
+Dit is een fork van de UniversalSync-Android-wrapper voor UniversalSync die belangrijke verbeteringen biedt, zoals:
 * De voortgang van de synchronisatie van mappen, apparaten en het geheel kan eenvoudig worden afgelezen.
 * “Elk uur synchroniseren” om nog meer batterij te besparen.
 * Individuele syncvoorwaarden kunnen per apparaat en per map worden toegepast.
 * Gebruikersinterface met recente wijzigingen, klik om bestanden te openen.
-* Wijzigingen in de configuratie van mappen en apparaten kunnen worden aangebracht, ongeacht of Universal Sync actief is of niet.
-* De gebruikersinterface legt uit waarom Universal Sync actief is of niet.
+* Wijzigingen in de configuratie van mappen en apparaten kunnen worden aangebracht, ongeacht of UniversalSync actief is of niet.
+* De gebruikersinterface legt uit waarom UniversalSync actief is of niet.
 * Het probleem van “batterijverslinding” is opgelost.
-* Ontdek andere Universal Sync-apparaten op hetzelfde netwerk en voeg ze eenvoudig toe.
+* Ontdek andere UniversalSync-apparaten op hetzelfde netwerk en voeg ze eenvoudig toe.
 * Ondersteunt tweerichtingssynchronisatie op externe SD-kaart sinds Android 11.
 
-Universal Sync-Fork voor Android is een wrapper voor Universal Sync die een Android-UI biedt in plaats van de ingebouwde web-UI van Universal Sync. Universal Sync vervangt propriëtaire synchronisatie- en clouddiensten door iets open, betrouwbaars en gedecentraliseerd. Uw gegevens zijn alleen van u en u verdient het om te kiezen waar ze worden opgeslagen, of ze worden gedeeld met derden en hoe ze via internet worden verzonden.
+UniversalSync-Fork voor Android is een wrapper voor UniversalSync die een Android-UI biedt in plaats van de ingebouwde web-UI van UniversalSync. UniversalSync vervangt propriëtaire synchronisatie- en clouddiensten door iets open, betrouwbaars en gedecentraliseerd. Uw gegevens zijn alleen van u en u verdient het om te kiezen waar ze worden opgeslagen, of ze worden gedeeld met derden en hoe ze via internet worden verzonden.
 
-Zoek eerst hulp op het forum en/of sociale media-apps voordat u issues aanmaakt op de tracker. Houd er rekening mee dat Universal Sync-Fork is ontstaan uit persoonlijke interesse om familie en vrienden te helpen Universal Sync op Android te gebruiken. Het was niet bedoeld voor de momenteel meer dan 100.000 gebruikers, ook al worden de resultaten met u en de community gedeeld. Hartelijk dank.
+Zoek eerst hulp op het forum en/of sociale media-apps voordat u issues aanmaakt op de tracker. Houd er rekening mee dat UniversalSync-Fork is ontstaan uit persoonlijke interesse om familie en vrienden te helpen UniversalSync op Android te gebruiken. Het was niet bedoeld voor de momenteel meer dan 100.000 gebruikers, ook al worden de resultaten met u en de community gedeeld. Hartelijk dank.
 
-Website: https://github.com/universalsync/Universal Sync Android
+Website: https://github.com/researchxxl/universal sync-android
 
-Broncode: https://github.com/universalsync/Universal Sync Android
+Broncode: https://github.com/researchxxl/universal sync-android
 
-Hoe Universal Sync naar een externe SD-kaart schrijft: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+Hoe UniversalSync naar een externe SD-kaart schrijft: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-Wiki, veelgestelde vragen en nuttige artikelen: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+Wiki, veelgestelde vragen en nuttige artikelen: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-Problemen: https://github.com/universalsync/Universal Sync Android/issues
+Problemen: https://github.com/researchxxl/universal sync-android/issues
 
 Help mee met de
-Vertaling: https://hosted.weblate.org/projects/Universal Sync/app/
+Vertaling: https://hosted.weblate.org/projects/universal sync-fork/app/

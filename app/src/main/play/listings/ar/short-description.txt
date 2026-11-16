@@ -1,1 +1,1 @@
-Wrapper for Universal Sync - مُزامنة ملفات مفتوحة ولامركزيَة
+Wrapper for UniversalSync - مُزامنة ملفات مفتوحة ولامركزيَة

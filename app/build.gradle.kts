@@ -44,7 +44,7 @@ dependencies {
 
 android {
     compileSdk = libs.versions.compile.sdk.get().toInt()
-    namespace = "com.universalsync.android"
+    namespace = "com.nutomic.universalSyncandroid"
     ndkVersion = libs.versions.ndk.version.get()
 
     externalNativeBuild {
@@ -58,7 +58,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.universalsync.android"
+        applicationId = "com.github.catfriend1.universalSyncfork"
         minSdk = libs.versions.min.sdk.get().toInt()
         targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = libs.versions.version.code.get().toInt()
@@ -76,9 +76,9 @@ android {
             fun propOrEnv(key: String): String? =
                 localProps.getProperty(key) ?: System.getenv(key)
             
-            storeFile = propOrEnv("UNIVERSALSYNC_RELEASE_STORE_FILE")?.let(::file)
+            storeFile = propOrEnv("UNIVERSAL SYNC_RELEASE_STORE_FILE")?.let(::file)
             storePassword = propOrEnv("SIGNING_PASSWORD")
-            keyAlias = propOrEnv("UNIVERSALSYNC_RELEASE_KEY_ALIAS")
+            keyAlias = propOrEnv("UNIVERSAL SYNC_RELEASE_KEY_ALIAS")
             keyPassword = storePassword
         }
     }
@@ -139,7 +139,7 @@ android {
 
     packaging {
         jniLibs {
-            // Otherwise libuniversalsync.so doesn't appear where it should in installs
+            // Otherwise libuniversal sync.so doesn't appear where it should in installs
             // based on app bundles, and thus nothing works.
             useLegacyPackaging = true
         }
@@ -201,7 +201,7 @@ project.afterEvaluate {
         tasks
             .matching { it.name.startsWith("merge") && it.name.endsWith("JniLibFolders") }
             .configureEach {
-                dependsOn(":universalsync:buildNative")
+                dependsOn(":universal sync:buildNative")
             }
     }
 }

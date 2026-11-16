@@ -1,27 +1,27 @@
-זו הסתעפות של עטיפת Universal Sync-אנדרואיד עבור Universal Sync אשר מביאה שיפורים גדולים כמו:
+זו הסתעפות של עטיפת UniversalSync-אנדרואיד עבור UniversalSync אשר מביאה שיפורים גדולים כמו:
 * התקדמות סנכרון התקן, תיקייה וכללית ניתנת לקריאה בקלות מממשק המשתמש.
 * "סנכרן כל שעה" כדי לחסוך אפילו יותר סוללה.
 * ניתן להחיל תנאי סנכרון בודדים לכל התקן ולכל תיקייה.
 * שינויי ממשק משתמש אחרונים, לחץ כדי לפתוח קבצים.
-* ניתן לעשות שינויים לתיקייה ולתצורת התקן ללא קשר אם Universal Sync פועל או לא
-* ממשק משתמש המסביר למה Universal Sync פועל או לא.
+* ניתן לעשות שינויים לתיקייה ולתצורת התקן ללא קשר אם UniversalSync פועל או לא
+* ממשק משתמש המסביר למה UniversalSync פועל או לא.
 * בעיית "זולל סוללה" מתוקנת.
-* גלה התקני Universal Sync אחרים באותה הרשת והוסף אותם בקלות.
+* גלה התקני UniversalSync אחרים באותה הרשת והוסף אותם בקלות.
 * תומך סנכרון דו־כיווני בכרטיס SD חיצוני מאז אנדרואיד 11.
 
-Universal Sync-Fork עבור אנדרואיד הוא עטיפה עבור Universal Sync שמספקת ממשק משתמש של אנדרואיד במקום ממשק המשתמש ברשת המובנה של Universal Sync. היישום Universal Sync מחליף סנכרון קנייני ושירותי ענן עם משהו פתוח, אמין ומבוזר. הנתונים שלך הם הנתונים שלך בלבד ומגיע לך לבחור היכן הם מאוחסנים, אם הם משותפים עם צד שלישי כלשהו ואיך הם משודרים על גבי האינטרנט.
+UniversalSync-Fork עבור אנדרואיד הוא עטיפה עבור UniversalSync שמספקת ממשק משתמש של אנדרואיד במקום ממשק המשתמש ברשת המובנה של UniversalSync. היישום UniversalSync מחליף סנכרון קנייני ושירותי ענן עם משהו פתוח, אמין ומבוזר. הנתונים שלך הם הנתונים שלך בלבד ומגיע לך לבחור היכן הם מאוחסנים, אם הם משותפים עם צד שלישי כלשהו ואיך הם משודרים על גבי האינטרנט.
 
-נא לפנות לעזרה בפורום או ביישומי מדיה חברתית קודם לפני יצירת בעיות בעוקב. נא לזכור כי Universal Sync-Fork נולד כעניין אישי כדי לעזור למשפחה ולחברים להשתמש ב-Universal Sync באנדרואיד. היישום לא היה מכוון על יותר מ-100,000 המשתמשים הנוכחיים למרות שהתוצאות משותפות איתך ועם הקהילה. תודה לך.
+נא לפנות לעזרה בפורום או ביישומי מדיה חברתית קודם לפני יצירת בעיות בעוקב. נא לזכור כי UniversalSync-Fork נולד כעניין אישי כדי לעזור למשפחה ולחברים להשתמש ב-UniversalSync באנדרואיד. היישום לא היה מכוון על יותר מ-100,000 המשתמשים הנוכחיים למרות שהתוצאות משותפות איתך ועם הקהילה. תודה לך.
 
-אתר: https://github.com/universalsync/Universal Sync Android
+אתר: https://github.com/researchxxl/universal sync-android
 
-קוד מקור: https://github.com/universalsync/Universal Sync Android
+קוד מקור: https://github.com/researchxxl/universal sync-android
 
-איך Universal Sync כותב לכרטיס SD חיצוני: https://github.com/universalsync/Universal Sync Android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
+איך UniversalSync כותב לכרטיס SD חיצוני: https://github.com/researchxxl/universal sync-android/blob/main/wiki/known-bug-workarounds/All-files-access_SD-card-write-access.md
 
-אתר שיתופי, שאלות נוספות ומאמרים מועילים: https://github.com/universalsync/Universal Sync Android/tree/main/wiki#readme
+אתר שיתופי, שאלות נוספות ומאמרים מועילים: https://github.com/researchxxl/universal sync-android/tree/main/wiki#readme
 
-בעיות: https://github.com/universalsync/Universal Sync Android/issues
+בעיות: https://github.com/researchxxl/universal sync-android/issues
 
 נא לעזור עם
-תרגום: https://hosted.weblate.org/projects/Universal Sync/app/
+תרגום: https://hosted.weblate.org/projects/universal sync-fork/app/
