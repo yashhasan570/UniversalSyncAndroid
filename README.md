@@ -1,12 +1,9 @@
-# UniversalSync-Fork - A UniversalSync Wrapper for Android
+# UniversalSync for Android
 
 [![License: MPLv2](https://img.shields.io/badge/License-MPLv2-blue.svg)](https://opensource.org/licenses/MPL-2.0)
 <a href="https://github.com/researchxxl/universal sync-android/releases/latest" alt="GitHub release"><img src="https://img.shields.io/github/v/release/researchxxl/universal sync-android" /></a>
 <a href="https://tooomm.github.io/github-release-stats/?username=researchxxl&repository=universal sync-android" alt="GitHub Stats"><img src="https://img.shields.io/github/downloads/researchxxl/universal sync-android/total.svg" /></a>
-<a href="https://f-droid.org/packages/com.github.catfriend1.universalSyncfork" alt="F-Droid release"><img src="https://img.shields.io/f-droid/v/com.github.catfriend1.universalSyncfork.svg" /></a>
-<a href="https://fdroid-metrics.streamlit.app/package_details?package=com.github.catfriend1.universalSyncfork"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fkitswas%2Ffdroid-metrics-dashboard%2Fraw%2Frefs%2Fheads%2Fmain%2Fprocessed%2Fmonthly%2Fcom.github.catfriend1.universalSyncfork.json&query=%24.total_downloads&style=for-the-badge&logo=fdroid&label=F-Droid%20%F0%9F%93%A5%20last%20month" height="22" /></a>
-<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.github.catfriend1.universalSyncfork%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fresearchxxl%2Funiversal sync-android%22%2C%22author%22%3A%22researchxxl%22%2C%22name%22%3A%22UniversalSync-Fork%22%2C%22preferredApkIndex%22%3A0%2C%22additionalSettings%22%3A%22%7B%5C%22verifyLatestTag%5C%22%3Atrue%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22com.github.catfriend1.universalSyncfork%5C%22%7D%22%2C%22overrideSource%22%3Anull%7D"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="22"></a>
-<a href="https://hosted.weblate.org/projects/universal sync-fork/app/"><img src="https://hosted.weblate.org/widget/universal sync-fork/app/svg-badge.svg" alt="Translation status" /></a>
+<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.github.catfriend1.universalsync.android%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fresearchxxl%2Funiversal sync-android%22%2C%22author%22%3A%22researchxxl%22%2C%22name%22%3A%22UniversalSync%22%2C%22preferredApkIndex%22%3A0%2C%22additionalSettings%22%3A%22%7B%5C%22verifyLatestTag%5C%22%3Atrue%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22com.github.catfriend1.universalsync.android%5C%22%7D%22%2C%22overrideSource%22%3Anull%7D"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="22"></a>
 [![Build App](https://github.com/researchxxl/universal sync-android/actions/workflows/build-app.yaml/badge.svg)](https://github.com/researchxxl/universal sync-android/actions/workflows/build-app.yaml)
 
 A wrapper of [UniversalSync](https://github.com/universal sync/universal sync) for Android. Head to the "releases" section or F-Droid for builds. Please seek help on the forum and/or social media apps first before creating issues on the tracker.
@@ -27,7 +24,6 @@ See [detailed info](wiki/developers/Building-and-Development.md).
 
 ## Acknowledgments
 
-This project was forked from [universal sync/universal sync-android](https://github.com/universal sync/universal sync-android).
 
 Special thanks to the former maintainers:
 
@@ -47,6 +43,8 @@ The project is licensed under [MPLv2](LICENSE).
 
 They extend use cases of our app or depend on our app. You might be curious to check their readme.
 
-- [DecSync CC](https://f-droid.org/packages/org.decsync.cc/) - "Sync contacts, calendars and tasks without a server using DecSync"
-- [Flym DecSync](https://f-droid.org/packages/org.decsync.flym/) - "Sync RSS without a server using DecSync"
-- [SleepSync](https://github.com/Baggio94/SleepSync) - "Pause UniversalSync-Fork when your Android device sleeps and automatically resume it when the screen wakes."
+- [SleepSync](https://github.com/Baggio94/SleepSync) - "Pause UniversalSync when your Android device sleeps and automatically resume it when the screen wakes."
+
+## Contact
+
+Questions, problem reports or feedback? Reach us on Telegram: [@johnconstantine570](https://t.me/johnconstantine570)
