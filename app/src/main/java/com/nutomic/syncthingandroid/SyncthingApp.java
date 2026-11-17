@@ -3,11 +3,18 @@ package com.nutomic.universalSyncandroid;
 import android.app.Application;
 import android.os.StrictMode;
 
+import androidx.preference.PreferenceManager;
+
+import com.nutomic.universalSyncandroid.util.RecentTasksController;
+
 import javax.inject.Inject;
 
 public class UniversalSyncApp extends Application {
 
     @Inject DaggerComponent mComponent;
+
+    // SharedPreferences keeps weak listener references, so retain the controller for this process.
+    private RecentTasksController mRecentTasksController;
 
     @Override
     public void onCreate() {
@@ -17,6 +24,10 @@ public class UniversalSyncApp extends Application {
                 .universalSyncModule(new UniversalSyncModule(this))
                 .build()
                 .inject(this);
+
+        mRecentTasksController = new RecentTasksController(this,
+                PreferenceManager.getDefaultSharedPreferences(this));
+        mRecentTasksController.start();
 
         // Set VM policy to avoid crash when sending folder URI to file manager.
         StrictMode.VmPolicy vmPolicy = new StrictMode.VmPolicy.Builder()
